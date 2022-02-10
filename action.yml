@@ -1,11 +1,32 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: aws-eventbridge-action
+description: Publish an event to AWS EventBridge.
+author: Articulate Global, LLC
 inputs:
-  milliseconds: # change this
+  event-bus-name:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: The name or ARN of the event bus to recieve the event.
+  source:
+    required: true
+    description: The source of the event.
+  resources:
+    required: false
+    description: A comma seperated list of of ARNs which the event concerns.
+  detail-type:
+    required: true
+    description: Used to decide what fields to expect in the event detail.
+  detail:
+    required: true
+    description: A valid JSON string.
+  aws-region:
+    required: true
+    description: AWS region
+    default: us-east-1
+outputs:
+  event-id:
+    description: The event ID from AWS EventBridge.
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: node16
+  main: dist/index.js
+branding:
+  color: blue
+  icon: upload-cloud

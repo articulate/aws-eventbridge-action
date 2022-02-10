@@ -1,19 +1,43 @@
-import * as core from '@actions/core'
-import {wait} from './wait'
+import * as core from '@actions/core';
+import {
+  EventBridgeClient,
+  PutEventsCommand,
+} from '@aws-sdk/client-eventbridge';
+
+import { getEntry } from './event';
+import { getEvent } from './inputs';
 
 async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+    const client = new EventBridgeClient({
+      region: core.getInput('aws-region'),
+    });
 
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+    // validate detail is valid JSON
+    const command = new PutEventsCommand({
+      Entries: [getEvent()],
+    });
 
-    core.setOutput('time', new Date().toTimeString())
+    core.debug('Sending request to AWS');
+    const response = await client.send(command);
+    core.debug(
+      `Recieved response from AWS: ${response.$metadata.httpStatusCode} ${response.$metadata.requestId}`,
+    );
+
+    const failed = response.FailedEntryCount || 0;
+    const entry = getEntry(response);
+    if (failed > 0) {
+      throw new Error(
+        `Could not send event. ${entry.ErrorCode}: ${entry.ErrorMessage}`,
+      );
+    }
+
+    core.setOutput('event-id', entry.EventId);
   } catch (error) {
-    if (error instanceof Error) core.setFailed(error.message)
+    if (error instanceof Error) {
+      core.setFailed(error.message);
+    }
   }
 }
 
-run()
+run();
