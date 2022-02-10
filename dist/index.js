@@ -130,6 +130,7 @@ function run() {
         }
         catch (error) {
             if (error instanceof Error) {
+                core.setOutput('error', error.message);
                 core.setFailed(error.message);
             }
         }

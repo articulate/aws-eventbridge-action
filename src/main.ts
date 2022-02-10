@@ -35,6 +35,7 @@ async function run(): Promise<void> {
     core.setOutput('event-id', entry.EventId);
   } catch (error) {
     if (error instanceof Error) {
+      core.setOutput('error', error.message);
       core.setFailed(error.message);
     }
   }
