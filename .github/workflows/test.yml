@@ -19,6 +19,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./
+      - name: Test invalid JSON
+        id: json
+        continue-on-error: true
+        uses: ./
         with:
-          milliseconds: 1000
+          detail: invalid
+      - name: Check invalid JSON
+        run: 'test "${{ steps.json.outputs.error }}" == "detail is not valid JSON. SyntaxError: Unexpected token i in JSON at position 0"'
+      - name: Test missing inputs
+        id: inputs
+        continue-on-error: true
+        uses: ./
+        with:
+          detail: ${{ toJSON(github.event) }}
+      - name: Check missing inputs
+        run: 'test "${{ steps.inputs.outputs.error }}" == "Input required and not supplied: event-bus-name"'
+      - name: Check if we can push to AWS
+        id: check
+        run: echo "::set-output name=push::${{ secrets.AWS_ACCESS_KEY_ID != '' }}"
+      - name: Test push to EventBridge
+        if: ${{ steps.check.outputs.push == 'true' }}
+        uses: ./
+        with:
+          event-bus-name: github-actions-test
+          source: com.articulate.aws-eventbridge-action
+          detail-type: github-action
+          detail: ${{ toJSON(github.event) }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
