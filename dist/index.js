@@ -1435,6 +1435,7 @@ const CancelReplayCommand_1 = __nccwpck_require__(5416);
 const CreateApiDestinationCommand_1 = __nccwpck_require__(5125);
 const CreateArchiveCommand_1 = __nccwpck_require__(5133);
 const CreateConnectionCommand_1 = __nccwpck_require__(9910);
+const CreateEndpointCommand_1 = __nccwpck_require__(8048);
 const CreateEventBusCommand_1 = __nccwpck_require__(5927);
 const CreatePartnerEventSourceCommand_1 = __nccwpck_require__(4229);
 const DeactivateEventSourceCommand_1 = __nccwpck_require__(3922);
@@ -1442,12 +1443,14 @@ const DeauthorizeConnectionCommand_1 = __nccwpck_require__(1652);
 const DeleteApiDestinationCommand_1 = __nccwpck_require__(6629);
 const DeleteArchiveCommand_1 = __nccwpck_require__(7806);
 const DeleteConnectionCommand_1 = __nccwpck_require__(7276);
+const DeleteEndpointCommand_1 = __nccwpck_require__(5413);
 const DeleteEventBusCommand_1 = __nccwpck_require__(7886);
 const DeletePartnerEventSourceCommand_1 = __nccwpck_require__(3127);
 const DeleteRuleCommand_1 = __nccwpck_require__(5923);
 const DescribeApiDestinationCommand_1 = __nccwpck_require__(5798);
 const DescribeArchiveCommand_1 = __nccwpck_require__(3073);
 const DescribeConnectionCommand_1 = __nccwpck_require__(708);
+const DescribeEndpointCommand_1 = __nccwpck_require__(435);
 const DescribeEventBusCommand_1 = __nccwpck_require__(25);
 const DescribeEventSourceCommand_1 = __nccwpck_require__(5449);
 const DescribePartnerEventSourceCommand_1 = __nccwpck_require__(3638);
@@ -1458,6 +1461,7 @@ const EnableRuleCommand_1 = __nccwpck_require__(10);
 const ListApiDestinationsCommand_1 = __nccwpck_require__(8681);
 const ListArchivesCommand_1 = __nccwpck_require__(2773);
 const ListConnectionsCommand_1 = __nccwpck_require__(1050);
+const ListEndpointsCommand_1 = __nccwpck_require__(9971);
 const ListEventBusesCommand_1 = __nccwpck_require__(6583);
 const ListEventSourcesCommand_1 = __nccwpck_require__(9748);
 const ListPartnerEventSourceAccountsCommand_1 = __nccwpck_require__(2323);
@@ -1481,6 +1485,7 @@ const UntagResourceCommand_1 = __nccwpck_require__(8752);
 const UpdateApiDestinationCommand_1 = __nccwpck_require__(2447);
 const UpdateArchiveCommand_1 = __nccwpck_require__(1358);
 const UpdateConnectionCommand_1 = __nccwpck_require__(4008);
+const UpdateEndpointCommand_1 = __nccwpck_require__(6050);
 const EventBridgeClient_1 = __nccwpck_require__(4067);
 class EventBridge extends EventBridgeClient_1.EventBridgeClient {
     activateEventSource(args, optionsOrCb, cb) {
@@ -1541,6 +1546,20 @@ class EventBridge extends EventBridgeClient_1.EventBridgeClient {
     }
     createConnection(args, optionsOrCb, cb) {
         const command = new CreateConnectionCommand_1.CreateConnectionCommand(args);
+        if (typeof optionsOrCb === "function") {
+            this.send(command, optionsOrCb);
+        }
+        else if (typeof cb === "function") {
+            if (typeof optionsOrCb !== "object")
+                throw new Error(`Expect http options but get ${typeof optionsOrCb}`);
+            this.send(command, optionsOrCb || {}, cb);
+        }
+        else {
+            return this.send(command, optionsOrCb);
+        }
+    }
+    createEndpoint(args, optionsOrCb, cb) {
+        const command = new CreateEndpointCommand_1.CreateEndpointCommand(args);
         if (typeof optionsOrCb === "function") {
             this.send(command, optionsOrCb);
         }
@@ -1651,6 +1670,20 @@ class EventBridge extends EventBridgeClient_1.EventBridgeClient {
             return this.send(command, optionsOrCb);
         }
     }
+    deleteEndpoint(args, optionsOrCb, cb) {
+        const command = new DeleteEndpointCommand_1.DeleteEndpointCommand(args);
+        if (typeof optionsOrCb === "function") {
+            this.send(command, optionsOrCb);
+        }
+        else if (typeof cb === "function") {
+            if (typeof optionsOrCb !== "object")
+                throw new Error(`Expect http options but get ${typeof optionsOrCb}`);
+            this.send(command, optionsOrCb || {}, cb);
+        }
+        else {
+            return this.send(command, optionsOrCb);
+        }
+    }
     deleteEventBus(args, optionsOrCb, cb) {
         const command = new DeleteEventBusCommand_1.DeleteEventBusCommand(args);
         if (typeof optionsOrCb === "function") {
@@ -1723,6 +1756,20 @@ class EventBridge extends EventBridgeClient_1.EventBridgeClient {
     }
     describeConnection(args, optionsOrCb, cb) {
         const command = new DescribeConnectionCommand_1.DescribeConnectionCommand(args);
+        if (typeof optionsOrCb === "function") {
+            this.send(command, optionsOrCb);
+        }
+        else if (typeof cb === "function") {
+            if (typeof optionsOrCb !== "object")
+                throw new Error(`Expect http options but get ${typeof optionsOrCb}`);
+            this.send(command, optionsOrCb || {}, cb);
+        }
+        else {
+            return this.send(command, optionsOrCb);
+        }
+    }
+    describeEndpoint(args, optionsOrCb, cb) {
+        const command = new DescribeEndpointCommand_1.DescribeEndpointCommand(args);
         if (typeof optionsOrCb === "function") {
             this.send(command, optionsOrCb);
         }
@@ -1863,6 +1910,20 @@ class EventBridge extends EventBridgeClient_1.EventBridgeClient {
     }
     listConnections(args, optionsOrCb, cb) {
         const command = new ListConnectionsCommand_1.ListConnectionsCommand(args);
+        if (typeof optionsOrCb === "function") {
+            this.send(command, optionsOrCb);
+        }
+        else if (typeof cb === "function") {
+            if (typeof optionsOrCb !== "object")
+                throw new Error(`Expect http options but get ${typeof optionsOrCb}`);
+            this.send(command, optionsOrCb || {}, cb);
+        }
+        else {
+            return this.send(command, optionsOrCb);
+        }
+    }
+    listEndpoints(args, optionsOrCb, cb) {
+        const command = new ListEndpointsCommand_1.ListEndpointsCommand(args);
         if (typeof optionsOrCb === "function") {
             this.send(command, optionsOrCb);
         }
@@ -2197,6 +2258,20 @@ class EventBridge extends EventBridgeClient_1.EventBridgeClient {
             return this.send(command, optionsOrCb);
         }
     }
+    updateEndpoint(args, optionsOrCb, cb) {
+        const command = new UpdateEndpointCommand_1.UpdateEndpointCommand(args);
+        if (typeof optionsOrCb === "function") {
+            this.send(command, optionsOrCb);
+        }
+        else if (typeof cb === "function") {
+            if (typeof optionsOrCb !== "object")
+                throw new Error(`Expect http options but get ${typeof optionsOrCb}`);
+            this.send(command, optionsOrCb || {}, cb);
+        }
+        else {
+            return this.send(command, optionsOrCb);
+        }
+    }
 }
 exports.EventBridge = EventBridge;
 
@@ -2462,6 +2537,50 @@ class CreateConnectionCommand extends smithy_client_1.Command {
     }
 }
 exports.CreateConnectionCommand = CreateConnectionCommand;
+
+
+/***/ }),
+
+/***/ 8048:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.CreateEndpointCommand = void 0;
+const middleware_serde_1 = __nccwpck_require__(3631);
+const smithy_client_1 = __nccwpck_require__(4963);
+const models_0_1 = __nccwpck_require__(5583);
+const Aws_json1_1_1 = __nccwpck_require__(8764);
+class CreateEndpointCommand extends smithy_client_1.Command {
+    constructor(input) {
+        super();
+        this.input = input;
+    }
+    resolveMiddleware(clientStack, configuration, options) {
+        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
+        const stack = clientStack.concat(this.middlewareStack);
+        const { logger } = configuration;
+        const clientName = "EventBridgeClient";
+        const commandName = "CreateEndpointCommand";
+        const handlerExecutionContext = {
+            logger,
+            clientName,
+            commandName,
+            inputFilterSensitiveLog: models_0_1.CreateEndpointRequest.filterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.CreateEndpointResponse.filterSensitiveLog,
+        };
+        const { requestHandler } = configuration;
+        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
+    }
+    serialize(input, context) {
+        return (0, Aws_json1_1_1.serializeAws_json1_1CreateEndpointCommand)(input, context);
+    }
+    deserialize(output, context) {
+        return (0, Aws_json1_1_1.deserializeAws_json1_1CreateEndpointCommand)(output, context);
+    }
+}
+exports.CreateEndpointCommand = CreateEndpointCommand;
 
 
 /***/ }),
@@ -2774,6 +2893,50 @@ exports.DeleteConnectionCommand = DeleteConnectionCommand;
 
 /***/ }),
 
+/***/ 5413:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.DeleteEndpointCommand = void 0;
+const middleware_serde_1 = __nccwpck_require__(3631);
+const smithy_client_1 = __nccwpck_require__(4963);
+const models_0_1 = __nccwpck_require__(5583);
+const Aws_json1_1_1 = __nccwpck_require__(8764);
+class DeleteEndpointCommand extends smithy_client_1.Command {
+    constructor(input) {
+        super();
+        this.input = input;
+    }
+    resolveMiddleware(clientStack, configuration, options) {
+        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
+        const stack = clientStack.concat(this.middlewareStack);
+        const { logger } = configuration;
+        const clientName = "EventBridgeClient";
+        const commandName = "DeleteEndpointCommand";
+        const handlerExecutionContext = {
+            logger,
+            clientName,
+            commandName,
+            inputFilterSensitiveLog: models_0_1.DeleteEndpointRequest.filterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DeleteEndpointResponse.filterSensitiveLog,
+        };
+        const { requestHandler } = configuration;
+        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
+    }
+    serialize(input, context) {
+        return (0, Aws_json1_1_1.serializeAws_json1_1DeleteEndpointCommand)(input, context);
+    }
+    deserialize(output, context) {
+        return (0, Aws_json1_1_1.deserializeAws_json1_1DeleteEndpointCommand)(output, context);
+    }
+}
+exports.DeleteEndpointCommand = DeleteEndpointCommand;
+
+
+/***/ }),
+
 /***/ 7886:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -3034,6 +3197,50 @@ class DescribeConnectionCommand extends smithy_client_1.Command {
     }
 }
 exports.DescribeConnectionCommand = DescribeConnectionCommand;
+
+
+/***/ }),
+
+/***/ 435:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.DescribeEndpointCommand = void 0;
+const middleware_serde_1 = __nccwpck_require__(3631);
+const smithy_client_1 = __nccwpck_require__(4963);
+const models_0_1 = __nccwpck_require__(5583);
+const Aws_json1_1_1 = __nccwpck_require__(8764);
+class DescribeEndpointCommand extends smithy_client_1.Command {
+    constructor(input) {
+        super();
+        this.input = input;
+    }
+    resolveMiddleware(clientStack, configuration, options) {
+        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
+        const stack = clientStack.concat(this.middlewareStack);
+        const { logger } = configuration;
+        const clientName = "EventBridgeClient";
+        const commandName = "DescribeEndpointCommand";
+        const handlerExecutionContext = {
+            logger,
+            clientName,
+            commandName,
+            inputFilterSensitiveLog: models_0_1.DescribeEndpointRequest.filterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribeEndpointResponse.filterSensitiveLog,
+        };
+        const { requestHandler } = configuration;
+        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
+    }
+    serialize(input, context) {
+        return (0, Aws_json1_1_1.serializeAws_json1_1DescribeEndpointCommand)(input, context);
+    }
+    deserialize(output, context) {
+        return (0, Aws_json1_1_1.deserializeAws_json1_1DescribeEndpointCommand)(output, context);
+    }
+}
+exports.DescribeEndpointCommand = DescribeEndpointCommand;
 
 
 /***/ }),
@@ -3478,6 +3685,50 @@ exports.ListConnectionsCommand = ListConnectionsCommand;
 
 /***/ }),
 
+/***/ 9971:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ListEndpointsCommand = void 0;
+const middleware_serde_1 = __nccwpck_require__(3631);
+const smithy_client_1 = __nccwpck_require__(4963);
+const models_0_1 = __nccwpck_require__(5583);
+const Aws_json1_1_1 = __nccwpck_require__(8764);
+class ListEndpointsCommand extends smithy_client_1.Command {
+    constructor(input) {
+        super();
+        this.input = input;
+    }
+    resolveMiddleware(clientStack, configuration, options) {
+        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
+        const stack = clientStack.concat(this.middlewareStack);
+        const { logger } = configuration;
+        const clientName = "EventBridgeClient";
+        const commandName = "ListEndpointsCommand";
+        const handlerExecutionContext = {
+            logger,
+            clientName,
+            commandName,
+            inputFilterSensitiveLog: models_0_1.ListEndpointsRequest.filterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListEndpointsResponse.filterSensitiveLog,
+        };
+        const { requestHandler } = configuration;
+        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
+    }
+    serialize(input, context) {
+        return (0, Aws_json1_1_1.serializeAws_json1_1ListEndpointsCommand)(input, context);
+    }
+    deserialize(output, context) {
+        return (0, Aws_json1_1_1.deserializeAws_json1_1ListEndpointsCommand)(output, context);
+    }
+}
+exports.ListEndpointsCommand = ListEndpointsCommand;
+
+
+/***/ }),
+
 /***/ 6583:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -3881,6 +4132,7 @@ exports.ListTargetsByRuleCommand = ListTargetsByRuleCommand;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PutEventsCommand = void 0;
+const middleware_sdk_eventbridge_1 = __nccwpck_require__(3726);
 const middleware_serde_1 = __nccwpck_require__(3631);
 const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(5583);
@@ -3892,6 +4144,7 @@ class PutEventsCommand extends smithy_client_1.Command {
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
+        this.middlewareStack.use((0, middleware_sdk_eventbridge_1.getInjectEndpointIdPlugin)(configuration));
         const stack = clientStack.concat(this.middlewareStack);
         const { logger } = configuration;
         const clientName = "EventBridgeClient";
@@ -4490,6 +4743,50 @@ exports.UpdateConnectionCommand = UpdateConnectionCommand;
 
 /***/ }),
 
+/***/ 6050:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.UpdateEndpointCommand = void 0;
+const middleware_serde_1 = __nccwpck_require__(3631);
+const smithy_client_1 = __nccwpck_require__(4963);
+const models_0_1 = __nccwpck_require__(5583);
+const Aws_json1_1_1 = __nccwpck_require__(8764);
+class UpdateEndpointCommand extends smithy_client_1.Command {
+    constructor(input) {
+        super();
+        this.input = input;
+    }
+    resolveMiddleware(clientStack, configuration, options) {
+        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
+        const stack = clientStack.concat(this.middlewareStack);
+        const { logger } = configuration;
+        const clientName = "EventBridgeClient";
+        const commandName = "UpdateEndpointCommand";
+        const handlerExecutionContext = {
+            logger,
+            clientName,
+            commandName,
+            inputFilterSensitiveLog: models_0_1.UpdateEndpointRequest.filterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.UpdateEndpointResponse.filterSensitiveLog,
+        };
+        const { requestHandler } = configuration;
+        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
+    }
+    serialize(input, context) {
+        return (0, Aws_json1_1_1.serializeAws_json1_1UpdateEndpointCommand)(input, context);
+    }
+    deserialize(output, context) {
+        return (0, Aws_json1_1_1.deserializeAws_json1_1UpdateEndpointCommand)(output, context);
+    }
+}
+exports.UpdateEndpointCommand = UpdateEndpointCommand;
+
+
+/***/ }),
+
 /***/ 4604:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -4502,6 +4799,7 @@ tslib_1.__exportStar(__nccwpck_require__(5416), exports);
 tslib_1.__exportStar(__nccwpck_require__(5125), exports);
 tslib_1.__exportStar(__nccwpck_require__(5133), exports);
 tslib_1.__exportStar(__nccwpck_require__(9910), exports);
+tslib_1.__exportStar(__nccwpck_require__(8048), exports);
 tslib_1.__exportStar(__nccwpck_require__(5927), exports);
 tslib_1.__exportStar(__nccwpck_require__(4229), exports);
 tslib_1.__exportStar(__nccwpck_require__(3922), exports);
@@ -4509,12 +4807,14 @@ tslib_1.__exportStar(__nccwpck_require__(1652), exports);
 tslib_1.__exportStar(__nccwpck_require__(6629), exports);
 tslib_1.__exportStar(__nccwpck_require__(7806), exports);
 tslib_1.__exportStar(__nccwpck_require__(7276), exports);
+tslib_1.__exportStar(__nccwpck_require__(5413), exports);
 tslib_1.__exportStar(__nccwpck_require__(7886), exports);
 tslib_1.__exportStar(__nccwpck_require__(3127), exports);
 tslib_1.__exportStar(__nccwpck_require__(5923), exports);
 tslib_1.__exportStar(__nccwpck_require__(5798), exports);
 tslib_1.__exportStar(__nccwpck_require__(3073), exports);
 tslib_1.__exportStar(__nccwpck_require__(708), exports);
+tslib_1.__exportStar(__nccwpck_require__(435), exports);
 tslib_1.__exportStar(__nccwpck_require__(25), exports);
 tslib_1.__exportStar(__nccwpck_require__(5449), exports);
 tslib_1.__exportStar(__nccwpck_require__(3638), exports);
@@ -4525,6 +4825,7 @@ tslib_1.__exportStar(__nccwpck_require__(10), exports);
 tslib_1.__exportStar(__nccwpck_require__(8681), exports);
 tslib_1.__exportStar(__nccwpck_require__(2773), exports);
 tslib_1.__exportStar(__nccwpck_require__(1050), exports);
+tslib_1.__exportStar(__nccwpck_require__(9971), exports);
 tslib_1.__exportStar(__nccwpck_require__(6583), exports);
 tslib_1.__exportStar(__nccwpck_require__(9748), exports);
 tslib_1.__exportStar(__nccwpck_require__(2323), exports);
@@ -4548,6 +4849,7 @@ tslib_1.__exportStar(__nccwpck_require__(8752), exports);
 tslib_1.__exportStar(__nccwpck_require__(2447), exports);
 tslib_1.__exportStar(__nccwpck_require__(1358), exports);
 tslib_1.__exportStar(__nccwpck_require__(4008), exports);
+tslib_1.__exportStar(__nccwpck_require__(6050), exports);
 
 
 /***/ }),
@@ -4799,10 +5101,10 @@ tslib_1.__exportStar(__nccwpck_require__(5583), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.DeleteConnectionRequest = exports.DeleteArchiveResponse = exports.DeleteArchiveRequest = exports.DeleteApiDestinationResponse = exports.DeleteApiDestinationRequest = exports.DeauthorizeConnectionResponse = exports.DeauthorizeConnectionRequest = exports.DeactivateEventSourceRequest = exports.CreatePartnerEventSourceResponse = exports.CreatePartnerEventSourceRequest = exports.CreateEventBusResponse = exports.CreateEventBusRequest = exports.Tag = exports.CreateConnectionResponse = exports.ConnectionState = exports.CreateConnectionRequest = exports.CreateConnectionAuthRequestParameters = exports.CreateConnectionOAuthRequestParameters = exports.ConnectionOAuthHttpMethod = exports.CreateConnectionOAuthClientRequestParameters = exports.ConnectionHttpParameters = exports.ConnectionQueryStringParameter = exports.ConnectionHeaderParameter = exports.ConnectionBodyParameter = exports.CreateConnectionBasicAuthRequestParameters = exports.CreateConnectionApiKeyAuthRequestParameters = exports.ConnectionAuthorizationType = exports.InvalidEventPatternException = exports.CreateArchiveResponse = exports.CreateArchiveRequest = exports.ResourceAlreadyExistsException = exports.LimitExceededException = exports.CreateApiDestinationResponse = exports.CreateApiDestinationRequest = exports.IllegalStatusException = exports.CancelReplayResponse = exports.ReplayState = exports.CancelReplayRequest = exports.AssignPublicIp = exports.Archive = exports.ArchiveState = exports.ApiDestination = exports.ApiDestinationHttpMethod = exports.ApiDestinationState = exports.ResourceNotFoundException = exports.OperationDisabledException = exports.InvalidStateException = exports.InternalException = exports.ConcurrentModificationException = exports.ActivateEventSourceRequest = void 0;
-exports.ListPartnerEventSourcesResponse = exports.PartnerEventSource = exports.ListPartnerEventSourcesRequest = exports.ListPartnerEventSourceAccountsResponse = exports.PartnerEventSourceAccount = exports.ListPartnerEventSourceAccountsRequest = exports.ListEventSourcesResponse = exports.EventSource = exports.ListEventSourcesRequest = exports.ListEventBusesResponse = exports.EventBus = exports.ListEventBusesRequest = exports.ListConnectionsResponse = exports.Connection = exports.ListConnectionsRequest = exports.ListArchivesResponse = exports.ListArchivesRequest = exports.ListApiDestinationsResponse = exports.ListApiDestinationsRequest = exports.EnableRuleRequest = exports.DisableRuleRequest = exports.DescribeRuleResponse = exports.RuleState = exports.DescribeRuleRequest = exports.DescribeReplayResponse = exports.ReplayDestination = exports.DescribeReplayRequest = exports.DescribePartnerEventSourceResponse = exports.DescribePartnerEventSourceRequest = exports.DescribeEventSourceResponse = exports.EventSourceState = exports.DescribeEventSourceRequest = exports.DescribeEventBusResponse = exports.DescribeEventBusRequest = exports.DescribeConnectionResponse = exports.ConnectionAuthResponseParameters = exports.ConnectionOAuthResponseParameters = exports.ConnectionOAuthClientResponseParameters = exports.ConnectionBasicAuthResponseParameters = exports.ConnectionApiKeyAuthResponseParameters = exports.DescribeConnectionRequest = exports.DescribeArchiveResponse = exports.DescribeArchiveRequest = exports.DescribeApiDestinationResponse = exports.DescribeApiDestinationRequest = exports.ManagedRuleException = exports.DeleteRuleRequest = exports.DeletePartnerEventSourceRequest = exports.DeleteEventBusRequest = exports.DeleteConnectionResponse = void 0;
-exports.PutRuleResponse = exports.PutRuleRequest = exports.PutPermissionRequest = exports.Condition = exports.PolicyLengthExceededException = exports.PutPartnerEventsResponse = exports.PutPartnerEventsResultEntry = exports.PutPartnerEventsRequest = exports.PutPartnerEventsRequestEntry = exports.PutEventsResponse = exports.PutEventsResultEntry = exports.PutEventsRequest = exports.PutEventsRequestEntry = exports.ListTargetsByRuleResponse = exports.Target = exports.SqsParameters = exports.SageMakerPipelineParameters = exports.SageMakerPipelineParameter = exports.RunCommandParameters = exports.RunCommandTarget = exports.RetryPolicy = exports.RedshiftDataParameters = exports.KinesisParameters = exports.InputTransformer = exports.HttpParameters = exports.EcsParameters = exports.PropagateTags = exports.PlacementStrategy = exports.PlacementStrategyType = exports.PlacementConstraint = exports.PlacementConstraintType = exports.NetworkConfiguration = exports.AwsVpcConfiguration = exports.LaunchType = exports.CapacityProviderStrategyItem = exports.DeadLetterConfig = exports.BatchParameters = exports.BatchRetryStrategy = exports.BatchArrayProperties = exports.ListTargetsByRuleRequest = exports.ListTagsForResourceResponse = exports.ListTagsForResourceRequest = exports.ListRulesResponse = exports.Rule = exports.ListRulesRequest = exports.ListRuleNamesByTargetResponse = exports.ListRuleNamesByTargetRequest = exports.ListReplaysResponse = exports.Replay = exports.ListReplaysRequest = void 0;
-exports.UpdateConnectionResponse = exports.UpdateConnectionRequest = exports.UpdateConnectionAuthRequestParameters = exports.UpdateConnectionOAuthRequestParameters = exports.UpdateConnectionOAuthClientRequestParameters = exports.UpdateConnectionBasicAuthRequestParameters = exports.UpdateConnectionApiKeyAuthRequestParameters = exports.UpdateArchiveResponse = exports.UpdateArchiveRequest = exports.UpdateApiDestinationResponse = exports.UpdateApiDestinationRequest = exports.UntagResourceResponse = exports.UntagResourceRequest = exports.TestEventPatternResponse = exports.TestEventPatternRequest = exports.TagResourceResponse = exports.TagResourceRequest = exports.StartReplayResponse = exports.StartReplayRequest = exports.RemoveTargetsResponse = exports.RemoveTargetsResultEntry = exports.RemoveTargetsRequest = exports.RemovePermissionRequest = exports.PutTargetsResponse = exports.PutTargetsResultEntry = exports.PutTargetsRequest = void 0;
+exports.CreateEventBusResponse = exports.CreateEventBusRequest = exports.Tag = exports.CreateEndpointResponse = exports.EndpointState = exports.CreateEndpointRequest = exports.RoutingConfig = exports.FailoverConfig = exports.Secondary = exports.Primary = exports.ReplicationConfig = exports.ReplicationState = exports.EndpointEventBus = exports.CreateConnectionResponse = exports.ConnectionState = exports.CreateConnectionRequest = exports.CreateConnectionAuthRequestParameters = exports.CreateConnectionOAuthRequestParameters = exports.ConnectionOAuthHttpMethod = exports.CreateConnectionOAuthClientRequestParameters = exports.ConnectionHttpParameters = exports.ConnectionQueryStringParameter = exports.ConnectionHeaderParameter = exports.ConnectionBodyParameter = exports.CreateConnectionBasicAuthRequestParameters = exports.CreateConnectionApiKeyAuthRequestParameters = exports.ConnectionAuthorizationType = exports.InvalidEventPatternException = exports.CreateArchiveResponse = exports.CreateArchiveRequest = exports.ResourceAlreadyExistsException = exports.LimitExceededException = exports.CreateApiDestinationResponse = exports.CreateApiDestinationRequest = exports.IllegalStatusException = exports.CancelReplayResponse = exports.ReplayState = exports.CancelReplayRequest = exports.AssignPublicIp = exports.Archive = exports.ArchiveState = exports.ApiDestination = exports.ApiDestinationHttpMethod = exports.ApiDestinationState = exports.ResourceNotFoundException = exports.OperationDisabledException = exports.InvalidStateException = exports.InternalException = exports.ConcurrentModificationException = exports.ActivateEventSourceRequest = void 0;
+exports.ListConnectionsRequest = exports.ListArchivesResponse = exports.ListArchivesRequest = exports.ListApiDestinationsResponse = exports.ListApiDestinationsRequest = exports.EnableRuleRequest = exports.DisableRuleRequest = exports.DescribeRuleResponse = exports.RuleState = exports.DescribeRuleRequest = exports.DescribeReplayResponse = exports.ReplayDestination = exports.DescribeReplayRequest = exports.DescribePartnerEventSourceResponse = exports.DescribePartnerEventSourceRequest = exports.DescribeEventSourceResponse = exports.EventSourceState = exports.DescribeEventSourceRequest = exports.DescribeEventBusResponse = exports.DescribeEventBusRequest = exports.DescribeEndpointResponse = exports.DescribeEndpointRequest = exports.DescribeConnectionResponse = exports.ConnectionAuthResponseParameters = exports.ConnectionOAuthResponseParameters = exports.ConnectionOAuthClientResponseParameters = exports.ConnectionBasicAuthResponseParameters = exports.ConnectionApiKeyAuthResponseParameters = exports.DescribeConnectionRequest = exports.DescribeArchiveResponse = exports.DescribeArchiveRequest = exports.DescribeApiDestinationResponse = exports.DescribeApiDestinationRequest = exports.ManagedRuleException = exports.DeleteRuleRequest = exports.DeletePartnerEventSourceRequest = exports.DeleteEventBusRequest = exports.DeleteEndpointResponse = exports.DeleteEndpointRequest = exports.DeleteConnectionResponse = exports.DeleteConnectionRequest = exports.DeleteArchiveResponse = exports.DeleteArchiveRequest = exports.DeleteApiDestinationResponse = exports.DeleteApiDestinationRequest = exports.DeauthorizeConnectionResponse = exports.DeauthorizeConnectionRequest = exports.DeactivateEventSourceRequest = exports.CreatePartnerEventSourceResponse = exports.CreatePartnerEventSourceRequest = void 0;
+exports.SageMakerPipelineParameter = exports.RunCommandParameters = exports.RunCommandTarget = exports.RetryPolicy = exports.RedshiftDataParameters = exports.KinesisParameters = exports.InputTransformer = exports.HttpParameters = exports.EcsParameters = exports.PropagateTags = exports.PlacementStrategy = exports.PlacementStrategyType = exports.PlacementConstraint = exports.PlacementConstraintType = exports.NetworkConfiguration = exports.AwsVpcConfiguration = exports.LaunchType = exports.CapacityProviderStrategyItem = exports.DeadLetterConfig = exports.BatchParameters = exports.BatchRetryStrategy = exports.BatchArrayProperties = exports.ListTargetsByRuleRequest = exports.ListTagsForResourceResponse = exports.ListTagsForResourceRequest = exports.ListRulesResponse = exports.Rule = exports.ListRulesRequest = exports.ListRuleNamesByTargetResponse = exports.ListRuleNamesByTargetRequest = exports.ListReplaysResponse = exports.Replay = exports.ListReplaysRequest = exports.ListPartnerEventSourcesResponse = exports.PartnerEventSource = exports.ListPartnerEventSourcesRequest = exports.ListPartnerEventSourceAccountsResponse = exports.PartnerEventSourceAccount = exports.ListPartnerEventSourceAccountsRequest = exports.ListEventSourcesResponse = exports.EventSource = exports.ListEventSourcesRequest = exports.ListEventBusesResponse = exports.EventBus = exports.ListEventBusesRequest = exports.ListEndpointsResponse = exports.Endpoint = exports.ListEndpointsRequest = exports.ListConnectionsResponse = exports.Connection = void 0;
+exports.UpdateEndpointResponse = exports.UpdateEndpointRequest = exports.UpdateConnectionResponse = exports.UpdateConnectionRequest = exports.UpdateConnectionAuthRequestParameters = exports.UpdateConnectionOAuthRequestParameters = exports.UpdateConnectionOAuthClientRequestParameters = exports.UpdateConnectionBasicAuthRequestParameters = exports.UpdateConnectionApiKeyAuthRequestParameters = exports.UpdateArchiveResponse = exports.UpdateArchiveRequest = exports.UpdateApiDestinationResponse = exports.UpdateApiDestinationRequest = exports.UntagResourceResponse = exports.UntagResourceRequest = exports.TestEventPatternResponse = exports.TestEventPatternRequest = exports.TagResourceResponse = exports.TagResourceRequest = exports.StartReplayResponse = exports.StartReplayRequest = exports.RemoveTargetsResponse = exports.RemoveTargetsResultEntry = exports.RemoveTargetsRequest = exports.RemovePermissionRequest = exports.PutTargetsResponse = exports.PutTargetsResultEntry = exports.PutTargetsRequest = exports.PutRuleResponse = exports.PutRuleRequest = exports.PutPermissionRequest = exports.Condition = exports.PolicyLengthExceededException = exports.PutPartnerEventsResponse = exports.PutPartnerEventsResultEntry = exports.PutPartnerEventsRequest = exports.PutPartnerEventsRequestEntry = exports.PutEventsResponse = exports.PutEventsResultEntry = exports.PutEventsRequest = exports.PutEventsRequestEntry = exports.ListTargetsByRuleResponse = exports.Target = exports.SqsParameters = exports.SageMakerPipelineParameters = void 0;
 const EventBridgeServiceException_1 = __nccwpck_require__(5180);
 var ActivateEventSourceRequest;
 (function (ActivateEventSourceRequest) {
@@ -5101,6 +5403,69 @@ var CreateConnectionResponse;
         ...obj,
     });
 })(CreateConnectionResponse = exports.CreateConnectionResponse || (exports.CreateConnectionResponse = {}));
+var EndpointEventBus;
+(function (EndpointEventBus) {
+    EndpointEventBus.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(EndpointEventBus = exports.EndpointEventBus || (exports.EndpointEventBus = {}));
+var ReplicationState;
+(function (ReplicationState) {
+    ReplicationState["DISABLED"] = "DISABLED";
+    ReplicationState["ENABLED"] = "ENABLED";
+})(ReplicationState = exports.ReplicationState || (exports.ReplicationState = {}));
+var ReplicationConfig;
+(function (ReplicationConfig) {
+    ReplicationConfig.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(ReplicationConfig = exports.ReplicationConfig || (exports.ReplicationConfig = {}));
+var Primary;
+(function (Primary) {
+    Primary.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(Primary = exports.Primary || (exports.Primary = {}));
+var Secondary;
+(function (Secondary) {
+    Secondary.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(Secondary = exports.Secondary || (exports.Secondary = {}));
+var FailoverConfig;
+(function (FailoverConfig) {
+    FailoverConfig.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(FailoverConfig = exports.FailoverConfig || (exports.FailoverConfig = {}));
+var RoutingConfig;
+(function (RoutingConfig) {
+    RoutingConfig.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(RoutingConfig = exports.RoutingConfig || (exports.RoutingConfig = {}));
+var CreateEndpointRequest;
+(function (CreateEndpointRequest) {
+    CreateEndpointRequest.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(CreateEndpointRequest = exports.CreateEndpointRequest || (exports.CreateEndpointRequest = {}));
+var EndpointState;
+(function (EndpointState) {
+    EndpointState["ACTIVE"] = "ACTIVE";
+    EndpointState["CREATE_FAILED"] = "CREATE_FAILED";
+    EndpointState["CREATING"] = "CREATING";
+    EndpointState["DELETE_FAILED"] = "DELETE_FAILED";
+    EndpointState["DELETING"] = "DELETING";
+    EndpointState["UPDATE_FAILED"] = "UPDATE_FAILED";
+    EndpointState["UPDATING"] = "UPDATING";
+})(EndpointState = exports.EndpointState || (exports.EndpointState = {}));
+var CreateEndpointResponse;
+(function (CreateEndpointResponse) {
+    CreateEndpointResponse.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(CreateEndpointResponse = exports.CreateEndpointResponse || (exports.CreateEndpointResponse = {}));
 var Tag;
 (function (Tag) {
     Tag.filterSensitiveLog = (obj) => ({
@@ -5185,6 +5550,18 @@ var DeleteConnectionResponse;
         ...obj,
     });
 })(DeleteConnectionResponse = exports.DeleteConnectionResponse || (exports.DeleteConnectionResponse = {}));
+var DeleteEndpointRequest;
+(function (DeleteEndpointRequest) {
+    DeleteEndpointRequest.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(DeleteEndpointRequest = exports.DeleteEndpointRequest || (exports.DeleteEndpointRequest = {}));
+var DeleteEndpointResponse;
+(function (DeleteEndpointResponse) {
+    DeleteEndpointResponse.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(DeleteEndpointResponse = exports.DeleteEndpointResponse || (exports.DeleteEndpointResponse = {}));
 var DeleteEventBusRequest;
 (function (DeleteEventBusRequest) {
     DeleteEventBusRequest.filterSensitiveLog = (obj) => ({
@@ -5282,6 +5659,18 @@ var DescribeConnectionResponse;
         ...obj,
     });
 })(DescribeConnectionResponse = exports.DescribeConnectionResponse || (exports.DescribeConnectionResponse = {}));
+var DescribeEndpointRequest;
+(function (DescribeEndpointRequest) {
+    DescribeEndpointRequest.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(DescribeEndpointRequest = exports.DescribeEndpointRequest || (exports.DescribeEndpointRequest = {}));
+var DescribeEndpointResponse;
+(function (DescribeEndpointResponse) {
+    DescribeEndpointResponse.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(DescribeEndpointResponse = exports.DescribeEndpointResponse || (exports.DescribeEndpointResponse = {}));
 var DescribeEventBusRequest;
 (function (DescribeEventBusRequest) {
     DescribeEventBusRequest.filterSensitiveLog = (obj) => ({
@@ -5413,6 +5802,24 @@ var ListConnectionsResponse;
         ...obj,
     });
 })(ListConnectionsResponse = exports.ListConnectionsResponse || (exports.ListConnectionsResponse = {}));
+var ListEndpointsRequest;
+(function (ListEndpointsRequest) {
+    ListEndpointsRequest.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(ListEndpointsRequest = exports.ListEndpointsRequest || (exports.ListEndpointsRequest = {}));
+var Endpoint;
+(function (Endpoint) {
+    Endpoint.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(Endpoint = exports.Endpoint || (exports.Endpoint = {}));
+var ListEndpointsResponse;
+(function (ListEndpointsResponse) {
+    ListEndpointsResponse.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(ListEndpointsResponse = exports.ListEndpointsResponse || (exports.ListEndpointsResponse = {}));
 var ListEventBusesRequest;
 (function (ListEventBusesRequest) {
     ListEventBusesRequest.filterSensitiveLog = (obj) => ({
@@ -5945,6 +6352,18 @@ var UpdateConnectionResponse;
         ...obj,
     });
 })(UpdateConnectionResponse = exports.UpdateConnectionResponse || (exports.UpdateConnectionResponse = {}));
+var UpdateEndpointRequest;
+(function (UpdateEndpointRequest) {
+    UpdateEndpointRequest.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(UpdateEndpointRequest = exports.UpdateEndpointRequest || (exports.UpdateEndpointRequest = {}));
+var UpdateEndpointResponse;
+(function (UpdateEndpointResponse) {
+    UpdateEndpointResponse.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(UpdateEndpointResponse = exports.UpdateEndpointResponse || (exports.UpdateEndpointResponse = {}));
 
 
 /***/ }),
@@ -5955,9 +6374,9 @@ var UpdateConnectionResponse;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.serializeAws_json1_1UpdateArchiveCommand = exports.serializeAws_json1_1UpdateApiDestinationCommand = exports.serializeAws_json1_1UntagResourceCommand = exports.serializeAws_json1_1TestEventPatternCommand = exports.serializeAws_json1_1TagResourceCommand = exports.serializeAws_json1_1StartReplayCommand = exports.serializeAws_json1_1RemoveTargetsCommand = exports.serializeAws_json1_1RemovePermissionCommand = exports.serializeAws_json1_1PutTargetsCommand = exports.serializeAws_json1_1PutRuleCommand = exports.serializeAws_json1_1PutPermissionCommand = exports.serializeAws_json1_1PutPartnerEventsCommand = exports.serializeAws_json1_1PutEventsCommand = exports.serializeAws_json1_1ListTargetsByRuleCommand = exports.serializeAws_json1_1ListTagsForResourceCommand = exports.serializeAws_json1_1ListRulesCommand = exports.serializeAws_json1_1ListRuleNamesByTargetCommand = exports.serializeAws_json1_1ListReplaysCommand = exports.serializeAws_json1_1ListPartnerEventSourcesCommand = exports.serializeAws_json1_1ListPartnerEventSourceAccountsCommand = exports.serializeAws_json1_1ListEventSourcesCommand = exports.serializeAws_json1_1ListEventBusesCommand = exports.serializeAws_json1_1ListConnectionsCommand = exports.serializeAws_json1_1ListArchivesCommand = exports.serializeAws_json1_1ListApiDestinationsCommand = exports.serializeAws_json1_1EnableRuleCommand = exports.serializeAws_json1_1DisableRuleCommand = exports.serializeAws_json1_1DescribeRuleCommand = exports.serializeAws_json1_1DescribeReplayCommand = exports.serializeAws_json1_1DescribePartnerEventSourceCommand = exports.serializeAws_json1_1DescribeEventSourceCommand = exports.serializeAws_json1_1DescribeEventBusCommand = exports.serializeAws_json1_1DescribeConnectionCommand = exports.serializeAws_json1_1DescribeArchiveCommand = exports.serializeAws_json1_1DescribeApiDestinationCommand = exports.serializeAws_json1_1DeleteRuleCommand = exports.serializeAws_json1_1DeletePartnerEventSourceCommand = exports.serializeAws_json1_1DeleteEventBusCommand = exports.serializeAws_json1_1DeleteConnectionCommand = exports.serializeAws_json1_1DeleteArchiveCommand = exports.serializeAws_json1_1DeleteApiDestinationCommand = exports.serializeAws_json1_1DeauthorizeConnectionCommand = exports.serializeAws_json1_1DeactivateEventSourceCommand = exports.serializeAws_json1_1CreatePartnerEventSourceCommand = exports.serializeAws_json1_1CreateEventBusCommand = exports.serializeAws_json1_1CreateConnectionCommand = exports.serializeAws_json1_1CreateArchiveCommand = exports.serializeAws_json1_1CreateApiDestinationCommand = exports.serializeAws_json1_1CancelReplayCommand = exports.serializeAws_json1_1ActivateEventSourceCommand = void 0;
-exports.deserializeAws_json1_1UpdateApiDestinationCommand = exports.deserializeAws_json1_1UntagResourceCommand = exports.deserializeAws_json1_1TestEventPatternCommand = exports.deserializeAws_json1_1TagResourceCommand = exports.deserializeAws_json1_1StartReplayCommand = exports.deserializeAws_json1_1RemoveTargetsCommand = exports.deserializeAws_json1_1RemovePermissionCommand = exports.deserializeAws_json1_1PutTargetsCommand = exports.deserializeAws_json1_1PutRuleCommand = exports.deserializeAws_json1_1PutPermissionCommand = exports.deserializeAws_json1_1PutPartnerEventsCommand = exports.deserializeAws_json1_1PutEventsCommand = exports.deserializeAws_json1_1ListTargetsByRuleCommand = exports.deserializeAws_json1_1ListTagsForResourceCommand = exports.deserializeAws_json1_1ListRulesCommand = exports.deserializeAws_json1_1ListRuleNamesByTargetCommand = exports.deserializeAws_json1_1ListReplaysCommand = exports.deserializeAws_json1_1ListPartnerEventSourcesCommand = exports.deserializeAws_json1_1ListPartnerEventSourceAccountsCommand = exports.deserializeAws_json1_1ListEventSourcesCommand = exports.deserializeAws_json1_1ListEventBusesCommand = exports.deserializeAws_json1_1ListConnectionsCommand = exports.deserializeAws_json1_1ListArchivesCommand = exports.deserializeAws_json1_1ListApiDestinationsCommand = exports.deserializeAws_json1_1EnableRuleCommand = exports.deserializeAws_json1_1DisableRuleCommand = exports.deserializeAws_json1_1DescribeRuleCommand = exports.deserializeAws_json1_1DescribeReplayCommand = exports.deserializeAws_json1_1DescribePartnerEventSourceCommand = exports.deserializeAws_json1_1DescribeEventSourceCommand = exports.deserializeAws_json1_1DescribeEventBusCommand = exports.deserializeAws_json1_1DescribeConnectionCommand = exports.deserializeAws_json1_1DescribeArchiveCommand = exports.deserializeAws_json1_1DescribeApiDestinationCommand = exports.deserializeAws_json1_1DeleteRuleCommand = exports.deserializeAws_json1_1DeletePartnerEventSourceCommand = exports.deserializeAws_json1_1DeleteEventBusCommand = exports.deserializeAws_json1_1DeleteConnectionCommand = exports.deserializeAws_json1_1DeleteArchiveCommand = exports.deserializeAws_json1_1DeleteApiDestinationCommand = exports.deserializeAws_json1_1DeauthorizeConnectionCommand = exports.deserializeAws_json1_1DeactivateEventSourceCommand = exports.deserializeAws_json1_1CreatePartnerEventSourceCommand = exports.deserializeAws_json1_1CreateEventBusCommand = exports.deserializeAws_json1_1CreateConnectionCommand = exports.deserializeAws_json1_1CreateArchiveCommand = exports.deserializeAws_json1_1CreateApiDestinationCommand = exports.deserializeAws_json1_1CancelReplayCommand = exports.deserializeAws_json1_1ActivateEventSourceCommand = exports.serializeAws_json1_1UpdateConnectionCommand = void 0;
-exports.deserializeAws_json1_1UpdateConnectionCommand = exports.deserializeAws_json1_1UpdateArchiveCommand = void 0;
+exports.serializeAws_json1_1TagResourceCommand = exports.serializeAws_json1_1StartReplayCommand = exports.serializeAws_json1_1RemoveTargetsCommand = exports.serializeAws_json1_1RemovePermissionCommand = exports.serializeAws_json1_1PutTargetsCommand = exports.serializeAws_json1_1PutRuleCommand = exports.serializeAws_json1_1PutPermissionCommand = exports.serializeAws_json1_1PutPartnerEventsCommand = exports.serializeAws_json1_1PutEventsCommand = exports.serializeAws_json1_1ListTargetsByRuleCommand = exports.serializeAws_json1_1ListTagsForResourceCommand = exports.serializeAws_json1_1ListRulesCommand = exports.serializeAws_json1_1ListRuleNamesByTargetCommand = exports.serializeAws_json1_1ListReplaysCommand = exports.serializeAws_json1_1ListPartnerEventSourcesCommand = exports.serializeAws_json1_1ListPartnerEventSourceAccountsCommand = exports.serializeAws_json1_1ListEventSourcesCommand = exports.serializeAws_json1_1ListEventBusesCommand = exports.serializeAws_json1_1ListEndpointsCommand = exports.serializeAws_json1_1ListConnectionsCommand = exports.serializeAws_json1_1ListArchivesCommand = exports.serializeAws_json1_1ListApiDestinationsCommand = exports.serializeAws_json1_1EnableRuleCommand = exports.serializeAws_json1_1DisableRuleCommand = exports.serializeAws_json1_1DescribeRuleCommand = exports.serializeAws_json1_1DescribeReplayCommand = exports.serializeAws_json1_1DescribePartnerEventSourceCommand = exports.serializeAws_json1_1DescribeEventSourceCommand = exports.serializeAws_json1_1DescribeEventBusCommand = exports.serializeAws_json1_1DescribeEndpointCommand = exports.serializeAws_json1_1DescribeConnectionCommand = exports.serializeAws_json1_1DescribeArchiveCommand = exports.serializeAws_json1_1DescribeApiDestinationCommand = exports.serializeAws_json1_1DeleteRuleCommand = exports.serializeAws_json1_1DeletePartnerEventSourceCommand = exports.serializeAws_json1_1DeleteEventBusCommand = exports.serializeAws_json1_1DeleteEndpointCommand = exports.serializeAws_json1_1DeleteConnectionCommand = exports.serializeAws_json1_1DeleteArchiveCommand = exports.serializeAws_json1_1DeleteApiDestinationCommand = exports.serializeAws_json1_1DeauthorizeConnectionCommand = exports.serializeAws_json1_1DeactivateEventSourceCommand = exports.serializeAws_json1_1CreatePartnerEventSourceCommand = exports.serializeAws_json1_1CreateEventBusCommand = exports.serializeAws_json1_1CreateEndpointCommand = exports.serializeAws_json1_1CreateConnectionCommand = exports.serializeAws_json1_1CreateArchiveCommand = exports.serializeAws_json1_1CreateApiDestinationCommand = exports.serializeAws_json1_1CancelReplayCommand = exports.serializeAws_json1_1ActivateEventSourceCommand = void 0;
+exports.deserializeAws_json1_1PutPermissionCommand = exports.deserializeAws_json1_1PutPartnerEventsCommand = exports.deserializeAws_json1_1PutEventsCommand = exports.deserializeAws_json1_1ListTargetsByRuleCommand = exports.deserializeAws_json1_1ListTagsForResourceCommand = exports.deserializeAws_json1_1ListRulesCommand = exports.deserializeAws_json1_1ListRuleNamesByTargetCommand = exports.deserializeAws_json1_1ListReplaysCommand = exports.deserializeAws_json1_1ListPartnerEventSourcesCommand = exports.deserializeAws_json1_1ListPartnerEventSourceAccountsCommand = exports.deserializeAws_json1_1ListEventSourcesCommand = exports.deserializeAws_json1_1ListEventBusesCommand = exports.deserializeAws_json1_1ListEndpointsCommand = exports.deserializeAws_json1_1ListConnectionsCommand = exports.deserializeAws_json1_1ListArchivesCommand = exports.deserializeAws_json1_1ListApiDestinationsCommand = exports.deserializeAws_json1_1EnableRuleCommand = exports.deserializeAws_json1_1DisableRuleCommand = exports.deserializeAws_json1_1DescribeRuleCommand = exports.deserializeAws_json1_1DescribeReplayCommand = exports.deserializeAws_json1_1DescribePartnerEventSourceCommand = exports.deserializeAws_json1_1DescribeEventSourceCommand = exports.deserializeAws_json1_1DescribeEventBusCommand = exports.deserializeAws_json1_1DescribeEndpointCommand = exports.deserializeAws_json1_1DescribeConnectionCommand = exports.deserializeAws_json1_1DescribeArchiveCommand = exports.deserializeAws_json1_1DescribeApiDestinationCommand = exports.deserializeAws_json1_1DeleteRuleCommand = exports.deserializeAws_json1_1DeletePartnerEventSourceCommand = exports.deserializeAws_json1_1DeleteEventBusCommand = exports.deserializeAws_json1_1DeleteEndpointCommand = exports.deserializeAws_json1_1DeleteConnectionCommand = exports.deserializeAws_json1_1DeleteArchiveCommand = exports.deserializeAws_json1_1DeleteApiDestinationCommand = exports.deserializeAws_json1_1DeauthorizeConnectionCommand = exports.deserializeAws_json1_1DeactivateEventSourceCommand = exports.deserializeAws_json1_1CreatePartnerEventSourceCommand = exports.deserializeAws_json1_1CreateEventBusCommand = exports.deserializeAws_json1_1CreateEndpointCommand = exports.deserializeAws_json1_1CreateConnectionCommand = exports.deserializeAws_json1_1CreateArchiveCommand = exports.deserializeAws_json1_1CreateApiDestinationCommand = exports.deserializeAws_json1_1CancelReplayCommand = exports.deserializeAws_json1_1ActivateEventSourceCommand = exports.serializeAws_json1_1UpdateEndpointCommand = exports.serializeAws_json1_1UpdateConnectionCommand = exports.serializeAws_json1_1UpdateArchiveCommand = exports.serializeAws_json1_1UpdateApiDestinationCommand = exports.serializeAws_json1_1UntagResourceCommand = exports.serializeAws_json1_1TestEventPatternCommand = void 0;
+exports.deserializeAws_json1_1UpdateEndpointCommand = exports.deserializeAws_json1_1UpdateConnectionCommand = exports.deserializeAws_json1_1UpdateArchiveCommand = exports.deserializeAws_json1_1UpdateApiDestinationCommand = exports.deserializeAws_json1_1UntagResourceCommand = exports.deserializeAws_json1_1TestEventPatternCommand = exports.deserializeAws_json1_1TagResourceCommand = exports.deserializeAws_json1_1StartReplayCommand = exports.deserializeAws_json1_1RemoveTargetsCommand = exports.deserializeAws_json1_1RemovePermissionCommand = exports.deserializeAws_json1_1PutTargetsCommand = exports.deserializeAws_json1_1PutRuleCommand = void 0;
 const protocol_http_1 = __nccwpck_require__(223);
 const smithy_client_1 = __nccwpck_require__(4963);
 const EventBridgeServiceException_1 = __nccwpck_require__(5180);
@@ -6012,6 +6431,16 @@ const serializeAws_json1_1CreateConnectionCommand = async (input, context) => {
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.serializeAws_json1_1CreateConnectionCommand = serializeAws_json1_1CreateConnectionCommand;
+const serializeAws_json1_1CreateEndpointCommand = async (input, context) => {
+    const headers = {
+        "content-type": "application/x-amz-json-1.1",
+        "x-amz-target": "AWSEvents.CreateEndpoint",
+    };
+    let body;
+    body = JSON.stringify(serializeAws_json1_1CreateEndpointRequest(input, context));
+    return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+exports.serializeAws_json1_1CreateEndpointCommand = serializeAws_json1_1CreateEndpointCommand;
 const serializeAws_json1_1CreateEventBusCommand = async (input, context) => {
     const headers = {
         "content-type": "application/x-amz-json-1.1",
@@ -6082,6 +6511,16 @@ const serializeAws_json1_1DeleteConnectionCommand = async (input, context) => {
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.serializeAws_json1_1DeleteConnectionCommand = serializeAws_json1_1DeleteConnectionCommand;
+const serializeAws_json1_1DeleteEndpointCommand = async (input, context) => {
+    const headers = {
+        "content-type": "application/x-amz-json-1.1",
+        "x-amz-target": "AWSEvents.DeleteEndpoint",
+    };
+    let body;
+    body = JSON.stringify(serializeAws_json1_1DeleteEndpointRequest(input, context));
+    return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+exports.serializeAws_json1_1DeleteEndpointCommand = serializeAws_json1_1DeleteEndpointCommand;
 const serializeAws_json1_1DeleteEventBusCommand = async (input, context) => {
     const headers = {
         "content-type": "application/x-amz-json-1.1",
@@ -6142,6 +6581,16 @@ const serializeAws_json1_1DescribeConnectionCommand = async (input, context) => 
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.serializeAws_json1_1DescribeConnectionCommand = serializeAws_json1_1DescribeConnectionCommand;
+const serializeAws_json1_1DescribeEndpointCommand = async (input, context) => {
+    const headers = {
+        "content-type": "application/x-amz-json-1.1",
+        "x-amz-target": "AWSEvents.DescribeEndpoint",
+    };
+    let body;
+    body = JSON.stringify(serializeAws_json1_1DescribeEndpointRequest(input, context));
+    return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+exports.serializeAws_json1_1DescribeEndpointCommand = serializeAws_json1_1DescribeEndpointCommand;
 const serializeAws_json1_1DescribeEventBusCommand = async (input, context) => {
     const headers = {
         "content-type": "application/x-amz-json-1.1",
@@ -6242,6 +6691,16 @@ const serializeAws_json1_1ListConnectionsCommand = async (input, context) => {
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.serializeAws_json1_1ListConnectionsCommand = serializeAws_json1_1ListConnectionsCommand;
+const serializeAws_json1_1ListEndpointsCommand = async (input, context) => {
+    const headers = {
+        "content-type": "application/x-amz-json-1.1",
+        "x-amz-target": "AWSEvents.ListEndpoints",
+    };
+    let body;
+    body = JSON.stringify(serializeAws_json1_1ListEndpointsRequest(input, context));
+    return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+exports.serializeAws_json1_1ListEndpointsCommand = serializeAws_json1_1ListEndpointsCommand;
 const serializeAws_json1_1ListEventBusesCommand = async (input, context) => {
     const headers = {
         "content-type": "application/x-amz-json-1.1",
@@ -6472,6 +6931,16 @@ const serializeAws_json1_1UpdateConnectionCommand = async (input, context) => {
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.serializeAws_json1_1UpdateConnectionCommand = serializeAws_json1_1UpdateConnectionCommand;
+const serializeAws_json1_1UpdateEndpointCommand = async (input, context) => {
+    const headers = {
+        "content-type": "application/x-amz-json-1.1",
+        "x-amz-target": "AWSEvents.UpdateEndpoint",
+    };
+    let body;
+    body = JSON.stringify(serializeAws_json1_1UpdateEndpointRequest(input, context));
+    return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+exports.serializeAws_json1_1UpdateEndpointCommand = serializeAws_json1_1UpdateEndpointCommand;
 const deserializeAws_json1_1ActivateEventSourceCommand = async (output, context) => {
     if (output.statusCode >= 300) {
         return deserializeAws_json1_1ActivateEventSourceCommandError(output, context);
@@ -6673,6 +7142,48 @@ const deserializeAws_json1_1CreateConnectionCommand = async (output, context) =>
 };
 exports.deserializeAws_json1_1CreateConnectionCommand = deserializeAws_json1_1CreateConnectionCommand;
 const deserializeAws_json1_1CreateConnectionCommandError = async (output, context) => {
+    const parsedOutput = {
+        ...output,
+        body: await parseBody(output.body, context),
+    };
+    let response;
+    let errorCode = "UnknownError";
+    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    switch (errorCode) {
+        case "InternalException":
+        case "com.amazonaws.eventbridge#InternalException":
+            throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
+        case "LimitExceededException":
+        case "com.amazonaws.eventbridge#LimitExceededException":
+            throw await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context);
+        case "ResourceAlreadyExistsException":
+        case "com.amazonaws.eventbridge#ResourceAlreadyExistsException":
+            throw await deserializeAws_json1_1ResourceAlreadyExistsExceptionResponse(parsedOutput, context);
+        default:
+            const parsedBody = parsedOutput.body;
+            response = new EventBridgeServiceException_1.EventBridgeServiceException({
+                name: parsedBody.code || parsedBody.Code || errorCode,
+                $fault: "client",
+                $metadata: deserializeMetadata(output),
+            });
+            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
+    }
+};
+const deserializeAws_json1_1CreateEndpointCommand = async (output, context) => {
+    if (output.statusCode >= 300) {
+        return deserializeAws_json1_1CreateEndpointCommandError(output, context);
+    }
+    const data = await parseBody(output.body, context);
+    let contents = {};
+    contents = deserializeAws_json1_1CreateEndpointResponse(data, context);
+    const response = {
+        $metadata: deserializeMetadata(output),
+        ...contents,
+    };
+    return Promise.resolve(response);
+};
+exports.deserializeAws_json1_1CreateEndpointCommand = deserializeAws_json1_1CreateEndpointCommand;
+const deserializeAws_json1_1CreateEndpointCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseBody(output.body, context),
@@ -7015,6 +7526,48 @@ const deserializeAws_json1_1DeleteConnectionCommandError = async (output, contex
             throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
+const deserializeAws_json1_1DeleteEndpointCommand = async (output, context) => {
+    if (output.statusCode >= 300) {
+        return deserializeAws_json1_1DeleteEndpointCommandError(output, context);
+    }
+    const data = await parseBody(output.body, context);
+    let contents = {};
+    contents = deserializeAws_json1_1DeleteEndpointResponse(data, context);
+    const response = {
+        $metadata: deserializeMetadata(output),
+        ...contents,
+    };
+    return Promise.resolve(response);
+};
+exports.deserializeAws_json1_1DeleteEndpointCommand = deserializeAws_json1_1DeleteEndpointCommand;
+const deserializeAws_json1_1DeleteEndpointCommandError = async (output, context) => {
+    const parsedOutput = {
+        ...output,
+        body: await parseBody(output.body, context),
+    };
+    let response;
+    let errorCode = "UnknownError";
+    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    switch (errorCode) {
+        case "ConcurrentModificationException":
+        case "com.amazonaws.eventbridge#ConcurrentModificationException":
+            throw await deserializeAws_json1_1ConcurrentModificationExceptionResponse(parsedOutput, context);
+        case "InternalException":
+        case "com.amazonaws.eventbridge#InternalException":
+            throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
+        case "ResourceNotFoundException":
+        case "com.amazonaws.eventbridge#ResourceNotFoundException":
+            throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
+        default:
+            const parsedBody = parsedOutput.body;
+            response = new EventBridgeServiceException_1.EventBridgeServiceException({
+                name: parsedBody.code || parsedBody.Code || errorCode,
+                $fault: "client",
+                $metadata: deserializeMetadata(output),
+            });
+            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
+    }
+};
 const deserializeAws_json1_1DeleteEventBusCommand = async (output, context) => {
     if (output.statusCode >= 300) {
         return deserializeAws_json1_1DeleteEventBusCommandError(output, context);
@@ -7228,6 +7781,45 @@ const deserializeAws_json1_1DescribeConnectionCommand = async (output, context) 
 };
 exports.deserializeAws_json1_1DescribeConnectionCommand = deserializeAws_json1_1DescribeConnectionCommand;
 const deserializeAws_json1_1DescribeConnectionCommandError = async (output, context) => {
+    const parsedOutput = {
+        ...output,
+        body: await parseBody(output.body, context),
+    };
+    let response;
+    let errorCode = "UnknownError";
+    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    switch (errorCode) {
+        case "InternalException":
+        case "com.amazonaws.eventbridge#InternalException":
+            throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
+        case "ResourceNotFoundException":
+        case "com.amazonaws.eventbridge#ResourceNotFoundException":
+            throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
+        default:
+            const parsedBody = parsedOutput.body;
+            response = new EventBridgeServiceException_1.EventBridgeServiceException({
+                name: parsedBody.code || parsedBody.Code || errorCode,
+                $fault: "client",
+                $metadata: deserializeMetadata(output),
+            });
+            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
+    }
+};
+const deserializeAws_json1_1DescribeEndpointCommand = async (output, context) => {
+    if (output.statusCode >= 300) {
+        return deserializeAws_json1_1DescribeEndpointCommandError(output, context);
+    }
+    const data = await parseBody(output.body, context);
+    let contents = {};
+    contents = deserializeAws_json1_1DescribeEndpointResponse(data, context);
+    const response = {
+        $metadata: deserializeMetadata(output),
+        ...contents,
+    };
+    return Promise.resolve(response);
+};
+exports.deserializeAws_json1_1DescribeEndpointCommand = deserializeAws_json1_1DescribeEndpointCommand;
+const deserializeAws_json1_1DescribeEndpointCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseBody(output.body, context),
@@ -7627,6 +8219,42 @@ const deserializeAws_json1_1ListConnectionsCommand = async (output, context) => 
 };
 exports.deserializeAws_json1_1ListConnectionsCommand = deserializeAws_json1_1ListConnectionsCommand;
 const deserializeAws_json1_1ListConnectionsCommandError = async (output, context) => {
+    const parsedOutput = {
+        ...output,
+        body: await parseBody(output.body, context),
+    };
+    let response;
+    let errorCode = "UnknownError";
+    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    switch (errorCode) {
+        case "InternalException":
+        case "com.amazonaws.eventbridge#InternalException":
+            throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
+        default:
+            const parsedBody = parsedOutput.body;
+            response = new EventBridgeServiceException_1.EventBridgeServiceException({
+                name: parsedBody.code || parsedBody.Code || errorCode,
+                $fault: "client",
+                $metadata: deserializeMetadata(output),
+            });
+            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
+    }
+};
+const deserializeAws_json1_1ListEndpointsCommand = async (output, context) => {
+    if (output.statusCode >= 300) {
+        return deserializeAws_json1_1ListEndpointsCommandError(output, context);
+    }
+    const data = await parseBody(output.body, context);
+    let contents = {};
+    contents = deserializeAws_json1_1ListEndpointsResponse(data, context);
+    const response = {
+        $metadata: deserializeMetadata(output),
+        ...contents,
+    };
+    return Promise.resolve(response);
+};
+exports.deserializeAws_json1_1ListEndpointsCommand = deserializeAws_json1_1ListEndpointsCommand;
+const deserializeAws_json1_1ListEndpointsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseBody(output.body, context),
@@ -8617,6 +9245,48 @@ const deserializeAws_json1_1UpdateConnectionCommandError = async (output, contex
             throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
+const deserializeAws_json1_1UpdateEndpointCommand = async (output, context) => {
+    if (output.statusCode >= 300) {
+        return deserializeAws_json1_1UpdateEndpointCommandError(output, context);
+    }
+    const data = await parseBody(output.body, context);
+    let contents = {};
+    contents = deserializeAws_json1_1UpdateEndpointResponse(data, context);
+    const response = {
+        $metadata: deserializeMetadata(output),
+        ...contents,
+    };
+    return Promise.resolve(response);
+};
+exports.deserializeAws_json1_1UpdateEndpointCommand = deserializeAws_json1_1UpdateEndpointCommand;
+const deserializeAws_json1_1UpdateEndpointCommandError = async (output, context) => {
+    const parsedOutput = {
+        ...output,
+        body: await parseBody(output.body, context),
+    };
+    let response;
+    let errorCode = "UnknownError";
+    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    switch (errorCode) {
+        case "ConcurrentModificationException":
+        case "com.amazonaws.eventbridge#ConcurrentModificationException":
+            throw await deserializeAws_json1_1ConcurrentModificationExceptionResponse(parsedOutput, context);
+        case "InternalException":
+        case "com.amazonaws.eventbridge#InternalException":
+            throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
+        case "ResourceNotFoundException":
+        case "com.amazonaws.eventbridge#ResourceNotFoundException":
+            throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
+        default:
+            const parsedBody = parsedOutput.body;
+            response = new EventBridgeServiceException_1.EventBridgeServiceException({
+                name: parsedBody.code || parsedBody.Code || errorCode,
+                $fault: "client",
+                $metadata: deserializeMetadata(output),
+            });
+            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
+    }
+};
 const deserializeAws_json1_1ConcurrentModificationExceptionResponse = async (parsedOutput, context) => {
     const body = parsedOutput.body;
     const deserialized = deserializeAws_json1_1ConcurrentModificationException(body, context);
@@ -8943,6 +9613,23 @@ const serializeAws_json1_1CreateConnectionRequest = (input, context) => {
         ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
     };
 };
+const serializeAws_json1_1CreateEndpointRequest = (input, context) => {
+    return {
+        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
+        ...(input.EventBuses !== undefined &&
+            input.EventBuses !== null && { EventBuses: serializeAws_json1_1EndpointEventBusList(input.EventBuses, context) }),
+        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.ReplicationConfig !== undefined &&
+            input.ReplicationConfig !== null && {
+            ReplicationConfig: serializeAws_json1_1ReplicationConfig(input.ReplicationConfig, context),
+        }),
+        ...(input.RoleArn !== undefined && input.RoleArn !== null && { RoleArn: input.RoleArn }),
+        ...(input.RoutingConfig !== undefined &&
+            input.RoutingConfig !== null && {
+            RoutingConfig: serializeAws_json1_1RoutingConfig(input.RoutingConfig, context),
+        }),
+    };
+};
 const serializeAws_json1_1CreateEventBusRequest = (input, context) => {
     return {
         ...(input.EventSourceName !== undefined &&
@@ -8987,6 +9674,11 @@ const serializeAws_json1_1DeleteConnectionRequest = (input, context) => {
         ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
     };
 };
+const serializeAws_json1_1DeleteEndpointRequest = (input, context) => {
+    return {
+        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+    };
+};
 const serializeAws_json1_1DeleteEventBusRequest = (input, context) => {
     return {
         ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
@@ -9017,6 +9709,12 @@ const serializeAws_json1_1DescribeArchiveRequest = (input, context) => {
 };
 const serializeAws_json1_1DescribeConnectionRequest = (input, context) => {
     return {
+        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+    };
+};
+const serializeAws_json1_1DescribeEndpointRequest = (input, context) => {
+    return {
+        ...(input.HomeRegion !== undefined && input.HomeRegion !== null && { HomeRegion: input.HomeRegion }),
         ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
     };
 };
@@ -9092,6 +9790,21 @@ const serializeAws_json1_1EnableRuleRequest = (input, context) => {
         ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
     };
 };
+const serializeAws_json1_1EndpointEventBus = (input, context) => {
+    return {
+        ...(input.EventBusArn !== undefined && input.EventBusArn !== null && { EventBusArn: input.EventBusArn }),
+    };
+};
+const serializeAws_json1_1EndpointEventBusList = (input, context) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return serializeAws_json1_1EndpointEventBus(entry, context);
+    });
+};
 const serializeAws_json1_1EventResourceList = (input, context) => {
     return input
         .filter((e) => e != null)
@@ -9101,6 +9814,14 @@ const serializeAws_json1_1EventResourceList = (input, context) => {
         }
         return entry;
     });
+};
+const serializeAws_json1_1FailoverConfig = (input, context) => {
+    return {
+        ...(input.Primary !== undefined &&
+            input.Primary !== null && { Primary: serializeAws_json1_1Primary(input.Primary, context) }),
+        ...(input.Secondary !== undefined &&
+            input.Secondary !== null && { Secondary: serializeAws_json1_1Secondary(input.Secondary, context) }),
+    };
 };
 const serializeAws_json1_1HeaderParametersMap = (input, context) => {
     return Object.entries(input).reduce((acc, [key, value]) => {
@@ -9167,6 +9888,14 @@ const serializeAws_json1_1ListConnectionsRequest = (input, context) => {
         ...(input.ConnectionState !== undefined &&
             input.ConnectionState !== null && { ConnectionState: input.ConnectionState }),
         ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
+        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
+    };
+};
+const serializeAws_json1_1ListEndpointsRequest = (input, context) => {
+    return {
+        ...(input.HomeRegion !== undefined && input.HomeRegion !== null && { HomeRegion: input.HomeRegion }),
+        ...(input.MaxResults !== undefined && input.MaxResults !== null && { MaxResults: input.MaxResults }),
         ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
         ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
     };
@@ -9289,8 +10018,14 @@ const serializeAws_json1_1PlacementStrategy = (input, context) => {
         ...(input.type !== undefined && input.type !== null && { type: input.type }),
     };
 };
+const serializeAws_json1_1Primary = (input, context) => {
+    return {
+        ...(input.HealthCheck !== undefined && input.HealthCheck !== null && { HealthCheck: input.HealthCheck }),
+    };
+};
 const serializeAws_json1_1PutEventsRequest = (input, context) => {
     return {
+        ...(input.EndpointId !== undefined && input.EndpointId !== null && { EndpointId: input.EndpointId }),
         ...(input.Entries !== undefined &&
             input.Entries !== null && { Entries: serializeAws_json1_1PutEventsRequestEntryList(input.Entries, context) }),
     };
@@ -9434,12 +10169,25 @@ const serializeAws_json1_1ReplayDestinationFilters = (input, context) => {
         return entry;
     });
 };
+const serializeAws_json1_1ReplicationConfig = (input, context) => {
+    return {
+        ...(input.State !== undefined && input.State !== null && { State: input.State }),
+    };
+};
 const serializeAws_json1_1RetryPolicy = (input, context) => {
     return {
         ...(input.MaximumEventAgeInSeconds !== undefined &&
             input.MaximumEventAgeInSeconds !== null && { MaximumEventAgeInSeconds: input.MaximumEventAgeInSeconds }),
         ...(input.MaximumRetryAttempts !== undefined &&
             input.MaximumRetryAttempts !== null && { MaximumRetryAttempts: input.MaximumRetryAttempts }),
+    };
+};
+const serializeAws_json1_1RoutingConfig = (input, context) => {
+    return {
+        ...(input.FailoverConfig !== undefined &&
+            input.FailoverConfig !== null && {
+            FailoverConfig: serializeAws_json1_1FailoverConfig(input.FailoverConfig, context),
+        }),
     };
 };
 const serializeAws_json1_1RunCommandParameters = (input, context) => {
@@ -9499,6 +10247,11 @@ const serializeAws_json1_1SageMakerPipelineParameters = (input, context) => {
             input.PipelineParameterList !== null && {
             PipelineParameterList: serializeAws_json1_1SageMakerPipelineParameterList(input.PipelineParameterList, context),
         }),
+    };
+};
+const serializeAws_json1_1Secondary = (input, context) => {
+    return {
+        ...(input.Route !== undefined && input.Route !== null && { Route: input.Route }),
     };
 };
 const serializeAws_json1_1SqsParameters = (input, context) => {
@@ -9743,6 +10496,23 @@ const serializeAws_json1_1UpdateConnectionRequest = (input, context) => {
             input.AuthorizationType !== null && { AuthorizationType: input.AuthorizationType }),
         ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
         ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+    };
+};
+const serializeAws_json1_1UpdateEndpointRequest = (input, context) => {
+    return {
+        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
+        ...(input.EventBuses !== undefined &&
+            input.EventBuses !== null && { EventBuses: serializeAws_json1_1EndpointEventBusList(input.EventBuses, context) }),
+        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.ReplicationConfig !== undefined &&
+            input.ReplicationConfig !== null && {
+            ReplicationConfig: serializeAws_json1_1ReplicationConfig(input.ReplicationConfig, context),
+        }),
+        ...(input.RoleArn !== undefined && input.RoleArn !== null && { RoleArn: input.RoleArn }),
+        ...(input.RoutingConfig !== undefined &&
+            input.RoutingConfig !== null && {
+            RoutingConfig: serializeAws_json1_1RoutingConfig(input.RoutingConfig, context),
+        }),
     };
 };
 const deserializeAws_json1_1ApiDestination = (output, context) => {
@@ -10034,6 +10804,23 @@ const deserializeAws_json1_1CreateConnectionResponse = (output, context) => {
             : undefined,
     };
 };
+const deserializeAws_json1_1CreateEndpointResponse = (output, context) => {
+    return {
+        Arn: (0, smithy_client_1.expectString)(output.Arn),
+        EventBuses: output.EventBuses !== undefined && output.EventBuses !== null
+            ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context)
+            : undefined,
+        Name: (0, smithy_client_1.expectString)(output.Name),
+        ReplicationConfig: output.ReplicationConfig !== undefined && output.ReplicationConfig !== null
+            ? deserializeAws_json1_1ReplicationConfig(output.ReplicationConfig, context)
+            : undefined,
+        RoleArn: (0, smithy_client_1.expectString)(output.RoleArn),
+        RoutingConfig: output.RoutingConfig !== undefined && output.RoutingConfig !== null
+            ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context)
+            : undefined,
+        State: (0, smithy_client_1.expectString)(output.State),
+    };
+};
 const deserializeAws_json1_1CreateEventBusResponse = (output, context) => {
     return {
         EventBusArn: (0, smithy_client_1.expectString)(output.EventBusArn),
@@ -10084,6 +10871,9 @@ const deserializeAws_json1_1DeleteConnectionResponse = (output, context) => {
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
     };
+};
+const deserializeAws_json1_1DeleteEndpointResponse = (output, context) => {
+    return {};
 };
 const deserializeAws_json1_1DescribeApiDestinationResponse = (output, context) => {
     return {
@@ -10140,6 +10930,33 @@ const deserializeAws_json1_1DescribeConnectionResponse = (output, context) => {
             : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
         SecretArn: (0, smithy_client_1.expectString)(output.SecretArn),
+        StateReason: (0, smithy_client_1.expectString)(output.StateReason),
+    };
+};
+const deserializeAws_json1_1DescribeEndpointResponse = (output, context) => {
+    return {
+        Arn: (0, smithy_client_1.expectString)(output.Arn),
+        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+            ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
+            : undefined,
+        Description: (0, smithy_client_1.expectString)(output.Description),
+        EndpointId: (0, smithy_client_1.expectString)(output.EndpointId),
+        EndpointUrl: (0, smithy_client_1.expectString)(output.EndpointUrl),
+        EventBuses: output.EventBuses !== undefined && output.EventBuses !== null
+            ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context)
+            : undefined,
+        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+            ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
+            : undefined,
+        Name: (0, smithy_client_1.expectString)(output.Name),
+        ReplicationConfig: output.ReplicationConfig !== undefined && output.ReplicationConfig !== null
+            ? deserializeAws_json1_1ReplicationConfig(output.ReplicationConfig, context)
+            : undefined,
+        RoleArn: (0, smithy_client_1.expectString)(output.RoleArn),
+        RoutingConfig: output.RoutingConfig !== undefined && output.RoutingConfig !== null
+            ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context)
+            : undefined,
+        State: (0, smithy_client_1.expectString)(output.State),
         StateReason: (0, smithy_client_1.expectString)(output.StateReason),
     };
 };
@@ -10240,6 +11057,60 @@ const deserializeAws_json1_1EcsParameters = (output, context) => {
         TaskDefinitionArn: (0, smithy_client_1.expectString)(output.TaskDefinitionArn),
     };
 };
+const deserializeAws_json1_1Endpoint = (output, context) => {
+    return {
+        Arn: (0, smithy_client_1.expectString)(output.Arn),
+        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+            ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
+            : undefined,
+        Description: (0, smithy_client_1.expectString)(output.Description),
+        EndpointId: (0, smithy_client_1.expectString)(output.EndpointId),
+        EndpointUrl: (0, smithy_client_1.expectString)(output.EndpointUrl),
+        EventBuses: output.EventBuses !== undefined && output.EventBuses !== null
+            ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context)
+            : undefined,
+        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+            ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
+            : undefined,
+        Name: (0, smithy_client_1.expectString)(output.Name),
+        ReplicationConfig: output.ReplicationConfig !== undefined && output.ReplicationConfig !== null
+            ? deserializeAws_json1_1ReplicationConfig(output.ReplicationConfig, context)
+            : undefined,
+        RoleArn: (0, smithy_client_1.expectString)(output.RoleArn),
+        RoutingConfig: output.RoutingConfig !== undefined && output.RoutingConfig !== null
+            ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context)
+            : undefined,
+        State: (0, smithy_client_1.expectString)(output.State),
+        StateReason: (0, smithy_client_1.expectString)(output.StateReason),
+    };
+};
+const deserializeAws_json1_1EndpointEventBus = (output, context) => {
+    return {
+        EventBusArn: (0, smithy_client_1.expectString)(output.EventBusArn),
+    };
+};
+const deserializeAws_json1_1EndpointEventBusList = (output, context) => {
+    const retVal = (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_json1_1EndpointEventBus(entry, context);
+    });
+    return retVal;
+};
+const deserializeAws_json1_1EndpointList = (output, context) => {
+    const retVal = (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_json1_1Endpoint(entry, context);
+    });
+    return retVal;
+};
 const deserializeAws_json1_1EventBus = (output, context) => {
     return {
         Arn: (0, smithy_client_1.expectString)(output.Arn),
@@ -10282,6 +11153,16 @@ const deserializeAws_json1_1EventSourceList = (output, context) => {
         return deserializeAws_json1_1EventSource(entry, context);
     });
     return retVal;
+};
+const deserializeAws_json1_1FailoverConfig = (output, context) => {
+    return {
+        Primary: output.Primary !== undefined && output.Primary !== null
+            ? deserializeAws_json1_1Primary(output.Primary, context)
+            : undefined,
+        Secondary: output.Secondary !== undefined && output.Secondary !== null
+            ? deserializeAws_json1_1Secondary(output.Secondary, context)
+            : undefined,
+    };
 };
 const deserializeAws_json1_1HeaderParametersMap = (output, context) => {
     return Object.entries(output).reduce((acc, [key, value]) => {
@@ -10365,6 +11246,14 @@ const deserializeAws_json1_1ListConnectionsResponse = (output, context) => {
     return {
         Connections: output.Connections !== undefined && output.Connections !== null
             ? deserializeAws_json1_1ConnectionResponseList(output.Connections, context)
+            : undefined,
+        NextToken: (0, smithy_client_1.expectString)(output.NextToken),
+    };
+};
+const deserializeAws_json1_1ListEndpointsResponse = (output, context) => {
+    return {
+        Endpoints: output.Endpoints !== undefined && output.Endpoints !== null
+            ? deserializeAws_json1_1EndpointList(output.Endpoints, context)
             : undefined,
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
     };
@@ -10545,6 +11434,11 @@ const deserializeAws_json1_1PlacementStrategy = (output, context) => {
 const deserializeAws_json1_1PolicyLengthExceededException = (output, context) => {
     return {
         message: (0, smithy_client_1.expectString)(output.message),
+    };
+};
+const deserializeAws_json1_1Primary = (output, context) => {
+    return {
+        HealthCheck: (0, smithy_client_1.expectString)(output.HealthCheck),
     };
 };
 const deserializeAws_json1_1PutEventsResponse = (output, context) => {
@@ -10730,6 +11624,11 @@ const deserializeAws_json1_1ReplayList = (output, context) => {
     });
     return retVal;
 };
+const deserializeAws_json1_1ReplicationConfig = (output, context) => {
+    return {
+        State: (0, smithy_client_1.expectString)(output.State),
+    };
+};
 const deserializeAws_json1_1ResourceAlreadyExistsException = (output, context) => {
     return {
         message: (0, smithy_client_1.expectString)(output.message),
@@ -10744,6 +11643,13 @@ const deserializeAws_json1_1RetryPolicy = (output, context) => {
     return {
         MaximumEventAgeInSeconds: (0, smithy_client_1.expectInt32)(output.MaximumEventAgeInSeconds),
         MaximumRetryAttempts: (0, smithy_client_1.expectInt32)(output.MaximumRetryAttempts),
+    };
+};
+const deserializeAws_json1_1RoutingConfig = (output, context) => {
+    return {
+        FailoverConfig: output.FailoverConfig !== undefined && output.FailoverConfig !== null
+            ? deserializeAws_json1_1FailoverConfig(output.FailoverConfig, context)
+            : undefined,
     };
 };
 const deserializeAws_json1_1Rule = (output, context) => {
@@ -10840,6 +11746,11 @@ const deserializeAws_json1_1SageMakerPipelineParameters = (output, context) => {
         PipelineParameterList: output.PipelineParameterList !== undefined && output.PipelineParameterList !== null
             ? deserializeAws_json1_1SageMakerPipelineParameterList(output.PipelineParameterList, context)
             : undefined,
+    };
+};
+const deserializeAws_json1_1Secondary = (output, context) => {
+    return {
+        Route: (0, smithy_client_1.expectString)(output.Route),
     };
 };
 const deserializeAws_json1_1SqsParameters = (output, context) => {
@@ -10997,6 +11908,25 @@ const deserializeAws_json1_1UpdateConnectionResponse = (output, context) => {
             : undefined,
     };
 };
+const deserializeAws_json1_1UpdateEndpointResponse = (output, context) => {
+    return {
+        Arn: (0, smithy_client_1.expectString)(output.Arn),
+        EndpointId: (0, smithy_client_1.expectString)(output.EndpointId),
+        EndpointUrl: (0, smithy_client_1.expectString)(output.EndpointUrl),
+        EventBuses: output.EventBuses !== undefined && output.EventBuses !== null
+            ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context)
+            : undefined,
+        Name: (0, smithy_client_1.expectString)(output.Name),
+        ReplicationConfig: output.ReplicationConfig !== undefined && output.ReplicationConfig !== null
+            ? deserializeAws_json1_1ReplicationConfig(output.ReplicationConfig, context)
+            : undefined,
+        RoleArn: (0, smithy_client_1.expectString)(output.RoleArn),
+        RoutingConfig: output.RoutingConfig !== undefined && output.RoutingConfig !== null
+            ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context)
+            : undefined,
+        State: (0, smithy_client_1.expectString)(output.State),
+    };
+};
 const deserializeMetadata = (output) => {
     var _a;
     return ({
@@ -11077,7 +12007,7 @@ const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(5660));
 const client_sts_1 = __nccwpck_require__(2209);
 const config_resolver_1 = __nccwpck_require__(6153);
 const credential_provider_node_1 = __nccwpck_require__(5531);
-const hash_node_1 = __nccwpck_require__(7442);
+const hash_node_1 = __nccwpck_require__(3052);
 const middleware_retry_1 = __nccwpck_require__(6064);
 const node_config_provider_1 = __nccwpck_require__(7684);
 const node_http_handler_1 = __nccwpck_require__(8805);
@@ -11130,17 +12060,19 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
+const signature_v4_multi_region_1 = __nccwpck_require__(1856);
 const url_parser_1 = __nccwpck_require__(7190);
 const endpoints_1 = __nccwpck_require__(690);
 const getRuntimeConfig = (config) => {
-    var _a, _b, _c, _d, _e;
+    var _a, _b, _c, _d, _e, _f;
     return ({
         apiVersion: "2015-10-07",
         disableHostPrefix: (_a = config === null || config === void 0 ? void 0 : config.disableHostPrefix) !== null && _a !== void 0 ? _a : false,
         logger: (_b = config === null || config === void 0 ? void 0 : config.logger) !== null && _b !== void 0 ? _b : {},
         regionInfoProvider: (_c = config === null || config === void 0 ? void 0 : config.regionInfoProvider) !== null && _c !== void 0 ? _c : endpoints_1.defaultRegionInfoProvider,
         serviceId: (_d = config === null || config === void 0 ? void 0 : config.serviceId) !== null && _d !== void 0 ? _d : "EventBridge",
-        urlParser: (_e = config === null || config === void 0 ? void 0 : config.urlParser) !== null && _e !== void 0 ? _e : url_parser_1.parseUrl,
+        signerConstructor: (_e = config === null || config === void 0 ? void 0 : config.signerConstructor) !== null && _e !== void 0 ? _e : signature_v4_multi_region_1.SignatureV4MultiRegion,
+        urlParser: (_f = config === null || config === void 0 ? void 0 : config.urlParser) !== null && _f !== void 0 ? _f : url_parser_1.parseUrl,
     });
 };
 exports.getRuntimeConfig = getRuntimeConfig;
@@ -12792,7 +13724,7 @@ exports.getRuntimeConfig = void 0;
 const tslib_1 = __nccwpck_require__(430);
 const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(1092));
 const config_resolver_1 = __nccwpck_require__(6153);
-const hash_node_1 = __nccwpck_require__(7442);
+const hash_node_1 = __nccwpck_require__(3052);
 const middleware_retry_1 = __nccwpck_require__(6064);
 const node_config_provider_1 = __nccwpck_require__(7684);
 const node_http_handler_1 = __nccwpck_require__(8805);
@@ -15433,7 +16365,7 @@ const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(7947));
 const defaultStsRoleAssumers_1 = __nccwpck_require__(48);
 const config_resolver_1 = __nccwpck_require__(6153);
 const credential_provider_node_1 = __nccwpck_require__(5531);
-const hash_node_1 = __nccwpck_require__(7442);
+const hash_node_1 = __nccwpck_require__(3052);
 const middleware_retry_1 = __nccwpck_require__(6064);
 const node_config_provider_1 = __nccwpck_require__(7684);
 const node_http_handler_1 = __nccwpck_require__(8805);
@@ -19877,7 +20809,7 @@ var __createBinding;
 
 /***/ }),
 
-/***/ 7442:
+/***/ 3052:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -20909,6 +21841,388 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 /***/ }),
 
 /***/ 6647:
+/***/ ((module) => {
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global global, define, System, Reflect, Promise */
+var __extends;
+var __assign;
+var __rest;
+var __decorate;
+var __param;
+var __metadata;
+var __awaiter;
+var __generator;
+var __exportStar;
+var __values;
+var __read;
+var __spread;
+var __spreadArrays;
+var __spreadArray;
+var __await;
+var __asyncGenerator;
+var __asyncDelegator;
+var __asyncValues;
+var __makeTemplateObject;
+var __importStar;
+var __importDefault;
+var __classPrivateFieldGet;
+var __classPrivateFieldSet;
+var __createBinding;
+(function (factory) {
+    var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
+    if (typeof define === "function" && define.amd) {
+        define("tslib", ["exports"], function (exports) { factory(createExporter(root, createExporter(exports))); });
+    }
+    else if ( true && typeof module.exports === "object") {
+        factory(createExporter(root, createExporter(module.exports)));
+    }
+    else {
+        factory(createExporter(root));
+    }
+    function createExporter(exports, previous) {
+        if (exports !== root) {
+            if (typeof Object.create === "function") {
+                Object.defineProperty(exports, "__esModule", { value: true });
+            }
+            else {
+                exports.__esModule = true;
+            }
+        }
+        return function (id, v) { return exports[id] = previous ? previous(id, v) : v; };
+    }
+})
+(function (exporter) {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+
+    __extends = function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+
+    __assign = Object.assign || function (t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+
+    __rest = function (s, e) {
+        var t = {};
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+            t[p] = s[p];
+        if (s != null && typeof Object.getOwnPropertySymbols === "function")
+            for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+                if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                    t[p[i]] = s[p[i]];
+            }
+        return t;
+    };
+
+    __decorate = function (decorators, target, key, desc) {
+        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+
+    __param = function (paramIndex, decorator) {
+        return function (target, key) { decorator(target, key, paramIndex); }
+    };
+
+    __metadata = function (metadataKey, metadataValue) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+    };
+
+    __awaiter = function (thisArg, _arguments, P, generator) {
+        function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+        return new (P || (P = Promise))(function (resolve, reject) {
+            function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+            function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+            function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+            step((generator = generator.apply(thisArg, _arguments || [])).next());
+        });
+    };
+
+    __generator = function (thisArg, body) {
+        var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+        function verb(n) { return function (v) { return step([n, v]); }; }
+        function step(op) {
+            if (f) throw new TypeError("Generator is already executing.");
+            while (_) try {
+                if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+                if (y = 0, t) op = [op[0] & 2, t.value];
+                switch (op[0]) {
+                    case 0: case 1: t = op; break;
+                    case 4: _.label++; return { value: op[1], done: false };
+                    case 5: _.label++; y = op[1]; op = [0]; continue;
+                    case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                    default:
+                        if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                        if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                        if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                        if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                        if (t[2]) _.ops.pop();
+                        _.trys.pop(); continue;
+                }
+                op = body.call(thisArg, _);
+            } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+            if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+        }
+    };
+
+    __exportStar = function(m, o) {
+        for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
+    };
+
+    __createBinding = Object.create ? (function(o, m, k, k2) {
+        if (k2 === undefined) k2 = k;
+        Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    }) : (function(o, m, k, k2) {
+        if (k2 === undefined) k2 = k;
+        o[k2] = m[k];
+    });
+
+    __values = function (o) {
+        var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+        if (m) return m.call(o);
+        if (o && typeof o.length === "number") return {
+            next: function () {
+                if (o && i >= o.length) o = void 0;
+                return { value: o && o[i++], done: !o };
+            }
+        };
+        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+    };
+
+    __read = function (o, n) {
+        var m = typeof Symbol === "function" && o[Symbol.iterator];
+        if (!m) return o;
+        var i = m.call(o), r, ar = [], e;
+        try {
+            while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+        }
+        catch (error) { e = { error: error }; }
+        finally {
+            try {
+                if (r && !r.done && (m = i["return"])) m.call(i);
+            }
+            finally { if (e) throw e.error; }
+        }
+        return ar;
+    };
+
+    /** @deprecated */
+    __spread = function () {
+        for (var ar = [], i = 0; i < arguments.length; i++)
+            ar = ar.concat(__read(arguments[i]));
+        return ar;
+    };
+
+    /** @deprecated */
+    __spreadArrays = function () {
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+        for (var r = Array(s), k = 0, i = 0; i < il; i++)
+            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+                r[k] = a[j];
+        return r;
+    };
+
+    __spreadArray = function (to, from, pack) {
+        if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+            if (ar || !(i in from)) {
+                if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+                ar[i] = from[i];
+            }
+        }
+        return to.concat(ar || Array.prototype.slice.call(from));
+    };
+
+    __await = function (v) {
+        return this instanceof __await ? (this.v = v, this) : new __await(v);
+    };
+
+    __asyncGenerator = function (thisArg, _arguments, generator) {
+        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        var g = generator.apply(thisArg, _arguments || []), i, q = [];
+        return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+        function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+        function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+        function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);  }
+        function fulfill(value) { resume("next", value); }
+        function reject(value) { resume("throw", value); }
+        function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+    };
+
+    __asyncDelegator = function (o) {
+        var i, p;
+        return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+        function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+    };
+
+    __asyncValues = function (o) {
+        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        var m = o[Symbol.asyncIterator], i;
+        return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+        function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+        function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+    };
+
+    __makeTemplateObject = function (cooked, raw) {
+        if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+        return cooked;
+    };
+
+    var __setModuleDefault = Object.create ? (function(o, v) {
+        Object.defineProperty(o, "default", { enumerable: true, value: v });
+    }) : function(o, v) {
+        o["default"] = v;
+    };
+
+    __importStar = function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+
+    __importDefault = function (mod) {
+        return (mod && mod.__esModule) ? mod : { "default": mod };
+    };
+
+    __classPrivateFieldGet = function (receiver, state, kind, f) {
+        if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+        return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+    };
+
+    __classPrivateFieldSet = function (receiver, state, value, kind, f) {
+        if (kind === "m") throw new TypeError("Private method is not writable");
+        if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+        return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+    };
+
+    exporter("__extends", __extends);
+    exporter("__assign", __assign);
+    exporter("__rest", __rest);
+    exporter("__decorate", __decorate);
+    exporter("__param", __param);
+    exporter("__metadata", __metadata);
+    exporter("__awaiter", __awaiter);
+    exporter("__generator", __generator);
+    exporter("__exportStar", __exportStar);
+    exporter("__createBinding", __createBinding);
+    exporter("__values", __values);
+    exporter("__read", __read);
+    exporter("__spread", __spread);
+    exporter("__spreadArrays", __spreadArrays);
+    exporter("__spreadArray", __spreadArray);
+    exporter("__await", __await);
+    exporter("__asyncGenerator", __asyncGenerator);
+    exporter("__asyncDelegator", __asyncDelegator);
+    exporter("__asyncValues", __asyncValues);
+    exporter("__makeTemplateObject", __makeTemplateObject);
+    exporter("__importStar", __importStar);
+    exporter("__importDefault", __importDefault);
+    exporter("__classPrivateFieldGet", __classPrivateFieldGet);
+    exporter("__classPrivateFieldSet", __classPrivateFieldSet);
+});
+
+
+/***/ }),
+
+/***/ 3726:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const tslib_1 = __nccwpck_require__(7442);
+tslib_1.__exportStar(__nccwpck_require__(3423), exports);
+
+
+/***/ }),
+
+/***/ 3423:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getInjectEndpointIdPlugin = exports.injectEndpointIdMiddlewareOptions = exports.injectEndpointIdMiddleware = void 0;
+const protocol_http_1 = __nccwpck_require__(223);
+const injectEndpointIdMiddleware = (config) => (next, context) => async (args) => {
+    if (typeof args.input.EndpointId === "undefined") {
+    }
+    else if (config.isCustomEndpoint) {
+        context.signing_region = "*";
+    }
+    else if ((await config.useFipsEndpoint()) === true) {
+        throw new Error("FIPS is not supported with EventBridge multi-region endpoints, please check the useFipsEndpoint configuration.");
+    }
+    else if (protocol_http_1.HttpRequest.isInstance(args.request)) {
+        const endpointSuffix = getEndpointSuffix(args.request.hostname);
+        if (!isValidHostnameComponent(args.input.EndpointId)) {
+            throw new Error(`The EndpointId is not a valid domain name component, got ${args.input.EndpointId}.`);
+        }
+        args.request.hostname = `${args.input.EndpointId}.endpoint.events.${endpointSuffix}`;
+        context.signing_region = "*";
+    }
+    return next(args);
+};
+exports.injectEndpointIdMiddleware = injectEndpointIdMiddleware;
+const getEndpointSuffix = (endpoint) => {
+    const EVENTS_ENDPOINT_PATTERN = /^(.+\.)?events(-fips)?(\.dualstack)?[.-]([a-z0-9-]+)\./;
+    return endpoint.replace(new RegExp(EVENTS_ENDPOINT_PATTERN), "");
+};
+const isValidHostnameComponent = (component) => {
+    const HOSTNAME_LABEL_PATTERN = /^[a-zA-Z0-9](([a-zA-Z0-9-]+)?[a-zA-Z0-9])?$/;
+    for (const label of component.split(".")) {
+        if (!HOSTNAME_LABEL_PATTERN.test(label) || label.length > 63) {
+            return false;
+        }
+    }
+    return true;
+};
+exports.injectEndpointIdMiddlewareOptions = {
+    step: "build",
+    tags: ["ENDPOINT_ID"],
+    name: "injectEndpointIdMiddleware",
+    override: true,
+};
+const getInjectEndpointIdPlugin = (options) => ({
+    applyToStack: (operationStack) => {
+        operationStack.add((0, exports.injectEndpointIdMiddleware)(options), exports.injectEndpointIdMiddlewareOptions);
+    },
+});
+exports.getInjectEndpointIdPlugin = getInjectEndpointIdPlugin;
+
+
+/***/ }),
+
+/***/ 7442:
 /***/ ((module) => {
 
 /*! *****************************************************************************
@@ -23629,14 +24943,18 @@ const write_request_body_1 = __nccwpck_require__(5248);
 class NodeHttpHandler {
     constructor(options) {
         this.metadata = { handlerProtocol: "http/1.1" };
-        if (typeof options === "function") {
-            this.configProvider = async () => {
-                return this.resolveDefaultConfig(await options());
-            };
-        }
-        else {
-            this.config = this.resolveDefaultConfig(options);
-        }
+        this.configProvider = new Promise((resolve, reject) => {
+            if (typeof options === "function") {
+                options()
+                    .then((_options) => {
+                    resolve(this.resolveDefaultConfig(_options));
+                })
+                    .catch(reject);
+            }
+            else {
+                resolve(this.resolveDefaultConfig(options));
+            }
+        });
     }
     resolveDefaultConfig(options) {
         const { connectionTimeout, socketTimeout, httpAgent, httpsAgent } = options || {};
@@ -23655,8 +24973,8 @@ class NodeHttpHandler {
         (_d = (_c = this.config) === null || _c === void 0 ? void 0 : _c.httpsAgent) === null || _d === void 0 ? void 0 : _d.destroy();
     }
     async handle(request, { abortSignal } = {}) {
-        if (!this.config && this.configProvider) {
-            this.config = await this.configProvider();
+        if (!this.config) {
+            this.config = await this.configProvider;
         }
         return new Promise((resolve, reject) => {
             if (!this.config) {
@@ -25606,6 +26924,388 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 /***/ }),
 
 /***/ 7512:
+/***/ ((module) => {
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global global, define, System, Reflect, Promise */
+var __extends;
+var __assign;
+var __rest;
+var __decorate;
+var __param;
+var __metadata;
+var __awaiter;
+var __generator;
+var __exportStar;
+var __values;
+var __read;
+var __spread;
+var __spreadArrays;
+var __spreadArray;
+var __await;
+var __asyncGenerator;
+var __asyncDelegator;
+var __asyncValues;
+var __makeTemplateObject;
+var __importStar;
+var __importDefault;
+var __classPrivateFieldGet;
+var __classPrivateFieldSet;
+var __createBinding;
+(function (factory) {
+    var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
+    if (typeof define === "function" && define.amd) {
+        define("tslib", ["exports"], function (exports) { factory(createExporter(root, createExporter(exports))); });
+    }
+    else if ( true && typeof module.exports === "object") {
+        factory(createExporter(root, createExporter(module.exports)));
+    }
+    else {
+        factory(createExporter(root));
+    }
+    function createExporter(exports, previous) {
+        if (exports !== root) {
+            if (typeof Object.create === "function") {
+                Object.defineProperty(exports, "__esModule", { value: true });
+            }
+            else {
+                exports.__esModule = true;
+            }
+        }
+        return function (id, v) { return exports[id] = previous ? previous(id, v) : v; };
+    }
+})
+(function (exporter) {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+
+    __extends = function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+
+    __assign = Object.assign || function (t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+
+    __rest = function (s, e) {
+        var t = {};
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+            t[p] = s[p];
+        if (s != null && typeof Object.getOwnPropertySymbols === "function")
+            for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+                if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                    t[p[i]] = s[p[i]];
+            }
+        return t;
+    };
+
+    __decorate = function (decorators, target, key, desc) {
+        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+
+    __param = function (paramIndex, decorator) {
+        return function (target, key) { decorator(target, key, paramIndex); }
+    };
+
+    __metadata = function (metadataKey, metadataValue) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+    };
+
+    __awaiter = function (thisArg, _arguments, P, generator) {
+        function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+        return new (P || (P = Promise))(function (resolve, reject) {
+            function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+            function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+            function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+            step((generator = generator.apply(thisArg, _arguments || [])).next());
+        });
+    };
+
+    __generator = function (thisArg, body) {
+        var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+        function verb(n) { return function (v) { return step([n, v]); }; }
+        function step(op) {
+            if (f) throw new TypeError("Generator is already executing.");
+            while (_) try {
+                if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+                if (y = 0, t) op = [op[0] & 2, t.value];
+                switch (op[0]) {
+                    case 0: case 1: t = op; break;
+                    case 4: _.label++; return { value: op[1], done: false };
+                    case 5: _.label++; y = op[1]; op = [0]; continue;
+                    case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                    default:
+                        if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                        if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                        if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                        if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                        if (t[2]) _.ops.pop();
+                        _.trys.pop(); continue;
+                }
+                op = body.call(thisArg, _);
+            } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+            if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+        }
+    };
+
+    __exportStar = function(m, o) {
+        for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
+    };
+
+    __createBinding = Object.create ? (function(o, m, k, k2) {
+        if (k2 === undefined) k2 = k;
+        Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    }) : (function(o, m, k, k2) {
+        if (k2 === undefined) k2 = k;
+        o[k2] = m[k];
+    });
+
+    __values = function (o) {
+        var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+        if (m) return m.call(o);
+        if (o && typeof o.length === "number") return {
+            next: function () {
+                if (o && i >= o.length) o = void 0;
+                return { value: o && o[i++], done: !o };
+            }
+        };
+        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+    };
+
+    __read = function (o, n) {
+        var m = typeof Symbol === "function" && o[Symbol.iterator];
+        if (!m) return o;
+        var i = m.call(o), r, ar = [], e;
+        try {
+            while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+        }
+        catch (error) { e = { error: error }; }
+        finally {
+            try {
+                if (r && !r.done && (m = i["return"])) m.call(i);
+            }
+            finally { if (e) throw e.error; }
+        }
+        return ar;
+    };
+
+    /** @deprecated */
+    __spread = function () {
+        for (var ar = [], i = 0; i < arguments.length; i++)
+            ar = ar.concat(__read(arguments[i]));
+        return ar;
+    };
+
+    /** @deprecated */
+    __spreadArrays = function () {
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+        for (var r = Array(s), k = 0, i = 0; i < il; i++)
+            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+                r[k] = a[j];
+        return r;
+    };
+
+    __spreadArray = function (to, from, pack) {
+        if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+            if (ar || !(i in from)) {
+                if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+                ar[i] = from[i];
+            }
+        }
+        return to.concat(ar || Array.prototype.slice.call(from));
+    };
+
+    __await = function (v) {
+        return this instanceof __await ? (this.v = v, this) : new __await(v);
+    };
+
+    __asyncGenerator = function (thisArg, _arguments, generator) {
+        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        var g = generator.apply(thisArg, _arguments || []), i, q = [];
+        return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+        function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+        function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+        function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);  }
+        function fulfill(value) { resume("next", value); }
+        function reject(value) { resume("throw", value); }
+        function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+    };
+
+    __asyncDelegator = function (o) {
+        var i, p;
+        return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+        function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+    };
+
+    __asyncValues = function (o) {
+        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        var m = o[Symbol.asyncIterator], i;
+        return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+        function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+        function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+    };
+
+    __makeTemplateObject = function (cooked, raw) {
+        if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+        return cooked;
+    };
+
+    var __setModuleDefault = Object.create ? (function(o, v) {
+        Object.defineProperty(o, "default", { enumerable: true, value: v });
+    }) : function(o, v) {
+        o["default"] = v;
+    };
+
+    __importStar = function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+
+    __importDefault = function (mod) {
+        return (mod && mod.__esModule) ? mod : { "default": mod };
+    };
+
+    __classPrivateFieldGet = function (receiver, state, kind, f) {
+        if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+        return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+    };
+
+    __classPrivateFieldSet = function (receiver, state, value, kind, f) {
+        if (kind === "m") throw new TypeError("Private method is not writable");
+        if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+        return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+    };
+
+    exporter("__extends", __extends);
+    exporter("__assign", __assign);
+    exporter("__rest", __rest);
+    exporter("__decorate", __decorate);
+    exporter("__param", __param);
+    exporter("__metadata", __metadata);
+    exporter("__awaiter", __awaiter);
+    exporter("__generator", __generator);
+    exporter("__exportStar", __exportStar);
+    exporter("__createBinding", __createBinding);
+    exporter("__values", __values);
+    exporter("__read", __read);
+    exporter("__spread", __spread);
+    exporter("__spreadArrays", __spreadArrays);
+    exporter("__spreadArray", __spreadArray);
+    exporter("__await", __await);
+    exporter("__asyncGenerator", __asyncGenerator);
+    exporter("__asyncDelegator", __asyncDelegator);
+    exporter("__asyncValues", __asyncValues);
+    exporter("__makeTemplateObject", __makeTemplateObject);
+    exporter("__importStar", __importStar);
+    exporter("__importDefault", __importDefault);
+    exporter("__classPrivateFieldGet", __classPrivateFieldGet);
+    exporter("__classPrivateFieldSet", __classPrivateFieldSet);
+});
+
+
+/***/ }),
+
+/***/ 4885:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SignatureV4MultiRegion = void 0;
+const signature_v4_1 = __nccwpck_require__(4275);
+class SignatureV4MultiRegion {
+    constructor(options) {
+        this.sigv4Signer = new signature_v4_1.SignatureV4(options);
+        this.signerOptions = options;
+    }
+    async sign(requestToSign, options = {}) {
+        if (options.signingRegion === "*") {
+            if (this.signerOptions.runtime !== "node")
+                throw new Error("This request requires signing with SigV4Asymmetric algorithm. It's only available in Node.js");
+            return this.getSigv4aSigner().sign(requestToSign, options);
+        }
+        return this.sigv4Signer.sign(requestToSign, options);
+    }
+    async presign(originalRequest, options = {}) {
+        if (options.signingRegion === "*") {
+            if (this.signerOptions.runtime !== "node")
+                throw new Error("This request requires signing with SigV4Asymmetric algorithm. It's only available in Node.js");
+            return this.getSigv4aSigner().presign(originalRequest, options);
+        }
+        return this.sigv4Signer.presign(originalRequest, options);
+    }
+    getSigv4aSigner() {
+        if (!this.sigv4aSigner) {
+            let CrtSignerV4;
+            try {
+                CrtSignerV4 =  true && (__nccwpck_require__(481).CrtSignerV4);
+                if (typeof CrtSignerV4 !== "function")
+                    throw new Error();
+            }
+            catch (e) {
+                e.message =
+                    `${e.message}\nPlease check if you have installed "@aws-sdk/signature-v4-crt" package explicitly. \n` +
+                        "For more information please go to " +
+                        "https://github.com/aws/aws-sdk-js-v3#functionality-requiring-aws-common-runtime-crt";
+                throw e;
+            }
+            this.sigv4aSigner = new CrtSignerV4({
+                ...this.signerOptions,
+                signingAlgorithm: 1,
+            });
+        }
+        return this.sigv4aSigner;
+    }
+}
+exports.SignatureV4MultiRegion = SignatureV4MultiRegion;
+
+
+/***/ }),
+
+/***/ 1856:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const tslib_1 = __nccwpck_require__(4061);
+tslib_1.__exportStar(__nccwpck_require__(4885), exports);
+
+
+/***/ }),
+
+/***/ 4061:
 /***/ ((module) => {
 
 /*! *****************************************************************************
@@ -32625,6 +34325,14 @@ exports["default"] = _default;
 
 /***/ }),
 
+/***/ 481:
+/***/ ((module) => {
+
+module.exports = eval("require")("@aws-sdk/signature-v4-crt");
+
+
+/***/ }),
+
 /***/ 7578:
 /***/ ((module) => {
 
@@ -32773,7 +34481,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-eventbridge","description":"AWS SDK for JavaScript Eventbridge Client for Node.js, Browser and React Native","version":"3.58.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.58.0","@aws-sdk/config-resolver":"3.58.0","@aws-sdk/credential-provider-node":"3.58.0","@aws-sdk/fetch-http-handler":"3.58.0","@aws-sdk/hash-node":"3.55.0","@aws-sdk/invalid-dependency":"3.55.0","@aws-sdk/middleware-content-length":"3.58.0","@aws-sdk/middleware-host-header":"3.58.0","@aws-sdk/middleware-logger":"3.55.0","@aws-sdk/middleware-retry":"3.58.0","@aws-sdk/middleware-serde":"3.55.0","@aws-sdk/middleware-signing":"3.58.0","@aws-sdk/middleware-stack":"3.55.0","@aws-sdk/middleware-user-agent":"3.58.0","@aws-sdk/node-config-provider":"3.58.0","@aws-sdk/node-http-handler":"3.58.0","@aws-sdk/protocol-http":"3.58.0","@aws-sdk/smithy-client":"3.55.0","@aws-sdk/types":"3.55.0","@aws-sdk/url-parser":"3.55.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.55.0","@aws-sdk/util-defaults-mode-node":"3.58.0","@aws-sdk/util-user-agent-browser":"3.58.0","@aws-sdk/util-user-agent-node":"3.58.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-eventbridge","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-eventbridge"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-eventbridge","description":"AWS SDK for JavaScript Eventbridge Client for Node.js, Browser and React Native","version":"3.74.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.74.0","@aws-sdk/config-resolver":"3.58.0","@aws-sdk/credential-provider-node":"3.74.0","@aws-sdk/fetch-http-handler":"3.58.0","@aws-sdk/hash-node":"3.55.0","@aws-sdk/invalid-dependency":"3.55.0","@aws-sdk/middleware-content-length":"3.58.0","@aws-sdk/middleware-host-header":"3.58.0","@aws-sdk/middleware-logger":"3.55.0","@aws-sdk/middleware-retry":"3.58.0","@aws-sdk/middleware-sdk-eventbridge":"3.66.0","@aws-sdk/middleware-serde":"3.55.0","@aws-sdk/middleware-signing":"3.58.0","@aws-sdk/middleware-stack":"3.55.0","@aws-sdk/middleware-user-agent":"3.58.0","@aws-sdk/node-config-provider":"3.58.0","@aws-sdk/node-http-handler":"3.74.0","@aws-sdk/protocol-http":"3.58.0","@aws-sdk/signature-v4-multi-region":"3.66.0","@aws-sdk/smithy-client":"3.72.0","@aws-sdk/types":"3.55.0","@aws-sdk/url-parser":"3.55.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.72.0","@aws-sdk/util-defaults-mode-node":"3.72.0","@aws-sdk/util-user-agent-browser":"3.58.0","@aws-sdk/util-user-agent-node":"3.58.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-eventbridge","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-eventbridge"}}');
 
 /***/ }),
 
@@ -32781,7 +34489,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-eventbridge","description"
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.58.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.58.0","@aws-sdk/fetch-http-handler":"3.58.0","@aws-sdk/hash-node":"3.55.0","@aws-sdk/invalid-dependency":"3.55.0","@aws-sdk/middleware-content-length":"3.58.0","@aws-sdk/middleware-host-header":"3.58.0","@aws-sdk/middleware-logger":"3.55.0","@aws-sdk/middleware-retry":"3.58.0","@aws-sdk/middleware-serde":"3.55.0","@aws-sdk/middleware-stack":"3.55.0","@aws-sdk/middleware-user-agent":"3.58.0","@aws-sdk/node-config-provider":"3.58.0","@aws-sdk/node-http-handler":"3.58.0","@aws-sdk/protocol-http":"3.58.0","@aws-sdk/smithy-client":"3.55.0","@aws-sdk/types":"3.55.0","@aws-sdk/url-parser":"3.55.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.55.0","@aws-sdk/util-defaults-mode-node":"3.58.0","@aws-sdk/util-user-agent-browser":"3.58.0","@aws-sdk/util-user-agent-node":"3.58.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.74.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.58.0","@aws-sdk/fetch-http-handler":"3.58.0","@aws-sdk/hash-node":"3.55.0","@aws-sdk/invalid-dependency":"3.55.0","@aws-sdk/middleware-content-length":"3.58.0","@aws-sdk/middleware-host-header":"3.58.0","@aws-sdk/middleware-logger":"3.55.0","@aws-sdk/middleware-retry":"3.58.0","@aws-sdk/middleware-serde":"3.55.0","@aws-sdk/middleware-stack":"3.55.0","@aws-sdk/middleware-user-agent":"3.58.0","@aws-sdk/node-config-provider":"3.58.0","@aws-sdk/node-http-handler":"3.74.0","@aws-sdk/protocol-http":"3.58.0","@aws-sdk/smithy-client":"3.72.0","@aws-sdk/types":"3.55.0","@aws-sdk/url-parser":"3.55.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.72.0","@aws-sdk/util-defaults-mode-node":"3.72.0","@aws-sdk/util-user-agent-browser":"3.58.0","@aws-sdk/util-user-agent-node":"3.58.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -32789,7 +34497,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.58.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.58.0","@aws-sdk/credential-provider-node":"3.58.0","@aws-sdk/fetch-http-handler":"3.58.0","@aws-sdk/hash-node":"3.55.0","@aws-sdk/invalid-dependency":"3.55.0","@aws-sdk/middleware-content-length":"3.58.0","@aws-sdk/middleware-host-header":"3.58.0","@aws-sdk/middleware-logger":"3.55.0","@aws-sdk/middleware-retry":"3.58.0","@aws-sdk/middleware-sdk-sts":"3.58.0","@aws-sdk/middleware-serde":"3.55.0","@aws-sdk/middleware-signing":"3.58.0","@aws-sdk/middleware-stack":"3.55.0","@aws-sdk/middleware-user-agent":"3.58.0","@aws-sdk/node-config-provider":"3.58.0","@aws-sdk/node-http-handler":"3.58.0","@aws-sdk/protocol-http":"3.58.0","@aws-sdk/smithy-client":"3.55.0","@aws-sdk/types":"3.55.0","@aws-sdk/url-parser":"3.55.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.55.0","@aws-sdk/util-defaults-mode-node":"3.58.0","@aws-sdk/util-user-agent-browser":"3.58.0","@aws-sdk/util-user-agent-node":"3.58.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.74.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.58.0","@aws-sdk/credential-provider-node":"3.74.0","@aws-sdk/fetch-http-handler":"3.58.0","@aws-sdk/hash-node":"3.55.0","@aws-sdk/invalid-dependency":"3.55.0","@aws-sdk/middleware-content-length":"3.58.0","@aws-sdk/middleware-host-header":"3.58.0","@aws-sdk/middleware-logger":"3.55.0","@aws-sdk/middleware-retry":"3.58.0","@aws-sdk/middleware-sdk-sts":"3.58.0","@aws-sdk/middleware-serde":"3.55.0","@aws-sdk/middleware-signing":"3.58.0","@aws-sdk/middleware-stack":"3.55.0","@aws-sdk/middleware-user-agent":"3.58.0","@aws-sdk/node-config-provider":"3.58.0","@aws-sdk/node-http-handler":"3.74.0","@aws-sdk/protocol-http":"3.58.0","@aws-sdk/smithy-client":"3.72.0","@aws-sdk/types":"3.55.0","@aws-sdk/url-parser":"3.55.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.72.0","@aws-sdk/util-defaults-mode-node":"3.72.0","@aws-sdk/util-user-agent-browser":"3.58.0","@aws-sdk/util-user-agent-node":"3.58.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
