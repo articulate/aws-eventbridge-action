@@ -22,7 +22,7 @@
   "author": "Articulate Global, LLC",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0",
+    "@actions/core": "^1.7.0",
     "@aws-sdk/client-eventbridge": "^3.74.0"
   },
   "devDependencies": {
