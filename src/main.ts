@@ -41,4 +41,5 @@ async function run(): Promise<void> {
   }
 }
 
+// eslint-disable-next-line unicorn/prefer-top-level-await
 run();
