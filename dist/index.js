@@ -2822,7 +2822,7 @@ class ActivateEventSourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ActivateEventSourceRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ActivateEventSourceRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -2866,8 +2866,8 @@ class CancelReplayCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CancelReplayRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CancelReplayResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.CancelReplayRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.CancelReplayResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -2910,8 +2910,8 @@ class CreateApiDestinationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateApiDestinationRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateApiDestinationResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.CreateApiDestinationRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.CreateApiDestinationResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -2954,8 +2954,8 @@ class CreateArchiveCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateArchiveRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateArchiveResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.CreateArchiveRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.CreateArchiveResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -2998,8 +2998,8 @@ class CreateConnectionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateConnectionRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateConnectionResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.CreateConnectionRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.CreateConnectionResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3042,8 +3042,8 @@ class CreateEndpointCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateEndpointRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateEndpointResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.CreateEndpointRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.CreateEndpointResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3086,8 +3086,8 @@ class CreateEventBusCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateEventBusRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateEventBusResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.CreateEventBusRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.CreateEventBusResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3130,8 +3130,8 @@ class CreatePartnerEventSourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreatePartnerEventSourceRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreatePartnerEventSourceResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.CreatePartnerEventSourceRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.CreatePartnerEventSourceResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3174,7 +3174,7 @@ class DeactivateEventSourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeactivateEventSourceRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DeactivateEventSourceRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -3218,8 +3218,8 @@ class DeauthorizeConnectionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeauthorizeConnectionRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeauthorizeConnectionResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DeauthorizeConnectionRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DeauthorizeConnectionResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3262,8 +3262,8 @@ class DeleteApiDestinationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteApiDestinationRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteApiDestinationResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DeleteApiDestinationRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DeleteApiDestinationResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3306,8 +3306,8 @@ class DeleteArchiveCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteArchiveRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteArchiveResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DeleteArchiveRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DeleteArchiveResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3350,8 +3350,8 @@ class DeleteConnectionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteConnectionRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteConnectionResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DeleteConnectionRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DeleteConnectionResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3394,8 +3394,8 @@ class DeleteEndpointCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteEndpointRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteEndpointResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DeleteEndpointRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DeleteEndpointResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3438,7 +3438,7 @@ class DeleteEventBusCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteEventBusRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DeleteEventBusRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -3482,7 +3482,7 @@ class DeletePartnerEventSourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeletePartnerEventSourceRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DeletePartnerEventSourceRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -3526,7 +3526,7 @@ class DeleteRuleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteRuleRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DeleteRuleRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -3570,8 +3570,8 @@ class DescribeApiDestinationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeApiDestinationRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeApiDestinationResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DescribeApiDestinationRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribeApiDestinationResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3614,8 +3614,8 @@ class DescribeArchiveCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeArchiveRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeArchiveResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DescribeArchiveRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribeArchiveResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3658,8 +3658,8 @@ class DescribeConnectionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeConnectionRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeConnectionResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DescribeConnectionRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribeConnectionResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3702,8 +3702,8 @@ class DescribeEndpointCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeEndpointRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeEndpointResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DescribeEndpointRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribeEndpointResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3746,8 +3746,8 @@ class DescribeEventBusCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeEventBusRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeEventBusResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DescribeEventBusRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribeEventBusResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3790,8 +3790,8 @@ class DescribeEventSourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeEventSourceRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeEventSourceResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DescribeEventSourceRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribeEventSourceResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3834,8 +3834,8 @@ class DescribePartnerEventSourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribePartnerEventSourceRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribePartnerEventSourceResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DescribePartnerEventSourceRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribePartnerEventSourceResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3878,8 +3878,8 @@ class DescribeReplayCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeReplayRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeReplayResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DescribeReplayRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribeReplayResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3922,8 +3922,8 @@ class DescribeRuleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeRuleRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeRuleResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DescribeRuleRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DescribeRuleResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3966,7 +3966,7 @@ class DisableRuleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DisableRuleRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DisableRuleRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -4010,7 +4010,7 @@ class EnableRuleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.EnableRuleRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.EnableRuleRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -4054,8 +4054,8 @@ class ListApiDestinationsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListApiDestinationsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListApiDestinationsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListApiDestinationsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListApiDestinationsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4098,8 +4098,8 @@ class ListArchivesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListArchivesRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListArchivesResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListArchivesRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListArchivesResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4142,8 +4142,8 @@ class ListConnectionsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListConnectionsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListConnectionsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListConnectionsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListConnectionsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4186,8 +4186,8 @@ class ListEndpointsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListEndpointsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListEndpointsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListEndpointsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListEndpointsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4230,8 +4230,8 @@ class ListEventBusesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListEventBusesRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListEventBusesResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListEventBusesRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListEventBusesResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4274,8 +4274,8 @@ class ListEventSourcesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListEventSourcesRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListEventSourcesResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListEventSourcesRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListEventSourcesResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4318,8 +4318,8 @@ class ListPartnerEventSourceAccountsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListPartnerEventSourceAccountsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListPartnerEventSourceAccountsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListPartnerEventSourceAccountsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListPartnerEventSourceAccountsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4362,8 +4362,8 @@ class ListPartnerEventSourcesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListPartnerEventSourcesRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListPartnerEventSourcesResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListPartnerEventSourcesRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListPartnerEventSourcesResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4406,8 +4406,8 @@ class ListReplaysCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListReplaysRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListReplaysResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListReplaysRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListReplaysResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4450,8 +4450,8 @@ class ListRuleNamesByTargetCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListRuleNamesByTargetRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListRuleNamesByTargetResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListRuleNamesByTargetRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListRuleNamesByTargetResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4494,8 +4494,8 @@ class ListRulesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListRulesRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListRulesResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListRulesRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListRulesResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4538,8 +4538,8 @@ class ListTagsForResourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListTagsForResourceRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListTagsForResourceResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListTagsForResourceRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListTagsForResourceResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4582,8 +4582,8 @@ class ListTargetsByRuleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListTargetsByRuleRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListTargetsByRuleResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListTargetsByRuleRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListTargetsByRuleResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4628,8 +4628,8 @@ class PutEventsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutEventsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.PutEventsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.PutEventsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.PutEventsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4672,8 +4672,8 @@ class PutPartnerEventsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutPartnerEventsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.PutPartnerEventsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.PutPartnerEventsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.PutPartnerEventsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4716,7 +4716,7 @@ class PutPermissionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutPermissionRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.PutPermissionRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -4760,8 +4760,8 @@ class PutRuleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutRuleRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.PutRuleResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.PutRuleRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.PutRuleResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4804,8 +4804,8 @@ class PutTargetsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutTargetsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.PutTargetsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.PutTargetsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.PutTargetsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4848,7 +4848,7 @@ class RemovePermissionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.RemovePermissionRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.RemovePermissionRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -4892,8 +4892,8 @@ class RemoveTargetsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.RemoveTargetsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.RemoveTargetsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.RemoveTargetsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.RemoveTargetsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4936,8 +4936,8 @@ class StartReplayCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.StartReplayRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.StartReplayResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.StartReplayRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.StartReplayResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4980,8 +4980,8 @@ class TagResourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.TagResourceRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.TagResourceResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.TagResourceRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.TagResourceResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5024,8 +5024,8 @@ class TestEventPatternCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.TestEventPatternRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.TestEventPatternResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.TestEventPatternRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.TestEventPatternResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5068,8 +5068,8 @@ class UntagResourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.UntagResourceRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.UntagResourceResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.UntagResourceRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.UntagResourceResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5112,8 +5112,8 @@ class UpdateApiDestinationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.UpdateApiDestinationRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.UpdateApiDestinationResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.UpdateApiDestinationRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.UpdateApiDestinationResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5156,8 +5156,8 @@ class UpdateArchiveCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.UpdateArchiveRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.UpdateArchiveResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.UpdateArchiveRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.UpdateArchiveResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5200,8 +5200,8 @@ class UpdateConnectionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.UpdateConnectionRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.UpdateConnectionResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.UpdateConnectionRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.UpdateConnectionResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5244,8 +5244,8 @@ class UpdateEndpointCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.UpdateEndpointRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.UpdateEndpointResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.UpdateEndpointRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.UpdateEndpointResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5410,6 +5410,7 @@ const partitionHash = {
             "fips-us-east-2",
             "fips-us-west-1",
             "fips-us-west-2",
+            "me-central-1",
             "me-south-1",
             "sa-east-1",
             "us-east-1",
@@ -5576,17 +5577,11 @@ tslib_1.__exportStar(__nccwpck_require__(5583), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.CreateEventBusResponse = exports.CreateEventBusRequest = exports.Tag = exports.CreateEndpointResponse = exports.EndpointState = exports.CreateEndpointRequest = exports.RoutingConfig = exports.FailoverConfig = exports.Secondary = exports.Primary = exports.ReplicationConfig = exports.ReplicationState = exports.EndpointEventBus = exports.CreateConnectionResponse = exports.ConnectionState = exports.CreateConnectionRequest = exports.CreateConnectionAuthRequestParameters = exports.CreateConnectionOAuthRequestParameters = exports.ConnectionOAuthHttpMethod = exports.CreateConnectionOAuthClientRequestParameters = exports.ConnectionHttpParameters = exports.ConnectionQueryStringParameter = exports.ConnectionHeaderParameter = exports.ConnectionBodyParameter = exports.CreateConnectionBasicAuthRequestParameters = exports.CreateConnectionApiKeyAuthRequestParameters = exports.ConnectionAuthorizationType = exports.InvalidEventPatternException = exports.CreateArchiveResponse = exports.CreateArchiveRequest = exports.ResourceAlreadyExistsException = exports.LimitExceededException = exports.CreateApiDestinationResponse = exports.CreateApiDestinationRequest = exports.IllegalStatusException = exports.CancelReplayResponse = exports.ReplayState = exports.CancelReplayRequest = exports.AssignPublicIp = exports.Archive = exports.ArchiveState = exports.ApiDestination = exports.ApiDestinationHttpMethod = exports.ApiDestinationState = exports.ResourceNotFoundException = exports.OperationDisabledException = exports.InvalidStateException = exports.InternalException = exports.ConcurrentModificationException = exports.ActivateEventSourceRequest = void 0;
-exports.ListConnectionsRequest = exports.ListArchivesResponse = exports.ListArchivesRequest = exports.ListApiDestinationsResponse = exports.ListApiDestinationsRequest = exports.EnableRuleRequest = exports.DisableRuleRequest = exports.DescribeRuleResponse = exports.RuleState = exports.DescribeRuleRequest = exports.DescribeReplayResponse = exports.ReplayDestination = exports.DescribeReplayRequest = exports.DescribePartnerEventSourceResponse = exports.DescribePartnerEventSourceRequest = exports.DescribeEventSourceResponse = exports.EventSourceState = exports.DescribeEventSourceRequest = exports.DescribeEventBusResponse = exports.DescribeEventBusRequest = exports.DescribeEndpointResponse = exports.DescribeEndpointRequest = exports.DescribeConnectionResponse = exports.ConnectionAuthResponseParameters = exports.ConnectionOAuthResponseParameters = exports.ConnectionOAuthClientResponseParameters = exports.ConnectionBasicAuthResponseParameters = exports.ConnectionApiKeyAuthResponseParameters = exports.DescribeConnectionRequest = exports.DescribeArchiveResponse = exports.DescribeArchiveRequest = exports.DescribeApiDestinationResponse = exports.DescribeApiDestinationRequest = exports.ManagedRuleException = exports.DeleteRuleRequest = exports.DeletePartnerEventSourceRequest = exports.DeleteEventBusRequest = exports.DeleteEndpointResponse = exports.DeleteEndpointRequest = exports.DeleteConnectionResponse = exports.DeleteConnectionRequest = exports.DeleteArchiveResponse = exports.DeleteArchiveRequest = exports.DeleteApiDestinationResponse = exports.DeleteApiDestinationRequest = exports.DeauthorizeConnectionResponse = exports.DeauthorizeConnectionRequest = exports.DeactivateEventSourceRequest = exports.CreatePartnerEventSourceResponse = exports.CreatePartnerEventSourceRequest = void 0;
-exports.SageMakerPipelineParameter = exports.RunCommandParameters = exports.RunCommandTarget = exports.RetryPolicy = exports.RedshiftDataParameters = exports.KinesisParameters = exports.InputTransformer = exports.HttpParameters = exports.EcsParameters = exports.PropagateTags = exports.PlacementStrategy = exports.PlacementStrategyType = exports.PlacementConstraint = exports.PlacementConstraintType = exports.NetworkConfiguration = exports.AwsVpcConfiguration = exports.LaunchType = exports.CapacityProviderStrategyItem = exports.DeadLetterConfig = exports.BatchParameters = exports.BatchRetryStrategy = exports.BatchArrayProperties = exports.ListTargetsByRuleRequest = exports.ListTagsForResourceResponse = exports.ListTagsForResourceRequest = exports.ListRulesResponse = exports.Rule = exports.ListRulesRequest = exports.ListRuleNamesByTargetResponse = exports.ListRuleNamesByTargetRequest = exports.ListReplaysResponse = exports.Replay = exports.ListReplaysRequest = exports.ListPartnerEventSourcesResponse = exports.PartnerEventSource = exports.ListPartnerEventSourcesRequest = exports.ListPartnerEventSourceAccountsResponse = exports.PartnerEventSourceAccount = exports.ListPartnerEventSourceAccountsRequest = exports.ListEventSourcesResponse = exports.EventSource = exports.ListEventSourcesRequest = exports.ListEventBusesResponse = exports.EventBus = exports.ListEventBusesRequest = exports.ListEndpointsResponse = exports.Endpoint = exports.ListEndpointsRequest = exports.ListConnectionsResponse = exports.Connection = void 0;
-exports.UpdateEndpointResponse = exports.UpdateEndpointRequest = exports.UpdateConnectionResponse = exports.UpdateConnectionRequest = exports.UpdateConnectionAuthRequestParameters = exports.UpdateConnectionOAuthRequestParameters = exports.UpdateConnectionOAuthClientRequestParameters = exports.UpdateConnectionBasicAuthRequestParameters = exports.UpdateConnectionApiKeyAuthRequestParameters = exports.UpdateArchiveResponse = exports.UpdateArchiveRequest = exports.UpdateApiDestinationResponse = exports.UpdateApiDestinationRequest = exports.UntagResourceResponse = exports.UntagResourceRequest = exports.TestEventPatternResponse = exports.TestEventPatternRequest = exports.TagResourceResponse = exports.TagResourceRequest = exports.StartReplayResponse = exports.StartReplayRequest = exports.RemoveTargetsResponse = exports.RemoveTargetsResultEntry = exports.RemoveTargetsRequest = exports.RemovePermissionRequest = exports.PutTargetsResponse = exports.PutTargetsResultEntry = exports.PutTargetsRequest = exports.PutRuleResponse = exports.PutRuleRequest = exports.PutPermissionRequest = exports.Condition = exports.PolicyLengthExceededException = exports.PutPartnerEventsResponse = exports.PutPartnerEventsResultEntry = exports.PutPartnerEventsRequest = exports.PutPartnerEventsRequestEntry = exports.PutEventsResponse = exports.PutEventsResultEntry = exports.PutEventsRequest = exports.PutEventsRequestEntry = exports.ListTargetsByRuleResponse = exports.Target = exports.SqsParameters = exports.SageMakerPipelineParameters = void 0;
+exports.PrimaryFilterSensitiveLog = exports.ReplicationConfigFilterSensitiveLog = exports.EndpointEventBusFilterSensitiveLog = exports.CreateConnectionResponseFilterSensitiveLog = exports.CreateConnectionRequestFilterSensitiveLog = exports.CreateConnectionAuthRequestParametersFilterSensitiveLog = exports.CreateConnectionOAuthRequestParametersFilterSensitiveLog = exports.CreateConnectionOAuthClientRequestParametersFilterSensitiveLog = exports.ConnectionHttpParametersFilterSensitiveLog = exports.ConnectionQueryStringParameterFilterSensitiveLog = exports.ConnectionHeaderParameterFilterSensitiveLog = exports.ConnectionBodyParameterFilterSensitiveLog = exports.CreateConnectionBasicAuthRequestParametersFilterSensitiveLog = exports.CreateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = exports.CreateArchiveResponseFilterSensitiveLog = exports.CreateArchiveRequestFilterSensitiveLog = exports.CreateApiDestinationResponseFilterSensitiveLog = exports.CreateApiDestinationRequestFilterSensitiveLog = exports.CancelReplayResponseFilterSensitiveLog = exports.CancelReplayRequestFilterSensitiveLog = exports.ArchiveFilterSensitiveLog = exports.ApiDestinationFilterSensitiveLog = exports.ActivateEventSourceRequestFilterSensitiveLog = exports.PolicyLengthExceededException = exports.PropagateTags = exports.PlacementStrategyType = exports.PlacementConstraintType = exports.LaunchType = exports.RuleState = exports.EventSourceState = exports.ManagedRuleException = exports.EndpointState = exports.ReplicationState = exports.ConnectionState = exports.ConnectionOAuthHttpMethod = exports.ConnectionAuthorizationType = exports.InvalidEventPatternException = exports.ResourceAlreadyExistsException = exports.LimitExceededException = exports.IllegalStatusException = exports.ReplayState = exports.AssignPublicIp = exports.ArchiveState = exports.ApiDestinationHttpMethod = exports.ApiDestinationState = exports.ResourceNotFoundException = exports.OperationDisabledException = exports.InvalidStateException = exports.InternalException = exports.ConcurrentModificationException = void 0;
+exports.EnableRuleRequestFilterSensitiveLog = exports.DisableRuleRequestFilterSensitiveLog = exports.DescribeRuleResponseFilterSensitiveLog = exports.DescribeRuleRequestFilterSensitiveLog = exports.DescribeReplayResponseFilterSensitiveLog = exports.ReplayDestinationFilterSensitiveLog = exports.DescribeReplayRequestFilterSensitiveLog = exports.DescribePartnerEventSourceResponseFilterSensitiveLog = exports.DescribePartnerEventSourceRequestFilterSensitiveLog = exports.DescribeEventSourceResponseFilterSensitiveLog = exports.DescribeEventSourceRequestFilterSensitiveLog = exports.DescribeEventBusResponseFilterSensitiveLog = exports.DescribeEventBusRequestFilterSensitiveLog = exports.DescribeEndpointResponseFilterSensitiveLog = exports.DescribeEndpointRequestFilterSensitiveLog = exports.DescribeConnectionResponseFilterSensitiveLog = exports.ConnectionAuthResponseParametersFilterSensitiveLog = exports.ConnectionOAuthResponseParametersFilterSensitiveLog = exports.ConnectionOAuthClientResponseParametersFilterSensitiveLog = exports.ConnectionBasicAuthResponseParametersFilterSensitiveLog = exports.ConnectionApiKeyAuthResponseParametersFilterSensitiveLog = exports.DescribeConnectionRequestFilterSensitiveLog = exports.DescribeArchiveResponseFilterSensitiveLog = exports.DescribeArchiveRequestFilterSensitiveLog = exports.DescribeApiDestinationResponseFilterSensitiveLog = exports.DescribeApiDestinationRequestFilterSensitiveLog = exports.DeleteRuleRequestFilterSensitiveLog = exports.DeletePartnerEventSourceRequestFilterSensitiveLog = exports.DeleteEventBusRequestFilterSensitiveLog = exports.DeleteEndpointResponseFilterSensitiveLog = exports.DeleteEndpointRequestFilterSensitiveLog = exports.DeleteConnectionResponseFilterSensitiveLog = exports.DeleteConnectionRequestFilterSensitiveLog = exports.DeleteArchiveResponseFilterSensitiveLog = exports.DeleteArchiveRequestFilterSensitiveLog = exports.DeleteApiDestinationResponseFilterSensitiveLog = exports.DeleteApiDestinationRequestFilterSensitiveLog = exports.DeauthorizeConnectionResponseFilterSensitiveLog = exports.DeauthorizeConnectionRequestFilterSensitiveLog = exports.DeactivateEventSourceRequestFilterSensitiveLog = exports.CreatePartnerEventSourceResponseFilterSensitiveLog = exports.CreatePartnerEventSourceRequestFilterSensitiveLog = exports.CreateEventBusResponseFilterSensitiveLog = exports.CreateEventBusRequestFilterSensitiveLog = exports.TagFilterSensitiveLog = exports.CreateEndpointResponseFilterSensitiveLog = exports.CreateEndpointRequestFilterSensitiveLog = exports.RoutingConfigFilterSensitiveLog = exports.FailoverConfigFilterSensitiveLog = exports.SecondaryFilterSensitiveLog = void 0;
+exports.RunCommandParametersFilterSensitiveLog = exports.RunCommandTargetFilterSensitiveLog = exports.RetryPolicyFilterSensitiveLog = exports.RedshiftDataParametersFilterSensitiveLog = exports.KinesisParametersFilterSensitiveLog = exports.InputTransformerFilterSensitiveLog = exports.HttpParametersFilterSensitiveLog = exports.EcsParametersFilterSensitiveLog = exports.PlacementStrategyFilterSensitiveLog = exports.PlacementConstraintFilterSensitiveLog = exports.NetworkConfigurationFilterSensitiveLog = exports.AwsVpcConfigurationFilterSensitiveLog = exports.CapacityProviderStrategyItemFilterSensitiveLog = exports.DeadLetterConfigFilterSensitiveLog = exports.BatchParametersFilterSensitiveLog = exports.BatchRetryStrategyFilterSensitiveLog = exports.BatchArrayPropertiesFilterSensitiveLog = exports.ListTargetsByRuleRequestFilterSensitiveLog = exports.ListTagsForResourceResponseFilterSensitiveLog = exports.ListTagsForResourceRequestFilterSensitiveLog = exports.ListRulesResponseFilterSensitiveLog = exports.RuleFilterSensitiveLog = exports.ListRulesRequestFilterSensitiveLog = exports.ListRuleNamesByTargetResponseFilterSensitiveLog = exports.ListRuleNamesByTargetRequestFilterSensitiveLog = exports.ListReplaysResponseFilterSensitiveLog = exports.ReplayFilterSensitiveLog = exports.ListReplaysRequestFilterSensitiveLog = exports.ListPartnerEventSourcesResponseFilterSensitiveLog = exports.PartnerEventSourceFilterSensitiveLog = exports.ListPartnerEventSourcesRequestFilterSensitiveLog = exports.ListPartnerEventSourceAccountsResponseFilterSensitiveLog = exports.PartnerEventSourceAccountFilterSensitiveLog = exports.ListPartnerEventSourceAccountsRequestFilterSensitiveLog = exports.ListEventSourcesResponseFilterSensitiveLog = exports.EventSourceFilterSensitiveLog = exports.ListEventSourcesRequestFilterSensitiveLog = exports.ListEventBusesResponseFilterSensitiveLog = exports.EventBusFilterSensitiveLog = exports.ListEventBusesRequestFilterSensitiveLog = exports.ListEndpointsResponseFilterSensitiveLog = exports.EndpointFilterSensitiveLog = exports.ListEndpointsRequestFilterSensitiveLog = exports.ListConnectionsResponseFilterSensitiveLog = exports.ConnectionFilterSensitiveLog = exports.ListConnectionsRequestFilterSensitiveLog = exports.ListArchivesResponseFilterSensitiveLog = exports.ListArchivesRequestFilterSensitiveLog = exports.ListApiDestinationsResponseFilterSensitiveLog = exports.ListApiDestinationsRequestFilterSensitiveLog = void 0;
+exports.UpdateEndpointResponseFilterSensitiveLog = exports.UpdateEndpointRequestFilterSensitiveLog = exports.UpdateConnectionResponseFilterSensitiveLog = exports.UpdateConnectionRequestFilterSensitiveLog = exports.UpdateConnectionAuthRequestParametersFilterSensitiveLog = exports.UpdateConnectionOAuthRequestParametersFilterSensitiveLog = exports.UpdateConnectionOAuthClientRequestParametersFilterSensitiveLog = exports.UpdateConnectionBasicAuthRequestParametersFilterSensitiveLog = exports.UpdateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = exports.UpdateArchiveResponseFilterSensitiveLog = exports.UpdateArchiveRequestFilterSensitiveLog = exports.UpdateApiDestinationResponseFilterSensitiveLog = exports.UpdateApiDestinationRequestFilterSensitiveLog = exports.UntagResourceResponseFilterSensitiveLog = exports.UntagResourceRequestFilterSensitiveLog = exports.TestEventPatternResponseFilterSensitiveLog = exports.TestEventPatternRequestFilterSensitiveLog = exports.TagResourceResponseFilterSensitiveLog = exports.TagResourceRequestFilterSensitiveLog = exports.StartReplayResponseFilterSensitiveLog = exports.StartReplayRequestFilterSensitiveLog = exports.RemoveTargetsResponseFilterSensitiveLog = exports.RemoveTargetsResultEntryFilterSensitiveLog = exports.RemoveTargetsRequestFilterSensitiveLog = exports.RemovePermissionRequestFilterSensitiveLog = exports.PutTargetsResponseFilterSensitiveLog = exports.PutTargetsResultEntryFilterSensitiveLog = exports.PutTargetsRequestFilterSensitiveLog = exports.PutRuleResponseFilterSensitiveLog = exports.PutRuleRequestFilterSensitiveLog = exports.PutPermissionRequestFilterSensitiveLog = exports.ConditionFilterSensitiveLog = exports.PutPartnerEventsResponseFilterSensitiveLog = exports.PutPartnerEventsResultEntryFilterSensitiveLog = exports.PutPartnerEventsRequestFilterSensitiveLog = exports.PutPartnerEventsRequestEntryFilterSensitiveLog = exports.PutEventsResponseFilterSensitiveLog = exports.PutEventsResultEntryFilterSensitiveLog = exports.PutEventsRequestFilterSensitiveLog = exports.PutEventsRequestEntryFilterSensitiveLog = exports.ListTargetsByRuleResponseFilterSensitiveLog = exports.TargetFilterSensitiveLog = exports.SqsParametersFilterSensitiveLog = exports.SageMakerPipelineParametersFilterSensitiveLog = exports.SageMakerPipelineParameterFilterSensitiveLog = void 0;
 const EventBridgeServiceException_1 = __nccwpck_require__(5180);
-var ActivateEventSourceRequest;
-(function (ActivateEventSourceRequest) {
-    ActivateEventSourceRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ActivateEventSourceRequest = exports.ActivateEventSourceRequest || (exports.ActivateEventSourceRequest = {}));
 class ConcurrentModificationException extends EventBridgeServiceException_1.EventBridgeServiceException {
     constructor(opts) {
         super({
@@ -5667,12 +5662,6 @@ var ApiDestinationHttpMethod;
     ApiDestinationHttpMethod["POST"] = "POST";
     ApiDestinationHttpMethod["PUT"] = "PUT";
 })(ApiDestinationHttpMethod = exports.ApiDestinationHttpMethod || (exports.ApiDestinationHttpMethod = {}));
-var ApiDestination;
-(function (ApiDestination) {
-    ApiDestination.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ApiDestination = exports.ApiDestination || (exports.ApiDestination = {}));
 var ArchiveState;
 (function (ArchiveState) {
     ArchiveState["CREATE_FAILED"] = "CREATE_FAILED";
@@ -5682,23 +5671,11 @@ var ArchiveState;
     ArchiveState["UPDATE_FAILED"] = "UPDATE_FAILED";
     ArchiveState["UPDATING"] = "UPDATING";
 })(ArchiveState = exports.ArchiveState || (exports.ArchiveState = {}));
-var Archive;
-(function (Archive) {
-    Archive.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Archive = exports.Archive || (exports.Archive = {}));
 var AssignPublicIp;
 (function (AssignPublicIp) {
     AssignPublicIp["DISABLED"] = "DISABLED";
     AssignPublicIp["ENABLED"] = "ENABLED";
 })(AssignPublicIp = exports.AssignPublicIp || (exports.AssignPublicIp = {}));
-var CancelReplayRequest;
-(function (CancelReplayRequest) {
-    CancelReplayRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CancelReplayRequest = exports.CancelReplayRequest || (exports.CancelReplayRequest = {}));
 var ReplayState;
 (function (ReplayState) {
     ReplayState["CANCELLED"] = "CANCELLED";
@@ -5708,12 +5685,6 @@ var ReplayState;
     ReplayState["RUNNING"] = "RUNNING";
     ReplayState["STARTING"] = "STARTING";
 })(ReplayState = exports.ReplayState || (exports.ReplayState = {}));
-var CancelReplayResponse;
-(function (CancelReplayResponse) {
-    CancelReplayResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CancelReplayResponse = exports.CancelReplayResponse || (exports.CancelReplayResponse = {}));
 class IllegalStatusException extends EventBridgeServiceException_1.EventBridgeServiceException {
     constructor(opts) {
         super({
@@ -5727,18 +5698,6 @@ class IllegalStatusException extends EventBridgeServiceException_1.EventBridgeSe
     }
 }
 exports.IllegalStatusException = IllegalStatusException;
-var CreateApiDestinationRequest;
-(function (CreateApiDestinationRequest) {
-    CreateApiDestinationRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateApiDestinationRequest = exports.CreateApiDestinationRequest || (exports.CreateApiDestinationRequest = {}));
-var CreateApiDestinationResponse;
-(function (CreateApiDestinationResponse) {
-    CreateApiDestinationResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateApiDestinationResponse = exports.CreateApiDestinationResponse || (exports.CreateApiDestinationResponse = {}));
 class LimitExceededException extends EventBridgeServiceException_1.EventBridgeServiceException {
     constructor(opts) {
         super({
@@ -5765,18 +5724,6 @@ class ResourceAlreadyExistsException extends EventBridgeServiceException_1.Event
     }
 }
 exports.ResourceAlreadyExistsException = ResourceAlreadyExistsException;
-var CreateArchiveRequest;
-(function (CreateArchiveRequest) {
-    CreateArchiveRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateArchiveRequest = exports.CreateArchiveRequest || (exports.CreateArchiveRequest = {}));
-var CreateArchiveResponse;
-(function (CreateArchiveResponse) {
-    CreateArchiveResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateArchiveResponse = exports.CreateArchiveResponse || (exports.CreateArchiveResponse = {}));
 class InvalidEventPatternException extends EventBridgeServiceException_1.EventBridgeServiceException {
     constructor(opts) {
         super({
@@ -5796,72 +5743,12 @@ var ConnectionAuthorizationType;
     ConnectionAuthorizationType["BASIC"] = "BASIC";
     ConnectionAuthorizationType["OAUTH_CLIENT_CREDENTIALS"] = "OAUTH_CLIENT_CREDENTIALS";
 })(ConnectionAuthorizationType = exports.ConnectionAuthorizationType || (exports.ConnectionAuthorizationType = {}));
-var CreateConnectionApiKeyAuthRequestParameters;
-(function (CreateConnectionApiKeyAuthRequestParameters) {
-    CreateConnectionApiKeyAuthRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateConnectionApiKeyAuthRequestParameters = exports.CreateConnectionApiKeyAuthRequestParameters || (exports.CreateConnectionApiKeyAuthRequestParameters = {}));
-var CreateConnectionBasicAuthRequestParameters;
-(function (CreateConnectionBasicAuthRequestParameters) {
-    CreateConnectionBasicAuthRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateConnectionBasicAuthRequestParameters = exports.CreateConnectionBasicAuthRequestParameters || (exports.CreateConnectionBasicAuthRequestParameters = {}));
-var ConnectionBodyParameter;
-(function (ConnectionBodyParameter) {
-    ConnectionBodyParameter.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ConnectionBodyParameter = exports.ConnectionBodyParameter || (exports.ConnectionBodyParameter = {}));
-var ConnectionHeaderParameter;
-(function (ConnectionHeaderParameter) {
-    ConnectionHeaderParameter.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ConnectionHeaderParameter = exports.ConnectionHeaderParameter || (exports.ConnectionHeaderParameter = {}));
-var ConnectionQueryStringParameter;
-(function (ConnectionQueryStringParameter) {
-    ConnectionQueryStringParameter.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ConnectionQueryStringParameter = exports.ConnectionQueryStringParameter || (exports.ConnectionQueryStringParameter = {}));
-var ConnectionHttpParameters;
-(function (ConnectionHttpParameters) {
-    ConnectionHttpParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ConnectionHttpParameters = exports.ConnectionHttpParameters || (exports.ConnectionHttpParameters = {}));
-var CreateConnectionOAuthClientRequestParameters;
-(function (CreateConnectionOAuthClientRequestParameters) {
-    CreateConnectionOAuthClientRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateConnectionOAuthClientRequestParameters = exports.CreateConnectionOAuthClientRequestParameters || (exports.CreateConnectionOAuthClientRequestParameters = {}));
 var ConnectionOAuthHttpMethod;
 (function (ConnectionOAuthHttpMethod) {
     ConnectionOAuthHttpMethod["GET"] = "GET";
     ConnectionOAuthHttpMethod["POST"] = "POST";
     ConnectionOAuthHttpMethod["PUT"] = "PUT";
 })(ConnectionOAuthHttpMethod = exports.ConnectionOAuthHttpMethod || (exports.ConnectionOAuthHttpMethod = {}));
-var CreateConnectionOAuthRequestParameters;
-(function (CreateConnectionOAuthRequestParameters) {
-    CreateConnectionOAuthRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateConnectionOAuthRequestParameters = exports.CreateConnectionOAuthRequestParameters || (exports.CreateConnectionOAuthRequestParameters = {}));
-var CreateConnectionAuthRequestParameters;
-(function (CreateConnectionAuthRequestParameters) {
-    CreateConnectionAuthRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateConnectionAuthRequestParameters = exports.CreateConnectionAuthRequestParameters || (exports.CreateConnectionAuthRequestParameters = {}));
-var CreateConnectionRequest;
-(function (CreateConnectionRequest) {
-    CreateConnectionRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateConnectionRequest = exports.CreateConnectionRequest || (exports.CreateConnectionRequest = {}));
 var ConnectionState;
 (function (ConnectionState) {
     ConnectionState["AUTHORIZED"] = "AUTHORIZED";
@@ -5872,59 +5759,11 @@ var ConnectionState;
     ConnectionState["DELETING"] = "DELETING";
     ConnectionState["UPDATING"] = "UPDATING";
 })(ConnectionState = exports.ConnectionState || (exports.ConnectionState = {}));
-var CreateConnectionResponse;
-(function (CreateConnectionResponse) {
-    CreateConnectionResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateConnectionResponse = exports.CreateConnectionResponse || (exports.CreateConnectionResponse = {}));
-var EndpointEventBus;
-(function (EndpointEventBus) {
-    EndpointEventBus.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(EndpointEventBus = exports.EndpointEventBus || (exports.EndpointEventBus = {}));
 var ReplicationState;
 (function (ReplicationState) {
     ReplicationState["DISABLED"] = "DISABLED";
     ReplicationState["ENABLED"] = "ENABLED";
 })(ReplicationState = exports.ReplicationState || (exports.ReplicationState = {}));
-var ReplicationConfig;
-(function (ReplicationConfig) {
-    ReplicationConfig.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ReplicationConfig = exports.ReplicationConfig || (exports.ReplicationConfig = {}));
-var Primary;
-(function (Primary) {
-    Primary.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Primary = exports.Primary || (exports.Primary = {}));
-var Secondary;
-(function (Secondary) {
-    Secondary.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Secondary = exports.Secondary || (exports.Secondary = {}));
-var FailoverConfig;
-(function (FailoverConfig) {
-    FailoverConfig.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(FailoverConfig = exports.FailoverConfig || (exports.FailoverConfig = {}));
-var RoutingConfig;
-(function (RoutingConfig) {
-    RoutingConfig.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RoutingConfig = exports.RoutingConfig || (exports.RoutingConfig = {}));
-var CreateEndpointRequest;
-(function (CreateEndpointRequest) {
-    CreateEndpointRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateEndpointRequest = exports.CreateEndpointRequest || (exports.CreateEndpointRequest = {}));
 var EndpointState;
 (function (EndpointState) {
     EndpointState["ACTIVE"] = "ACTIVE";
@@ -5935,126 +5774,6 @@ var EndpointState;
     EndpointState["UPDATE_FAILED"] = "UPDATE_FAILED";
     EndpointState["UPDATING"] = "UPDATING";
 })(EndpointState = exports.EndpointState || (exports.EndpointState = {}));
-var CreateEndpointResponse;
-(function (CreateEndpointResponse) {
-    CreateEndpointResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateEndpointResponse = exports.CreateEndpointResponse || (exports.CreateEndpointResponse = {}));
-var Tag;
-(function (Tag) {
-    Tag.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Tag = exports.Tag || (exports.Tag = {}));
-var CreateEventBusRequest;
-(function (CreateEventBusRequest) {
-    CreateEventBusRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateEventBusRequest = exports.CreateEventBusRequest || (exports.CreateEventBusRequest = {}));
-var CreateEventBusResponse;
-(function (CreateEventBusResponse) {
-    CreateEventBusResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreateEventBusResponse = exports.CreateEventBusResponse || (exports.CreateEventBusResponse = {}));
-var CreatePartnerEventSourceRequest;
-(function (CreatePartnerEventSourceRequest) {
-    CreatePartnerEventSourceRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreatePartnerEventSourceRequest = exports.CreatePartnerEventSourceRequest || (exports.CreatePartnerEventSourceRequest = {}));
-var CreatePartnerEventSourceResponse;
-(function (CreatePartnerEventSourceResponse) {
-    CreatePartnerEventSourceResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CreatePartnerEventSourceResponse = exports.CreatePartnerEventSourceResponse || (exports.CreatePartnerEventSourceResponse = {}));
-var DeactivateEventSourceRequest;
-(function (DeactivateEventSourceRequest) {
-    DeactivateEventSourceRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeactivateEventSourceRequest = exports.DeactivateEventSourceRequest || (exports.DeactivateEventSourceRequest = {}));
-var DeauthorizeConnectionRequest;
-(function (DeauthorizeConnectionRequest) {
-    DeauthorizeConnectionRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeauthorizeConnectionRequest = exports.DeauthorizeConnectionRequest || (exports.DeauthorizeConnectionRequest = {}));
-var DeauthorizeConnectionResponse;
-(function (DeauthorizeConnectionResponse) {
-    DeauthorizeConnectionResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeauthorizeConnectionResponse = exports.DeauthorizeConnectionResponse || (exports.DeauthorizeConnectionResponse = {}));
-var DeleteApiDestinationRequest;
-(function (DeleteApiDestinationRequest) {
-    DeleteApiDestinationRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteApiDestinationRequest = exports.DeleteApiDestinationRequest || (exports.DeleteApiDestinationRequest = {}));
-var DeleteApiDestinationResponse;
-(function (DeleteApiDestinationResponse) {
-    DeleteApiDestinationResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteApiDestinationResponse = exports.DeleteApiDestinationResponse || (exports.DeleteApiDestinationResponse = {}));
-var DeleteArchiveRequest;
-(function (DeleteArchiveRequest) {
-    DeleteArchiveRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteArchiveRequest = exports.DeleteArchiveRequest || (exports.DeleteArchiveRequest = {}));
-var DeleteArchiveResponse;
-(function (DeleteArchiveResponse) {
-    DeleteArchiveResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteArchiveResponse = exports.DeleteArchiveResponse || (exports.DeleteArchiveResponse = {}));
-var DeleteConnectionRequest;
-(function (DeleteConnectionRequest) {
-    DeleteConnectionRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteConnectionRequest = exports.DeleteConnectionRequest || (exports.DeleteConnectionRequest = {}));
-var DeleteConnectionResponse;
-(function (DeleteConnectionResponse) {
-    DeleteConnectionResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteConnectionResponse = exports.DeleteConnectionResponse || (exports.DeleteConnectionResponse = {}));
-var DeleteEndpointRequest;
-(function (DeleteEndpointRequest) {
-    DeleteEndpointRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteEndpointRequest = exports.DeleteEndpointRequest || (exports.DeleteEndpointRequest = {}));
-var DeleteEndpointResponse;
-(function (DeleteEndpointResponse) {
-    DeleteEndpointResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteEndpointResponse = exports.DeleteEndpointResponse || (exports.DeleteEndpointResponse = {}));
-var DeleteEventBusRequest;
-(function (DeleteEventBusRequest) {
-    DeleteEventBusRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteEventBusRequest = exports.DeleteEventBusRequest || (exports.DeleteEventBusRequest = {}));
-var DeletePartnerEventSourceRequest;
-(function (DeletePartnerEventSourceRequest) {
-    DeletePartnerEventSourceRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeletePartnerEventSourceRequest = exports.DeletePartnerEventSourceRequest || (exports.DeletePartnerEventSourceRequest = {}));
-var DeleteRuleRequest;
-(function (DeleteRuleRequest) {
-    DeleteRuleRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeleteRuleRequest = exports.DeleteRuleRequest || (exports.DeleteRuleRequest = {}));
 class ManagedRuleException extends EventBridgeServiceException_1.EventBridgeServiceException {
     constructor(opts) {
         super({
@@ -6068,572 +5787,38 @@ class ManagedRuleException extends EventBridgeServiceException_1.EventBridgeServ
     }
 }
 exports.ManagedRuleException = ManagedRuleException;
-var DescribeApiDestinationRequest;
-(function (DescribeApiDestinationRequest) {
-    DescribeApiDestinationRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeApiDestinationRequest = exports.DescribeApiDestinationRequest || (exports.DescribeApiDestinationRequest = {}));
-var DescribeApiDestinationResponse;
-(function (DescribeApiDestinationResponse) {
-    DescribeApiDestinationResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeApiDestinationResponse = exports.DescribeApiDestinationResponse || (exports.DescribeApiDestinationResponse = {}));
-var DescribeArchiveRequest;
-(function (DescribeArchiveRequest) {
-    DescribeArchiveRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeArchiveRequest = exports.DescribeArchiveRequest || (exports.DescribeArchiveRequest = {}));
-var DescribeArchiveResponse;
-(function (DescribeArchiveResponse) {
-    DescribeArchiveResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeArchiveResponse = exports.DescribeArchiveResponse || (exports.DescribeArchiveResponse = {}));
-var DescribeConnectionRequest;
-(function (DescribeConnectionRequest) {
-    DescribeConnectionRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeConnectionRequest = exports.DescribeConnectionRequest || (exports.DescribeConnectionRequest = {}));
-var ConnectionApiKeyAuthResponseParameters;
-(function (ConnectionApiKeyAuthResponseParameters) {
-    ConnectionApiKeyAuthResponseParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ConnectionApiKeyAuthResponseParameters = exports.ConnectionApiKeyAuthResponseParameters || (exports.ConnectionApiKeyAuthResponseParameters = {}));
-var ConnectionBasicAuthResponseParameters;
-(function (ConnectionBasicAuthResponseParameters) {
-    ConnectionBasicAuthResponseParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ConnectionBasicAuthResponseParameters = exports.ConnectionBasicAuthResponseParameters || (exports.ConnectionBasicAuthResponseParameters = {}));
-var ConnectionOAuthClientResponseParameters;
-(function (ConnectionOAuthClientResponseParameters) {
-    ConnectionOAuthClientResponseParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ConnectionOAuthClientResponseParameters = exports.ConnectionOAuthClientResponseParameters || (exports.ConnectionOAuthClientResponseParameters = {}));
-var ConnectionOAuthResponseParameters;
-(function (ConnectionOAuthResponseParameters) {
-    ConnectionOAuthResponseParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ConnectionOAuthResponseParameters = exports.ConnectionOAuthResponseParameters || (exports.ConnectionOAuthResponseParameters = {}));
-var ConnectionAuthResponseParameters;
-(function (ConnectionAuthResponseParameters) {
-    ConnectionAuthResponseParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ConnectionAuthResponseParameters = exports.ConnectionAuthResponseParameters || (exports.ConnectionAuthResponseParameters = {}));
-var DescribeConnectionResponse;
-(function (DescribeConnectionResponse) {
-    DescribeConnectionResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeConnectionResponse = exports.DescribeConnectionResponse || (exports.DescribeConnectionResponse = {}));
-var DescribeEndpointRequest;
-(function (DescribeEndpointRequest) {
-    DescribeEndpointRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeEndpointRequest = exports.DescribeEndpointRequest || (exports.DescribeEndpointRequest = {}));
-var DescribeEndpointResponse;
-(function (DescribeEndpointResponse) {
-    DescribeEndpointResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeEndpointResponse = exports.DescribeEndpointResponse || (exports.DescribeEndpointResponse = {}));
-var DescribeEventBusRequest;
-(function (DescribeEventBusRequest) {
-    DescribeEventBusRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeEventBusRequest = exports.DescribeEventBusRequest || (exports.DescribeEventBusRequest = {}));
-var DescribeEventBusResponse;
-(function (DescribeEventBusResponse) {
-    DescribeEventBusResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeEventBusResponse = exports.DescribeEventBusResponse || (exports.DescribeEventBusResponse = {}));
-var DescribeEventSourceRequest;
-(function (DescribeEventSourceRequest) {
-    DescribeEventSourceRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeEventSourceRequest = exports.DescribeEventSourceRequest || (exports.DescribeEventSourceRequest = {}));
 var EventSourceState;
 (function (EventSourceState) {
     EventSourceState["ACTIVE"] = "ACTIVE";
     EventSourceState["DELETED"] = "DELETED";
     EventSourceState["PENDING"] = "PENDING";
 })(EventSourceState = exports.EventSourceState || (exports.EventSourceState = {}));
-var DescribeEventSourceResponse;
-(function (DescribeEventSourceResponse) {
-    DescribeEventSourceResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeEventSourceResponse = exports.DescribeEventSourceResponse || (exports.DescribeEventSourceResponse = {}));
-var DescribePartnerEventSourceRequest;
-(function (DescribePartnerEventSourceRequest) {
-    DescribePartnerEventSourceRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribePartnerEventSourceRequest = exports.DescribePartnerEventSourceRequest || (exports.DescribePartnerEventSourceRequest = {}));
-var DescribePartnerEventSourceResponse;
-(function (DescribePartnerEventSourceResponse) {
-    DescribePartnerEventSourceResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribePartnerEventSourceResponse = exports.DescribePartnerEventSourceResponse || (exports.DescribePartnerEventSourceResponse = {}));
-var DescribeReplayRequest;
-(function (DescribeReplayRequest) {
-    DescribeReplayRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeReplayRequest = exports.DescribeReplayRequest || (exports.DescribeReplayRequest = {}));
-var ReplayDestination;
-(function (ReplayDestination) {
-    ReplayDestination.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ReplayDestination = exports.ReplayDestination || (exports.ReplayDestination = {}));
-var DescribeReplayResponse;
-(function (DescribeReplayResponse) {
-    DescribeReplayResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeReplayResponse = exports.DescribeReplayResponse || (exports.DescribeReplayResponse = {}));
-var DescribeRuleRequest;
-(function (DescribeRuleRequest) {
-    DescribeRuleRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeRuleRequest = exports.DescribeRuleRequest || (exports.DescribeRuleRequest = {}));
 var RuleState;
 (function (RuleState) {
     RuleState["DISABLED"] = "DISABLED";
     RuleState["ENABLED"] = "ENABLED";
 })(RuleState = exports.RuleState || (exports.RuleState = {}));
-var DescribeRuleResponse;
-(function (DescribeRuleResponse) {
-    DescribeRuleResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DescribeRuleResponse = exports.DescribeRuleResponse || (exports.DescribeRuleResponse = {}));
-var DisableRuleRequest;
-(function (DisableRuleRequest) {
-    DisableRuleRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DisableRuleRequest = exports.DisableRuleRequest || (exports.DisableRuleRequest = {}));
-var EnableRuleRequest;
-(function (EnableRuleRequest) {
-    EnableRuleRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(EnableRuleRequest = exports.EnableRuleRequest || (exports.EnableRuleRequest = {}));
-var ListApiDestinationsRequest;
-(function (ListApiDestinationsRequest) {
-    ListApiDestinationsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListApiDestinationsRequest = exports.ListApiDestinationsRequest || (exports.ListApiDestinationsRequest = {}));
-var ListApiDestinationsResponse;
-(function (ListApiDestinationsResponse) {
-    ListApiDestinationsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListApiDestinationsResponse = exports.ListApiDestinationsResponse || (exports.ListApiDestinationsResponse = {}));
-var ListArchivesRequest;
-(function (ListArchivesRequest) {
-    ListArchivesRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListArchivesRequest = exports.ListArchivesRequest || (exports.ListArchivesRequest = {}));
-var ListArchivesResponse;
-(function (ListArchivesResponse) {
-    ListArchivesResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListArchivesResponse = exports.ListArchivesResponse || (exports.ListArchivesResponse = {}));
-var ListConnectionsRequest;
-(function (ListConnectionsRequest) {
-    ListConnectionsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListConnectionsRequest = exports.ListConnectionsRequest || (exports.ListConnectionsRequest = {}));
-var Connection;
-(function (Connection) {
-    Connection.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Connection = exports.Connection || (exports.Connection = {}));
-var ListConnectionsResponse;
-(function (ListConnectionsResponse) {
-    ListConnectionsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListConnectionsResponse = exports.ListConnectionsResponse || (exports.ListConnectionsResponse = {}));
-var ListEndpointsRequest;
-(function (ListEndpointsRequest) {
-    ListEndpointsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListEndpointsRequest = exports.ListEndpointsRequest || (exports.ListEndpointsRequest = {}));
-var Endpoint;
-(function (Endpoint) {
-    Endpoint.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Endpoint = exports.Endpoint || (exports.Endpoint = {}));
-var ListEndpointsResponse;
-(function (ListEndpointsResponse) {
-    ListEndpointsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListEndpointsResponse = exports.ListEndpointsResponse || (exports.ListEndpointsResponse = {}));
-var ListEventBusesRequest;
-(function (ListEventBusesRequest) {
-    ListEventBusesRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListEventBusesRequest = exports.ListEventBusesRequest || (exports.ListEventBusesRequest = {}));
-var EventBus;
-(function (EventBus) {
-    EventBus.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(EventBus = exports.EventBus || (exports.EventBus = {}));
-var ListEventBusesResponse;
-(function (ListEventBusesResponse) {
-    ListEventBusesResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListEventBusesResponse = exports.ListEventBusesResponse || (exports.ListEventBusesResponse = {}));
-var ListEventSourcesRequest;
-(function (ListEventSourcesRequest) {
-    ListEventSourcesRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListEventSourcesRequest = exports.ListEventSourcesRequest || (exports.ListEventSourcesRequest = {}));
-var EventSource;
-(function (EventSource) {
-    EventSource.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(EventSource = exports.EventSource || (exports.EventSource = {}));
-var ListEventSourcesResponse;
-(function (ListEventSourcesResponse) {
-    ListEventSourcesResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListEventSourcesResponse = exports.ListEventSourcesResponse || (exports.ListEventSourcesResponse = {}));
-var ListPartnerEventSourceAccountsRequest;
-(function (ListPartnerEventSourceAccountsRequest) {
-    ListPartnerEventSourceAccountsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListPartnerEventSourceAccountsRequest = exports.ListPartnerEventSourceAccountsRequest || (exports.ListPartnerEventSourceAccountsRequest = {}));
-var PartnerEventSourceAccount;
-(function (PartnerEventSourceAccount) {
-    PartnerEventSourceAccount.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PartnerEventSourceAccount = exports.PartnerEventSourceAccount || (exports.PartnerEventSourceAccount = {}));
-var ListPartnerEventSourceAccountsResponse;
-(function (ListPartnerEventSourceAccountsResponse) {
-    ListPartnerEventSourceAccountsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListPartnerEventSourceAccountsResponse = exports.ListPartnerEventSourceAccountsResponse || (exports.ListPartnerEventSourceAccountsResponse = {}));
-var ListPartnerEventSourcesRequest;
-(function (ListPartnerEventSourcesRequest) {
-    ListPartnerEventSourcesRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListPartnerEventSourcesRequest = exports.ListPartnerEventSourcesRequest || (exports.ListPartnerEventSourcesRequest = {}));
-var PartnerEventSource;
-(function (PartnerEventSource) {
-    PartnerEventSource.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PartnerEventSource = exports.PartnerEventSource || (exports.PartnerEventSource = {}));
-var ListPartnerEventSourcesResponse;
-(function (ListPartnerEventSourcesResponse) {
-    ListPartnerEventSourcesResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListPartnerEventSourcesResponse = exports.ListPartnerEventSourcesResponse || (exports.ListPartnerEventSourcesResponse = {}));
-var ListReplaysRequest;
-(function (ListReplaysRequest) {
-    ListReplaysRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListReplaysRequest = exports.ListReplaysRequest || (exports.ListReplaysRequest = {}));
-var Replay;
-(function (Replay) {
-    Replay.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Replay = exports.Replay || (exports.Replay = {}));
-var ListReplaysResponse;
-(function (ListReplaysResponse) {
-    ListReplaysResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListReplaysResponse = exports.ListReplaysResponse || (exports.ListReplaysResponse = {}));
-var ListRuleNamesByTargetRequest;
-(function (ListRuleNamesByTargetRequest) {
-    ListRuleNamesByTargetRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListRuleNamesByTargetRequest = exports.ListRuleNamesByTargetRequest || (exports.ListRuleNamesByTargetRequest = {}));
-var ListRuleNamesByTargetResponse;
-(function (ListRuleNamesByTargetResponse) {
-    ListRuleNamesByTargetResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListRuleNamesByTargetResponse = exports.ListRuleNamesByTargetResponse || (exports.ListRuleNamesByTargetResponse = {}));
-var ListRulesRequest;
-(function (ListRulesRequest) {
-    ListRulesRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListRulesRequest = exports.ListRulesRequest || (exports.ListRulesRequest = {}));
-var Rule;
-(function (Rule) {
-    Rule.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Rule = exports.Rule || (exports.Rule = {}));
-var ListRulesResponse;
-(function (ListRulesResponse) {
-    ListRulesResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListRulesResponse = exports.ListRulesResponse || (exports.ListRulesResponse = {}));
-var ListTagsForResourceRequest;
-(function (ListTagsForResourceRequest) {
-    ListTagsForResourceRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListTagsForResourceRequest = exports.ListTagsForResourceRequest || (exports.ListTagsForResourceRequest = {}));
-var ListTagsForResourceResponse;
-(function (ListTagsForResourceResponse) {
-    ListTagsForResourceResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListTagsForResourceResponse = exports.ListTagsForResourceResponse || (exports.ListTagsForResourceResponse = {}));
-var ListTargetsByRuleRequest;
-(function (ListTargetsByRuleRequest) {
-    ListTargetsByRuleRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListTargetsByRuleRequest = exports.ListTargetsByRuleRequest || (exports.ListTargetsByRuleRequest = {}));
-var BatchArrayProperties;
-(function (BatchArrayProperties) {
-    BatchArrayProperties.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(BatchArrayProperties = exports.BatchArrayProperties || (exports.BatchArrayProperties = {}));
-var BatchRetryStrategy;
-(function (BatchRetryStrategy) {
-    BatchRetryStrategy.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(BatchRetryStrategy = exports.BatchRetryStrategy || (exports.BatchRetryStrategy = {}));
-var BatchParameters;
-(function (BatchParameters) {
-    BatchParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(BatchParameters = exports.BatchParameters || (exports.BatchParameters = {}));
-var DeadLetterConfig;
-(function (DeadLetterConfig) {
-    DeadLetterConfig.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DeadLetterConfig = exports.DeadLetterConfig || (exports.DeadLetterConfig = {}));
-var CapacityProviderStrategyItem;
-(function (CapacityProviderStrategyItem) {
-    CapacityProviderStrategyItem.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(CapacityProviderStrategyItem = exports.CapacityProviderStrategyItem || (exports.CapacityProviderStrategyItem = {}));
 var LaunchType;
 (function (LaunchType) {
     LaunchType["EC2"] = "EC2";
     LaunchType["EXTERNAL"] = "EXTERNAL";
     LaunchType["FARGATE"] = "FARGATE";
 })(LaunchType = exports.LaunchType || (exports.LaunchType = {}));
-var AwsVpcConfiguration;
-(function (AwsVpcConfiguration) {
-    AwsVpcConfiguration.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(AwsVpcConfiguration = exports.AwsVpcConfiguration || (exports.AwsVpcConfiguration = {}));
-var NetworkConfiguration;
-(function (NetworkConfiguration) {
-    NetworkConfiguration.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(NetworkConfiguration = exports.NetworkConfiguration || (exports.NetworkConfiguration = {}));
 var PlacementConstraintType;
 (function (PlacementConstraintType) {
     PlacementConstraintType["DISTINCT_INSTANCE"] = "distinctInstance";
     PlacementConstraintType["MEMBER_OF"] = "memberOf";
 })(PlacementConstraintType = exports.PlacementConstraintType || (exports.PlacementConstraintType = {}));
-var PlacementConstraint;
-(function (PlacementConstraint) {
-    PlacementConstraint.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PlacementConstraint = exports.PlacementConstraint || (exports.PlacementConstraint = {}));
 var PlacementStrategyType;
 (function (PlacementStrategyType) {
     PlacementStrategyType["BINPACK"] = "binpack";
     PlacementStrategyType["RANDOM"] = "random";
     PlacementStrategyType["SPREAD"] = "spread";
 })(PlacementStrategyType = exports.PlacementStrategyType || (exports.PlacementStrategyType = {}));
-var PlacementStrategy;
-(function (PlacementStrategy) {
-    PlacementStrategy.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PlacementStrategy = exports.PlacementStrategy || (exports.PlacementStrategy = {}));
 var PropagateTags;
 (function (PropagateTags) {
     PropagateTags["TASK_DEFINITION"] = "TASK_DEFINITION";
 })(PropagateTags = exports.PropagateTags || (exports.PropagateTags = {}));
-var EcsParameters;
-(function (EcsParameters) {
-    EcsParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(EcsParameters = exports.EcsParameters || (exports.EcsParameters = {}));
-var HttpParameters;
-(function (HttpParameters) {
-    HttpParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(HttpParameters = exports.HttpParameters || (exports.HttpParameters = {}));
-var InputTransformer;
-(function (InputTransformer) {
-    InputTransformer.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(InputTransformer = exports.InputTransformer || (exports.InputTransformer = {}));
-var KinesisParameters;
-(function (KinesisParameters) {
-    KinesisParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(KinesisParameters = exports.KinesisParameters || (exports.KinesisParameters = {}));
-var RedshiftDataParameters;
-(function (RedshiftDataParameters) {
-    RedshiftDataParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RedshiftDataParameters = exports.RedshiftDataParameters || (exports.RedshiftDataParameters = {}));
-var RetryPolicy;
-(function (RetryPolicy) {
-    RetryPolicy.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RetryPolicy = exports.RetryPolicy || (exports.RetryPolicy = {}));
-var RunCommandTarget;
-(function (RunCommandTarget) {
-    RunCommandTarget.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RunCommandTarget = exports.RunCommandTarget || (exports.RunCommandTarget = {}));
-var RunCommandParameters;
-(function (RunCommandParameters) {
-    RunCommandParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RunCommandParameters = exports.RunCommandParameters || (exports.RunCommandParameters = {}));
-var SageMakerPipelineParameter;
-(function (SageMakerPipelineParameter) {
-    SageMakerPipelineParameter.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(SageMakerPipelineParameter = exports.SageMakerPipelineParameter || (exports.SageMakerPipelineParameter = {}));
-var SageMakerPipelineParameters;
-(function (SageMakerPipelineParameters) {
-    SageMakerPipelineParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(SageMakerPipelineParameters = exports.SageMakerPipelineParameters || (exports.SageMakerPipelineParameters = {}));
-var SqsParameters;
-(function (SqsParameters) {
-    SqsParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(SqsParameters = exports.SqsParameters || (exports.SqsParameters = {}));
-var Target;
-(function (Target) {
-    Target.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Target = exports.Target || (exports.Target = {}));
-var ListTargetsByRuleResponse;
-(function (ListTargetsByRuleResponse) {
-    ListTargetsByRuleResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListTargetsByRuleResponse = exports.ListTargetsByRuleResponse || (exports.ListTargetsByRuleResponse = {}));
-var PutEventsRequestEntry;
-(function (PutEventsRequestEntry) {
-    PutEventsRequestEntry.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutEventsRequestEntry = exports.PutEventsRequestEntry || (exports.PutEventsRequestEntry = {}));
-var PutEventsRequest;
-(function (PutEventsRequest) {
-    PutEventsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutEventsRequest = exports.PutEventsRequest || (exports.PutEventsRequest = {}));
-var PutEventsResultEntry;
-(function (PutEventsResultEntry) {
-    PutEventsResultEntry.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutEventsResultEntry = exports.PutEventsResultEntry || (exports.PutEventsResultEntry = {}));
-var PutEventsResponse;
-(function (PutEventsResponse) {
-    PutEventsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutEventsResponse = exports.PutEventsResponse || (exports.PutEventsResponse = {}));
-var PutPartnerEventsRequestEntry;
-(function (PutPartnerEventsRequestEntry) {
-    PutPartnerEventsRequestEntry.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutPartnerEventsRequestEntry = exports.PutPartnerEventsRequestEntry || (exports.PutPartnerEventsRequestEntry = {}));
-var PutPartnerEventsRequest;
-(function (PutPartnerEventsRequest) {
-    PutPartnerEventsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutPartnerEventsRequest = exports.PutPartnerEventsRequest || (exports.PutPartnerEventsRequest = {}));
-var PutPartnerEventsResultEntry;
-(function (PutPartnerEventsResultEntry) {
-    PutPartnerEventsResultEntry.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutPartnerEventsResultEntry = exports.PutPartnerEventsResultEntry || (exports.PutPartnerEventsResultEntry = {}));
-var PutPartnerEventsResponse;
-(function (PutPartnerEventsResponse) {
-    PutPartnerEventsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutPartnerEventsResponse = exports.PutPartnerEventsResponse || (exports.PutPartnerEventsResponse = {}));
 class PolicyLengthExceededException extends EventBridgeServiceException_1.EventBridgeServiceException {
     constructor(opts) {
         super({
@@ -6647,198 +5832,678 @@ class PolicyLengthExceededException extends EventBridgeServiceException_1.EventB
     }
 }
 exports.PolicyLengthExceededException = PolicyLengthExceededException;
-var Condition;
-(function (Condition) {
-    Condition.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Condition = exports.Condition || (exports.Condition = {}));
-var PutPermissionRequest;
-(function (PutPermissionRequest) {
-    PutPermissionRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutPermissionRequest = exports.PutPermissionRequest || (exports.PutPermissionRequest = {}));
-var PutRuleRequest;
-(function (PutRuleRequest) {
-    PutRuleRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutRuleRequest = exports.PutRuleRequest || (exports.PutRuleRequest = {}));
-var PutRuleResponse;
-(function (PutRuleResponse) {
-    PutRuleResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutRuleResponse = exports.PutRuleResponse || (exports.PutRuleResponse = {}));
-var PutTargetsRequest;
-(function (PutTargetsRequest) {
-    PutTargetsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutTargetsRequest = exports.PutTargetsRequest || (exports.PutTargetsRequest = {}));
-var PutTargetsResultEntry;
-(function (PutTargetsResultEntry) {
-    PutTargetsResultEntry.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutTargetsResultEntry = exports.PutTargetsResultEntry || (exports.PutTargetsResultEntry = {}));
-var PutTargetsResponse;
-(function (PutTargetsResponse) {
-    PutTargetsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PutTargetsResponse = exports.PutTargetsResponse || (exports.PutTargetsResponse = {}));
-var RemovePermissionRequest;
-(function (RemovePermissionRequest) {
-    RemovePermissionRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RemovePermissionRequest = exports.RemovePermissionRequest || (exports.RemovePermissionRequest = {}));
-var RemoveTargetsRequest;
-(function (RemoveTargetsRequest) {
-    RemoveTargetsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RemoveTargetsRequest = exports.RemoveTargetsRequest || (exports.RemoveTargetsRequest = {}));
-var RemoveTargetsResultEntry;
-(function (RemoveTargetsResultEntry) {
-    RemoveTargetsResultEntry.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RemoveTargetsResultEntry = exports.RemoveTargetsResultEntry || (exports.RemoveTargetsResultEntry = {}));
-var RemoveTargetsResponse;
-(function (RemoveTargetsResponse) {
-    RemoveTargetsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RemoveTargetsResponse = exports.RemoveTargetsResponse || (exports.RemoveTargetsResponse = {}));
-var StartReplayRequest;
-(function (StartReplayRequest) {
-    StartReplayRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(StartReplayRequest = exports.StartReplayRequest || (exports.StartReplayRequest = {}));
-var StartReplayResponse;
-(function (StartReplayResponse) {
-    StartReplayResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(StartReplayResponse = exports.StartReplayResponse || (exports.StartReplayResponse = {}));
-var TagResourceRequest;
-(function (TagResourceRequest) {
-    TagResourceRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(TagResourceRequest = exports.TagResourceRequest || (exports.TagResourceRequest = {}));
-var TagResourceResponse;
-(function (TagResourceResponse) {
-    TagResourceResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(TagResourceResponse = exports.TagResourceResponse || (exports.TagResourceResponse = {}));
-var TestEventPatternRequest;
-(function (TestEventPatternRequest) {
-    TestEventPatternRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(TestEventPatternRequest = exports.TestEventPatternRequest || (exports.TestEventPatternRequest = {}));
-var TestEventPatternResponse;
-(function (TestEventPatternResponse) {
-    TestEventPatternResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(TestEventPatternResponse = exports.TestEventPatternResponse || (exports.TestEventPatternResponse = {}));
-var UntagResourceRequest;
-(function (UntagResourceRequest) {
-    UntagResourceRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UntagResourceRequest = exports.UntagResourceRequest || (exports.UntagResourceRequest = {}));
-var UntagResourceResponse;
-(function (UntagResourceResponse) {
-    UntagResourceResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UntagResourceResponse = exports.UntagResourceResponse || (exports.UntagResourceResponse = {}));
-var UpdateApiDestinationRequest;
-(function (UpdateApiDestinationRequest) {
-    UpdateApiDestinationRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateApiDestinationRequest = exports.UpdateApiDestinationRequest || (exports.UpdateApiDestinationRequest = {}));
-var UpdateApiDestinationResponse;
-(function (UpdateApiDestinationResponse) {
-    UpdateApiDestinationResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateApiDestinationResponse = exports.UpdateApiDestinationResponse || (exports.UpdateApiDestinationResponse = {}));
-var UpdateArchiveRequest;
-(function (UpdateArchiveRequest) {
-    UpdateArchiveRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateArchiveRequest = exports.UpdateArchiveRequest || (exports.UpdateArchiveRequest = {}));
-var UpdateArchiveResponse;
-(function (UpdateArchiveResponse) {
-    UpdateArchiveResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateArchiveResponse = exports.UpdateArchiveResponse || (exports.UpdateArchiveResponse = {}));
-var UpdateConnectionApiKeyAuthRequestParameters;
-(function (UpdateConnectionApiKeyAuthRequestParameters) {
-    UpdateConnectionApiKeyAuthRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateConnectionApiKeyAuthRequestParameters = exports.UpdateConnectionApiKeyAuthRequestParameters || (exports.UpdateConnectionApiKeyAuthRequestParameters = {}));
-var UpdateConnectionBasicAuthRequestParameters;
-(function (UpdateConnectionBasicAuthRequestParameters) {
-    UpdateConnectionBasicAuthRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateConnectionBasicAuthRequestParameters = exports.UpdateConnectionBasicAuthRequestParameters || (exports.UpdateConnectionBasicAuthRequestParameters = {}));
-var UpdateConnectionOAuthClientRequestParameters;
-(function (UpdateConnectionOAuthClientRequestParameters) {
-    UpdateConnectionOAuthClientRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateConnectionOAuthClientRequestParameters = exports.UpdateConnectionOAuthClientRequestParameters || (exports.UpdateConnectionOAuthClientRequestParameters = {}));
-var UpdateConnectionOAuthRequestParameters;
-(function (UpdateConnectionOAuthRequestParameters) {
-    UpdateConnectionOAuthRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateConnectionOAuthRequestParameters = exports.UpdateConnectionOAuthRequestParameters || (exports.UpdateConnectionOAuthRequestParameters = {}));
-var UpdateConnectionAuthRequestParameters;
-(function (UpdateConnectionAuthRequestParameters) {
-    UpdateConnectionAuthRequestParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateConnectionAuthRequestParameters = exports.UpdateConnectionAuthRequestParameters || (exports.UpdateConnectionAuthRequestParameters = {}));
-var UpdateConnectionRequest;
-(function (UpdateConnectionRequest) {
-    UpdateConnectionRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateConnectionRequest = exports.UpdateConnectionRequest || (exports.UpdateConnectionRequest = {}));
-var UpdateConnectionResponse;
-(function (UpdateConnectionResponse) {
-    UpdateConnectionResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateConnectionResponse = exports.UpdateConnectionResponse || (exports.UpdateConnectionResponse = {}));
-var UpdateEndpointRequest;
-(function (UpdateEndpointRequest) {
-    UpdateEndpointRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateEndpointRequest = exports.UpdateEndpointRequest || (exports.UpdateEndpointRequest = {}));
-var UpdateEndpointResponse;
-(function (UpdateEndpointResponse) {
-    UpdateEndpointResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(UpdateEndpointResponse = exports.UpdateEndpointResponse || (exports.UpdateEndpointResponse = {}));
+const ActivateEventSourceRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ActivateEventSourceRequestFilterSensitiveLog = ActivateEventSourceRequestFilterSensitiveLog;
+const ApiDestinationFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ApiDestinationFilterSensitiveLog = ApiDestinationFilterSensitiveLog;
+const ArchiveFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ArchiveFilterSensitiveLog = ArchiveFilterSensitiveLog;
+const CancelReplayRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CancelReplayRequestFilterSensitiveLog = CancelReplayRequestFilterSensitiveLog;
+const CancelReplayResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CancelReplayResponseFilterSensitiveLog = CancelReplayResponseFilterSensitiveLog;
+const CreateApiDestinationRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateApiDestinationRequestFilterSensitiveLog = CreateApiDestinationRequestFilterSensitiveLog;
+const CreateApiDestinationResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateApiDestinationResponseFilterSensitiveLog = CreateApiDestinationResponseFilterSensitiveLog;
+const CreateArchiveRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateArchiveRequestFilterSensitiveLog = CreateArchiveRequestFilterSensitiveLog;
+const CreateArchiveResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateArchiveResponseFilterSensitiveLog = CreateArchiveResponseFilterSensitiveLog;
+const CreateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = CreateConnectionApiKeyAuthRequestParametersFilterSensitiveLog;
+const CreateConnectionBasicAuthRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateConnectionBasicAuthRequestParametersFilterSensitiveLog = CreateConnectionBasicAuthRequestParametersFilterSensitiveLog;
+const ConnectionBodyParameterFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionBodyParameterFilterSensitiveLog = ConnectionBodyParameterFilterSensitiveLog;
+const ConnectionHeaderParameterFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionHeaderParameterFilterSensitiveLog = ConnectionHeaderParameterFilterSensitiveLog;
+const ConnectionQueryStringParameterFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionQueryStringParameterFilterSensitiveLog = ConnectionQueryStringParameterFilterSensitiveLog;
+const ConnectionHttpParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionHttpParametersFilterSensitiveLog = ConnectionHttpParametersFilterSensitiveLog;
+const CreateConnectionOAuthClientRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateConnectionOAuthClientRequestParametersFilterSensitiveLog = CreateConnectionOAuthClientRequestParametersFilterSensitiveLog;
+const CreateConnectionOAuthRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateConnectionOAuthRequestParametersFilterSensitiveLog = CreateConnectionOAuthRequestParametersFilterSensitiveLog;
+const CreateConnectionAuthRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateConnectionAuthRequestParametersFilterSensitiveLog = CreateConnectionAuthRequestParametersFilterSensitiveLog;
+const CreateConnectionRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateConnectionRequestFilterSensitiveLog = CreateConnectionRequestFilterSensitiveLog;
+const CreateConnectionResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateConnectionResponseFilterSensitiveLog = CreateConnectionResponseFilterSensitiveLog;
+const EndpointEventBusFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.EndpointEventBusFilterSensitiveLog = EndpointEventBusFilterSensitiveLog;
+const ReplicationConfigFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ReplicationConfigFilterSensitiveLog = ReplicationConfigFilterSensitiveLog;
+const PrimaryFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PrimaryFilterSensitiveLog = PrimaryFilterSensitiveLog;
+const SecondaryFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.SecondaryFilterSensitiveLog = SecondaryFilterSensitiveLog;
+const FailoverConfigFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.FailoverConfigFilterSensitiveLog = FailoverConfigFilterSensitiveLog;
+const RoutingConfigFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RoutingConfigFilterSensitiveLog = RoutingConfigFilterSensitiveLog;
+const CreateEndpointRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateEndpointRequestFilterSensitiveLog = CreateEndpointRequestFilterSensitiveLog;
+const CreateEndpointResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateEndpointResponseFilterSensitiveLog = CreateEndpointResponseFilterSensitiveLog;
+const TagFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.TagFilterSensitiveLog = TagFilterSensitiveLog;
+const CreateEventBusRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateEventBusRequestFilterSensitiveLog = CreateEventBusRequestFilterSensitiveLog;
+const CreateEventBusResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreateEventBusResponseFilterSensitiveLog = CreateEventBusResponseFilterSensitiveLog;
+const CreatePartnerEventSourceRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreatePartnerEventSourceRequestFilterSensitiveLog = CreatePartnerEventSourceRequestFilterSensitiveLog;
+const CreatePartnerEventSourceResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CreatePartnerEventSourceResponseFilterSensitiveLog = CreatePartnerEventSourceResponseFilterSensitiveLog;
+const DeactivateEventSourceRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeactivateEventSourceRequestFilterSensitiveLog = DeactivateEventSourceRequestFilterSensitiveLog;
+const DeauthorizeConnectionRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeauthorizeConnectionRequestFilterSensitiveLog = DeauthorizeConnectionRequestFilterSensitiveLog;
+const DeauthorizeConnectionResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeauthorizeConnectionResponseFilterSensitiveLog = DeauthorizeConnectionResponseFilterSensitiveLog;
+const DeleteApiDestinationRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteApiDestinationRequestFilterSensitiveLog = DeleteApiDestinationRequestFilterSensitiveLog;
+const DeleteApiDestinationResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteApiDestinationResponseFilterSensitiveLog = DeleteApiDestinationResponseFilterSensitiveLog;
+const DeleteArchiveRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteArchiveRequestFilterSensitiveLog = DeleteArchiveRequestFilterSensitiveLog;
+const DeleteArchiveResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteArchiveResponseFilterSensitiveLog = DeleteArchiveResponseFilterSensitiveLog;
+const DeleteConnectionRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteConnectionRequestFilterSensitiveLog = DeleteConnectionRequestFilterSensitiveLog;
+const DeleteConnectionResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteConnectionResponseFilterSensitiveLog = DeleteConnectionResponseFilterSensitiveLog;
+const DeleteEndpointRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteEndpointRequestFilterSensitiveLog = DeleteEndpointRequestFilterSensitiveLog;
+const DeleteEndpointResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteEndpointResponseFilterSensitiveLog = DeleteEndpointResponseFilterSensitiveLog;
+const DeleteEventBusRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteEventBusRequestFilterSensitiveLog = DeleteEventBusRequestFilterSensitiveLog;
+const DeletePartnerEventSourceRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeletePartnerEventSourceRequestFilterSensitiveLog = DeletePartnerEventSourceRequestFilterSensitiveLog;
+const DeleteRuleRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeleteRuleRequestFilterSensitiveLog = DeleteRuleRequestFilterSensitiveLog;
+const DescribeApiDestinationRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeApiDestinationRequestFilterSensitiveLog = DescribeApiDestinationRequestFilterSensitiveLog;
+const DescribeApiDestinationResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeApiDestinationResponseFilterSensitiveLog = DescribeApiDestinationResponseFilterSensitiveLog;
+const DescribeArchiveRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeArchiveRequestFilterSensitiveLog = DescribeArchiveRequestFilterSensitiveLog;
+const DescribeArchiveResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeArchiveResponseFilterSensitiveLog = DescribeArchiveResponseFilterSensitiveLog;
+const DescribeConnectionRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeConnectionRequestFilterSensitiveLog = DescribeConnectionRequestFilterSensitiveLog;
+const ConnectionApiKeyAuthResponseParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionApiKeyAuthResponseParametersFilterSensitiveLog = ConnectionApiKeyAuthResponseParametersFilterSensitiveLog;
+const ConnectionBasicAuthResponseParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionBasicAuthResponseParametersFilterSensitiveLog = ConnectionBasicAuthResponseParametersFilterSensitiveLog;
+const ConnectionOAuthClientResponseParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionOAuthClientResponseParametersFilterSensitiveLog = ConnectionOAuthClientResponseParametersFilterSensitiveLog;
+const ConnectionOAuthResponseParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionOAuthResponseParametersFilterSensitiveLog = ConnectionOAuthResponseParametersFilterSensitiveLog;
+const ConnectionAuthResponseParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionAuthResponseParametersFilterSensitiveLog = ConnectionAuthResponseParametersFilterSensitiveLog;
+const DescribeConnectionResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeConnectionResponseFilterSensitiveLog = DescribeConnectionResponseFilterSensitiveLog;
+const DescribeEndpointRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeEndpointRequestFilterSensitiveLog = DescribeEndpointRequestFilterSensitiveLog;
+const DescribeEndpointResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeEndpointResponseFilterSensitiveLog = DescribeEndpointResponseFilterSensitiveLog;
+const DescribeEventBusRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeEventBusRequestFilterSensitiveLog = DescribeEventBusRequestFilterSensitiveLog;
+const DescribeEventBusResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeEventBusResponseFilterSensitiveLog = DescribeEventBusResponseFilterSensitiveLog;
+const DescribeEventSourceRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeEventSourceRequestFilterSensitiveLog = DescribeEventSourceRequestFilterSensitiveLog;
+const DescribeEventSourceResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeEventSourceResponseFilterSensitiveLog = DescribeEventSourceResponseFilterSensitiveLog;
+const DescribePartnerEventSourceRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribePartnerEventSourceRequestFilterSensitiveLog = DescribePartnerEventSourceRequestFilterSensitiveLog;
+const DescribePartnerEventSourceResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribePartnerEventSourceResponseFilterSensitiveLog = DescribePartnerEventSourceResponseFilterSensitiveLog;
+const DescribeReplayRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeReplayRequestFilterSensitiveLog = DescribeReplayRequestFilterSensitiveLog;
+const ReplayDestinationFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ReplayDestinationFilterSensitiveLog = ReplayDestinationFilterSensitiveLog;
+const DescribeReplayResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeReplayResponseFilterSensitiveLog = DescribeReplayResponseFilterSensitiveLog;
+const DescribeRuleRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeRuleRequestFilterSensitiveLog = DescribeRuleRequestFilterSensitiveLog;
+const DescribeRuleResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DescribeRuleResponseFilterSensitiveLog = DescribeRuleResponseFilterSensitiveLog;
+const DisableRuleRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DisableRuleRequestFilterSensitiveLog = DisableRuleRequestFilterSensitiveLog;
+const EnableRuleRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.EnableRuleRequestFilterSensitiveLog = EnableRuleRequestFilterSensitiveLog;
+const ListApiDestinationsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListApiDestinationsRequestFilterSensitiveLog = ListApiDestinationsRequestFilterSensitiveLog;
+const ListApiDestinationsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListApiDestinationsResponseFilterSensitiveLog = ListApiDestinationsResponseFilterSensitiveLog;
+const ListArchivesRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListArchivesRequestFilterSensitiveLog = ListArchivesRequestFilterSensitiveLog;
+const ListArchivesResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListArchivesResponseFilterSensitiveLog = ListArchivesResponseFilterSensitiveLog;
+const ListConnectionsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListConnectionsRequestFilterSensitiveLog = ListConnectionsRequestFilterSensitiveLog;
+const ConnectionFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConnectionFilterSensitiveLog = ConnectionFilterSensitiveLog;
+const ListConnectionsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListConnectionsResponseFilterSensitiveLog = ListConnectionsResponseFilterSensitiveLog;
+const ListEndpointsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListEndpointsRequestFilterSensitiveLog = ListEndpointsRequestFilterSensitiveLog;
+const EndpointFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.EndpointFilterSensitiveLog = EndpointFilterSensitiveLog;
+const ListEndpointsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListEndpointsResponseFilterSensitiveLog = ListEndpointsResponseFilterSensitiveLog;
+const ListEventBusesRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListEventBusesRequestFilterSensitiveLog = ListEventBusesRequestFilterSensitiveLog;
+const EventBusFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.EventBusFilterSensitiveLog = EventBusFilterSensitiveLog;
+const ListEventBusesResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListEventBusesResponseFilterSensitiveLog = ListEventBusesResponseFilterSensitiveLog;
+const ListEventSourcesRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListEventSourcesRequestFilterSensitiveLog = ListEventSourcesRequestFilterSensitiveLog;
+const EventSourceFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.EventSourceFilterSensitiveLog = EventSourceFilterSensitiveLog;
+const ListEventSourcesResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListEventSourcesResponseFilterSensitiveLog = ListEventSourcesResponseFilterSensitiveLog;
+const ListPartnerEventSourceAccountsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListPartnerEventSourceAccountsRequestFilterSensitiveLog = ListPartnerEventSourceAccountsRequestFilterSensitiveLog;
+const PartnerEventSourceAccountFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PartnerEventSourceAccountFilterSensitiveLog = PartnerEventSourceAccountFilterSensitiveLog;
+const ListPartnerEventSourceAccountsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListPartnerEventSourceAccountsResponseFilterSensitiveLog = ListPartnerEventSourceAccountsResponseFilterSensitiveLog;
+const ListPartnerEventSourcesRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListPartnerEventSourcesRequestFilterSensitiveLog = ListPartnerEventSourcesRequestFilterSensitiveLog;
+const PartnerEventSourceFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PartnerEventSourceFilterSensitiveLog = PartnerEventSourceFilterSensitiveLog;
+const ListPartnerEventSourcesResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListPartnerEventSourcesResponseFilterSensitiveLog = ListPartnerEventSourcesResponseFilterSensitiveLog;
+const ListReplaysRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListReplaysRequestFilterSensitiveLog = ListReplaysRequestFilterSensitiveLog;
+const ReplayFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ReplayFilterSensitiveLog = ReplayFilterSensitiveLog;
+const ListReplaysResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListReplaysResponseFilterSensitiveLog = ListReplaysResponseFilterSensitiveLog;
+const ListRuleNamesByTargetRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListRuleNamesByTargetRequestFilterSensitiveLog = ListRuleNamesByTargetRequestFilterSensitiveLog;
+const ListRuleNamesByTargetResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListRuleNamesByTargetResponseFilterSensitiveLog = ListRuleNamesByTargetResponseFilterSensitiveLog;
+const ListRulesRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListRulesRequestFilterSensitiveLog = ListRulesRequestFilterSensitiveLog;
+const RuleFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RuleFilterSensitiveLog = RuleFilterSensitiveLog;
+const ListRulesResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListRulesResponseFilterSensitiveLog = ListRulesResponseFilterSensitiveLog;
+const ListTagsForResourceRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListTagsForResourceRequestFilterSensitiveLog = ListTagsForResourceRequestFilterSensitiveLog;
+const ListTagsForResourceResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListTagsForResourceResponseFilterSensitiveLog = ListTagsForResourceResponseFilterSensitiveLog;
+const ListTargetsByRuleRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListTargetsByRuleRequestFilterSensitiveLog = ListTargetsByRuleRequestFilterSensitiveLog;
+const BatchArrayPropertiesFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.BatchArrayPropertiesFilterSensitiveLog = BatchArrayPropertiesFilterSensitiveLog;
+const BatchRetryStrategyFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.BatchRetryStrategyFilterSensitiveLog = BatchRetryStrategyFilterSensitiveLog;
+const BatchParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.BatchParametersFilterSensitiveLog = BatchParametersFilterSensitiveLog;
+const DeadLetterConfigFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DeadLetterConfigFilterSensitiveLog = DeadLetterConfigFilterSensitiveLog;
+const CapacityProviderStrategyItemFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CapacityProviderStrategyItemFilterSensitiveLog = CapacityProviderStrategyItemFilterSensitiveLog;
+const AwsVpcConfigurationFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.AwsVpcConfigurationFilterSensitiveLog = AwsVpcConfigurationFilterSensitiveLog;
+const NetworkConfigurationFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.NetworkConfigurationFilterSensitiveLog = NetworkConfigurationFilterSensitiveLog;
+const PlacementConstraintFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PlacementConstraintFilterSensitiveLog = PlacementConstraintFilterSensitiveLog;
+const PlacementStrategyFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PlacementStrategyFilterSensitiveLog = PlacementStrategyFilterSensitiveLog;
+const EcsParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.EcsParametersFilterSensitiveLog = EcsParametersFilterSensitiveLog;
+const HttpParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.HttpParametersFilterSensitiveLog = HttpParametersFilterSensitiveLog;
+const InputTransformerFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.InputTransformerFilterSensitiveLog = InputTransformerFilterSensitiveLog;
+const KinesisParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.KinesisParametersFilterSensitiveLog = KinesisParametersFilterSensitiveLog;
+const RedshiftDataParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RedshiftDataParametersFilterSensitiveLog = RedshiftDataParametersFilterSensitiveLog;
+const RetryPolicyFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RetryPolicyFilterSensitiveLog = RetryPolicyFilterSensitiveLog;
+const RunCommandTargetFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RunCommandTargetFilterSensitiveLog = RunCommandTargetFilterSensitiveLog;
+const RunCommandParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RunCommandParametersFilterSensitiveLog = RunCommandParametersFilterSensitiveLog;
+const SageMakerPipelineParameterFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.SageMakerPipelineParameterFilterSensitiveLog = SageMakerPipelineParameterFilterSensitiveLog;
+const SageMakerPipelineParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.SageMakerPipelineParametersFilterSensitiveLog = SageMakerPipelineParametersFilterSensitiveLog;
+const SqsParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.SqsParametersFilterSensitiveLog = SqsParametersFilterSensitiveLog;
+const TargetFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.TargetFilterSensitiveLog = TargetFilterSensitiveLog;
+const ListTargetsByRuleResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListTargetsByRuleResponseFilterSensitiveLog = ListTargetsByRuleResponseFilterSensitiveLog;
+const PutEventsRequestEntryFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutEventsRequestEntryFilterSensitiveLog = PutEventsRequestEntryFilterSensitiveLog;
+const PutEventsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutEventsRequestFilterSensitiveLog = PutEventsRequestFilterSensitiveLog;
+const PutEventsResultEntryFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutEventsResultEntryFilterSensitiveLog = PutEventsResultEntryFilterSensitiveLog;
+const PutEventsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutEventsResponseFilterSensitiveLog = PutEventsResponseFilterSensitiveLog;
+const PutPartnerEventsRequestEntryFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutPartnerEventsRequestEntryFilterSensitiveLog = PutPartnerEventsRequestEntryFilterSensitiveLog;
+const PutPartnerEventsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutPartnerEventsRequestFilterSensitiveLog = PutPartnerEventsRequestFilterSensitiveLog;
+const PutPartnerEventsResultEntryFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutPartnerEventsResultEntryFilterSensitiveLog = PutPartnerEventsResultEntryFilterSensitiveLog;
+const PutPartnerEventsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutPartnerEventsResponseFilterSensitiveLog = PutPartnerEventsResponseFilterSensitiveLog;
+const ConditionFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ConditionFilterSensitiveLog = ConditionFilterSensitiveLog;
+const PutPermissionRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutPermissionRequestFilterSensitiveLog = PutPermissionRequestFilterSensitiveLog;
+const PutRuleRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutRuleRequestFilterSensitiveLog = PutRuleRequestFilterSensitiveLog;
+const PutRuleResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutRuleResponseFilterSensitiveLog = PutRuleResponseFilterSensitiveLog;
+const PutTargetsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutTargetsRequestFilterSensitiveLog = PutTargetsRequestFilterSensitiveLog;
+const PutTargetsResultEntryFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutTargetsResultEntryFilterSensitiveLog = PutTargetsResultEntryFilterSensitiveLog;
+const PutTargetsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PutTargetsResponseFilterSensitiveLog = PutTargetsResponseFilterSensitiveLog;
+const RemovePermissionRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RemovePermissionRequestFilterSensitiveLog = RemovePermissionRequestFilterSensitiveLog;
+const RemoveTargetsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RemoveTargetsRequestFilterSensitiveLog = RemoveTargetsRequestFilterSensitiveLog;
+const RemoveTargetsResultEntryFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RemoveTargetsResultEntryFilterSensitiveLog = RemoveTargetsResultEntryFilterSensitiveLog;
+const RemoveTargetsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RemoveTargetsResponseFilterSensitiveLog = RemoveTargetsResponseFilterSensitiveLog;
+const StartReplayRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.StartReplayRequestFilterSensitiveLog = StartReplayRequestFilterSensitiveLog;
+const StartReplayResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.StartReplayResponseFilterSensitiveLog = StartReplayResponseFilterSensitiveLog;
+const TagResourceRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.TagResourceRequestFilterSensitiveLog = TagResourceRequestFilterSensitiveLog;
+const TagResourceResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.TagResourceResponseFilterSensitiveLog = TagResourceResponseFilterSensitiveLog;
+const TestEventPatternRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.TestEventPatternRequestFilterSensitiveLog = TestEventPatternRequestFilterSensitiveLog;
+const TestEventPatternResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.TestEventPatternResponseFilterSensitiveLog = TestEventPatternResponseFilterSensitiveLog;
+const UntagResourceRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UntagResourceRequestFilterSensitiveLog = UntagResourceRequestFilterSensitiveLog;
+const UntagResourceResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UntagResourceResponseFilterSensitiveLog = UntagResourceResponseFilterSensitiveLog;
+const UpdateApiDestinationRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateApiDestinationRequestFilterSensitiveLog = UpdateApiDestinationRequestFilterSensitiveLog;
+const UpdateApiDestinationResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateApiDestinationResponseFilterSensitiveLog = UpdateApiDestinationResponseFilterSensitiveLog;
+const UpdateArchiveRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateArchiveRequestFilterSensitiveLog = UpdateArchiveRequestFilterSensitiveLog;
+const UpdateArchiveResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateArchiveResponseFilterSensitiveLog = UpdateArchiveResponseFilterSensitiveLog;
+const UpdateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = UpdateConnectionApiKeyAuthRequestParametersFilterSensitiveLog;
+const UpdateConnectionBasicAuthRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateConnectionBasicAuthRequestParametersFilterSensitiveLog = UpdateConnectionBasicAuthRequestParametersFilterSensitiveLog;
+const UpdateConnectionOAuthClientRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateConnectionOAuthClientRequestParametersFilterSensitiveLog = UpdateConnectionOAuthClientRequestParametersFilterSensitiveLog;
+const UpdateConnectionOAuthRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateConnectionOAuthRequestParametersFilterSensitiveLog = UpdateConnectionOAuthRequestParametersFilterSensitiveLog;
+const UpdateConnectionAuthRequestParametersFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateConnectionAuthRequestParametersFilterSensitiveLog = UpdateConnectionAuthRequestParametersFilterSensitiveLog;
+const UpdateConnectionRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateConnectionRequestFilterSensitiveLog = UpdateConnectionRequestFilterSensitiveLog;
+const UpdateConnectionResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateConnectionResponseFilterSensitiveLog = UpdateConnectionResponseFilterSensitiveLog;
+const UpdateEndpointRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateEndpointRequestFilterSensitiveLog = UpdateEndpointRequestFilterSensitiveLog;
+const UpdateEndpointResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.UpdateEndpointResponseFilterSensitiveLog = UpdateEndpointResponseFilterSensitiveLog;
 
 
 /***/ }),
@@ -7432,9 +7097,7 @@ const deserializeAws_json1_1ActivateEventSourceCommandError = async (output, con
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7453,12 +7116,12 @@ const deserializeAws_json1_1ActivateEventSourceCommandError = async (output, con
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1CancelReplayCommand = async (output, context) => {
@@ -7480,9 +7143,7 @@ const deserializeAws_json1_1CancelReplayCommandError = async (output, context) =
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7498,12 +7159,12 @@ const deserializeAws_json1_1CancelReplayCommandError = async (output, context) =
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1CreateApiDestinationCommand = async (output, context) => {
@@ -7525,9 +7186,7 @@ const deserializeAws_json1_1CreateApiDestinationCommandError = async (output, co
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -7543,12 +7202,12 @@ const deserializeAws_json1_1CreateApiDestinationCommandError = async (output, co
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1CreateArchiveCommand = async (output, context) => {
@@ -7570,9 +7229,7 @@ const deserializeAws_json1_1CreateArchiveCommandError = async (output, context) 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7594,12 +7251,12 @@ const deserializeAws_json1_1CreateArchiveCommandError = async (output, context) 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1CreateConnectionCommand = async (output, context) => {
@@ -7621,9 +7278,7 @@ const deserializeAws_json1_1CreateConnectionCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -7636,12 +7291,12 @@ const deserializeAws_json1_1CreateConnectionCommandError = async (output, contex
             throw await deserializeAws_json1_1ResourceAlreadyExistsExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1CreateEndpointCommand = async (output, context) => {
@@ -7663,9 +7318,7 @@ const deserializeAws_json1_1CreateEndpointCommandError = async (output, context)
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -7678,12 +7331,12 @@ const deserializeAws_json1_1CreateEndpointCommandError = async (output, context)
             throw await deserializeAws_json1_1ResourceAlreadyExistsExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1CreateEventBusCommand = async (output, context) => {
@@ -7705,9 +7358,7 @@ const deserializeAws_json1_1CreateEventBusCommandError = async (output, context)
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7732,12 +7383,12 @@ const deserializeAws_json1_1CreateEventBusCommandError = async (output, context)
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1CreatePartnerEventSourceCommand = async (output, context) => {
@@ -7759,9 +7410,7 @@ const deserializeAws_json1_1CreatePartnerEventSourceCommandError = async (output
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7780,12 +7429,12 @@ const deserializeAws_json1_1CreatePartnerEventSourceCommandError = async (output
             throw await deserializeAws_json1_1ResourceAlreadyExistsExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DeactivateEventSourceCommand = async (output, context) => {
@@ -7804,9 +7453,7 @@ const deserializeAws_json1_1DeactivateEventSourceCommandError = async (output, c
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7825,12 +7472,12 @@ const deserializeAws_json1_1DeactivateEventSourceCommandError = async (output, c
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DeauthorizeConnectionCommand = async (output, context) => {
@@ -7852,9 +7499,7 @@ const deserializeAws_json1_1DeauthorizeConnectionCommandError = async (output, c
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7867,12 +7512,12 @@ const deserializeAws_json1_1DeauthorizeConnectionCommandError = async (output, c
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DeleteApiDestinationCommand = async (output, context) => {
@@ -7894,9 +7539,7 @@ const deserializeAws_json1_1DeleteApiDestinationCommandError = async (output, co
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7909,12 +7552,12 @@ const deserializeAws_json1_1DeleteApiDestinationCommandError = async (output, co
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DeleteArchiveCommand = async (output, context) => {
@@ -7936,9 +7579,7 @@ const deserializeAws_json1_1DeleteArchiveCommandError = async (output, context) 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7951,12 +7592,12 @@ const deserializeAws_json1_1DeleteArchiveCommandError = async (output, context) 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DeleteConnectionCommand = async (output, context) => {
@@ -7978,9 +7619,7 @@ const deserializeAws_json1_1DeleteConnectionCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -7993,12 +7632,12 @@ const deserializeAws_json1_1DeleteConnectionCommandError = async (output, contex
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DeleteEndpointCommand = async (output, context) => {
@@ -8020,9 +7659,7 @@ const deserializeAws_json1_1DeleteEndpointCommandError = async (output, context)
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -8035,12 +7672,12 @@ const deserializeAws_json1_1DeleteEndpointCommandError = async (output, context)
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DeleteEventBusCommand = async (output, context) => {
@@ -8059,9 +7696,7 @@ const deserializeAws_json1_1DeleteEventBusCommandError = async (output, context)
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -8071,12 +7706,12 @@ const deserializeAws_json1_1DeleteEventBusCommandError = async (output, context)
             throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DeletePartnerEventSourceCommand = async (output, context) => {
@@ -8095,9 +7730,7 @@ const deserializeAws_json1_1DeletePartnerEventSourceCommandError = async (output
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -8110,12 +7743,12 @@ const deserializeAws_json1_1DeletePartnerEventSourceCommandError = async (output
             throw await deserializeAws_json1_1OperationDisabledExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DeleteRuleCommand = async (output, context) => {
@@ -8134,9 +7767,7 @@ const deserializeAws_json1_1DeleteRuleCommandError = async (output, context) => 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -8152,12 +7783,12 @@ const deserializeAws_json1_1DeleteRuleCommandError = async (output, context) => 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DescribeApiDestinationCommand = async (output, context) => {
@@ -8179,9 +7810,7 @@ const deserializeAws_json1_1DescribeApiDestinationCommandError = async (output, 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8191,12 +7820,12 @@ const deserializeAws_json1_1DescribeApiDestinationCommandError = async (output, 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DescribeArchiveCommand = async (output, context) => {
@@ -8218,9 +7847,7 @@ const deserializeAws_json1_1DescribeArchiveCommandError = async (output, context
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8233,12 +7860,12 @@ const deserializeAws_json1_1DescribeArchiveCommandError = async (output, context
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DescribeConnectionCommand = async (output, context) => {
@@ -8260,9 +7887,7 @@ const deserializeAws_json1_1DescribeConnectionCommandError = async (output, cont
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8272,12 +7897,12 @@ const deserializeAws_json1_1DescribeConnectionCommandError = async (output, cont
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DescribeEndpointCommand = async (output, context) => {
@@ -8299,9 +7924,7 @@ const deserializeAws_json1_1DescribeEndpointCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8311,12 +7934,12 @@ const deserializeAws_json1_1DescribeEndpointCommandError = async (output, contex
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DescribeEventBusCommand = async (output, context) => {
@@ -8338,9 +7961,7 @@ const deserializeAws_json1_1DescribeEventBusCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8350,12 +7971,12 @@ const deserializeAws_json1_1DescribeEventBusCommandError = async (output, contex
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DescribeEventSourceCommand = async (output, context) => {
@@ -8377,9 +7998,7 @@ const deserializeAws_json1_1DescribeEventSourceCommandError = async (output, con
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8392,12 +8011,12 @@ const deserializeAws_json1_1DescribeEventSourceCommandError = async (output, con
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DescribePartnerEventSourceCommand = async (output, context) => {
@@ -8419,9 +8038,7 @@ const deserializeAws_json1_1DescribePartnerEventSourceCommandError = async (outp
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8434,12 +8051,12 @@ const deserializeAws_json1_1DescribePartnerEventSourceCommandError = async (outp
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DescribeReplayCommand = async (output, context) => {
@@ -8461,9 +8078,7 @@ const deserializeAws_json1_1DescribeReplayCommandError = async (output, context)
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8473,12 +8088,12 @@ const deserializeAws_json1_1DescribeReplayCommandError = async (output, context)
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DescribeRuleCommand = async (output, context) => {
@@ -8500,9 +8115,7 @@ const deserializeAws_json1_1DescribeRuleCommandError = async (output, context) =
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8512,12 +8125,12 @@ const deserializeAws_json1_1DescribeRuleCommandError = async (output, context) =
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1DisableRuleCommand = async (output, context) => {
@@ -8536,9 +8149,7 @@ const deserializeAws_json1_1DisableRuleCommandError = async (output, context) =>
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -8554,12 +8165,12 @@ const deserializeAws_json1_1DisableRuleCommandError = async (output, context) =>
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1EnableRuleCommand = async (output, context) => {
@@ -8578,9 +8189,7 @@ const deserializeAws_json1_1EnableRuleCommandError = async (output, context) => 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -8596,12 +8205,12 @@ const deserializeAws_json1_1EnableRuleCommandError = async (output, context) => 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListApiDestinationsCommand = async (output, context) => {
@@ -8623,21 +8232,19 @@ const deserializeAws_json1_1ListApiDestinationsCommandError = async (output, con
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
             throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListArchivesCommand = async (output, context) => {
@@ -8659,9 +8266,7 @@ const deserializeAws_json1_1ListArchivesCommandError = async (output, context) =
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8671,12 +8276,12 @@ const deserializeAws_json1_1ListArchivesCommandError = async (output, context) =
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListConnectionsCommand = async (output, context) => {
@@ -8698,21 +8303,19 @@ const deserializeAws_json1_1ListConnectionsCommandError = async (output, context
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
             throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListEndpointsCommand = async (output, context) => {
@@ -8734,21 +8337,19 @@ const deserializeAws_json1_1ListEndpointsCommandError = async (output, context) 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
             throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListEventBusesCommand = async (output, context) => {
@@ -8770,21 +8371,19 @@ const deserializeAws_json1_1ListEventBusesCommandError = async (output, context)
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
             throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListEventSourcesCommand = async (output, context) => {
@@ -8806,9 +8405,7 @@ const deserializeAws_json1_1ListEventSourcesCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8818,12 +8415,12 @@ const deserializeAws_json1_1ListEventSourcesCommandError = async (output, contex
             throw await deserializeAws_json1_1OperationDisabledExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListPartnerEventSourceAccountsCommand = async (output, context) => {
@@ -8845,9 +8442,7 @@ const deserializeAws_json1_1ListPartnerEventSourceAccountsCommandError = async (
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8860,12 +8455,12 @@ const deserializeAws_json1_1ListPartnerEventSourceAccountsCommandError = async (
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListPartnerEventSourcesCommand = async (output, context) => {
@@ -8887,9 +8482,7 @@ const deserializeAws_json1_1ListPartnerEventSourcesCommandError = async (output,
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8899,12 +8492,12 @@ const deserializeAws_json1_1ListPartnerEventSourcesCommandError = async (output,
             throw await deserializeAws_json1_1OperationDisabledExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListReplaysCommand = async (output, context) => {
@@ -8926,21 +8519,19 @@ const deserializeAws_json1_1ListReplaysCommandError = async (output, context) =>
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
             throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListRuleNamesByTargetCommand = async (output, context) => {
@@ -8962,9 +8553,7 @@ const deserializeAws_json1_1ListRuleNamesByTargetCommandError = async (output, c
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -8974,12 +8563,12 @@ const deserializeAws_json1_1ListRuleNamesByTargetCommandError = async (output, c
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListRulesCommand = async (output, context) => {
@@ -9001,9 +8590,7 @@ const deserializeAws_json1_1ListRulesCommandError = async (output, context) => {
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -9013,12 +8600,12 @@ const deserializeAws_json1_1ListRulesCommandError = async (output, context) => {
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListTagsForResourceCommand = async (output, context) => {
@@ -9040,9 +8627,7 @@ const deserializeAws_json1_1ListTagsForResourceCommandError = async (output, con
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -9052,12 +8637,12 @@ const deserializeAws_json1_1ListTagsForResourceCommandError = async (output, con
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ListTargetsByRuleCommand = async (output, context) => {
@@ -9079,9 +8664,7 @@ const deserializeAws_json1_1ListTargetsByRuleCommandError = async (output, conte
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -9091,12 +8674,12 @@ const deserializeAws_json1_1ListTargetsByRuleCommandError = async (output, conte
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1PutEventsCommand = async (output, context) => {
@@ -9118,21 +8701,19 @@ const deserializeAws_json1_1PutEventsCommandError = async (output, context) => {
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
             throw await deserializeAws_json1_1InternalExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1PutPartnerEventsCommand = async (output, context) => {
@@ -9154,9 +8735,7 @@ const deserializeAws_json1_1PutPartnerEventsCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -9166,12 +8745,12 @@ const deserializeAws_json1_1PutPartnerEventsCommandError = async (output, contex
             throw await deserializeAws_json1_1OperationDisabledExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1PutPermissionCommand = async (output, context) => {
@@ -9190,9 +8769,7 @@ const deserializeAws_json1_1PutPermissionCommandError = async (output, context) 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9211,12 +8788,12 @@ const deserializeAws_json1_1PutPermissionCommandError = async (output, context) 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1PutRuleCommand = async (output, context) => {
@@ -9238,9 +8815,7 @@ const deserializeAws_json1_1PutRuleCommandError = async (output, context) => {
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9262,12 +8837,12 @@ const deserializeAws_json1_1PutRuleCommandError = async (output, context) => {
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1PutTargetsCommand = async (output, context) => {
@@ -9289,9 +8864,7 @@ const deserializeAws_json1_1PutTargetsCommandError = async (output, context) => 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9310,12 +8883,12 @@ const deserializeAws_json1_1PutTargetsCommandError = async (output, context) => 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1RemovePermissionCommand = async (output, context) => {
@@ -9334,9 +8907,7 @@ const deserializeAws_json1_1RemovePermissionCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9352,12 +8923,12 @@ const deserializeAws_json1_1RemovePermissionCommandError = async (output, contex
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1RemoveTargetsCommand = async (output, context) => {
@@ -9379,9 +8950,7 @@ const deserializeAws_json1_1RemoveTargetsCommandError = async (output, context) 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9397,12 +8966,12 @@ const deserializeAws_json1_1RemoveTargetsCommandError = async (output, context) 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1StartReplayCommand = async (output, context) => {
@@ -9424,9 +8993,7 @@ const deserializeAws_json1_1StartReplayCommandError = async (output, context) =>
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -9445,12 +9012,12 @@ const deserializeAws_json1_1StartReplayCommandError = async (output, context) =>
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1TagResourceCommand = async (output, context) => {
@@ -9472,9 +9039,7 @@ const deserializeAws_json1_1TagResourceCommandError = async (output, context) =>
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9490,12 +9055,12 @@ const deserializeAws_json1_1TagResourceCommandError = async (output, context) =>
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1TestEventPatternCommand = async (output, context) => {
@@ -9517,9 +9082,7 @@ const deserializeAws_json1_1TestEventPatternCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InternalException":
         case "com.amazonaws.eventbridge#InternalException":
@@ -9529,12 +9092,12 @@ const deserializeAws_json1_1TestEventPatternCommandError = async (output, contex
             throw await deserializeAws_json1_1InvalidEventPatternExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1UntagResourceCommand = async (output, context) => {
@@ -9556,9 +9119,7 @@ const deserializeAws_json1_1UntagResourceCommandError = async (output, context) 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9574,12 +9135,12 @@ const deserializeAws_json1_1UntagResourceCommandError = async (output, context) 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1UpdateApiDestinationCommand = async (output, context) => {
@@ -9601,9 +9162,7 @@ const deserializeAws_json1_1UpdateApiDestinationCommandError = async (output, co
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9619,12 +9178,12 @@ const deserializeAws_json1_1UpdateApiDestinationCommandError = async (output, co
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1UpdateArchiveCommand = async (output, context) => {
@@ -9646,9 +9205,7 @@ const deserializeAws_json1_1UpdateArchiveCommandError = async (output, context) 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9667,12 +9224,12 @@ const deserializeAws_json1_1UpdateArchiveCommandError = async (output, context) 
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1UpdateConnectionCommand = async (output, context) => {
@@ -9694,9 +9251,7 @@ const deserializeAws_json1_1UpdateConnectionCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9712,12 +9267,12 @@ const deserializeAws_json1_1UpdateConnectionCommandError = async (output, contex
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1UpdateEndpointCommand = async (output, context) => {
@@ -9739,9 +9294,7 @@ const deserializeAws_json1_1UpdateEndpointCommandError = async (output, context)
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ConcurrentModificationException":
         case "com.amazonaws.eventbridge#ConcurrentModificationException":
@@ -9754,12 +9307,12 @@ const deserializeAws_json1_1UpdateEndpointCommandError = async (output, context)
             throw await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new EventBridgeServiceException_1.EventBridgeServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: EventBridgeServiceException_1.EventBridgeServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_json1_1ConcurrentModificationExceptionResponse = async (parsedOutput, context) => {
@@ -9863,420 +9416,374 @@ const deserializeAws_json1_1ResourceNotFoundExceptionResponse = async (parsedOut
 };
 const serializeAws_json1_1ActivateEventSourceRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1AwsVpcConfiguration = (input, context) => {
     return {
-        ...(input.AssignPublicIp !== undefined &&
-            input.AssignPublicIp !== null && { AssignPublicIp: input.AssignPublicIp }),
-        ...(input.SecurityGroups !== undefined &&
-            input.SecurityGroups !== null && {
+        ...(input.AssignPublicIp != null && { AssignPublicIp: input.AssignPublicIp }),
+        ...(input.SecurityGroups != null && {
             SecurityGroups: serializeAws_json1_1StringList(input.SecurityGroups, context),
         }),
-        ...(input.Subnets !== undefined &&
-            input.Subnets !== null && { Subnets: serializeAws_json1_1StringList(input.Subnets, context) }),
+        ...(input.Subnets != null && { Subnets: serializeAws_json1_1StringList(input.Subnets, context) }),
     };
 };
 const serializeAws_json1_1BatchArrayProperties = (input, context) => {
     return {
-        ...(input.Size !== undefined && input.Size !== null && { Size: input.Size }),
+        ...(input.Size != null && { Size: input.Size }),
     };
 };
 const serializeAws_json1_1BatchParameters = (input, context) => {
     return {
-        ...(input.ArrayProperties !== undefined &&
-            input.ArrayProperties !== null && {
+        ...(input.ArrayProperties != null && {
             ArrayProperties: serializeAws_json1_1BatchArrayProperties(input.ArrayProperties, context),
         }),
-        ...(input.JobDefinition !== undefined && input.JobDefinition !== null && { JobDefinition: input.JobDefinition }),
-        ...(input.JobName !== undefined && input.JobName !== null && { JobName: input.JobName }),
-        ...(input.RetryStrategy !== undefined &&
-            input.RetryStrategy !== null && {
+        ...(input.JobDefinition != null && { JobDefinition: input.JobDefinition }),
+        ...(input.JobName != null && { JobName: input.JobName }),
+        ...(input.RetryStrategy != null && {
             RetryStrategy: serializeAws_json1_1BatchRetryStrategy(input.RetryStrategy, context),
         }),
     };
 };
 const serializeAws_json1_1BatchRetryStrategy = (input, context) => {
     return {
-        ...(input.Attempts !== undefined && input.Attempts !== null && { Attempts: input.Attempts }),
+        ...(input.Attempts != null && { Attempts: input.Attempts }),
     };
 };
 const serializeAws_json1_1CancelReplayRequest = (input, context) => {
     return {
-        ...(input.ReplayName !== undefined && input.ReplayName !== null && { ReplayName: input.ReplayName }),
+        ...(input.ReplayName != null && { ReplayName: input.ReplayName }),
     };
 };
 const serializeAws_json1_1CapacityProviderStrategy = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1CapacityProviderStrategyItem(entry, context);
     });
 };
 const serializeAws_json1_1CapacityProviderStrategyItem = (input, context) => {
     return {
-        ...(input.base !== undefined && input.base !== null && { base: input.base }),
-        ...(input.capacityProvider !== undefined &&
-            input.capacityProvider !== null && { capacityProvider: input.capacityProvider }),
-        ...(input.weight !== undefined && input.weight !== null && { weight: input.weight }),
+        ...(input.base != null && { base: input.base }),
+        ...(input.capacityProvider != null && { capacityProvider: input.capacityProvider }),
+        ...(input.weight != null && { weight: input.weight }),
     };
 };
 const serializeAws_json1_1Condition = (input, context) => {
     return {
-        ...(input.Key !== undefined && input.Key !== null && { Key: input.Key }),
-        ...(input.Type !== undefined && input.Type !== null && { Type: input.Type }),
-        ...(input.Value !== undefined && input.Value !== null && { Value: input.Value }),
+        ...(input.Key != null && { Key: input.Key }),
+        ...(input.Type != null && { Type: input.Type }),
+        ...(input.Value != null && { Value: input.Value }),
     };
 };
 const serializeAws_json1_1ConnectionBodyParameter = (input, context) => {
     return {
-        ...(input.IsValueSecret !== undefined && input.IsValueSecret !== null && { IsValueSecret: input.IsValueSecret }),
-        ...(input.Key !== undefined && input.Key !== null && { Key: input.Key }),
-        ...(input.Value !== undefined && input.Value !== null && { Value: input.Value }),
+        ...(input.IsValueSecret != null && { IsValueSecret: input.IsValueSecret }),
+        ...(input.Key != null && { Key: input.Key }),
+        ...(input.Value != null && { Value: input.Value }),
     };
 };
 const serializeAws_json1_1ConnectionBodyParametersList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1ConnectionBodyParameter(entry, context);
     });
 };
 const serializeAws_json1_1ConnectionHeaderParameter = (input, context) => {
     return {
-        ...(input.IsValueSecret !== undefined && input.IsValueSecret !== null && { IsValueSecret: input.IsValueSecret }),
-        ...(input.Key !== undefined && input.Key !== null && { Key: input.Key }),
-        ...(input.Value !== undefined && input.Value !== null && { Value: input.Value }),
+        ...(input.IsValueSecret != null && { IsValueSecret: input.IsValueSecret }),
+        ...(input.Key != null && { Key: input.Key }),
+        ...(input.Value != null && { Value: input.Value }),
     };
 };
 const serializeAws_json1_1ConnectionHeaderParametersList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1ConnectionHeaderParameter(entry, context);
     });
 };
 const serializeAws_json1_1ConnectionHttpParameters = (input, context) => {
     return {
-        ...(input.BodyParameters !== undefined &&
-            input.BodyParameters !== null && {
+        ...(input.BodyParameters != null && {
             BodyParameters: serializeAws_json1_1ConnectionBodyParametersList(input.BodyParameters, context),
         }),
-        ...(input.HeaderParameters !== undefined &&
-            input.HeaderParameters !== null && {
+        ...(input.HeaderParameters != null && {
             HeaderParameters: serializeAws_json1_1ConnectionHeaderParametersList(input.HeaderParameters, context),
         }),
-        ...(input.QueryStringParameters !== undefined &&
-            input.QueryStringParameters !== null && {
+        ...(input.QueryStringParameters != null && {
             QueryStringParameters: serializeAws_json1_1ConnectionQueryStringParametersList(input.QueryStringParameters, context),
         }),
     };
 };
 const serializeAws_json1_1ConnectionQueryStringParameter = (input, context) => {
     return {
-        ...(input.IsValueSecret !== undefined && input.IsValueSecret !== null && { IsValueSecret: input.IsValueSecret }),
-        ...(input.Key !== undefined && input.Key !== null && { Key: input.Key }),
-        ...(input.Value !== undefined && input.Value !== null && { Value: input.Value }),
+        ...(input.IsValueSecret != null && { IsValueSecret: input.IsValueSecret }),
+        ...(input.Key != null && { Key: input.Key }),
+        ...(input.Value != null && { Value: input.Value }),
     };
 };
 const serializeAws_json1_1ConnectionQueryStringParametersList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1ConnectionQueryStringParameter(entry, context);
     });
 };
 const serializeAws_json1_1CreateApiDestinationRequest = (input, context) => {
     return {
-        ...(input.ConnectionArn !== undefined && input.ConnectionArn !== null && { ConnectionArn: input.ConnectionArn }),
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.HttpMethod !== undefined && input.HttpMethod !== null && { HttpMethod: input.HttpMethod }),
-        ...(input.InvocationEndpoint !== undefined &&
-            input.InvocationEndpoint !== null && { InvocationEndpoint: input.InvocationEndpoint }),
-        ...(input.InvocationRateLimitPerSecond !== undefined &&
-            input.InvocationRateLimitPerSecond !== null && {
+        ...(input.ConnectionArn != null && { ConnectionArn: input.ConnectionArn }),
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.HttpMethod != null && { HttpMethod: input.HttpMethod }),
+        ...(input.InvocationEndpoint != null && { InvocationEndpoint: input.InvocationEndpoint }),
+        ...(input.InvocationRateLimitPerSecond != null && {
             InvocationRateLimitPerSecond: input.InvocationRateLimitPerSecond,
         }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1CreateArchiveRequest = (input, context) => {
     return {
-        ...(input.ArchiveName !== undefined && input.ArchiveName !== null && { ArchiveName: input.ArchiveName }),
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.EventPattern !== undefined && input.EventPattern !== null && { EventPattern: input.EventPattern }),
-        ...(input.EventSourceArn !== undefined &&
-            input.EventSourceArn !== null && { EventSourceArn: input.EventSourceArn }),
-        ...(input.RetentionDays !== undefined && input.RetentionDays !== null && { RetentionDays: input.RetentionDays }),
+        ...(input.ArchiveName != null && { ArchiveName: input.ArchiveName }),
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.EventPattern != null && { EventPattern: input.EventPattern }),
+        ...(input.EventSourceArn != null && { EventSourceArn: input.EventSourceArn }),
+        ...(input.RetentionDays != null && { RetentionDays: input.RetentionDays }),
     };
 };
 const serializeAws_json1_1CreateConnectionApiKeyAuthRequestParameters = (input, context) => {
     return {
-        ...(input.ApiKeyName !== undefined && input.ApiKeyName !== null && { ApiKeyName: input.ApiKeyName }),
-        ...(input.ApiKeyValue !== undefined && input.ApiKeyValue !== null && { ApiKeyValue: input.ApiKeyValue }),
+        ...(input.ApiKeyName != null && { ApiKeyName: input.ApiKeyName }),
+        ...(input.ApiKeyValue != null && { ApiKeyValue: input.ApiKeyValue }),
     };
 };
 const serializeAws_json1_1CreateConnectionAuthRequestParameters = (input, context) => {
     return {
-        ...(input.ApiKeyAuthParameters !== undefined &&
-            input.ApiKeyAuthParameters !== null && {
+        ...(input.ApiKeyAuthParameters != null && {
             ApiKeyAuthParameters: serializeAws_json1_1CreateConnectionApiKeyAuthRequestParameters(input.ApiKeyAuthParameters, context),
         }),
-        ...(input.BasicAuthParameters !== undefined &&
-            input.BasicAuthParameters !== null && {
+        ...(input.BasicAuthParameters != null && {
             BasicAuthParameters: serializeAws_json1_1CreateConnectionBasicAuthRequestParameters(input.BasicAuthParameters, context),
         }),
-        ...(input.InvocationHttpParameters !== undefined &&
-            input.InvocationHttpParameters !== null && {
+        ...(input.InvocationHttpParameters != null && {
             InvocationHttpParameters: serializeAws_json1_1ConnectionHttpParameters(input.InvocationHttpParameters, context),
         }),
-        ...(input.OAuthParameters !== undefined &&
-            input.OAuthParameters !== null && {
+        ...(input.OAuthParameters != null && {
             OAuthParameters: serializeAws_json1_1CreateConnectionOAuthRequestParameters(input.OAuthParameters, context),
         }),
     };
 };
 const serializeAws_json1_1CreateConnectionBasicAuthRequestParameters = (input, context) => {
     return {
-        ...(input.Password !== undefined && input.Password !== null && { Password: input.Password }),
-        ...(input.Username !== undefined && input.Username !== null && { Username: input.Username }),
+        ...(input.Password != null && { Password: input.Password }),
+        ...(input.Username != null && { Username: input.Username }),
     };
 };
 const serializeAws_json1_1CreateConnectionOAuthClientRequestParameters = (input, context) => {
     return {
-        ...(input.ClientID !== undefined && input.ClientID !== null && { ClientID: input.ClientID }),
-        ...(input.ClientSecret !== undefined && input.ClientSecret !== null && { ClientSecret: input.ClientSecret }),
+        ...(input.ClientID != null && { ClientID: input.ClientID }),
+        ...(input.ClientSecret != null && { ClientSecret: input.ClientSecret }),
     };
 };
 const serializeAws_json1_1CreateConnectionOAuthRequestParameters = (input, context) => {
     return {
-        ...(input.AuthorizationEndpoint !== undefined &&
-            input.AuthorizationEndpoint !== null && { AuthorizationEndpoint: input.AuthorizationEndpoint }),
-        ...(input.ClientParameters !== undefined &&
-            input.ClientParameters !== null && {
+        ...(input.AuthorizationEndpoint != null && { AuthorizationEndpoint: input.AuthorizationEndpoint }),
+        ...(input.ClientParameters != null && {
             ClientParameters: serializeAws_json1_1CreateConnectionOAuthClientRequestParameters(input.ClientParameters, context),
         }),
-        ...(input.HttpMethod !== undefined && input.HttpMethod !== null && { HttpMethod: input.HttpMethod }),
-        ...(input.OAuthHttpParameters !== undefined &&
-            input.OAuthHttpParameters !== null && {
+        ...(input.HttpMethod != null && { HttpMethod: input.HttpMethod }),
+        ...(input.OAuthHttpParameters != null && {
             OAuthHttpParameters: serializeAws_json1_1ConnectionHttpParameters(input.OAuthHttpParameters, context),
         }),
     };
 };
 const serializeAws_json1_1CreateConnectionRequest = (input, context) => {
     return {
-        ...(input.AuthParameters !== undefined &&
-            input.AuthParameters !== null && {
+        ...(input.AuthParameters != null && {
             AuthParameters: serializeAws_json1_1CreateConnectionAuthRequestParameters(input.AuthParameters, context),
         }),
-        ...(input.AuthorizationType !== undefined &&
-            input.AuthorizationType !== null && { AuthorizationType: input.AuthorizationType }),
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.AuthorizationType != null && { AuthorizationType: input.AuthorizationType }),
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1CreateEndpointRequest = (input, context) => {
     return {
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.EventBuses !== undefined &&
-            input.EventBuses !== null && { EventBuses: serializeAws_json1_1EndpointEventBusList(input.EventBuses, context) }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
-        ...(input.ReplicationConfig !== undefined &&
-            input.ReplicationConfig !== null && {
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.EventBuses != null && {
+            EventBuses: serializeAws_json1_1EndpointEventBusList(input.EventBuses, context),
+        }),
+        ...(input.Name != null && { Name: input.Name }),
+        ...(input.ReplicationConfig != null && {
             ReplicationConfig: serializeAws_json1_1ReplicationConfig(input.ReplicationConfig, context),
         }),
-        ...(input.RoleArn !== undefined && input.RoleArn !== null && { RoleArn: input.RoleArn }),
-        ...(input.RoutingConfig !== undefined &&
-            input.RoutingConfig !== null && {
+        ...(input.RoleArn != null && { RoleArn: input.RoleArn }),
+        ...(input.RoutingConfig != null && {
             RoutingConfig: serializeAws_json1_1RoutingConfig(input.RoutingConfig, context),
         }),
     };
 };
 const serializeAws_json1_1CreateEventBusRequest = (input, context) => {
     return {
-        ...(input.EventSourceName !== undefined &&
-            input.EventSourceName !== null && { EventSourceName: input.EventSourceName }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
-        ...(input.Tags !== undefined && input.Tags !== null && { Tags: serializeAws_json1_1TagList(input.Tags, context) }),
+        ...(input.EventSourceName != null && { EventSourceName: input.EventSourceName }),
+        ...(input.Name != null && { Name: input.Name }),
+        ...(input.Tags != null && { Tags: serializeAws_json1_1TagList(input.Tags, context) }),
     };
 };
 const serializeAws_json1_1CreatePartnerEventSourceRequest = (input, context) => {
     return {
-        ...(input.Account !== undefined && input.Account !== null && { Account: input.Account }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Account != null && { Account: input.Account }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DeactivateEventSourceRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DeadLetterConfig = (input, context) => {
     return {
-        ...(input.Arn !== undefined && input.Arn !== null && { Arn: input.Arn }),
+        ...(input.Arn != null && { Arn: input.Arn }),
     };
 };
 const serializeAws_json1_1DeauthorizeConnectionRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DeleteApiDestinationRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DeleteArchiveRequest = (input, context) => {
     return {
-        ...(input.ArchiveName !== undefined && input.ArchiveName !== null && { ArchiveName: input.ArchiveName }),
+        ...(input.ArchiveName != null && { ArchiveName: input.ArchiveName }),
     };
 };
 const serializeAws_json1_1DeleteConnectionRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DeleteEndpointRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DeleteEventBusRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DeletePartnerEventSourceRequest = (input, context) => {
     return {
-        ...(input.Account !== undefined && input.Account !== null && { Account: input.Account }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Account != null && { Account: input.Account }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DeleteRuleRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Force !== undefined && input.Force !== null && { Force: input.Force }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Force != null && { Force: input.Force }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DescribeApiDestinationRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DescribeArchiveRequest = (input, context) => {
     return {
-        ...(input.ArchiveName !== undefined && input.ArchiveName !== null && { ArchiveName: input.ArchiveName }),
+        ...(input.ArchiveName != null && { ArchiveName: input.ArchiveName }),
     };
 };
 const serializeAws_json1_1DescribeConnectionRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DescribeEndpointRequest = (input, context) => {
     return {
-        ...(input.HomeRegion !== undefined && input.HomeRegion !== null && { HomeRegion: input.HomeRegion }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.HomeRegion != null && { HomeRegion: input.HomeRegion }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DescribeEventBusRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DescribeEventSourceRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DescribePartnerEventSourceRequest = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DescribeReplayRequest = (input, context) => {
     return {
-        ...(input.ReplayName !== undefined && input.ReplayName !== null && { ReplayName: input.ReplayName }),
+        ...(input.ReplayName != null && { ReplayName: input.ReplayName }),
     };
 };
 const serializeAws_json1_1DescribeRuleRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1DisableRuleRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1EcsParameters = (input, context) => {
     return {
-        ...(input.CapacityProviderStrategy !== undefined &&
-            input.CapacityProviderStrategy !== null && {
+        ...(input.CapacityProviderStrategy != null && {
             CapacityProviderStrategy: serializeAws_json1_1CapacityProviderStrategy(input.CapacityProviderStrategy, context),
         }),
-        ...(input.EnableECSManagedTags !== undefined &&
-            input.EnableECSManagedTags !== null && { EnableECSManagedTags: input.EnableECSManagedTags }),
-        ...(input.EnableExecuteCommand !== undefined &&
-            input.EnableExecuteCommand !== null && { EnableExecuteCommand: input.EnableExecuteCommand }),
-        ...(input.Group !== undefined && input.Group !== null && { Group: input.Group }),
-        ...(input.LaunchType !== undefined && input.LaunchType !== null && { LaunchType: input.LaunchType }),
-        ...(input.NetworkConfiguration !== undefined &&
-            input.NetworkConfiguration !== null && {
+        ...(input.EnableECSManagedTags != null && { EnableECSManagedTags: input.EnableECSManagedTags }),
+        ...(input.EnableExecuteCommand != null && { EnableExecuteCommand: input.EnableExecuteCommand }),
+        ...(input.Group != null && { Group: input.Group }),
+        ...(input.LaunchType != null && { LaunchType: input.LaunchType }),
+        ...(input.NetworkConfiguration != null && {
             NetworkConfiguration: serializeAws_json1_1NetworkConfiguration(input.NetworkConfiguration, context),
         }),
-        ...(input.PlacementConstraints !== undefined &&
-            input.PlacementConstraints !== null && {
+        ...(input.PlacementConstraints != null && {
             PlacementConstraints: serializeAws_json1_1PlacementConstraints(input.PlacementConstraints, context),
         }),
-        ...(input.PlacementStrategy !== undefined &&
-            input.PlacementStrategy !== null && {
+        ...(input.PlacementStrategy != null && {
             PlacementStrategy: serializeAws_json1_1PlacementStrategies(input.PlacementStrategy, context),
         }),
-        ...(input.PlatformVersion !== undefined &&
-            input.PlatformVersion !== null && { PlatformVersion: input.PlatformVersion }),
-        ...(input.PropagateTags !== undefined && input.PropagateTags !== null && { PropagateTags: input.PropagateTags }),
-        ...(input.ReferenceId !== undefined && input.ReferenceId !== null && { ReferenceId: input.ReferenceId }),
-        ...(input.Tags !== undefined && input.Tags !== null && { Tags: serializeAws_json1_1TagList(input.Tags, context) }),
-        ...(input.TaskCount !== undefined && input.TaskCount !== null && { TaskCount: input.TaskCount }),
-        ...(input.TaskDefinitionArn !== undefined &&
-            input.TaskDefinitionArn !== null && { TaskDefinitionArn: input.TaskDefinitionArn }),
+        ...(input.PlatformVersion != null && { PlatformVersion: input.PlatformVersion }),
+        ...(input.PropagateTags != null && { PropagateTags: input.PropagateTags }),
+        ...(input.ReferenceId != null && { ReferenceId: input.ReferenceId }),
+        ...(input.Tags != null && { Tags: serializeAws_json1_1TagList(input.Tags, context) }),
+        ...(input.TaskCount != null && { TaskCount: input.TaskCount }),
+        ...(input.TaskDefinitionArn != null && { TaskDefinitionArn: input.TaskDefinitionArn }),
     };
 };
 const serializeAws_json1_1EnableRuleRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1EndpointEventBus = (input, context) => {
     return {
-        ...(input.EventBusArn !== undefined && input.EventBusArn !== null && { EventBusArn: input.EventBusArn }),
+        ...(input.EventBusArn != null && { EventBusArn: input.EventBusArn }),
     };
 };
 const serializeAws_json1_1EndpointEventBusList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1EndpointEventBus(entry, context);
     });
 };
@@ -10284,18 +9791,13 @@ const serializeAws_json1_1EventResourceList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return entry;
     });
 };
 const serializeAws_json1_1FailoverConfig = (input, context) => {
     return {
-        ...(input.Primary !== undefined &&
-            input.Primary !== null && { Primary: serializeAws_json1_1Primary(input.Primary, context) }),
-        ...(input.Secondary !== undefined &&
-            input.Secondary !== null && { Secondary: serializeAws_json1_1Secondary(input.Secondary, context) }),
+        ...(input.Primary != null && { Primary: serializeAws_json1_1Primary(input.Primary, context) }),
+        ...(input.Secondary != null && { Secondary: serializeAws_json1_1Secondary(input.Secondary, context) }),
     };
 };
 const serializeAws_json1_1HeaderParametersMap = (input, context) => {
@@ -10311,142 +9813,132 @@ const serializeAws_json1_1HeaderParametersMap = (input, context) => {
 };
 const serializeAws_json1_1HttpParameters = (input, context) => {
     return {
-        ...(input.HeaderParameters !== undefined &&
-            input.HeaderParameters !== null && {
+        ...(input.HeaderParameters != null && {
             HeaderParameters: serializeAws_json1_1HeaderParametersMap(input.HeaderParameters, context),
         }),
-        ...(input.PathParameterValues !== undefined &&
-            input.PathParameterValues !== null && {
+        ...(input.PathParameterValues != null && {
             PathParameterValues: serializeAws_json1_1PathParameterList(input.PathParameterValues, context),
         }),
-        ...(input.QueryStringParameters !== undefined &&
-            input.QueryStringParameters !== null && {
+        ...(input.QueryStringParameters != null && {
             QueryStringParameters: serializeAws_json1_1QueryStringParametersMap(input.QueryStringParameters, context),
         }),
     };
 };
 const serializeAws_json1_1InputTransformer = (input, context) => {
     return {
-        ...(input.InputPathsMap !== undefined &&
-            input.InputPathsMap !== null && {
+        ...(input.InputPathsMap != null && {
             InputPathsMap: serializeAws_json1_1TransformerPaths(input.InputPathsMap, context),
         }),
-        ...(input.InputTemplate !== undefined && input.InputTemplate !== null && { InputTemplate: input.InputTemplate }),
+        ...(input.InputTemplate != null && { InputTemplate: input.InputTemplate }),
     };
 };
 const serializeAws_json1_1KinesisParameters = (input, context) => {
     return {
-        ...(input.PartitionKeyPath !== undefined &&
-            input.PartitionKeyPath !== null && { PartitionKeyPath: input.PartitionKeyPath }),
+        ...(input.PartitionKeyPath != null && { PartitionKeyPath: input.PartitionKeyPath }),
     };
 };
 const serializeAws_json1_1ListApiDestinationsRequest = (input, context) => {
     return {
-        ...(input.ConnectionArn !== undefined && input.ConnectionArn !== null && { ConnectionArn: input.ConnectionArn }),
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
+        ...(input.ConnectionArn != null && { ConnectionArn: input.ConnectionArn }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NamePrefix != null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
     };
 };
 const serializeAws_json1_1ListArchivesRequest = (input, context) => {
     return {
-        ...(input.EventSourceArn !== undefined &&
-            input.EventSourceArn !== null && { EventSourceArn: input.EventSourceArn }),
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
-        ...(input.State !== undefined && input.State !== null && { State: input.State }),
+        ...(input.EventSourceArn != null && { EventSourceArn: input.EventSourceArn }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NamePrefix != null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
+        ...(input.State != null && { State: input.State }),
     };
 };
 const serializeAws_json1_1ListConnectionsRequest = (input, context) => {
     return {
-        ...(input.ConnectionState !== undefined &&
-            input.ConnectionState !== null && { ConnectionState: input.ConnectionState }),
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
+        ...(input.ConnectionState != null && { ConnectionState: input.ConnectionState }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NamePrefix != null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
     };
 };
 const serializeAws_json1_1ListEndpointsRequest = (input, context) => {
     return {
-        ...(input.HomeRegion !== undefined && input.HomeRegion !== null && { HomeRegion: input.HomeRegion }),
-        ...(input.MaxResults !== undefined && input.MaxResults !== null && { MaxResults: input.MaxResults }),
-        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
+        ...(input.HomeRegion != null && { HomeRegion: input.HomeRegion }),
+        ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
+        ...(input.NamePrefix != null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
     };
 };
 const serializeAws_json1_1ListEventBusesRequest = (input, context) => {
     return {
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NamePrefix != null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
     };
 };
 const serializeAws_json1_1ListEventSourcesRequest = (input, context) => {
     return {
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NamePrefix != null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
     };
 };
 const serializeAws_json1_1ListPartnerEventSourceAccountsRequest = (input, context) => {
     return {
-        ...(input.EventSourceName !== undefined &&
-            input.EventSourceName !== null && { EventSourceName: input.EventSourceName }),
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
+        ...(input.EventSourceName != null && { EventSourceName: input.EventSourceName }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
     };
 };
 const serializeAws_json1_1ListPartnerEventSourcesRequest = (input, context) => {
     return {
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NamePrefix != null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
     };
 };
 const serializeAws_json1_1ListReplaysRequest = (input, context) => {
     return {
-        ...(input.EventSourceArn !== undefined &&
-            input.EventSourceArn !== null && { EventSourceArn: input.EventSourceArn }),
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
-        ...(input.State !== undefined && input.State !== null && { State: input.State }),
+        ...(input.EventSourceArn != null && { EventSourceArn: input.EventSourceArn }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NamePrefix != null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
+        ...(input.State != null && { State: input.State }),
     };
 };
 const serializeAws_json1_1ListRuleNamesByTargetRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
-        ...(input.TargetArn !== undefined && input.TargetArn !== null && { TargetArn: input.TargetArn }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
+        ...(input.TargetArn != null && { TargetArn: input.TargetArn }),
     };
 };
 const serializeAws_json1_1ListRulesRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NamePrefix !== undefined && input.NamePrefix !== null && { NamePrefix: input.NamePrefix }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NamePrefix != null && { NamePrefix: input.NamePrefix }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
     };
 };
 const serializeAws_json1_1ListTagsForResourceRequest = (input, context) => {
     return {
-        ...(input.ResourceARN !== undefined && input.ResourceARN !== null && { ResourceARN: input.ResourceARN }),
+        ...(input.ResourceARN != null && { ResourceARN: input.ResourceARN }),
     };
 };
 const serializeAws_json1_1ListTargetsByRuleRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Limit !== undefined && input.Limit !== null && { Limit: input.Limit }),
-        ...(input.NextToken !== undefined && input.NextToken !== null && { NextToken: input.NextToken }),
-        ...(input.Rule !== undefined && input.Rule !== null && { Rule: input.Rule }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Limit != null && { Limit: input.Limit }),
+        ...(input.NextToken != null && { NextToken: input.NextToken }),
+        ...(input.Rule != null && { Rule: input.Rule }),
     };
 };
 const serializeAws_json1_1NetworkConfiguration = (input, context) => {
     return {
-        ...(input.awsvpcConfiguration !== undefined &&
-            input.awsvpcConfiguration !== null && {
+        ...(input.awsvpcConfiguration != null && {
             awsvpcConfiguration: serializeAws_json1_1AwsVpcConfiguration(input.awsvpcConfiguration, context),
         }),
     };
@@ -10455,25 +9947,19 @@ const serializeAws_json1_1PathParameterList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return entry;
     });
 };
 const serializeAws_json1_1PlacementConstraint = (input, context) => {
     return {
-        ...(input.expression !== undefined && input.expression !== null && { expression: input.expression }),
-        ...(input.type !== undefined && input.type !== null && { type: input.type }),
+        ...(input.expression != null && { expression: input.expression }),
+        ...(input.type != null && { type: input.type }),
     };
 };
 const serializeAws_json1_1PlacementConstraints = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1PlacementConstraint(entry, context);
     });
 };
@@ -10481,110 +9967,94 @@ const serializeAws_json1_1PlacementStrategies = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1PlacementStrategy(entry, context);
     });
 };
 const serializeAws_json1_1PlacementStrategy = (input, context) => {
     return {
-        ...(input.field !== undefined && input.field !== null && { field: input.field }),
-        ...(input.type !== undefined && input.type !== null && { type: input.type }),
+        ...(input.field != null && { field: input.field }),
+        ...(input.type != null && { type: input.type }),
     };
 };
 const serializeAws_json1_1Primary = (input, context) => {
     return {
-        ...(input.HealthCheck !== undefined && input.HealthCheck !== null && { HealthCheck: input.HealthCheck }),
+        ...(input.HealthCheck != null && { HealthCheck: input.HealthCheck }),
     };
 };
 const serializeAws_json1_1PutEventsRequest = (input, context) => {
     return {
-        ...(input.EndpointId !== undefined && input.EndpointId !== null && { EndpointId: input.EndpointId }),
-        ...(input.Entries !== undefined &&
-            input.Entries !== null && { Entries: serializeAws_json1_1PutEventsRequestEntryList(input.Entries, context) }),
+        ...(input.EndpointId != null && { EndpointId: input.EndpointId }),
+        ...(input.Entries != null && { Entries: serializeAws_json1_1PutEventsRequestEntryList(input.Entries, context) }),
     };
 };
 const serializeAws_json1_1PutEventsRequestEntry = (input, context) => {
     return {
-        ...(input.Detail !== undefined && input.Detail !== null && { Detail: input.Detail }),
-        ...(input.DetailType !== undefined && input.DetailType !== null && { DetailType: input.DetailType }),
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Resources !== undefined &&
-            input.Resources !== null && { Resources: serializeAws_json1_1EventResourceList(input.Resources, context) }),
-        ...(input.Source !== undefined && input.Source !== null && { Source: input.Source }),
-        ...(input.Time !== undefined && input.Time !== null && { Time: Math.round(input.Time.getTime() / 1000) }),
-        ...(input.TraceHeader !== undefined && input.TraceHeader !== null && { TraceHeader: input.TraceHeader }),
+        ...(input.Detail != null && { Detail: input.Detail }),
+        ...(input.DetailType != null && { DetailType: input.DetailType }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Resources != null && { Resources: serializeAws_json1_1EventResourceList(input.Resources, context) }),
+        ...(input.Source != null && { Source: input.Source }),
+        ...(input.Time != null && { Time: Math.round(input.Time.getTime() / 1000) }),
+        ...(input.TraceHeader != null && { TraceHeader: input.TraceHeader }),
     };
 };
 const serializeAws_json1_1PutEventsRequestEntryList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1PutEventsRequestEntry(entry, context);
     });
 };
 const serializeAws_json1_1PutPartnerEventsRequest = (input, context) => {
     return {
-        ...(input.Entries !== undefined &&
-            input.Entries !== null && {
+        ...(input.Entries != null && {
             Entries: serializeAws_json1_1PutPartnerEventsRequestEntryList(input.Entries, context),
         }),
     };
 };
 const serializeAws_json1_1PutPartnerEventsRequestEntry = (input, context) => {
     return {
-        ...(input.Detail !== undefined && input.Detail !== null && { Detail: input.Detail }),
-        ...(input.DetailType !== undefined && input.DetailType !== null && { DetailType: input.DetailType }),
-        ...(input.Resources !== undefined &&
-            input.Resources !== null && { Resources: serializeAws_json1_1EventResourceList(input.Resources, context) }),
-        ...(input.Source !== undefined && input.Source !== null && { Source: input.Source }),
-        ...(input.Time !== undefined && input.Time !== null && { Time: Math.round(input.Time.getTime() / 1000) }),
+        ...(input.Detail != null && { Detail: input.Detail }),
+        ...(input.DetailType != null && { DetailType: input.DetailType }),
+        ...(input.Resources != null && { Resources: serializeAws_json1_1EventResourceList(input.Resources, context) }),
+        ...(input.Source != null && { Source: input.Source }),
+        ...(input.Time != null && { Time: Math.round(input.Time.getTime() / 1000) }),
     };
 };
 const serializeAws_json1_1PutPartnerEventsRequestEntryList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1PutPartnerEventsRequestEntry(entry, context);
     });
 };
 const serializeAws_json1_1PutPermissionRequest = (input, context) => {
     return {
-        ...(input.Action !== undefined && input.Action !== null && { Action: input.Action }),
-        ...(input.Condition !== undefined &&
-            input.Condition !== null && { Condition: serializeAws_json1_1Condition(input.Condition, context) }),
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Policy !== undefined && input.Policy !== null && { Policy: input.Policy }),
-        ...(input.Principal !== undefined && input.Principal !== null && { Principal: input.Principal }),
-        ...(input.StatementId !== undefined && input.StatementId !== null && { StatementId: input.StatementId }),
+        ...(input.Action != null && { Action: input.Action }),
+        ...(input.Condition != null && { Condition: serializeAws_json1_1Condition(input.Condition, context) }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Policy != null && { Policy: input.Policy }),
+        ...(input.Principal != null && { Principal: input.Principal }),
+        ...(input.StatementId != null && { StatementId: input.StatementId }),
     };
 };
 const serializeAws_json1_1PutRuleRequest = (input, context) => {
     return {
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.EventPattern !== undefined && input.EventPattern !== null && { EventPattern: input.EventPattern }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
-        ...(input.RoleArn !== undefined && input.RoleArn !== null && { RoleArn: input.RoleArn }),
-        ...(input.ScheduleExpression !== undefined &&
-            input.ScheduleExpression !== null && { ScheduleExpression: input.ScheduleExpression }),
-        ...(input.State !== undefined && input.State !== null && { State: input.State }),
-        ...(input.Tags !== undefined && input.Tags !== null && { Tags: serializeAws_json1_1TagList(input.Tags, context) }),
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.EventPattern != null && { EventPattern: input.EventPattern }),
+        ...(input.Name != null && { Name: input.Name }),
+        ...(input.RoleArn != null && { RoleArn: input.RoleArn }),
+        ...(input.ScheduleExpression != null && { ScheduleExpression: input.ScheduleExpression }),
+        ...(input.State != null && { State: input.State }),
+        ...(input.Tags != null && { Tags: serializeAws_json1_1TagList(input.Tags, context) }),
     };
 };
 const serializeAws_json1_1PutTargetsRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Rule !== undefined && input.Rule !== null && { Rule: input.Rule }),
-        ...(input.Targets !== undefined &&
-            input.Targets !== null && { Targets: serializeAws_json1_1TargetList(input.Targets, context) }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Rule != null && { Rule: input.Rule }),
+        ...(input.Targets != null && { Targets: serializeAws_json1_1TargetList(input.Targets, context) }),
     };
 };
 const serializeAws_json1_1QueryStringParametersMap = (input, context) => {
@@ -10600,36 +10070,33 @@ const serializeAws_json1_1QueryStringParametersMap = (input, context) => {
 };
 const serializeAws_json1_1RedshiftDataParameters = (input, context) => {
     return {
-        ...(input.Database !== undefined && input.Database !== null && { Database: input.Database }),
-        ...(input.DbUser !== undefined && input.DbUser !== null && { DbUser: input.DbUser }),
-        ...(input.SecretManagerArn !== undefined &&
-            input.SecretManagerArn !== null && { SecretManagerArn: input.SecretManagerArn }),
-        ...(input.Sql !== undefined && input.Sql !== null && { Sql: input.Sql }),
-        ...(input.StatementName !== undefined && input.StatementName !== null && { StatementName: input.StatementName }),
-        ...(input.WithEvent !== undefined && input.WithEvent !== null && { WithEvent: input.WithEvent }),
+        ...(input.Database != null && { Database: input.Database }),
+        ...(input.DbUser != null && { DbUser: input.DbUser }),
+        ...(input.SecretManagerArn != null && { SecretManagerArn: input.SecretManagerArn }),
+        ...(input.Sql != null && { Sql: input.Sql }),
+        ...(input.StatementName != null && { StatementName: input.StatementName }),
+        ...(input.WithEvent != null && { WithEvent: input.WithEvent }),
     };
 };
 const serializeAws_json1_1RemovePermissionRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.RemoveAllPermissions !== undefined &&
-            input.RemoveAllPermissions !== null && { RemoveAllPermissions: input.RemoveAllPermissions }),
-        ...(input.StatementId !== undefined && input.StatementId !== null && { StatementId: input.StatementId }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.RemoveAllPermissions != null && { RemoveAllPermissions: input.RemoveAllPermissions }),
+        ...(input.StatementId != null && { StatementId: input.StatementId }),
     };
 };
 const serializeAws_json1_1RemoveTargetsRequest = (input, context) => {
     return {
-        ...(input.EventBusName !== undefined && input.EventBusName !== null && { EventBusName: input.EventBusName }),
-        ...(input.Force !== undefined && input.Force !== null && { Force: input.Force }),
-        ...(input.Ids !== undefined && input.Ids !== null && { Ids: serializeAws_json1_1TargetIdList(input.Ids, context) }),
-        ...(input.Rule !== undefined && input.Rule !== null && { Rule: input.Rule }),
+        ...(input.EventBusName != null && { EventBusName: input.EventBusName }),
+        ...(input.Force != null && { Force: input.Force }),
+        ...(input.Ids != null && { Ids: serializeAws_json1_1TargetIdList(input.Ids, context) }),
+        ...(input.Rule != null && { Rule: input.Rule }),
     };
 };
 const serializeAws_json1_1ReplayDestination = (input, context) => {
     return {
-        ...(input.Arn !== undefined && input.Arn !== null && { Arn: input.Arn }),
-        ...(input.FilterArns !== undefined &&
-            input.FilterArns !== null && {
+        ...(input.Arn != null && { Arn: input.Arn }),
+        ...(input.FilterArns != null && {
             FilterArns: serializeAws_json1_1ReplayDestinationFilters(input.FilterArns, context),
         }),
     };
@@ -10638,55 +10105,44 @@ const serializeAws_json1_1ReplayDestinationFilters = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return entry;
     });
 };
 const serializeAws_json1_1ReplicationConfig = (input, context) => {
     return {
-        ...(input.State !== undefined && input.State !== null && { State: input.State }),
+        ...(input.State != null && { State: input.State }),
     };
 };
 const serializeAws_json1_1RetryPolicy = (input, context) => {
     return {
-        ...(input.MaximumEventAgeInSeconds !== undefined &&
-            input.MaximumEventAgeInSeconds !== null && { MaximumEventAgeInSeconds: input.MaximumEventAgeInSeconds }),
-        ...(input.MaximumRetryAttempts !== undefined &&
-            input.MaximumRetryAttempts !== null && { MaximumRetryAttempts: input.MaximumRetryAttempts }),
+        ...(input.MaximumEventAgeInSeconds != null && { MaximumEventAgeInSeconds: input.MaximumEventAgeInSeconds }),
+        ...(input.MaximumRetryAttempts != null && { MaximumRetryAttempts: input.MaximumRetryAttempts }),
     };
 };
 const serializeAws_json1_1RoutingConfig = (input, context) => {
     return {
-        ...(input.FailoverConfig !== undefined &&
-            input.FailoverConfig !== null && {
+        ...(input.FailoverConfig != null && {
             FailoverConfig: serializeAws_json1_1FailoverConfig(input.FailoverConfig, context),
         }),
     };
 };
 const serializeAws_json1_1RunCommandParameters = (input, context) => {
     return {
-        ...(input.RunCommandTargets !== undefined &&
-            input.RunCommandTargets !== null && {
+        ...(input.RunCommandTargets != null && {
             RunCommandTargets: serializeAws_json1_1RunCommandTargets(input.RunCommandTargets, context),
         }),
     };
 };
 const serializeAws_json1_1RunCommandTarget = (input, context) => {
     return {
-        ...(input.Key !== undefined && input.Key !== null && { Key: input.Key }),
-        ...(input.Values !== undefined &&
-            input.Values !== null && { Values: serializeAws_json1_1RunCommandTargetValues(input.Values, context) }),
+        ...(input.Key != null && { Key: input.Key }),
+        ...(input.Values != null && { Values: serializeAws_json1_1RunCommandTargetValues(input.Values, context) }),
     };
 };
 const serializeAws_json1_1RunCommandTargets = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1RunCommandTarget(entry, context);
     });
 };
@@ -10694,84 +10150,68 @@ const serializeAws_json1_1RunCommandTargetValues = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return entry;
     });
 };
 const serializeAws_json1_1SageMakerPipelineParameter = (input, context) => {
     return {
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
-        ...(input.Value !== undefined && input.Value !== null && { Value: input.Value }),
+        ...(input.Name != null && { Name: input.Name }),
+        ...(input.Value != null && { Value: input.Value }),
     };
 };
 const serializeAws_json1_1SageMakerPipelineParameterList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1SageMakerPipelineParameter(entry, context);
     });
 };
 const serializeAws_json1_1SageMakerPipelineParameters = (input, context) => {
     return {
-        ...(input.PipelineParameterList !== undefined &&
-            input.PipelineParameterList !== null && {
+        ...(input.PipelineParameterList != null && {
             PipelineParameterList: serializeAws_json1_1SageMakerPipelineParameterList(input.PipelineParameterList, context),
         }),
     };
 };
 const serializeAws_json1_1Secondary = (input, context) => {
     return {
-        ...(input.Route !== undefined && input.Route !== null && { Route: input.Route }),
+        ...(input.Route != null && { Route: input.Route }),
     };
 };
 const serializeAws_json1_1SqsParameters = (input, context) => {
     return {
-        ...(input.MessageGroupId !== undefined &&
-            input.MessageGroupId !== null && { MessageGroupId: input.MessageGroupId }),
+        ...(input.MessageGroupId != null && { MessageGroupId: input.MessageGroupId }),
     };
 };
 const serializeAws_json1_1StartReplayRequest = (input, context) => {
     return {
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.Destination !== undefined &&
-            input.Destination !== null && { Destination: serializeAws_json1_1ReplayDestination(input.Destination, context) }),
-        ...(input.EventEndTime !== undefined &&
-            input.EventEndTime !== null && { EventEndTime: Math.round(input.EventEndTime.getTime() / 1000) }),
-        ...(input.EventSourceArn !== undefined &&
-            input.EventSourceArn !== null && { EventSourceArn: input.EventSourceArn }),
-        ...(input.EventStartTime !== undefined &&
-            input.EventStartTime !== null && { EventStartTime: Math.round(input.EventStartTime.getTime() / 1000) }),
-        ...(input.ReplayName !== undefined && input.ReplayName !== null && { ReplayName: input.ReplayName }),
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.Destination != null && {
+            Destination: serializeAws_json1_1ReplayDestination(input.Destination, context),
+        }),
+        ...(input.EventEndTime != null && { EventEndTime: Math.round(input.EventEndTime.getTime() / 1000) }),
+        ...(input.EventSourceArn != null && { EventSourceArn: input.EventSourceArn }),
+        ...(input.EventStartTime != null && { EventStartTime: Math.round(input.EventStartTime.getTime() / 1000) }),
+        ...(input.ReplayName != null && { ReplayName: input.ReplayName }),
     };
 };
 const serializeAws_json1_1StringList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return entry;
     });
 };
 const serializeAws_json1_1Tag = (input, context) => {
     return {
-        ...(input.Key !== undefined && input.Key !== null && { Key: input.Key }),
-        ...(input.Value !== undefined && input.Value !== null && { Value: input.Value }),
+        ...(input.Key != null && { Key: input.Key }),
+        ...(input.Value != null && { Value: input.Value }),
     };
 };
 const serializeAws_json1_1TagKeyList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return entry;
     });
 };
@@ -10779,65 +10219,51 @@ const serializeAws_json1_1TagList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1Tag(entry, context);
     });
 };
 const serializeAws_json1_1TagResourceRequest = (input, context) => {
     return {
-        ...(input.ResourceARN !== undefined && input.ResourceARN !== null && { ResourceARN: input.ResourceARN }),
-        ...(input.Tags !== undefined && input.Tags !== null && { Tags: serializeAws_json1_1TagList(input.Tags, context) }),
+        ...(input.ResourceARN != null && { ResourceARN: input.ResourceARN }),
+        ...(input.Tags != null && { Tags: serializeAws_json1_1TagList(input.Tags, context) }),
     };
 };
 const serializeAws_json1_1Target = (input, context) => {
     return {
-        ...(input.Arn !== undefined && input.Arn !== null && { Arn: input.Arn }),
-        ...(input.BatchParameters !== undefined &&
-            input.BatchParameters !== null && {
+        ...(input.Arn != null && { Arn: input.Arn }),
+        ...(input.BatchParameters != null && {
             BatchParameters: serializeAws_json1_1BatchParameters(input.BatchParameters, context),
         }),
-        ...(input.DeadLetterConfig !== undefined &&
-            input.DeadLetterConfig !== null && {
+        ...(input.DeadLetterConfig != null && {
             DeadLetterConfig: serializeAws_json1_1DeadLetterConfig(input.DeadLetterConfig, context),
         }),
-        ...(input.EcsParameters !== undefined &&
-            input.EcsParameters !== null && {
+        ...(input.EcsParameters != null && {
             EcsParameters: serializeAws_json1_1EcsParameters(input.EcsParameters, context),
         }),
-        ...(input.HttpParameters !== undefined &&
-            input.HttpParameters !== null && {
+        ...(input.HttpParameters != null && {
             HttpParameters: serializeAws_json1_1HttpParameters(input.HttpParameters, context),
         }),
-        ...(input.Id !== undefined && input.Id !== null && { Id: input.Id }),
-        ...(input.Input !== undefined && input.Input !== null && { Input: input.Input }),
-        ...(input.InputPath !== undefined && input.InputPath !== null && { InputPath: input.InputPath }),
-        ...(input.InputTransformer !== undefined &&
-            input.InputTransformer !== null && {
+        ...(input.Id != null && { Id: input.Id }),
+        ...(input.Input != null && { Input: input.Input }),
+        ...(input.InputPath != null && { InputPath: input.InputPath }),
+        ...(input.InputTransformer != null && {
             InputTransformer: serializeAws_json1_1InputTransformer(input.InputTransformer, context),
         }),
-        ...(input.KinesisParameters !== undefined &&
-            input.KinesisParameters !== null && {
+        ...(input.KinesisParameters != null && {
             KinesisParameters: serializeAws_json1_1KinesisParameters(input.KinesisParameters, context),
         }),
-        ...(input.RedshiftDataParameters !== undefined &&
-            input.RedshiftDataParameters !== null && {
+        ...(input.RedshiftDataParameters != null && {
             RedshiftDataParameters: serializeAws_json1_1RedshiftDataParameters(input.RedshiftDataParameters, context),
         }),
-        ...(input.RetryPolicy !== undefined &&
-            input.RetryPolicy !== null && { RetryPolicy: serializeAws_json1_1RetryPolicy(input.RetryPolicy, context) }),
-        ...(input.RoleArn !== undefined && input.RoleArn !== null && { RoleArn: input.RoleArn }),
-        ...(input.RunCommandParameters !== undefined &&
-            input.RunCommandParameters !== null && {
+        ...(input.RetryPolicy != null && { RetryPolicy: serializeAws_json1_1RetryPolicy(input.RetryPolicy, context) }),
+        ...(input.RoleArn != null && { RoleArn: input.RoleArn }),
+        ...(input.RunCommandParameters != null && {
             RunCommandParameters: serializeAws_json1_1RunCommandParameters(input.RunCommandParameters, context),
         }),
-        ...(input.SageMakerPipelineParameters !== undefined &&
-            input.SageMakerPipelineParameters !== null && {
+        ...(input.SageMakerPipelineParameters != null && {
             SageMakerPipelineParameters: serializeAws_json1_1SageMakerPipelineParameters(input.SageMakerPipelineParameters, context),
         }),
-        ...(input.SqsParameters !== undefined &&
-            input.SqsParameters !== null && {
+        ...(input.SqsParameters != null && {
             SqsParameters: serializeAws_json1_1SqsParameters(input.SqsParameters, context),
         }),
     };
@@ -10846,9 +10272,6 @@ const serializeAws_json1_1TargetIdList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return entry;
     });
 };
@@ -10856,16 +10279,13 @@ const serializeAws_json1_1TargetList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        if (entry === null) {
-            return null;
-        }
         return serializeAws_json1_1Target(entry, context);
     });
 };
 const serializeAws_json1_1TestEventPatternRequest = (input, context) => {
     return {
-        ...(input.Event !== undefined && input.Event !== null && { Event: input.Event }),
-        ...(input.EventPattern !== undefined && input.EventPattern !== null && { EventPattern: input.EventPattern }),
+        ...(input.Event != null && { Event: input.Event }),
+        ...(input.EventPattern != null && { EventPattern: input.EventPattern }),
     };
 };
 const serializeAws_json1_1TransformerPaths = (input, context) => {
@@ -10881,111 +10301,98 @@ const serializeAws_json1_1TransformerPaths = (input, context) => {
 };
 const serializeAws_json1_1UntagResourceRequest = (input, context) => {
     return {
-        ...(input.ResourceARN !== undefined && input.ResourceARN !== null && { ResourceARN: input.ResourceARN }),
-        ...(input.TagKeys !== undefined &&
-            input.TagKeys !== null && { TagKeys: serializeAws_json1_1TagKeyList(input.TagKeys, context) }),
+        ...(input.ResourceARN != null && { ResourceARN: input.ResourceARN }),
+        ...(input.TagKeys != null && { TagKeys: serializeAws_json1_1TagKeyList(input.TagKeys, context) }),
     };
 };
 const serializeAws_json1_1UpdateApiDestinationRequest = (input, context) => {
     return {
-        ...(input.ConnectionArn !== undefined && input.ConnectionArn !== null && { ConnectionArn: input.ConnectionArn }),
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.HttpMethod !== undefined && input.HttpMethod !== null && { HttpMethod: input.HttpMethod }),
-        ...(input.InvocationEndpoint !== undefined &&
-            input.InvocationEndpoint !== null && { InvocationEndpoint: input.InvocationEndpoint }),
-        ...(input.InvocationRateLimitPerSecond !== undefined &&
-            input.InvocationRateLimitPerSecond !== null && {
+        ...(input.ConnectionArn != null && { ConnectionArn: input.ConnectionArn }),
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.HttpMethod != null && { HttpMethod: input.HttpMethod }),
+        ...(input.InvocationEndpoint != null && { InvocationEndpoint: input.InvocationEndpoint }),
+        ...(input.InvocationRateLimitPerSecond != null && {
             InvocationRateLimitPerSecond: input.InvocationRateLimitPerSecond,
         }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1UpdateArchiveRequest = (input, context) => {
     return {
-        ...(input.ArchiveName !== undefined && input.ArchiveName !== null && { ArchiveName: input.ArchiveName }),
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.EventPattern !== undefined && input.EventPattern !== null && { EventPattern: input.EventPattern }),
-        ...(input.RetentionDays !== undefined && input.RetentionDays !== null && { RetentionDays: input.RetentionDays }),
+        ...(input.ArchiveName != null && { ArchiveName: input.ArchiveName }),
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.EventPattern != null && { EventPattern: input.EventPattern }),
+        ...(input.RetentionDays != null && { RetentionDays: input.RetentionDays }),
     };
 };
 const serializeAws_json1_1UpdateConnectionApiKeyAuthRequestParameters = (input, context) => {
     return {
-        ...(input.ApiKeyName !== undefined && input.ApiKeyName !== null && { ApiKeyName: input.ApiKeyName }),
-        ...(input.ApiKeyValue !== undefined && input.ApiKeyValue !== null && { ApiKeyValue: input.ApiKeyValue }),
+        ...(input.ApiKeyName != null && { ApiKeyName: input.ApiKeyName }),
+        ...(input.ApiKeyValue != null && { ApiKeyValue: input.ApiKeyValue }),
     };
 };
 const serializeAws_json1_1UpdateConnectionAuthRequestParameters = (input, context) => {
     return {
-        ...(input.ApiKeyAuthParameters !== undefined &&
-            input.ApiKeyAuthParameters !== null && {
+        ...(input.ApiKeyAuthParameters != null && {
             ApiKeyAuthParameters: serializeAws_json1_1UpdateConnectionApiKeyAuthRequestParameters(input.ApiKeyAuthParameters, context),
         }),
-        ...(input.BasicAuthParameters !== undefined &&
-            input.BasicAuthParameters !== null && {
+        ...(input.BasicAuthParameters != null && {
             BasicAuthParameters: serializeAws_json1_1UpdateConnectionBasicAuthRequestParameters(input.BasicAuthParameters, context),
         }),
-        ...(input.InvocationHttpParameters !== undefined &&
-            input.InvocationHttpParameters !== null && {
+        ...(input.InvocationHttpParameters != null && {
             InvocationHttpParameters: serializeAws_json1_1ConnectionHttpParameters(input.InvocationHttpParameters, context),
         }),
-        ...(input.OAuthParameters !== undefined &&
-            input.OAuthParameters !== null && {
+        ...(input.OAuthParameters != null && {
             OAuthParameters: serializeAws_json1_1UpdateConnectionOAuthRequestParameters(input.OAuthParameters, context),
         }),
     };
 };
 const serializeAws_json1_1UpdateConnectionBasicAuthRequestParameters = (input, context) => {
     return {
-        ...(input.Password !== undefined && input.Password !== null && { Password: input.Password }),
-        ...(input.Username !== undefined && input.Username !== null && { Username: input.Username }),
+        ...(input.Password != null && { Password: input.Password }),
+        ...(input.Username != null && { Username: input.Username }),
     };
 };
 const serializeAws_json1_1UpdateConnectionOAuthClientRequestParameters = (input, context) => {
     return {
-        ...(input.ClientID !== undefined && input.ClientID !== null && { ClientID: input.ClientID }),
-        ...(input.ClientSecret !== undefined && input.ClientSecret !== null && { ClientSecret: input.ClientSecret }),
+        ...(input.ClientID != null && { ClientID: input.ClientID }),
+        ...(input.ClientSecret != null && { ClientSecret: input.ClientSecret }),
     };
 };
 const serializeAws_json1_1UpdateConnectionOAuthRequestParameters = (input, context) => {
     return {
-        ...(input.AuthorizationEndpoint !== undefined &&
-            input.AuthorizationEndpoint !== null && { AuthorizationEndpoint: input.AuthorizationEndpoint }),
-        ...(input.ClientParameters !== undefined &&
-            input.ClientParameters !== null && {
+        ...(input.AuthorizationEndpoint != null && { AuthorizationEndpoint: input.AuthorizationEndpoint }),
+        ...(input.ClientParameters != null && {
             ClientParameters: serializeAws_json1_1UpdateConnectionOAuthClientRequestParameters(input.ClientParameters, context),
         }),
-        ...(input.HttpMethod !== undefined && input.HttpMethod !== null && { HttpMethod: input.HttpMethod }),
-        ...(input.OAuthHttpParameters !== undefined &&
-            input.OAuthHttpParameters !== null && {
+        ...(input.HttpMethod != null && { HttpMethod: input.HttpMethod }),
+        ...(input.OAuthHttpParameters != null && {
             OAuthHttpParameters: serializeAws_json1_1ConnectionHttpParameters(input.OAuthHttpParameters, context),
         }),
     };
 };
 const serializeAws_json1_1UpdateConnectionRequest = (input, context) => {
     return {
-        ...(input.AuthParameters !== undefined &&
-            input.AuthParameters !== null && {
+        ...(input.AuthParameters != null && {
             AuthParameters: serializeAws_json1_1UpdateConnectionAuthRequestParameters(input.AuthParameters, context),
         }),
-        ...(input.AuthorizationType !== undefined &&
-            input.AuthorizationType !== null && { AuthorizationType: input.AuthorizationType }),
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
+        ...(input.AuthorizationType != null && { AuthorizationType: input.AuthorizationType }),
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.Name != null && { Name: input.Name }),
     };
 };
 const serializeAws_json1_1UpdateEndpointRequest = (input, context) => {
     return {
-        ...(input.Description !== undefined && input.Description !== null && { Description: input.Description }),
-        ...(input.EventBuses !== undefined &&
-            input.EventBuses !== null && { EventBuses: serializeAws_json1_1EndpointEventBusList(input.EventBuses, context) }),
-        ...(input.Name !== undefined && input.Name !== null && { Name: input.Name }),
-        ...(input.ReplicationConfig !== undefined &&
-            input.ReplicationConfig !== null && {
+        ...(input.Description != null && { Description: input.Description }),
+        ...(input.EventBuses != null && {
+            EventBuses: serializeAws_json1_1EndpointEventBusList(input.EventBuses, context),
+        }),
+        ...(input.Name != null && { Name: input.Name }),
+        ...(input.ReplicationConfig != null && {
             ReplicationConfig: serializeAws_json1_1ReplicationConfig(input.ReplicationConfig, context),
         }),
-        ...(input.RoleArn !== undefined && input.RoleArn !== null && { RoleArn: input.RoleArn }),
-        ...(input.RoutingConfig !== undefined &&
-            input.RoutingConfig !== null && {
+        ...(input.RoleArn != null && { RoleArn: input.RoleArn }),
+        ...(input.RoutingConfig != null && {
             RoutingConfig: serializeAws_json1_1RoutingConfig(input.RoutingConfig, context),
         }),
     };
@@ -10995,13 +10402,13 @@ const deserializeAws_json1_1ApiDestination = (output, context) => {
         ApiDestinationArn: (0, smithy_client_1.expectString)(output.ApiDestinationArn),
         ApiDestinationState: (0, smithy_client_1.expectString)(output.ApiDestinationState),
         ConnectionArn: (0, smithy_client_1.expectString)(output.ConnectionArn),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
         HttpMethod: (0, smithy_client_1.expectString)(output.HttpMethod),
         InvocationEndpoint: (0, smithy_client_1.expectString)(output.InvocationEndpoint),
         InvocationRateLimitPerSecond: (0, smithy_client_1.expectInt32)(output.InvocationRateLimitPerSecond),
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
@@ -11021,7 +10428,7 @@ const deserializeAws_json1_1ApiDestinationResponseList = (output, context) => {
 const deserializeAws_json1_1Archive = (output, context) => {
     return {
         ArchiveName: (0, smithy_client_1.expectString)(output.ArchiveName),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
         EventCount: (0, smithy_client_1.expectLong)(output.EventCount),
@@ -11046,12 +10453,8 @@ const deserializeAws_json1_1ArchiveResponseList = (output, context) => {
 const deserializeAws_json1_1AwsVpcConfiguration = (output, context) => {
     return {
         AssignPublicIp: (0, smithy_client_1.expectString)(output.AssignPublicIp),
-        SecurityGroups: output.SecurityGroups !== undefined && output.SecurityGroups !== null
-            ? deserializeAws_json1_1StringList(output.SecurityGroups, context)
-            : undefined,
-        Subnets: output.Subnets !== undefined && output.Subnets !== null
-            ? deserializeAws_json1_1StringList(output.Subnets, context)
-            : undefined,
+        SecurityGroups: output.SecurityGroups != null ? deserializeAws_json1_1StringList(output.SecurityGroups, context) : undefined,
+        Subnets: output.Subnets != null ? deserializeAws_json1_1StringList(output.Subnets, context) : undefined,
     };
 };
 const deserializeAws_json1_1BatchArrayProperties = (output, context) => {
@@ -11061,12 +10464,12 @@ const deserializeAws_json1_1BatchArrayProperties = (output, context) => {
 };
 const deserializeAws_json1_1BatchParameters = (output, context) => {
     return {
-        ArrayProperties: output.ArrayProperties !== undefined && output.ArrayProperties !== null
+        ArrayProperties: output.ArrayProperties != null
             ? deserializeAws_json1_1BatchArrayProperties(output.ArrayProperties, context)
             : undefined,
         JobDefinition: (0, smithy_client_1.expectString)(output.JobDefinition),
         JobName: (0, smithy_client_1.expectString)(output.JobName),
-        RetryStrategy: output.RetryStrategy !== undefined && output.RetryStrategy !== null
+        RetryStrategy: output.RetryStrategy != null
             ? deserializeAws_json1_1BatchRetryStrategy(output.RetryStrategy, context)
             : undefined,
     };
@@ -11111,13 +10514,13 @@ const deserializeAws_json1_1Connection = (output, context) => {
         AuthorizationType: (0, smithy_client_1.expectString)(output.AuthorizationType),
         ConnectionArn: (0, smithy_client_1.expectString)(output.ConnectionArn),
         ConnectionState: (0, smithy_client_1.expectString)(output.ConnectionState),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        LastAuthorizedTime: output.LastAuthorizedTime !== undefined && output.LastAuthorizedTime !== null
+        LastAuthorizedTime: output.LastAuthorizedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastAuthorizedTime)))
             : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
@@ -11131,16 +10534,16 @@ const deserializeAws_json1_1ConnectionApiKeyAuthResponseParameters = (output, co
 };
 const deserializeAws_json1_1ConnectionAuthResponseParameters = (output, context) => {
     return {
-        ApiKeyAuthParameters: output.ApiKeyAuthParameters !== undefined && output.ApiKeyAuthParameters !== null
+        ApiKeyAuthParameters: output.ApiKeyAuthParameters != null
             ? deserializeAws_json1_1ConnectionApiKeyAuthResponseParameters(output.ApiKeyAuthParameters, context)
             : undefined,
-        BasicAuthParameters: output.BasicAuthParameters !== undefined && output.BasicAuthParameters !== null
+        BasicAuthParameters: output.BasicAuthParameters != null
             ? deserializeAws_json1_1ConnectionBasicAuthResponseParameters(output.BasicAuthParameters, context)
             : undefined,
-        InvocationHttpParameters: output.InvocationHttpParameters !== undefined && output.InvocationHttpParameters !== null
+        InvocationHttpParameters: output.InvocationHttpParameters != null
             ? deserializeAws_json1_1ConnectionHttpParameters(output.InvocationHttpParameters, context)
             : undefined,
-        OAuthParameters: output.OAuthParameters !== undefined && output.OAuthParameters !== null
+        OAuthParameters: output.OAuthParameters != null
             ? deserializeAws_json1_1ConnectionOAuthResponseParameters(output.OAuthParameters, context)
             : undefined,
     };
@@ -11188,13 +10591,13 @@ const deserializeAws_json1_1ConnectionHeaderParametersList = (output, context) =
 };
 const deserializeAws_json1_1ConnectionHttpParameters = (output, context) => {
     return {
-        BodyParameters: output.BodyParameters !== undefined && output.BodyParameters !== null
+        BodyParameters: output.BodyParameters != null
             ? deserializeAws_json1_1ConnectionBodyParametersList(output.BodyParameters, context)
             : undefined,
-        HeaderParameters: output.HeaderParameters !== undefined && output.HeaderParameters !== null
+        HeaderParameters: output.HeaderParameters != null
             ? deserializeAws_json1_1ConnectionHeaderParametersList(output.HeaderParameters, context)
             : undefined,
-        QueryStringParameters: output.QueryStringParameters !== undefined && output.QueryStringParameters !== null
+        QueryStringParameters: output.QueryStringParameters != null
             ? deserializeAws_json1_1ConnectionQueryStringParametersList(output.QueryStringParameters, context)
             : undefined,
     };
@@ -11207,11 +10610,11 @@ const deserializeAws_json1_1ConnectionOAuthClientResponseParameters = (output, c
 const deserializeAws_json1_1ConnectionOAuthResponseParameters = (output, context) => {
     return {
         AuthorizationEndpoint: (0, smithy_client_1.expectString)(output.AuthorizationEndpoint),
-        ClientParameters: output.ClientParameters !== undefined && output.ClientParameters !== null
+        ClientParameters: output.ClientParameters != null
             ? deserializeAws_json1_1ConnectionOAuthClientResponseParameters(output.ClientParameters, context)
             : undefined,
         HttpMethod: (0, smithy_client_1.expectString)(output.HttpMethod),
-        OAuthHttpParameters: output.OAuthHttpParameters !== undefined && output.OAuthHttpParameters !== null
+        OAuthHttpParameters: output.OAuthHttpParameters != null
             ? deserializeAws_json1_1ConnectionHttpParameters(output.OAuthHttpParameters, context)
             : undefined,
     };
@@ -11249,10 +10652,10 @@ const deserializeAws_json1_1CreateApiDestinationResponse = (output, context) => 
     return {
         ApiDestinationArn: (0, smithy_client_1.expectString)(output.ApiDestinationArn),
         ApiDestinationState: (0, smithy_client_1.expectString)(output.ApiDestinationState),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
     };
@@ -11260,7 +10663,7 @@ const deserializeAws_json1_1CreateApiDestinationResponse = (output, context) => 
 const deserializeAws_json1_1CreateArchiveResponse = (output, context) => {
     return {
         ArchiveArn: (0, smithy_client_1.expectString)(output.ArchiveArn),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
@@ -11271,10 +10674,10 @@ const deserializeAws_json1_1CreateConnectionResponse = (output, context) => {
     return {
         ConnectionArn: (0, smithy_client_1.expectString)(output.ConnectionArn),
         ConnectionState: (0, smithy_client_1.expectString)(output.ConnectionState),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
     };
@@ -11282,17 +10685,13 @@ const deserializeAws_json1_1CreateConnectionResponse = (output, context) => {
 const deserializeAws_json1_1CreateEndpointResponse = (output, context) => {
     return {
         Arn: (0, smithy_client_1.expectString)(output.Arn),
-        EventBuses: output.EventBuses !== undefined && output.EventBuses !== null
-            ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context)
-            : undefined,
+        EventBuses: output.EventBuses != null ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context) : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
-        ReplicationConfig: output.ReplicationConfig !== undefined && output.ReplicationConfig !== null
+        ReplicationConfig: output.ReplicationConfig != null
             ? deserializeAws_json1_1ReplicationConfig(output.ReplicationConfig, context)
             : undefined,
         RoleArn: (0, smithy_client_1.expectString)(output.RoleArn),
-        RoutingConfig: output.RoutingConfig !== undefined && output.RoutingConfig !== null
-            ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context)
-            : undefined,
+        RoutingConfig: output.RoutingConfig != null ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context) : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
     };
 };
@@ -11315,13 +10714,13 @@ const deserializeAws_json1_1DeauthorizeConnectionResponse = (output, context) =>
     return {
         ConnectionArn: (0, smithy_client_1.expectString)(output.ConnectionArn),
         ConnectionState: (0, smithy_client_1.expectString)(output.ConnectionState),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        LastAuthorizedTime: output.LastAuthorizedTime !== undefined && output.LastAuthorizedTime !== null
+        LastAuthorizedTime: output.LastAuthorizedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastAuthorizedTime)))
             : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
     };
@@ -11336,13 +10735,13 @@ const deserializeAws_json1_1DeleteConnectionResponse = (output, context) => {
     return {
         ConnectionArn: (0, smithy_client_1.expectString)(output.ConnectionArn),
         ConnectionState: (0, smithy_client_1.expectString)(output.ConnectionState),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        LastAuthorizedTime: output.LastAuthorizedTime !== undefined && output.LastAuthorizedTime !== null
+        LastAuthorizedTime: output.LastAuthorizedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastAuthorizedTime)))
             : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
     };
@@ -11355,14 +10754,14 @@ const deserializeAws_json1_1DescribeApiDestinationResponse = (output, context) =
         ApiDestinationArn: (0, smithy_client_1.expectString)(output.ApiDestinationArn),
         ApiDestinationState: (0, smithy_client_1.expectString)(output.ApiDestinationState),
         ConnectionArn: (0, smithy_client_1.expectString)(output.ConnectionArn),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
         Description: (0, smithy_client_1.expectString)(output.Description),
         HttpMethod: (0, smithy_client_1.expectString)(output.HttpMethod),
         InvocationEndpoint: (0, smithy_client_1.expectString)(output.InvocationEndpoint),
         InvocationRateLimitPerSecond: (0, smithy_client_1.expectInt32)(output.InvocationRateLimitPerSecond),
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
@@ -11372,7 +10771,7 @@ const deserializeAws_json1_1DescribeArchiveResponse = (output, context) => {
     return {
         ArchiveArn: (0, smithy_client_1.expectString)(output.ArchiveArn),
         ArchiveName: (0, smithy_client_1.expectString)(output.ArchiveName),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
         Description: (0, smithy_client_1.expectString)(output.Description),
@@ -11387,20 +10786,20 @@ const deserializeAws_json1_1DescribeArchiveResponse = (output, context) => {
 };
 const deserializeAws_json1_1DescribeConnectionResponse = (output, context) => {
     return {
-        AuthParameters: output.AuthParameters !== undefined && output.AuthParameters !== null
+        AuthParameters: output.AuthParameters != null
             ? deserializeAws_json1_1ConnectionAuthResponseParameters(output.AuthParameters, context)
             : undefined,
         AuthorizationType: (0, smithy_client_1.expectString)(output.AuthorizationType),
         ConnectionArn: (0, smithy_client_1.expectString)(output.ConnectionArn),
         ConnectionState: (0, smithy_client_1.expectString)(output.ConnectionState),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
         Description: (0, smithy_client_1.expectString)(output.Description),
-        LastAuthorizedTime: output.LastAuthorizedTime !== undefined && output.LastAuthorizedTime !== null
+        LastAuthorizedTime: output.LastAuthorizedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastAuthorizedTime)))
             : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
@@ -11411,26 +10810,22 @@ const deserializeAws_json1_1DescribeConnectionResponse = (output, context) => {
 const deserializeAws_json1_1DescribeEndpointResponse = (output, context) => {
     return {
         Arn: (0, smithy_client_1.expectString)(output.Arn),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
         Description: (0, smithy_client_1.expectString)(output.Description),
         EndpointId: (0, smithy_client_1.expectString)(output.EndpointId),
         EndpointUrl: (0, smithy_client_1.expectString)(output.EndpointUrl),
-        EventBuses: output.EventBuses !== undefined && output.EventBuses !== null
-            ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context)
-            : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        EventBuses: output.EventBuses != null ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context) : undefined,
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
-        ReplicationConfig: output.ReplicationConfig !== undefined && output.ReplicationConfig !== null
+        ReplicationConfig: output.ReplicationConfig != null
             ? deserializeAws_json1_1ReplicationConfig(output.ReplicationConfig, context)
             : undefined,
         RoleArn: (0, smithy_client_1.expectString)(output.RoleArn),
-        RoutingConfig: output.RoutingConfig !== undefined && output.RoutingConfig !== null
-            ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context)
-            : undefined,
+        RoutingConfig: output.RoutingConfig != null ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context) : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
         StateReason: (0, smithy_client_1.expectString)(output.StateReason),
     };
@@ -11446,10 +10841,10 @@ const deserializeAws_json1_1DescribeEventSourceResponse = (output, context) => {
     return {
         Arn: (0, smithy_client_1.expectString)(output.Arn),
         CreatedBy: (0, smithy_client_1.expectString)(output.CreatedBy),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        ExpirationTime: output.ExpirationTime !== undefined && output.ExpirationTime !== null
+        ExpirationTime: output.ExpirationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.ExpirationTime)))
             : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
@@ -11465,25 +10860,23 @@ const deserializeAws_json1_1DescribePartnerEventSourceResponse = (output, contex
 const deserializeAws_json1_1DescribeReplayResponse = (output, context) => {
     return {
         Description: (0, smithy_client_1.expectString)(output.Description),
-        Destination: output.Destination !== undefined && output.Destination !== null
-            ? deserializeAws_json1_1ReplayDestination(output.Destination, context)
-            : undefined,
-        EventEndTime: output.EventEndTime !== undefined && output.EventEndTime !== null
+        Destination: output.Destination != null ? deserializeAws_json1_1ReplayDestination(output.Destination, context) : undefined,
+        EventEndTime: output.EventEndTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.EventEndTime)))
             : undefined,
-        EventLastReplayedTime: output.EventLastReplayedTime !== undefined && output.EventLastReplayedTime !== null
+        EventLastReplayedTime: output.EventLastReplayedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.EventLastReplayedTime)))
             : undefined,
         EventSourceArn: (0, smithy_client_1.expectString)(output.EventSourceArn),
-        EventStartTime: output.EventStartTime !== undefined && output.EventStartTime !== null
+        EventStartTime: output.EventStartTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.EventStartTime)))
             : undefined,
         ReplayArn: (0, smithy_client_1.expectString)(output.ReplayArn),
-        ReplayEndTime: output.ReplayEndTime !== undefined && output.ReplayEndTime !== null
+        ReplayEndTime: output.ReplayEndTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.ReplayEndTime)))
             : undefined,
         ReplayName: (0, smithy_client_1.expectString)(output.ReplayName),
-        ReplayStartTime: output.ReplayStartTime !== undefined && output.ReplayStartTime !== null
+        ReplayStartTime: output.ReplayStartTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.ReplayStartTime)))
             : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
@@ -11506,28 +10899,26 @@ const deserializeAws_json1_1DescribeRuleResponse = (output, context) => {
 };
 const deserializeAws_json1_1EcsParameters = (output, context) => {
     return {
-        CapacityProviderStrategy: output.CapacityProviderStrategy !== undefined && output.CapacityProviderStrategy !== null
+        CapacityProviderStrategy: output.CapacityProviderStrategy != null
             ? deserializeAws_json1_1CapacityProviderStrategy(output.CapacityProviderStrategy, context)
             : undefined,
         EnableECSManagedTags: (0, smithy_client_1.expectBoolean)(output.EnableECSManagedTags),
         EnableExecuteCommand: (0, smithy_client_1.expectBoolean)(output.EnableExecuteCommand),
         Group: (0, smithy_client_1.expectString)(output.Group),
         LaunchType: (0, smithy_client_1.expectString)(output.LaunchType),
-        NetworkConfiguration: output.NetworkConfiguration !== undefined && output.NetworkConfiguration !== null
+        NetworkConfiguration: output.NetworkConfiguration != null
             ? deserializeAws_json1_1NetworkConfiguration(output.NetworkConfiguration, context)
             : undefined,
-        PlacementConstraints: output.PlacementConstraints !== undefined && output.PlacementConstraints !== null
+        PlacementConstraints: output.PlacementConstraints != null
             ? deserializeAws_json1_1PlacementConstraints(output.PlacementConstraints, context)
             : undefined,
-        PlacementStrategy: output.PlacementStrategy !== undefined && output.PlacementStrategy !== null
+        PlacementStrategy: output.PlacementStrategy != null
             ? deserializeAws_json1_1PlacementStrategies(output.PlacementStrategy, context)
             : undefined,
         PlatformVersion: (0, smithy_client_1.expectString)(output.PlatformVersion),
         PropagateTags: (0, smithy_client_1.expectString)(output.PropagateTags),
         ReferenceId: (0, smithy_client_1.expectString)(output.ReferenceId),
-        Tags: output.Tags !== undefined && output.Tags !== null
-            ? deserializeAws_json1_1TagList(output.Tags, context)
-            : undefined,
+        Tags: output.Tags != null ? deserializeAws_json1_1TagList(output.Tags, context) : undefined,
         TaskCount: (0, smithy_client_1.expectInt32)(output.TaskCount),
         TaskDefinitionArn: (0, smithy_client_1.expectString)(output.TaskDefinitionArn),
     };
@@ -11535,26 +10926,22 @@ const deserializeAws_json1_1EcsParameters = (output, context) => {
 const deserializeAws_json1_1Endpoint = (output, context) => {
     return {
         Arn: (0, smithy_client_1.expectString)(output.Arn),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
         Description: (0, smithy_client_1.expectString)(output.Description),
         EndpointId: (0, smithy_client_1.expectString)(output.EndpointId),
         EndpointUrl: (0, smithy_client_1.expectString)(output.EndpointUrl),
-        EventBuses: output.EventBuses !== undefined && output.EventBuses !== null
-            ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context)
-            : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        EventBuses: output.EventBuses != null ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context) : undefined,
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
-        ReplicationConfig: output.ReplicationConfig !== undefined && output.ReplicationConfig !== null
+        ReplicationConfig: output.ReplicationConfig != null
             ? deserializeAws_json1_1ReplicationConfig(output.ReplicationConfig, context)
             : undefined,
         RoleArn: (0, smithy_client_1.expectString)(output.RoleArn),
-        RoutingConfig: output.RoutingConfig !== undefined && output.RoutingConfig !== null
-            ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context)
-            : undefined,
+        RoutingConfig: output.RoutingConfig != null ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context) : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
         StateReason: (0, smithy_client_1.expectString)(output.StateReason),
     };
@@ -11608,10 +10995,10 @@ const deserializeAws_json1_1EventSource = (output, context) => {
     return {
         Arn: (0, smithy_client_1.expectString)(output.Arn),
         CreatedBy: (0, smithy_client_1.expectString)(output.CreatedBy),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        ExpirationTime: output.ExpirationTime !== undefined && output.ExpirationTime !== null
+        ExpirationTime: output.ExpirationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.ExpirationTime)))
             : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
@@ -11631,12 +11018,8 @@ const deserializeAws_json1_1EventSourceList = (output, context) => {
 };
 const deserializeAws_json1_1FailoverConfig = (output, context) => {
     return {
-        Primary: output.Primary !== undefined && output.Primary !== null
-            ? deserializeAws_json1_1Primary(output.Primary, context)
-            : undefined,
-        Secondary: output.Secondary !== undefined && output.Secondary !== null
-            ? deserializeAws_json1_1Secondary(output.Secondary, context)
-            : undefined,
+        Primary: output.Primary != null ? deserializeAws_json1_1Primary(output.Primary, context) : undefined,
+        Secondary: output.Secondary != null ? deserializeAws_json1_1Secondary(output.Secondary, context) : undefined,
     };
 };
 const deserializeAws_json1_1HeaderParametersMap = (output, context) => {
@@ -11652,13 +11035,13 @@ const deserializeAws_json1_1HeaderParametersMap = (output, context) => {
 };
 const deserializeAws_json1_1HttpParameters = (output, context) => {
     return {
-        HeaderParameters: output.HeaderParameters !== undefined && output.HeaderParameters !== null
+        HeaderParameters: output.HeaderParameters != null
             ? deserializeAws_json1_1HeaderParametersMap(output.HeaderParameters, context)
             : undefined,
-        PathParameterValues: output.PathParameterValues !== undefined && output.PathParameterValues !== null
+        PathParameterValues: output.PathParameterValues != null
             ? deserializeAws_json1_1PathParameterList(output.PathParameterValues, context)
             : undefined,
-        QueryStringParameters: output.QueryStringParameters !== undefined && output.QueryStringParameters !== null
+        QueryStringParameters: output.QueryStringParameters != null
             ? deserializeAws_json1_1QueryStringParametersMap(output.QueryStringParameters, context)
             : undefined,
     };
@@ -11670,9 +11053,7 @@ const deserializeAws_json1_1IllegalStatusException = (output, context) => {
 };
 const deserializeAws_json1_1InputTransformer = (output, context) => {
     return {
-        InputPathsMap: output.InputPathsMap !== undefined && output.InputPathsMap !== null
-            ? deserializeAws_json1_1TransformerPaths(output.InputPathsMap, context)
-            : undefined,
+        InputPathsMap: output.InputPathsMap != null ? deserializeAws_json1_1TransformerPaths(output.InputPathsMap, context) : undefined,
         InputTemplate: (0, smithy_client_1.expectString)(output.InputTemplate),
     };
 };
@@ -11703,7 +11084,7 @@ const deserializeAws_json1_1LimitExceededException = (output, context) => {
 };
 const deserializeAws_json1_1ListApiDestinationsResponse = (output, context) => {
     return {
-        ApiDestinations: output.ApiDestinations !== undefined && output.ApiDestinations !== null
+        ApiDestinations: output.ApiDestinations != null
             ? deserializeAws_json1_1ApiDestinationResponseList(output.ApiDestinations, context)
             : undefined,
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
@@ -11711,15 +11092,13 @@ const deserializeAws_json1_1ListApiDestinationsResponse = (output, context) => {
 };
 const deserializeAws_json1_1ListArchivesResponse = (output, context) => {
     return {
-        Archives: output.Archives !== undefined && output.Archives !== null
-            ? deserializeAws_json1_1ArchiveResponseList(output.Archives, context)
-            : undefined,
+        Archives: output.Archives != null ? deserializeAws_json1_1ArchiveResponseList(output.Archives, context) : undefined,
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
     };
 };
 const deserializeAws_json1_1ListConnectionsResponse = (output, context) => {
     return {
-        Connections: output.Connections !== undefined && output.Connections !== null
+        Connections: output.Connections != null
             ? deserializeAws_json1_1ConnectionResponseList(output.Connections, context)
             : undefined,
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
@@ -11727,32 +11106,26 @@ const deserializeAws_json1_1ListConnectionsResponse = (output, context) => {
 };
 const deserializeAws_json1_1ListEndpointsResponse = (output, context) => {
     return {
-        Endpoints: output.Endpoints !== undefined && output.Endpoints !== null
-            ? deserializeAws_json1_1EndpointList(output.Endpoints, context)
-            : undefined,
+        Endpoints: output.Endpoints != null ? deserializeAws_json1_1EndpointList(output.Endpoints, context) : undefined,
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
     };
 };
 const deserializeAws_json1_1ListEventBusesResponse = (output, context) => {
     return {
-        EventBuses: output.EventBuses !== undefined && output.EventBuses !== null
-            ? deserializeAws_json1_1EventBusList(output.EventBuses, context)
-            : undefined,
+        EventBuses: output.EventBuses != null ? deserializeAws_json1_1EventBusList(output.EventBuses, context) : undefined,
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
     };
 };
 const deserializeAws_json1_1ListEventSourcesResponse = (output, context) => {
     return {
-        EventSources: output.EventSources !== undefined && output.EventSources !== null
-            ? deserializeAws_json1_1EventSourceList(output.EventSources, context)
-            : undefined,
+        EventSources: output.EventSources != null ? deserializeAws_json1_1EventSourceList(output.EventSources, context) : undefined,
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
     };
 };
 const deserializeAws_json1_1ListPartnerEventSourceAccountsResponse = (output, context) => {
     return {
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
-        PartnerEventSourceAccounts: output.PartnerEventSourceAccounts !== undefined && output.PartnerEventSourceAccounts !== null
+        PartnerEventSourceAccounts: output.PartnerEventSourceAccounts != null
             ? deserializeAws_json1_1PartnerEventSourceAccountList(output.PartnerEventSourceAccounts, context)
             : undefined,
     };
@@ -11760,7 +11133,7 @@ const deserializeAws_json1_1ListPartnerEventSourceAccountsResponse = (output, co
 const deserializeAws_json1_1ListPartnerEventSourcesResponse = (output, context) => {
     return {
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
-        PartnerEventSources: output.PartnerEventSources !== undefined && output.PartnerEventSources !== null
+        PartnerEventSources: output.PartnerEventSources != null
             ? deserializeAws_json1_1PartnerEventSourceList(output.PartnerEventSources, context)
             : undefined,
     };
@@ -11768,40 +11141,30 @@ const deserializeAws_json1_1ListPartnerEventSourcesResponse = (output, context) 
 const deserializeAws_json1_1ListReplaysResponse = (output, context) => {
     return {
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
-        Replays: output.Replays !== undefined && output.Replays !== null
-            ? deserializeAws_json1_1ReplayList(output.Replays, context)
-            : undefined,
+        Replays: output.Replays != null ? deserializeAws_json1_1ReplayList(output.Replays, context) : undefined,
     };
 };
 const deserializeAws_json1_1ListRuleNamesByTargetResponse = (output, context) => {
     return {
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
-        RuleNames: output.RuleNames !== undefined && output.RuleNames !== null
-            ? deserializeAws_json1_1RuleNameList(output.RuleNames, context)
-            : undefined,
+        RuleNames: output.RuleNames != null ? deserializeAws_json1_1RuleNameList(output.RuleNames, context) : undefined,
     };
 };
 const deserializeAws_json1_1ListRulesResponse = (output, context) => {
     return {
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
-        Rules: output.Rules !== undefined && output.Rules !== null
-            ? deserializeAws_json1_1RuleResponseList(output.Rules, context)
-            : undefined,
+        Rules: output.Rules != null ? deserializeAws_json1_1RuleResponseList(output.Rules, context) : undefined,
     };
 };
 const deserializeAws_json1_1ListTagsForResourceResponse = (output, context) => {
     return {
-        Tags: output.Tags !== undefined && output.Tags !== null
-            ? deserializeAws_json1_1TagList(output.Tags, context)
-            : undefined,
+        Tags: output.Tags != null ? deserializeAws_json1_1TagList(output.Tags, context) : undefined,
     };
 };
 const deserializeAws_json1_1ListTargetsByRuleResponse = (output, context) => {
     return {
         NextToken: (0, smithy_client_1.expectString)(output.NextToken),
-        Targets: output.Targets !== undefined && output.Targets !== null
-            ? deserializeAws_json1_1TargetList(output.Targets, context)
-            : undefined,
+        Targets: output.Targets != null ? deserializeAws_json1_1TargetList(output.Targets, context) : undefined,
     };
 };
 const deserializeAws_json1_1ManagedRuleException = (output, context) => {
@@ -11811,7 +11174,7 @@ const deserializeAws_json1_1ManagedRuleException = (output, context) => {
 };
 const deserializeAws_json1_1NetworkConfiguration = (output, context) => {
     return {
-        awsvpcConfiguration: output.awsvpcConfiguration !== undefined && output.awsvpcConfiguration !== null
+        awsvpcConfiguration: output.awsvpcConfiguration != null
             ? deserializeAws_json1_1AwsVpcConfiguration(output.awsvpcConfiguration, context)
             : undefined,
     };
@@ -11830,10 +11193,10 @@ const deserializeAws_json1_1PartnerEventSource = (output, context) => {
 const deserializeAws_json1_1PartnerEventSourceAccount = (output, context) => {
     return {
         Account: (0, smithy_client_1.expectString)(output.Account),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        ExpirationTime: output.ExpirationTime !== undefined && output.ExpirationTime !== null
+        ExpirationTime: output.ExpirationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.ExpirationTime)))
             : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
@@ -11918,9 +11281,7 @@ const deserializeAws_json1_1Primary = (output, context) => {
 };
 const deserializeAws_json1_1PutEventsResponse = (output, context) => {
     return {
-        Entries: output.Entries !== undefined && output.Entries !== null
-            ? deserializeAws_json1_1PutEventsResultEntryList(output.Entries, context)
-            : undefined,
+        Entries: output.Entries != null ? deserializeAws_json1_1PutEventsResultEntryList(output.Entries, context) : undefined,
         FailedEntryCount: (0, smithy_client_1.expectInt32)(output.FailedEntryCount),
     };
 };
@@ -11944,7 +11305,7 @@ const deserializeAws_json1_1PutEventsResultEntryList = (output, context) => {
 };
 const deserializeAws_json1_1PutPartnerEventsResponse = (output, context) => {
     return {
-        Entries: output.Entries !== undefined && output.Entries !== null
+        Entries: output.Entries != null
             ? deserializeAws_json1_1PutPartnerEventsResultEntryList(output.Entries, context)
             : undefined,
         FailedEntryCount: (0, smithy_client_1.expectInt32)(output.FailedEntryCount),
@@ -11975,7 +11336,7 @@ const deserializeAws_json1_1PutRuleResponse = (output, context) => {
 };
 const deserializeAws_json1_1PutTargetsResponse = (output, context) => {
     return {
-        FailedEntries: output.FailedEntries !== undefined && output.FailedEntries !== null
+        FailedEntries: output.FailedEntries != null
             ? deserializeAws_json1_1PutTargetsResultEntryList(output.FailedEntries, context)
             : undefined,
         FailedEntryCount: (0, smithy_client_1.expectInt32)(output.FailedEntryCount),
@@ -12022,7 +11383,7 @@ const deserializeAws_json1_1RedshiftDataParameters = (output, context) => {
 };
 const deserializeAws_json1_1RemoveTargetsResponse = (output, context) => {
     return {
-        FailedEntries: output.FailedEntries !== undefined && output.FailedEntries !== null
+        FailedEntries: output.FailedEntries != null
             ? deserializeAws_json1_1RemoveTargetsResultEntryList(output.FailedEntries, context)
             : undefined,
         FailedEntryCount: (0, smithy_client_1.expectInt32)(output.FailedEntryCount),
@@ -12048,21 +11409,21 @@ const deserializeAws_json1_1RemoveTargetsResultEntryList = (output, context) => 
 };
 const deserializeAws_json1_1Replay = (output, context) => {
     return {
-        EventEndTime: output.EventEndTime !== undefined && output.EventEndTime !== null
+        EventEndTime: output.EventEndTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.EventEndTime)))
             : undefined,
-        EventLastReplayedTime: output.EventLastReplayedTime !== undefined && output.EventLastReplayedTime !== null
+        EventLastReplayedTime: output.EventLastReplayedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.EventLastReplayedTime)))
             : undefined,
         EventSourceArn: (0, smithy_client_1.expectString)(output.EventSourceArn),
-        EventStartTime: output.EventStartTime !== undefined && output.EventStartTime !== null
+        EventStartTime: output.EventStartTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.EventStartTime)))
             : undefined,
-        ReplayEndTime: output.ReplayEndTime !== undefined && output.ReplayEndTime !== null
+        ReplayEndTime: output.ReplayEndTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.ReplayEndTime)))
             : undefined,
         ReplayName: (0, smithy_client_1.expectString)(output.ReplayName),
-        ReplayStartTime: output.ReplayStartTime !== undefined && output.ReplayStartTime !== null
+        ReplayStartTime: output.ReplayStartTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.ReplayStartTime)))
             : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
@@ -12072,7 +11433,7 @@ const deserializeAws_json1_1Replay = (output, context) => {
 const deserializeAws_json1_1ReplayDestination = (output, context) => {
     return {
         Arn: (0, smithy_client_1.expectString)(output.Arn),
-        FilterArns: output.FilterArns !== undefined && output.FilterArns !== null
+        FilterArns: output.FilterArns != null
             ? deserializeAws_json1_1ReplayDestinationFilters(output.FilterArns, context)
             : undefined,
     };
@@ -12122,9 +11483,7 @@ const deserializeAws_json1_1RetryPolicy = (output, context) => {
 };
 const deserializeAws_json1_1RoutingConfig = (output, context) => {
     return {
-        FailoverConfig: output.FailoverConfig !== undefined && output.FailoverConfig !== null
-            ? deserializeAws_json1_1FailoverConfig(output.FailoverConfig, context)
-            : undefined,
+        FailoverConfig: output.FailoverConfig != null ? deserializeAws_json1_1FailoverConfig(output.FailoverConfig, context) : undefined,
     };
 };
 const deserializeAws_json1_1Rule = (output, context) => {
@@ -12164,7 +11523,7 @@ const deserializeAws_json1_1RuleResponseList = (output, context) => {
 };
 const deserializeAws_json1_1RunCommandParameters = (output, context) => {
     return {
-        RunCommandTargets: output.RunCommandTargets !== undefined && output.RunCommandTargets !== null
+        RunCommandTargets: output.RunCommandTargets != null
             ? deserializeAws_json1_1RunCommandTargets(output.RunCommandTargets, context)
             : undefined,
     };
@@ -12172,9 +11531,7 @@ const deserializeAws_json1_1RunCommandParameters = (output, context) => {
 const deserializeAws_json1_1RunCommandTarget = (output, context) => {
     return {
         Key: (0, smithy_client_1.expectString)(output.Key),
-        Values: output.Values !== undefined && output.Values !== null
-            ? deserializeAws_json1_1RunCommandTargetValues(output.Values, context)
-            : undefined,
+        Values: output.Values != null ? deserializeAws_json1_1RunCommandTargetValues(output.Values, context) : undefined,
     };
 };
 const deserializeAws_json1_1RunCommandTargets = (output, context) => {
@@ -12218,7 +11575,7 @@ const deserializeAws_json1_1SageMakerPipelineParameterList = (output, context) =
 };
 const deserializeAws_json1_1SageMakerPipelineParameters = (output, context) => {
     return {
-        PipelineParameterList: output.PipelineParameterList !== undefined && output.PipelineParameterList !== null
+        PipelineParameterList: output.PipelineParameterList != null
             ? deserializeAws_json1_1SageMakerPipelineParameterList(output.PipelineParameterList, context)
             : undefined,
     };
@@ -12236,7 +11593,7 @@ const deserializeAws_json1_1SqsParameters = (output, context) => {
 const deserializeAws_json1_1StartReplayResponse = (output, context) => {
     return {
         ReplayArn: (0, smithy_client_1.expectString)(output.ReplayArn),
-        ReplayStartTime: output.ReplayStartTime !== undefined && output.ReplayStartTime !== null
+        ReplayStartTime: output.ReplayStartTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.ReplayStartTime)))
             : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
@@ -12277,43 +11634,35 @@ const deserializeAws_json1_1TagResourceResponse = (output, context) => {
 const deserializeAws_json1_1Target = (output, context) => {
     return {
         Arn: (0, smithy_client_1.expectString)(output.Arn),
-        BatchParameters: output.BatchParameters !== undefined && output.BatchParameters !== null
+        BatchParameters: output.BatchParameters != null
             ? deserializeAws_json1_1BatchParameters(output.BatchParameters, context)
             : undefined,
-        DeadLetterConfig: output.DeadLetterConfig !== undefined && output.DeadLetterConfig !== null
+        DeadLetterConfig: output.DeadLetterConfig != null
             ? deserializeAws_json1_1DeadLetterConfig(output.DeadLetterConfig, context)
             : undefined,
-        EcsParameters: output.EcsParameters !== undefined && output.EcsParameters !== null
-            ? deserializeAws_json1_1EcsParameters(output.EcsParameters, context)
-            : undefined,
-        HttpParameters: output.HttpParameters !== undefined && output.HttpParameters !== null
-            ? deserializeAws_json1_1HttpParameters(output.HttpParameters, context)
-            : undefined,
+        EcsParameters: output.EcsParameters != null ? deserializeAws_json1_1EcsParameters(output.EcsParameters, context) : undefined,
+        HttpParameters: output.HttpParameters != null ? deserializeAws_json1_1HttpParameters(output.HttpParameters, context) : undefined,
         Id: (0, smithy_client_1.expectString)(output.Id),
         Input: (0, smithy_client_1.expectString)(output.Input),
         InputPath: (0, smithy_client_1.expectString)(output.InputPath),
-        InputTransformer: output.InputTransformer !== undefined && output.InputTransformer !== null
+        InputTransformer: output.InputTransformer != null
             ? deserializeAws_json1_1InputTransformer(output.InputTransformer, context)
             : undefined,
-        KinesisParameters: output.KinesisParameters !== undefined && output.KinesisParameters !== null
+        KinesisParameters: output.KinesisParameters != null
             ? deserializeAws_json1_1KinesisParameters(output.KinesisParameters, context)
             : undefined,
-        RedshiftDataParameters: output.RedshiftDataParameters !== undefined && output.RedshiftDataParameters !== null
+        RedshiftDataParameters: output.RedshiftDataParameters != null
             ? deserializeAws_json1_1RedshiftDataParameters(output.RedshiftDataParameters, context)
             : undefined,
-        RetryPolicy: output.RetryPolicy !== undefined && output.RetryPolicy !== null
-            ? deserializeAws_json1_1RetryPolicy(output.RetryPolicy, context)
-            : undefined,
+        RetryPolicy: output.RetryPolicy != null ? deserializeAws_json1_1RetryPolicy(output.RetryPolicy, context) : undefined,
         RoleArn: (0, smithy_client_1.expectString)(output.RoleArn),
-        RunCommandParameters: output.RunCommandParameters !== undefined && output.RunCommandParameters !== null
+        RunCommandParameters: output.RunCommandParameters != null
             ? deserializeAws_json1_1RunCommandParameters(output.RunCommandParameters, context)
             : undefined,
-        SageMakerPipelineParameters: output.SageMakerPipelineParameters !== undefined && output.SageMakerPipelineParameters !== null
+        SageMakerPipelineParameters: output.SageMakerPipelineParameters != null
             ? deserializeAws_json1_1SageMakerPipelineParameters(output.SageMakerPipelineParameters, context)
             : undefined,
-        SqsParameters: output.SqsParameters !== undefined && output.SqsParameters !== null
-            ? deserializeAws_json1_1SqsParameters(output.SqsParameters, context)
-            : undefined,
+        SqsParameters: output.SqsParameters != null ? deserializeAws_json1_1SqsParameters(output.SqsParameters, context) : undefined,
     };
 };
 const deserializeAws_json1_1TargetList = (output, context) => {
@@ -12350,10 +11699,10 @@ const deserializeAws_json1_1UpdateApiDestinationResponse = (output, context) => 
     return {
         ApiDestinationArn: (0, smithy_client_1.expectString)(output.ApiDestinationArn),
         ApiDestinationState: (0, smithy_client_1.expectString)(output.ApiDestinationState),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
     };
@@ -12361,7 +11710,7 @@ const deserializeAws_json1_1UpdateApiDestinationResponse = (output, context) => 
 const deserializeAws_json1_1UpdateArchiveResponse = (output, context) => {
     return {
         ArchiveArn: (0, smithy_client_1.expectString)(output.ArchiveArn),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
@@ -12372,13 +11721,13 @@ const deserializeAws_json1_1UpdateConnectionResponse = (output, context) => {
     return {
         ConnectionArn: (0, smithy_client_1.expectString)(output.ConnectionArn),
         ConnectionState: (0, smithy_client_1.expectString)(output.ConnectionState),
-        CreationTime: output.CreationTime !== undefined && output.CreationTime !== null
+        CreationTime: output.CreationTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.CreationTime)))
             : undefined,
-        LastAuthorizedTime: output.LastAuthorizedTime !== undefined && output.LastAuthorizedTime !== null
+        LastAuthorizedTime: output.LastAuthorizedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastAuthorizedTime)))
             : undefined,
-        LastModifiedTime: output.LastModifiedTime !== undefined && output.LastModifiedTime !== null
+        LastModifiedTime: output.LastModifiedTime != null
             ? (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseEpochTimestamp)((0, smithy_client_1.expectNumber)(output.LastModifiedTime)))
             : undefined,
     };
@@ -12388,17 +11737,13 @@ const deserializeAws_json1_1UpdateEndpointResponse = (output, context) => {
         Arn: (0, smithy_client_1.expectString)(output.Arn),
         EndpointId: (0, smithy_client_1.expectString)(output.EndpointId),
         EndpointUrl: (0, smithy_client_1.expectString)(output.EndpointUrl),
-        EventBuses: output.EventBuses !== undefined && output.EventBuses !== null
-            ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context)
-            : undefined,
+        EventBuses: output.EventBuses != null ? deserializeAws_json1_1EndpointEventBusList(output.EventBuses, context) : undefined,
         Name: (0, smithy_client_1.expectString)(output.Name),
-        ReplicationConfig: output.ReplicationConfig !== undefined && output.ReplicationConfig !== null
+        ReplicationConfig: output.ReplicationConfig != null
             ? deserializeAws_json1_1ReplicationConfig(output.ReplicationConfig, context)
             : undefined,
         RoleArn: (0, smithy_client_1.expectString)(output.RoleArn),
-        RoutingConfig: output.RoutingConfig !== undefined && output.RoutingConfig !== null
-            ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context)
-            : undefined,
+        RoutingConfig: output.RoutingConfig != null ? deserializeAws_json1_1RoutingConfig(output.RoutingConfig, context) : undefined,
         State: (0, smithy_client_1.expectString)(output.State),
     };
 };
@@ -12446,6 +11791,12 @@ const loadRestJsonErrorCode = (output, data) => {
     const findKey = (object, key) => Object.keys(object).find((k) => k.toLowerCase() === key.toLowerCase());
     const sanitizeErrorCode = (rawValue) => {
         let cleanValue = rawValue;
+        if (typeof cleanValue === "number") {
+            cleanValue = cleanValue.toString();
+        }
+        if (cleanValue.indexOf(",") >= 0) {
+            cleanValue = cleanValue.split(",")[0];
+        }
         if (cleanValue.indexOf(":") >= 0) {
             cleanValue = cleanValue.split(":")[0];
         }
@@ -12464,7 +11815,6 @@ const loadRestJsonErrorCode = (output, data) => {
     if (data["__type"] !== undefined) {
         return sanitizeErrorCode(data["__type"]);
     }
-    return "";
 };
 
 
@@ -13013,8 +12363,8 @@ class GetRoleCredentialsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetRoleCredentialsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetRoleCredentialsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.GetRoleCredentialsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.GetRoleCredentialsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -13057,8 +12407,8 @@ class ListAccountRolesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListAccountRolesRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListAccountRolesResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListAccountRolesRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListAccountRolesResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -13101,8 +12451,8 @@ class ListAccountsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListAccountsRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListAccountsResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.ListAccountsRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.ListAccountsResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -13145,7 +12495,7 @@ class LogoutCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.LogoutRequest.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.LogoutRequestFilterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
         const { requestHandler } = configuration;
@@ -13187,6 +12537,15 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultRegionInfoProvider = void 0;
 const config_resolver_1 = __nccwpck_require__(6153);
 const regionHash = {
+    "ap-east-1": {
+        variants: [
+            {
+                hostname: "portal.sso.ap-east-1.amazonaws.com",
+                tags: [],
+            },
+        ],
+        signingRegion: "ap-east-1",
+    },
     "ap-northeast-1": {
         variants: [
             {
@@ -13268,6 +12627,15 @@ const regionHash = {
         ],
         signingRegion: "eu-north-1",
     },
+    "eu-south-1": {
+        variants: [
+            {
+                hostname: "portal.sso.eu-south-1.amazonaws.com",
+                tags: [],
+            },
+        ],
+        signingRegion: "eu-south-1",
+    },
     "eu-west-1": {
         variants: [
             {
@@ -13294,6 +12662,15 @@ const regionHash = {
             },
         ],
         signingRegion: "eu-west-3",
+    },
+    "me-south-1": {
+        variants: [
+            {
+                hostname: "portal.sso.me-south-1.amazonaws.com",
+                tags: [],
+            },
+        ],
+        signingRegion: "me-south-1",
     },
     "sa-east-1": {
         variants: [
@@ -13369,6 +12746,7 @@ const partitionHash = {
             "eu-west-1",
             "eu-west-2",
             "eu-west-3",
+            "me-central-1",
             "me-south-1",
             "sa-east-1",
             "us-east-1",
@@ -13536,37 +12914,9 @@ tslib_1.__exportStar(__nccwpck_require__(6390), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.LogoutRequest = exports.ListAccountsResponse = exports.ListAccountsRequest = exports.ListAccountRolesResponse = exports.RoleInfo = exports.ListAccountRolesRequest = exports.UnauthorizedException = exports.TooManyRequestsException = exports.ResourceNotFoundException = exports.InvalidRequestException = exports.GetRoleCredentialsResponse = exports.RoleCredentials = exports.GetRoleCredentialsRequest = exports.AccountInfo = void 0;
+exports.LogoutRequestFilterSensitiveLog = exports.ListAccountsResponseFilterSensitiveLog = exports.ListAccountsRequestFilterSensitiveLog = exports.ListAccountRolesResponseFilterSensitiveLog = exports.RoleInfoFilterSensitiveLog = exports.ListAccountRolesRequestFilterSensitiveLog = exports.GetRoleCredentialsResponseFilterSensitiveLog = exports.RoleCredentialsFilterSensitiveLog = exports.GetRoleCredentialsRequestFilterSensitiveLog = exports.AccountInfoFilterSensitiveLog = exports.UnauthorizedException = exports.TooManyRequestsException = exports.ResourceNotFoundException = exports.InvalidRequestException = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 const SSOServiceException_1 = __nccwpck_require__(1517);
-var AccountInfo;
-(function (AccountInfo) {
-    AccountInfo.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(AccountInfo = exports.AccountInfo || (exports.AccountInfo = {}));
-var GetRoleCredentialsRequest;
-(function (GetRoleCredentialsRequest) {
-    GetRoleCredentialsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-        ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
-    });
-})(GetRoleCredentialsRequest = exports.GetRoleCredentialsRequest || (exports.GetRoleCredentialsRequest = {}));
-var RoleCredentials;
-(function (RoleCredentials) {
-    RoleCredentials.filterSensitiveLog = (obj) => ({
-        ...obj,
-        ...(obj.secretAccessKey && { secretAccessKey: smithy_client_1.SENSITIVE_STRING }),
-        ...(obj.sessionToken && { sessionToken: smithy_client_1.SENSITIVE_STRING }),
-    });
-})(RoleCredentials = exports.RoleCredentials || (exports.RoleCredentials = {}));
-var GetRoleCredentialsResponse;
-(function (GetRoleCredentialsResponse) {
-    GetRoleCredentialsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-        ...(obj.roleCredentials && { roleCredentials: RoleCredentials.filterSensitiveLog(obj.roleCredentials) }),
-    });
-})(GetRoleCredentialsResponse = exports.GetRoleCredentialsResponse || (exports.GetRoleCredentialsResponse = {}));
 class InvalidRequestException extends SSOServiceException_1.SSOServiceException {
     constructor(opts) {
         super({
@@ -13619,45 +12969,53 @@ class UnauthorizedException extends SSOServiceException_1.SSOServiceException {
     }
 }
 exports.UnauthorizedException = UnauthorizedException;
-var ListAccountRolesRequest;
-(function (ListAccountRolesRequest) {
-    ListAccountRolesRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-        ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
-    });
-})(ListAccountRolesRequest = exports.ListAccountRolesRequest || (exports.ListAccountRolesRequest = {}));
-var RoleInfo;
-(function (RoleInfo) {
-    RoleInfo.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(RoleInfo = exports.RoleInfo || (exports.RoleInfo = {}));
-var ListAccountRolesResponse;
-(function (ListAccountRolesResponse) {
-    ListAccountRolesResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListAccountRolesResponse = exports.ListAccountRolesResponse || (exports.ListAccountRolesResponse = {}));
-var ListAccountsRequest;
-(function (ListAccountsRequest) {
-    ListAccountsRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-        ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
-    });
-})(ListAccountsRequest = exports.ListAccountsRequest || (exports.ListAccountsRequest = {}));
-var ListAccountsResponse;
-(function (ListAccountsResponse) {
-    ListAccountsResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(ListAccountsResponse = exports.ListAccountsResponse || (exports.ListAccountsResponse = {}));
-var LogoutRequest;
-(function (LogoutRequest) {
-    LogoutRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-        ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
-    });
-})(LogoutRequest = exports.LogoutRequest || (exports.LogoutRequest = {}));
+const AccountInfoFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.AccountInfoFilterSensitiveLog = AccountInfoFilterSensitiveLog;
+const GetRoleCredentialsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+    ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
+});
+exports.GetRoleCredentialsRequestFilterSensitiveLog = GetRoleCredentialsRequestFilterSensitiveLog;
+const RoleCredentialsFilterSensitiveLog = (obj) => ({
+    ...obj,
+    ...(obj.secretAccessKey && { secretAccessKey: smithy_client_1.SENSITIVE_STRING }),
+    ...(obj.sessionToken && { sessionToken: smithy_client_1.SENSITIVE_STRING }),
+});
+exports.RoleCredentialsFilterSensitiveLog = RoleCredentialsFilterSensitiveLog;
+const GetRoleCredentialsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+    ...(obj.roleCredentials && { roleCredentials: (0, exports.RoleCredentialsFilterSensitiveLog)(obj.roleCredentials) }),
+});
+exports.GetRoleCredentialsResponseFilterSensitiveLog = GetRoleCredentialsResponseFilterSensitiveLog;
+const ListAccountRolesRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+    ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
+});
+exports.ListAccountRolesRequestFilterSensitiveLog = ListAccountRolesRequestFilterSensitiveLog;
+const RoleInfoFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.RoleInfoFilterSensitiveLog = RoleInfoFilterSensitiveLog;
+const ListAccountRolesResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListAccountRolesResponseFilterSensitiveLog = ListAccountRolesResponseFilterSensitiveLog;
+const ListAccountsRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+    ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
+});
+exports.ListAccountsRequestFilterSensitiveLog = ListAccountsRequestFilterSensitiveLog;
+const ListAccountsResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.ListAccountsResponseFilterSensitiveLog = ListAccountsResponseFilterSensitiveLog;
+const LogoutRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+    ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
+});
+exports.LogoutRequestFilterSensitiveLog = LogoutRequestFilterSensitiveLog;
 
 
 /***/ }),
@@ -13787,14 +13145,14 @@ const models_0_1 = __nccwpck_require__(6390);
 const SSOServiceException_1 = __nccwpck_require__(1517);
 const serializeAws_restJson1GetRoleCredentialsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
-    const headers = {
-        ...(isSerializableHeaderValue(input.accessToken) && { "x-amz-sso_bearer_token": input.accessToken }),
-    };
+    const headers = map({}, isSerializableHeaderValue, {
+        "x-amz-sso_bearer_token": input.accessToken,
+    });
     const resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/federation/credentials";
-    const query = {
-        ...(input.roleName !== undefined && { role_name: input.roleName }),
-        ...(input.accountId !== undefined && { account_id: input.accountId }),
-    };
+    const query = map({
+        role_name: [, input.roleName],
+        account_id: [, input.accountId],
+    });
     let body;
     return new protocol_http_1.HttpRequest({
         protocol,
@@ -13810,15 +13168,15 @@ const serializeAws_restJson1GetRoleCredentialsCommand = async (input, context) =
 exports.serializeAws_restJson1GetRoleCredentialsCommand = serializeAws_restJson1GetRoleCredentialsCommand;
 const serializeAws_restJson1ListAccountRolesCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
-    const headers = {
-        ...(isSerializableHeaderValue(input.accessToken) && { "x-amz-sso_bearer_token": input.accessToken }),
-    };
+    const headers = map({}, isSerializableHeaderValue, {
+        "x-amz-sso_bearer_token": input.accessToken,
+    });
     const resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/assignment/roles";
-    const query = {
-        ...(input.nextToken !== undefined && { next_token: input.nextToken }),
-        ...(input.maxResults !== undefined && { max_result: input.maxResults.toString() }),
-        ...(input.accountId !== undefined && { account_id: input.accountId }),
-    };
+    const query = map({
+        next_token: [, input.nextToken],
+        max_result: [() => input.maxResults !== void 0, () => input.maxResults.toString()],
+        account_id: [, input.accountId],
+    });
     let body;
     return new protocol_http_1.HttpRequest({
         protocol,
@@ -13834,14 +13192,14 @@ const serializeAws_restJson1ListAccountRolesCommand = async (input, context) => 
 exports.serializeAws_restJson1ListAccountRolesCommand = serializeAws_restJson1ListAccountRolesCommand;
 const serializeAws_restJson1ListAccountsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
-    const headers = {
-        ...(isSerializableHeaderValue(input.accessToken) && { "x-amz-sso_bearer_token": input.accessToken }),
-    };
+    const headers = map({}, isSerializableHeaderValue, {
+        "x-amz-sso_bearer_token": input.accessToken,
+    });
     const resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/assignment/accounts";
-    const query = {
-        ...(input.nextToken !== undefined && { next_token: input.nextToken }),
-        ...(input.maxResults !== undefined && { max_result: input.maxResults.toString() }),
-    };
+    const query = map({
+        next_token: [, input.nextToken],
+        max_result: [() => input.maxResults !== void 0, () => input.maxResults.toString()],
+    });
     let body;
     return new protocol_http_1.HttpRequest({
         protocol,
@@ -13857,9 +13215,9 @@ const serializeAws_restJson1ListAccountsCommand = async (input, context) => {
 exports.serializeAws_restJson1ListAccountsCommand = serializeAws_restJson1ListAccountsCommand;
 const serializeAws_restJson1LogoutCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
-    const headers = {
-        ...(isSerializableHeaderValue(input.accessToken) && { "x-amz-sso_bearer_token": input.accessToken }),
-    };
+    const headers = map({}, isSerializableHeaderValue, {
+        "x-amz-sso_bearer_token": input.accessToken,
+    });
     const resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/logout";
     let body;
     return new protocol_http_1.HttpRequest({
@@ -13877,15 +13235,14 @@ const deserializeAws_restJson1GetRoleCredentialsCommand = async (output, context
     if (output.statusCode !== 200 && output.statusCode >= 300) {
         return deserializeAws_restJson1GetRoleCredentialsCommandError(output, context);
     }
-    const contents = {
+    const contents = map({
         $metadata: deserializeMetadata(output),
-        roleCredentials: undefined,
-    };
+    });
     const data = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.expectObject)(await parseBody(output.body, context)), "body");
-    if (data.roleCredentials !== undefined && data.roleCredentials !== null) {
+    if (data.roleCredentials != null) {
         contents.roleCredentials = deserializeAws_restJson1RoleCredentials(data.roleCredentials, context);
     }
-    return Promise.resolve(contents);
+    return contents;
 };
 exports.deserializeAws_restJson1GetRoleCredentialsCommand = deserializeAws_restJson1GetRoleCredentialsCommand;
 const deserializeAws_restJson1GetRoleCredentialsCommandError = async (output, context) => {
@@ -13893,9 +13250,7 @@ const deserializeAws_restJson1GetRoleCredentialsCommandError = async (output, co
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InvalidRequestException":
         case "com.amazonaws.sso#InvalidRequestException":
@@ -13911,31 +13266,29 @@ const deserializeAws_restJson1GetRoleCredentialsCommandError = async (output, co
             throw await deserializeAws_restJson1UnauthorizedExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new SSOServiceException_1.SSOServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: SSOServiceException_1.SSOServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_restJson1ListAccountRolesCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
         return deserializeAws_restJson1ListAccountRolesCommandError(output, context);
     }
-    const contents = {
+    const contents = map({
         $metadata: deserializeMetadata(output),
-        nextToken: undefined,
-        roleList: undefined,
-    };
+    });
     const data = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.expectObject)(await parseBody(output.body, context)), "body");
-    if (data.nextToken !== undefined && data.nextToken !== null) {
+    if (data.nextToken != null) {
         contents.nextToken = (0, smithy_client_1.expectString)(data.nextToken);
     }
-    if (data.roleList !== undefined && data.roleList !== null) {
+    if (data.roleList != null) {
         contents.roleList = deserializeAws_restJson1RoleListType(data.roleList, context);
     }
-    return Promise.resolve(contents);
+    return contents;
 };
 exports.deserializeAws_restJson1ListAccountRolesCommand = deserializeAws_restJson1ListAccountRolesCommand;
 const deserializeAws_restJson1ListAccountRolesCommandError = async (output, context) => {
@@ -13943,9 +13296,7 @@ const deserializeAws_restJson1ListAccountRolesCommandError = async (output, cont
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InvalidRequestException":
         case "com.amazonaws.sso#InvalidRequestException":
@@ -13961,31 +13312,29 @@ const deserializeAws_restJson1ListAccountRolesCommandError = async (output, cont
             throw await deserializeAws_restJson1UnauthorizedExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new SSOServiceException_1.SSOServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: SSOServiceException_1.SSOServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_restJson1ListAccountsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
         return deserializeAws_restJson1ListAccountsCommandError(output, context);
     }
-    const contents = {
+    const contents = map({
         $metadata: deserializeMetadata(output),
-        accountList: undefined,
-        nextToken: undefined,
-    };
+    });
     const data = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.expectObject)(await parseBody(output.body, context)), "body");
-    if (data.accountList !== undefined && data.accountList !== null) {
+    if (data.accountList != null) {
         contents.accountList = deserializeAws_restJson1AccountListType(data.accountList, context);
     }
-    if (data.nextToken !== undefined && data.nextToken !== null) {
+    if (data.nextToken != null) {
         contents.nextToken = (0, smithy_client_1.expectString)(data.nextToken);
     }
-    return Promise.resolve(contents);
+    return contents;
 };
 exports.deserializeAws_restJson1ListAccountsCommand = deserializeAws_restJson1ListAccountsCommand;
 const deserializeAws_restJson1ListAccountsCommandError = async (output, context) => {
@@ -13993,9 +13342,7 @@ const deserializeAws_restJson1ListAccountsCommandError = async (output, context)
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InvalidRequestException":
         case "com.amazonaws.sso#InvalidRequestException":
@@ -14011,23 +13358,23 @@ const deserializeAws_restJson1ListAccountsCommandError = async (output, context)
             throw await deserializeAws_restJson1UnauthorizedExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new SSOServiceException_1.SSOServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: SSOServiceException_1.SSOServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
 const deserializeAws_restJson1LogoutCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
         return deserializeAws_restJson1LogoutCommandError(output, context);
     }
-    const contents = {
+    const contents = map({
         $metadata: deserializeMetadata(output),
-    };
+    });
     await collectBody(output.body, context);
-    return Promise.resolve(contents);
+    return contents;
 };
 exports.deserializeAws_restJson1LogoutCommand = deserializeAws_restJson1LogoutCommand;
 const deserializeAws_restJson1LogoutCommandError = async (output, context) => {
@@ -14035,9 +13382,7 @@ const deserializeAws_restJson1LogoutCommandError = async (output, context) => {
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InvalidRequestException":
         case "com.amazonaws.sso#InvalidRequestException":
@@ -14050,18 +13395,19 @@ const deserializeAws_restJson1LogoutCommandError = async (output, context) => {
             throw await deserializeAws_restJson1UnauthorizedExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new SSOServiceException_1.SSOServiceException({
-                name: parsedBody.code || parsedBody.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody,
+                exceptionCtor: SSOServiceException_1.SSOServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody);
     }
 };
+const map = smithy_client_1.map;
 const deserializeAws_restJson1InvalidRequestExceptionResponse = async (parsedOutput, context) => {
-    const contents = {};
+    const contents = map({});
     const data = parsedOutput.body;
-    if (data.message !== undefined && data.message !== null) {
+    if (data.message != null) {
         contents.message = (0, smithy_client_1.expectString)(data.message);
     }
     const exception = new models_0_1.InvalidRequestException({
@@ -14071,9 +13417,9 @@ const deserializeAws_restJson1InvalidRequestExceptionResponse = async (parsedOut
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
 const deserializeAws_restJson1ResourceNotFoundExceptionResponse = async (parsedOutput, context) => {
-    const contents = {};
+    const contents = map({});
     const data = parsedOutput.body;
-    if (data.message !== undefined && data.message !== null) {
+    if (data.message != null) {
         contents.message = (0, smithy_client_1.expectString)(data.message);
     }
     const exception = new models_0_1.ResourceNotFoundException({
@@ -14083,9 +13429,9 @@ const deserializeAws_restJson1ResourceNotFoundExceptionResponse = async (parsedO
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
 const deserializeAws_restJson1TooManyRequestsExceptionResponse = async (parsedOutput, context) => {
-    const contents = {};
+    const contents = map({});
     const data = parsedOutput.body;
-    if (data.message !== undefined && data.message !== null) {
+    if (data.message != null) {
         contents.message = (0, smithy_client_1.expectString)(data.message);
     }
     const exception = new models_0_1.TooManyRequestsException({
@@ -14095,9 +13441,9 @@ const deserializeAws_restJson1TooManyRequestsExceptionResponse = async (parsedOu
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
 const deserializeAws_restJson1UnauthorizedExceptionResponse = async (parsedOutput, context) => {
-    const contents = {};
+    const contents = map({});
     const data = parsedOutput.body;
-    if (data.message !== undefined && data.message !== null) {
+    if (data.message != null) {
         contents.message = (0, smithy_client_1.expectString)(data.message);
     }
     const exception = new models_0_1.UnauthorizedException({
@@ -14180,6 +13526,12 @@ const loadRestJsonErrorCode = (output, data) => {
     const findKey = (object, key) => Object.keys(object).find((k) => k.toLowerCase() === key.toLowerCase());
     const sanitizeErrorCode = (rawValue) => {
         let cleanValue = rawValue;
+        if (typeof cleanValue === "number") {
+            cleanValue = cleanValue.toString();
+        }
+        if (cleanValue.indexOf(",") >= 0) {
+            cleanValue = cleanValue.split(",")[0];
+        }
         if (cleanValue.indexOf(":") >= 0) {
             cleanValue = cleanValue.split(":")[0];
         }
@@ -14198,7 +13550,6 @@ const loadRestJsonErrorCode = (output, data) => {
     if (data["__type"] !== undefined) {
         return sanitizeErrorCode(data["__type"]);
     }
-    return "";
 };
 
 
@@ -14817,8 +14168,8 @@ class AssumeRoleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.AssumeRoleRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.AssumeRoleResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -14861,8 +14212,8 @@ class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -14905,8 +14256,8 @@ class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -14951,8 +14302,8 @@ class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DecodeAuthorizationMessageRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DecodeAuthorizationMessageResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.DecodeAuthorizationMessageRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DecodeAuthorizationMessageResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -14997,8 +14348,8 @@ class GetAccessKeyInfoCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetAccessKeyInfoRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetAccessKeyInfoResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.GetAccessKeyInfoRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.GetAccessKeyInfoResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -15043,8 +14394,8 @@ class GetCallerIdentityCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetCallerIdentityRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetCallerIdentityResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.GetCallerIdentityRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.GetCallerIdentityResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -15089,8 +14440,8 @@ class GetFederationTokenCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetFederationTokenRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetFederationTokenResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.GetFederationTokenRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.GetFederationTokenResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -15135,8 +14486,8 @@ class GetSessionTokenCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetSessionTokenRequest.filterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetSessionTokenResponse.filterSensitiveLog,
+            inputFilterSensitiveLog: models_0_1.GetSessionTokenRequestFilterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.GetSessionTokenResponseFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -15181,9 +14532,22 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.decorateDefaultCredentialProvider = exports.getDefaultRoleAssumerWithWebIdentity = exports.getDefaultRoleAssumer = void 0;
 const defaultStsRoleAssumers_1 = __nccwpck_require__(48);
 const STSClient_1 = __nccwpck_require__(4195);
-const getDefaultRoleAssumer = (stsOptions = {}) => (0, defaultStsRoleAssumers_1.getDefaultRoleAssumer)(stsOptions, STSClient_1.STSClient);
+const getCustomizableStsClientCtor = (baseCtor, customizations) => {
+    if (!customizations)
+        return baseCtor;
+    else
+        return class CustomizableSTSClient extends baseCtor {
+            constructor(config) {
+                super(config);
+                for (const customization of customizations) {
+                    this.middlewareStack.use(customization);
+                }
+            }
+        };
+};
+const getDefaultRoleAssumer = (stsOptions = {}, stsPlugins) => (0, defaultStsRoleAssumers_1.getDefaultRoleAssumer)(stsOptions, getCustomizableStsClientCtor(STSClient_1.STSClient, stsPlugins));
 exports.getDefaultRoleAssumer = getDefaultRoleAssumer;
-const getDefaultRoleAssumerWithWebIdentity = (stsOptions = {}) => (0, defaultStsRoleAssumers_1.getDefaultRoleAssumerWithWebIdentity)(stsOptions, STSClient_1.STSClient);
+const getDefaultRoleAssumerWithWebIdentity = (stsOptions = {}, stsPlugins) => (0, defaultStsRoleAssumers_1.getDefaultRoleAssumerWithWebIdentity)(stsOptions, getCustomizableStsClientCtor(STSClient_1.STSClient, stsPlugins));
 exports.getDefaultRoleAssumerWithWebIdentity = getDefaultRoleAssumerWithWebIdentity;
 const decorateDefaultCredentialProvider = (provider) => (input) => provider({
     roleAssumer: (0, exports.getDefaultRoleAssumer)(input),
@@ -15366,6 +14730,7 @@ const partitionHash = {
             "eu-west-1",
             "eu-west-2",
             "eu-west-3",
+            "me-central-1",
             "me-south-1",
             "sa-east-1",
             "us-east-1",
@@ -15537,44 +14902,8 @@ tslib_1.__exportStar(__nccwpck_require__(1780), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.GetSessionTokenResponse = exports.GetSessionTokenRequest = exports.GetFederationTokenResponse = exports.FederatedUser = exports.GetFederationTokenRequest = exports.GetCallerIdentityResponse = exports.GetCallerIdentityRequest = exports.GetAccessKeyInfoResponse = exports.GetAccessKeyInfoRequest = exports.InvalidAuthorizationMessageException = exports.DecodeAuthorizationMessageResponse = exports.DecodeAuthorizationMessageRequest = exports.IDPCommunicationErrorException = exports.AssumeRoleWithWebIdentityResponse = exports.AssumeRoleWithWebIdentityRequest = exports.InvalidIdentityTokenException = exports.IDPRejectedClaimException = exports.AssumeRoleWithSAMLResponse = exports.AssumeRoleWithSAMLRequest = exports.RegionDisabledException = exports.PackedPolicyTooLargeException = exports.MalformedPolicyDocumentException = exports.ExpiredTokenException = exports.AssumeRoleResponse = exports.Credentials = exports.AssumeRoleRequest = exports.Tag = exports.PolicyDescriptorType = exports.AssumedRoleUser = void 0;
+exports.GetSessionTokenResponseFilterSensitiveLog = exports.GetSessionTokenRequestFilterSensitiveLog = exports.GetFederationTokenResponseFilterSensitiveLog = exports.FederatedUserFilterSensitiveLog = exports.GetFederationTokenRequestFilterSensitiveLog = exports.GetCallerIdentityResponseFilterSensitiveLog = exports.GetCallerIdentityRequestFilterSensitiveLog = exports.GetAccessKeyInfoResponseFilterSensitiveLog = exports.GetAccessKeyInfoRequestFilterSensitiveLog = exports.DecodeAuthorizationMessageResponseFilterSensitiveLog = exports.DecodeAuthorizationMessageRequestFilterSensitiveLog = exports.AssumeRoleWithWebIdentityResponseFilterSensitiveLog = exports.AssumeRoleWithWebIdentityRequestFilterSensitiveLog = exports.AssumeRoleWithSAMLResponseFilterSensitiveLog = exports.AssumeRoleWithSAMLRequestFilterSensitiveLog = exports.AssumeRoleResponseFilterSensitiveLog = exports.CredentialsFilterSensitiveLog = exports.AssumeRoleRequestFilterSensitiveLog = exports.TagFilterSensitiveLog = exports.PolicyDescriptorTypeFilterSensitiveLog = exports.AssumedRoleUserFilterSensitiveLog = exports.InvalidAuthorizationMessageException = exports.IDPCommunicationErrorException = exports.InvalidIdentityTokenException = exports.IDPRejectedClaimException = exports.RegionDisabledException = exports.PackedPolicyTooLargeException = exports.MalformedPolicyDocumentException = exports.ExpiredTokenException = void 0;
 const STSServiceException_1 = __nccwpck_require__(6450);
-var AssumedRoleUser;
-(function (AssumedRoleUser) {
-    AssumedRoleUser.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(AssumedRoleUser = exports.AssumedRoleUser || (exports.AssumedRoleUser = {}));
-var PolicyDescriptorType;
-(function (PolicyDescriptorType) {
-    PolicyDescriptorType.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(PolicyDescriptorType = exports.PolicyDescriptorType || (exports.PolicyDescriptorType = {}));
-var Tag;
-(function (Tag) {
-    Tag.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Tag = exports.Tag || (exports.Tag = {}));
-var AssumeRoleRequest;
-(function (AssumeRoleRequest) {
-    AssumeRoleRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(AssumeRoleRequest = exports.AssumeRoleRequest || (exports.AssumeRoleRequest = {}));
-var Credentials;
-(function (Credentials) {
-    Credentials.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(Credentials = exports.Credentials || (exports.Credentials = {}));
-var AssumeRoleResponse;
-(function (AssumeRoleResponse) {
-    AssumeRoleResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(AssumeRoleResponse = exports.AssumeRoleResponse || (exports.AssumeRoleResponse = {}));
 class ExpiredTokenException extends STSServiceException_1.STSServiceException {
     constructor(opts) {
         super({
@@ -15627,18 +14956,6 @@ class RegionDisabledException extends STSServiceException_1.STSServiceException 
     }
 }
 exports.RegionDisabledException = RegionDisabledException;
-var AssumeRoleWithSAMLRequest;
-(function (AssumeRoleWithSAMLRequest) {
-    AssumeRoleWithSAMLRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(AssumeRoleWithSAMLRequest = exports.AssumeRoleWithSAMLRequest || (exports.AssumeRoleWithSAMLRequest = {}));
-var AssumeRoleWithSAMLResponse;
-(function (AssumeRoleWithSAMLResponse) {
-    AssumeRoleWithSAMLResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(AssumeRoleWithSAMLResponse = exports.AssumeRoleWithSAMLResponse || (exports.AssumeRoleWithSAMLResponse = {}));
 class IDPRejectedClaimException extends STSServiceException_1.STSServiceException {
     constructor(opts) {
         super({
@@ -15665,18 +14982,6 @@ class InvalidIdentityTokenException extends STSServiceException_1.STSServiceExce
     }
 }
 exports.InvalidIdentityTokenException = InvalidIdentityTokenException;
-var AssumeRoleWithWebIdentityRequest;
-(function (AssumeRoleWithWebIdentityRequest) {
-    AssumeRoleWithWebIdentityRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(AssumeRoleWithWebIdentityRequest = exports.AssumeRoleWithWebIdentityRequest || (exports.AssumeRoleWithWebIdentityRequest = {}));
-var AssumeRoleWithWebIdentityResponse;
-(function (AssumeRoleWithWebIdentityResponse) {
-    AssumeRoleWithWebIdentityResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(AssumeRoleWithWebIdentityResponse = exports.AssumeRoleWithWebIdentityResponse || (exports.AssumeRoleWithWebIdentityResponse = {}));
 class IDPCommunicationErrorException extends STSServiceException_1.STSServiceException {
     constructor(opts) {
         super({
@@ -15690,18 +14995,6 @@ class IDPCommunicationErrorException extends STSServiceException_1.STSServiceExc
     }
 }
 exports.IDPCommunicationErrorException = IDPCommunicationErrorException;
-var DecodeAuthorizationMessageRequest;
-(function (DecodeAuthorizationMessageRequest) {
-    DecodeAuthorizationMessageRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DecodeAuthorizationMessageRequest = exports.DecodeAuthorizationMessageRequest || (exports.DecodeAuthorizationMessageRequest = {}));
-var DecodeAuthorizationMessageResponse;
-(function (DecodeAuthorizationMessageResponse) {
-    DecodeAuthorizationMessageResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(DecodeAuthorizationMessageResponse = exports.DecodeAuthorizationMessageResponse || (exports.DecodeAuthorizationMessageResponse = {}));
 class InvalidAuthorizationMessageException extends STSServiceException_1.STSServiceException {
     constructor(opts) {
         super({
@@ -15715,60 +15008,90 @@ class InvalidAuthorizationMessageException extends STSServiceException_1.STSServ
     }
 }
 exports.InvalidAuthorizationMessageException = InvalidAuthorizationMessageException;
-var GetAccessKeyInfoRequest;
-(function (GetAccessKeyInfoRequest) {
-    GetAccessKeyInfoRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(GetAccessKeyInfoRequest = exports.GetAccessKeyInfoRequest || (exports.GetAccessKeyInfoRequest = {}));
-var GetAccessKeyInfoResponse;
-(function (GetAccessKeyInfoResponse) {
-    GetAccessKeyInfoResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(GetAccessKeyInfoResponse = exports.GetAccessKeyInfoResponse || (exports.GetAccessKeyInfoResponse = {}));
-var GetCallerIdentityRequest;
-(function (GetCallerIdentityRequest) {
-    GetCallerIdentityRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(GetCallerIdentityRequest = exports.GetCallerIdentityRequest || (exports.GetCallerIdentityRequest = {}));
-var GetCallerIdentityResponse;
-(function (GetCallerIdentityResponse) {
-    GetCallerIdentityResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(GetCallerIdentityResponse = exports.GetCallerIdentityResponse || (exports.GetCallerIdentityResponse = {}));
-var GetFederationTokenRequest;
-(function (GetFederationTokenRequest) {
-    GetFederationTokenRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(GetFederationTokenRequest = exports.GetFederationTokenRequest || (exports.GetFederationTokenRequest = {}));
-var FederatedUser;
-(function (FederatedUser) {
-    FederatedUser.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(FederatedUser = exports.FederatedUser || (exports.FederatedUser = {}));
-var GetFederationTokenResponse;
-(function (GetFederationTokenResponse) {
-    GetFederationTokenResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(GetFederationTokenResponse = exports.GetFederationTokenResponse || (exports.GetFederationTokenResponse = {}));
-var GetSessionTokenRequest;
-(function (GetSessionTokenRequest) {
-    GetSessionTokenRequest.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(GetSessionTokenRequest = exports.GetSessionTokenRequest || (exports.GetSessionTokenRequest = {}));
-var GetSessionTokenResponse;
-(function (GetSessionTokenResponse) {
-    GetSessionTokenResponse.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(GetSessionTokenResponse = exports.GetSessionTokenResponse || (exports.GetSessionTokenResponse = {}));
+const AssumedRoleUserFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.AssumedRoleUserFilterSensitiveLog = AssumedRoleUserFilterSensitiveLog;
+const PolicyDescriptorTypeFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.PolicyDescriptorTypeFilterSensitiveLog = PolicyDescriptorTypeFilterSensitiveLog;
+const TagFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.TagFilterSensitiveLog = TagFilterSensitiveLog;
+const AssumeRoleRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.AssumeRoleRequestFilterSensitiveLog = AssumeRoleRequestFilterSensitiveLog;
+const CredentialsFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.CredentialsFilterSensitiveLog = CredentialsFilterSensitiveLog;
+const AssumeRoleResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.AssumeRoleResponseFilterSensitiveLog = AssumeRoleResponseFilterSensitiveLog;
+const AssumeRoleWithSAMLRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.AssumeRoleWithSAMLRequestFilterSensitiveLog = AssumeRoleWithSAMLRequestFilterSensitiveLog;
+const AssumeRoleWithSAMLResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.AssumeRoleWithSAMLResponseFilterSensitiveLog = AssumeRoleWithSAMLResponseFilterSensitiveLog;
+const AssumeRoleWithWebIdentityRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.AssumeRoleWithWebIdentityRequestFilterSensitiveLog = AssumeRoleWithWebIdentityRequestFilterSensitiveLog;
+const AssumeRoleWithWebIdentityResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.AssumeRoleWithWebIdentityResponseFilterSensitiveLog = AssumeRoleWithWebIdentityResponseFilterSensitiveLog;
+const DecodeAuthorizationMessageRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DecodeAuthorizationMessageRequestFilterSensitiveLog = DecodeAuthorizationMessageRequestFilterSensitiveLog;
+const DecodeAuthorizationMessageResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.DecodeAuthorizationMessageResponseFilterSensitiveLog = DecodeAuthorizationMessageResponseFilterSensitiveLog;
+const GetAccessKeyInfoRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.GetAccessKeyInfoRequestFilterSensitiveLog = GetAccessKeyInfoRequestFilterSensitiveLog;
+const GetAccessKeyInfoResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.GetAccessKeyInfoResponseFilterSensitiveLog = GetAccessKeyInfoResponseFilterSensitiveLog;
+const GetCallerIdentityRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.GetCallerIdentityRequestFilterSensitiveLog = GetCallerIdentityRequestFilterSensitiveLog;
+const GetCallerIdentityResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.GetCallerIdentityResponseFilterSensitiveLog = GetCallerIdentityResponseFilterSensitiveLog;
+const GetFederationTokenRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.GetFederationTokenRequestFilterSensitiveLog = GetFederationTokenRequestFilterSensitiveLog;
+const FederatedUserFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.FederatedUserFilterSensitiveLog = FederatedUserFilterSensitiveLog;
+const GetFederationTokenResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.GetFederationTokenResponseFilterSensitiveLog = GetFederationTokenResponseFilterSensitiveLog;
+const GetSessionTokenRequestFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.GetSessionTokenRequestFilterSensitiveLog = GetSessionTokenRequestFilterSensitiveLog;
+const GetSessionTokenResponseFilterSensitiveLog = (obj) => ({
+    ...obj,
+});
+exports.GetSessionTokenResponseFilterSensitiveLog = GetSessionTokenResponseFilterSensitiveLog;
 
 
 /***/ }),
@@ -15909,9 +15232,7 @@ const deserializeAws_queryAssumeRoleCommandError = async (output, context) => {
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadQueryErrorCode(output, parsedOutput.body);
+    const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ExpiredTokenException":
         case "com.amazonaws.sts#ExpiredTokenException":
@@ -15927,12 +15248,12 @@ const deserializeAws_queryAssumeRoleCommandError = async (output, context) => {
             throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new STSServiceException_1.STSServiceException({
-                name: parsedBody.Error.code || parsedBody.Error.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody: parsedBody.Error,
+                exceptionCtor: STSServiceException_1.STSServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody.Error);
     }
 };
 const deserializeAws_queryAssumeRoleWithSAMLCommand = async (output, context) => {
@@ -15954,9 +15275,7 @@ const deserializeAws_queryAssumeRoleWithSAMLCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadQueryErrorCode(output, parsedOutput.body);
+    const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ExpiredTokenException":
         case "com.amazonaws.sts#ExpiredTokenException":
@@ -15978,12 +15297,12 @@ const deserializeAws_queryAssumeRoleWithSAMLCommandError = async (output, contex
             throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new STSServiceException_1.STSServiceException({
-                name: parsedBody.Error.code || parsedBody.Error.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody: parsedBody.Error,
+                exceptionCtor: STSServiceException_1.STSServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody.Error);
     }
 };
 const deserializeAws_queryAssumeRoleWithWebIdentityCommand = async (output, context) => {
@@ -16005,9 +15324,7 @@ const deserializeAws_queryAssumeRoleWithWebIdentityCommandError = async (output,
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadQueryErrorCode(output, parsedOutput.body);
+    const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ExpiredTokenException":
         case "com.amazonaws.sts#ExpiredTokenException":
@@ -16032,12 +15349,12 @@ const deserializeAws_queryAssumeRoleWithWebIdentityCommandError = async (output,
             throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new STSServiceException_1.STSServiceException({
-                name: parsedBody.Error.code || parsedBody.Error.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody: parsedBody.Error,
+                exceptionCtor: STSServiceException_1.STSServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody.Error);
     }
 };
 const deserializeAws_queryDecodeAuthorizationMessageCommand = async (output, context) => {
@@ -16059,21 +15376,19 @@ const deserializeAws_queryDecodeAuthorizationMessageCommandError = async (output
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadQueryErrorCode(output, parsedOutput.body);
+    const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "InvalidAuthorizationMessageException":
         case "com.amazonaws.sts#InvalidAuthorizationMessageException":
             throw await deserializeAws_queryInvalidAuthorizationMessageExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new STSServiceException_1.STSServiceException({
-                name: parsedBody.Error.code || parsedBody.Error.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody: parsedBody.Error,
+                exceptionCtor: STSServiceException_1.STSServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody.Error);
     }
 };
 const deserializeAws_queryGetAccessKeyInfoCommand = async (output, context) => {
@@ -16095,19 +15410,14 @@ const deserializeAws_queryGetAccessKeyInfoCommandError = async (output, context)
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadQueryErrorCode(output, parsedOutput.body);
-    switch (errorCode) {
-        default:
-            const parsedBody = parsedOutput.body;
-            response = new STSServiceException_1.STSServiceException({
-                name: parsedBody.Error.code || parsedBody.Error.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
-            });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody.Error);
-    }
+    const errorCode = loadQueryErrorCode(output, parsedOutput.body);
+    const parsedBody = parsedOutput.body;
+    (0, smithy_client_1.throwDefaultError)({
+        output,
+        parsedBody: parsedBody.Error,
+        exceptionCtor: STSServiceException_1.STSServiceException,
+        errorCode,
+    });
 };
 const deserializeAws_queryGetCallerIdentityCommand = async (output, context) => {
     if (output.statusCode >= 300) {
@@ -16128,19 +15438,14 @@ const deserializeAws_queryGetCallerIdentityCommandError = async (output, context
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadQueryErrorCode(output, parsedOutput.body);
-    switch (errorCode) {
-        default:
-            const parsedBody = parsedOutput.body;
-            response = new STSServiceException_1.STSServiceException({
-                name: parsedBody.Error.code || parsedBody.Error.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
-            });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody.Error);
-    }
+    const errorCode = loadQueryErrorCode(output, parsedOutput.body);
+    const parsedBody = parsedOutput.body;
+    (0, smithy_client_1.throwDefaultError)({
+        output,
+        parsedBody: parsedBody.Error,
+        exceptionCtor: STSServiceException_1.STSServiceException,
+        errorCode,
+    });
 };
 const deserializeAws_queryGetFederationTokenCommand = async (output, context) => {
     if (output.statusCode >= 300) {
@@ -16161,9 +15466,7 @@ const deserializeAws_queryGetFederationTokenCommandError = async (output, contex
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadQueryErrorCode(output, parsedOutput.body);
+    const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "MalformedPolicyDocumentException":
         case "com.amazonaws.sts#MalformedPolicyDocumentException":
@@ -16176,12 +15479,12 @@ const deserializeAws_queryGetFederationTokenCommandError = async (output, contex
             throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new STSServiceException_1.STSServiceException({
-                name: parsedBody.Error.code || parsedBody.Error.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody: parsedBody.Error,
+                exceptionCtor: STSServiceException_1.STSServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody.Error);
     }
 };
 const deserializeAws_queryGetSessionTokenCommand = async (output, context) => {
@@ -16203,21 +15506,19 @@ const deserializeAws_queryGetSessionTokenCommandError = async (output, context) 
         ...output,
         body: await parseBody(output.body, context),
     };
-    let response;
-    let errorCode = "UnknownError";
-    errorCode = loadQueryErrorCode(output, parsedOutput.body);
+    const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "RegionDisabledException":
         case "com.amazonaws.sts#RegionDisabledException":
             throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
-            response = new STSServiceException_1.STSServiceException({
-                name: parsedBody.Error.code || parsedBody.Error.Code || errorCode,
-                $fault: "client",
-                $metadata: deserializeMetadata(output),
+            (0, smithy_client_1.throwDefaultError)({
+                output,
+                parsedBody: parsedBody.Error,
+                exceptionCtor: STSServiceException_1.STSServiceException,
+                errorCode,
             });
-            throw (0, smithy_client_1.decorateServiceException)(response, parsedBody.Error);
     }
 };
 const deserializeAws_queryExpiredTokenExceptionResponse = async (parsedOutput, context) => {
@@ -16294,118 +15595,118 @@ const deserializeAws_queryRegionDisabledExceptionResponse = async (parsedOutput,
 };
 const serializeAws_queryAssumeRoleRequest = (input, context) => {
     const entries = {};
-    if (input.RoleArn !== undefined && input.RoleArn !== null) {
+    if (input.RoleArn != null) {
         entries["RoleArn"] = input.RoleArn;
     }
-    if (input.RoleSessionName !== undefined && input.RoleSessionName !== null) {
+    if (input.RoleSessionName != null) {
         entries["RoleSessionName"] = input.RoleSessionName;
     }
-    if (input.PolicyArns !== undefined && input.PolicyArns !== null) {
+    if (input.PolicyArns != null) {
         const memberEntries = serializeAws_querypolicyDescriptorListType(input.PolicyArns, context);
         Object.entries(memberEntries).forEach(([key, value]) => {
             const loc = `PolicyArns.${key}`;
             entries[loc] = value;
         });
     }
-    if (input.Policy !== undefined && input.Policy !== null) {
+    if (input.Policy != null) {
         entries["Policy"] = input.Policy;
     }
-    if (input.DurationSeconds !== undefined && input.DurationSeconds !== null) {
+    if (input.DurationSeconds != null) {
         entries["DurationSeconds"] = input.DurationSeconds;
     }
-    if (input.Tags !== undefined && input.Tags !== null) {
+    if (input.Tags != null) {
         const memberEntries = serializeAws_querytagListType(input.Tags, context);
         Object.entries(memberEntries).forEach(([key, value]) => {
             const loc = `Tags.${key}`;
             entries[loc] = value;
         });
     }
-    if (input.TransitiveTagKeys !== undefined && input.TransitiveTagKeys !== null) {
+    if (input.TransitiveTagKeys != null) {
         const memberEntries = serializeAws_querytagKeyListType(input.TransitiveTagKeys, context);
         Object.entries(memberEntries).forEach(([key, value]) => {
             const loc = `TransitiveTagKeys.${key}`;
             entries[loc] = value;
         });
     }
-    if (input.ExternalId !== undefined && input.ExternalId !== null) {
+    if (input.ExternalId != null) {
         entries["ExternalId"] = input.ExternalId;
     }
-    if (input.SerialNumber !== undefined && input.SerialNumber !== null) {
+    if (input.SerialNumber != null) {
         entries["SerialNumber"] = input.SerialNumber;
     }
-    if (input.TokenCode !== undefined && input.TokenCode !== null) {
+    if (input.TokenCode != null) {
         entries["TokenCode"] = input.TokenCode;
     }
-    if (input.SourceIdentity !== undefined && input.SourceIdentity !== null) {
+    if (input.SourceIdentity != null) {
         entries["SourceIdentity"] = input.SourceIdentity;
     }
     return entries;
 };
 const serializeAws_queryAssumeRoleWithSAMLRequest = (input, context) => {
     const entries = {};
-    if (input.RoleArn !== undefined && input.RoleArn !== null) {
+    if (input.RoleArn != null) {
         entries["RoleArn"] = input.RoleArn;
     }
-    if (input.PrincipalArn !== undefined && input.PrincipalArn !== null) {
+    if (input.PrincipalArn != null) {
         entries["PrincipalArn"] = input.PrincipalArn;
     }
-    if (input.SAMLAssertion !== undefined && input.SAMLAssertion !== null) {
+    if (input.SAMLAssertion != null) {
         entries["SAMLAssertion"] = input.SAMLAssertion;
     }
-    if (input.PolicyArns !== undefined && input.PolicyArns !== null) {
+    if (input.PolicyArns != null) {
         const memberEntries = serializeAws_querypolicyDescriptorListType(input.PolicyArns, context);
         Object.entries(memberEntries).forEach(([key, value]) => {
             const loc = `PolicyArns.${key}`;
             entries[loc] = value;
         });
     }
-    if (input.Policy !== undefined && input.Policy !== null) {
+    if (input.Policy != null) {
         entries["Policy"] = input.Policy;
     }
-    if (input.DurationSeconds !== undefined && input.DurationSeconds !== null) {
+    if (input.DurationSeconds != null) {
         entries["DurationSeconds"] = input.DurationSeconds;
     }
     return entries;
 };
 const serializeAws_queryAssumeRoleWithWebIdentityRequest = (input, context) => {
     const entries = {};
-    if (input.RoleArn !== undefined && input.RoleArn !== null) {
+    if (input.RoleArn != null) {
         entries["RoleArn"] = input.RoleArn;
     }
-    if (input.RoleSessionName !== undefined && input.RoleSessionName !== null) {
+    if (input.RoleSessionName != null) {
         entries["RoleSessionName"] = input.RoleSessionName;
     }
-    if (input.WebIdentityToken !== undefined && input.WebIdentityToken !== null) {
+    if (input.WebIdentityToken != null) {
         entries["WebIdentityToken"] = input.WebIdentityToken;
     }
-    if (input.ProviderId !== undefined && input.ProviderId !== null) {
+    if (input.ProviderId != null) {
         entries["ProviderId"] = input.ProviderId;
     }
-    if (input.PolicyArns !== undefined && input.PolicyArns !== null) {
+    if (input.PolicyArns != null) {
         const memberEntries = serializeAws_querypolicyDescriptorListType(input.PolicyArns, context);
         Object.entries(memberEntries).forEach(([key, value]) => {
             const loc = `PolicyArns.${key}`;
             entries[loc] = value;
         });
     }
-    if (input.Policy !== undefined && input.Policy !== null) {
+    if (input.Policy != null) {
         entries["Policy"] = input.Policy;
     }
-    if (input.DurationSeconds !== undefined && input.DurationSeconds !== null) {
+    if (input.DurationSeconds != null) {
         entries["DurationSeconds"] = input.DurationSeconds;
     }
     return entries;
 };
 const serializeAws_queryDecodeAuthorizationMessageRequest = (input, context) => {
     const entries = {};
-    if (input.EncodedMessage !== undefined && input.EncodedMessage !== null) {
+    if (input.EncodedMessage != null) {
         entries["EncodedMessage"] = input.EncodedMessage;
     }
     return entries;
 };
 const serializeAws_queryGetAccessKeyInfoRequest = (input, context) => {
     const entries = {};
-    if (input.AccessKeyId !== undefined && input.AccessKeyId !== null) {
+    if (input.AccessKeyId != null) {
         entries["AccessKeyId"] = input.AccessKeyId;
     }
     return entries;
@@ -16416,23 +15717,23 @@ const serializeAws_queryGetCallerIdentityRequest = (input, context) => {
 };
 const serializeAws_queryGetFederationTokenRequest = (input, context) => {
     const entries = {};
-    if (input.Name !== undefined && input.Name !== null) {
+    if (input.Name != null) {
         entries["Name"] = input.Name;
     }
-    if (input.Policy !== undefined && input.Policy !== null) {
+    if (input.Policy != null) {
         entries["Policy"] = input.Policy;
     }
-    if (input.PolicyArns !== undefined && input.PolicyArns !== null) {
+    if (input.PolicyArns != null) {
         const memberEntries = serializeAws_querypolicyDescriptorListType(input.PolicyArns, context);
         Object.entries(memberEntries).forEach(([key, value]) => {
             const loc = `PolicyArns.${key}`;
             entries[loc] = value;
         });
     }
-    if (input.DurationSeconds !== undefined && input.DurationSeconds !== null) {
+    if (input.DurationSeconds != null) {
         entries["DurationSeconds"] = input.DurationSeconds;
     }
-    if (input.Tags !== undefined && input.Tags !== null) {
+    if (input.Tags != null) {
         const memberEntries = serializeAws_querytagListType(input.Tags, context);
         Object.entries(memberEntries).forEach(([key, value]) => {
             const loc = `Tags.${key}`;
@@ -16443,13 +15744,13 @@ const serializeAws_queryGetFederationTokenRequest = (input, context) => {
 };
 const serializeAws_queryGetSessionTokenRequest = (input, context) => {
     const entries = {};
-    if (input.DurationSeconds !== undefined && input.DurationSeconds !== null) {
+    if (input.DurationSeconds != null) {
         entries["DurationSeconds"] = input.DurationSeconds;
     }
-    if (input.SerialNumber !== undefined && input.SerialNumber !== null) {
+    if (input.SerialNumber != null) {
         entries["SerialNumber"] = input.SerialNumber;
     }
-    if (input.TokenCode !== undefined && input.TokenCode !== null) {
+    if (input.TokenCode != null) {
         entries["TokenCode"] = input.TokenCode;
     }
     return entries;
@@ -16471,17 +15772,17 @@ const serializeAws_querypolicyDescriptorListType = (input, context) => {
 };
 const serializeAws_queryPolicyDescriptorType = (input, context) => {
     const entries = {};
-    if (input.arn !== undefined && input.arn !== null) {
+    if (input.arn != null) {
         entries["arn"] = input.arn;
     }
     return entries;
 };
 const serializeAws_queryTag = (input, context) => {
     const entries = {};
-    if (input.Key !== undefined && input.Key !== null) {
+    if (input.Key != null) {
         entries["Key"] = input.Key;
     }
-    if (input.Value !== undefined && input.Value !== null) {
+    if (input.Value != null) {
         entries["Value"] = input.Value;
     }
     return entries;
@@ -16852,7 +16153,6 @@ const loadQueryErrorCode = (output, data) => {
     if (output.statusCode == 404) {
         return "NotFound";
     }
-    return "";
 };
 
 
@@ -17365,7 +16665,7 @@ const resolveEndpointsConfig = (input) => {
         endpoint: endpoint
             ? (0, util_middleware_1.normalizeProvider)(typeof endpoint === "string" ? urlParser(endpoint) : endpoint)
             : () => (0, getEndpointFromRegion_1.getEndpointFromRegion)({ ...input, useDualstackEndpoint, useFipsEndpoint }),
-        isCustomEndpoint: endpoint ? true : false,
+        isCustomEndpoint: !!endpoint,
         useDualstackEndpoint,
     };
 };
@@ -22201,7 +21501,9 @@ class StandardRetryStrategy {
                 attempts++;
                 if (this.shouldRetry(err, attempts, maxAttempts)) {
                     retryTokenAmount = this.retryQuota.retrieveRetryTokens(err);
-                    const delay = this.delayDecider((0, service_error_classification_1.isThrottlingError)(err) ? constants_1.THROTTLING_RETRY_DELAY_BASE : constants_1.DEFAULT_RETRY_DELAY_BASE, attempts);
+                    const delayFromDecider = this.delayDecider((0, service_error_classification_1.isThrottlingError)(err) ? constants_1.THROTTLING_RETRY_DELAY_BASE : constants_1.DEFAULT_RETRY_DELAY_BASE, attempts);
+                    const delayFromResponse = getDelayFromRetryAfterHeader(err.$response);
+                    const delay = Math.max(delayFromResponse || 0, delayFromDecider);
                     totalDelay += delay;
                     await new Promise((resolve) => setTimeout(resolve, delay));
                     continue;
@@ -22217,6 +21519,19 @@ class StandardRetryStrategy {
     }
 }
 exports.StandardRetryStrategy = StandardRetryStrategy;
+const getDelayFromRetryAfterHeader = (response) => {
+    if (!protocol_http_1.HttpResponse.isInstance(response))
+        return;
+    const retryAfterHeaderName = Object.keys(response.headers).find((key) => key.toLowerCase() === "retry-after");
+    if (!retryAfterHeaderName)
+        return;
+    const retryAfter = response.headers[retryAfterHeaderName];
+    const retryAfterSeconds = Number(retryAfter);
+    if (!Number.isNaN(retryAfterSeconds))
+        return retryAfterSeconds * 1000;
+    const retryAfterDate = new Date(retryAfter);
+    return retryAfterDate.getTime() - Date.now();
+};
 const asSdkError = (error) => {
     if (error instanceof Error)
         return error;
@@ -23322,7 +22637,14 @@ exports.getSerdePlugin = getSerdePlugin;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.serializerMiddleware = void 0;
 const serializerMiddleware = (options, serializer) => (next, context) => async (args) => {
-    const request = await serializer(args.input, options);
+    var _a;
+    const endpoint = ((_a = context.endpointV2) === null || _a === void 0 ? void 0 : _a.url) && options.urlParser
+        ? async () => options.urlParser(context.endpointV2.url)
+        : options.endpoint;
+    if (!endpoint) {
+        throw new Error("No valid endpoint provider available.");
+    }
+    const request = await serializer(args.input, { ...options, endpoint });
     return next({
         ...args,
         request,
@@ -23666,6 +22988,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveSigV4AuthConfig = exports.resolveAwsAuthConfig = void 0;
 const property_provider_1 = __nccwpck_require__(4462);
 const signature_v4_1 = __nccwpck_require__(4275);
+const util_middleware_1 = __nccwpck_require__(236);
 const CREDENTIAL_EXPIRE_WINDOW = 300000;
 const resolveAwsAuthConfig = (input) => {
     const normalizedCreds = input.credentials
@@ -23674,10 +22997,10 @@ const resolveAwsAuthConfig = (input) => {
     const { signingEscapePath = true, systemClockOffset = input.systemClockOffset || 0, sha256 } = input;
     let signer;
     if (input.signer) {
-        signer = normalizeProvider(input.signer);
+        signer = (0, util_middleware_1.normalizeProvider)(input.signer);
     }
-    else {
-        signer = () => normalizeProvider(input.region)()
+    else if (input.regionInfoProvider) {
+        signer = () => (0, util_middleware_1.normalizeProvider)(input.region)()
             .then(async (region) => [
             (await input.regionInfoProvider(region, {
                 useFipsEndpoint: await input.useFipsEndpoint(),
@@ -23697,9 +23020,30 @@ const resolveAwsAuthConfig = (input) => {
                 sha256,
                 uriEscapePath: signingEscapePath,
             };
-            const signerConstructor = input.signerConstructor || signature_v4_1.SignatureV4;
-            return new signerConstructor(params);
+            const SignerCtor = input.signerConstructor || signature_v4_1.SignatureV4;
+            return new SignerCtor(params);
         });
+    }
+    else {
+        signer = async (authScheme) => {
+            if (!authScheme) {
+                throw new Error("Unexpected empty auth scheme config");
+            }
+            const signingRegion = authScheme.signingScope;
+            const signingService = authScheme.signingName;
+            input.signingRegion = input.signingRegion || signingRegion;
+            input.signingName = input.signingName || signingService || input.serviceId;
+            const params = {
+                ...input,
+                credentials: normalizedCreds,
+                region: input.signingRegion,
+                service: input.signingName,
+                sha256,
+                uriEscapePath: signingEscapePath,
+            };
+            const SignerCtor = input.signerConstructor || signature_v4_1.SignatureV4;
+            return new SignerCtor(params);
+        };
     }
     return {
         ...input,
@@ -23717,10 +23061,10 @@ const resolveSigV4AuthConfig = (input) => {
     const { signingEscapePath = true, systemClockOffset = input.systemClockOffset || 0, sha256 } = input;
     let signer;
     if (input.signer) {
-        signer = normalizeProvider(input.signer);
+        signer = (0, util_middleware_1.normalizeProvider)(input.signer);
     }
     else {
-        signer = normalizeProvider(new signature_v4_1.SignatureV4({
+        signer = (0, util_middleware_1.normalizeProvider)(new signature_v4_1.SignatureV4({
             credentials: normalizedCreds,
             region: input.region,
             service: input.signingName,
@@ -23737,19 +23081,12 @@ const resolveSigV4AuthConfig = (input) => {
     };
 };
 exports.resolveSigV4AuthConfig = resolveSigV4AuthConfig;
-const normalizeProvider = (input) => {
-    if (typeof input === "object") {
-        const promisified = Promise.resolve(input);
-        return () => promisified;
-    }
-    return input;
-};
 const normalizeCredentialProvider = (credentials) => {
     if (typeof credentials === "function") {
         return (0, property_provider_1.memoize)(credentials, (credentials) => credentials.expiration !== undefined &&
             credentials.expiration.getTime() - Date.now() < CREDENTIAL_EXPIRE_WINDOW, (credentials) => credentials.expiration !== undefined);
     }
-    return normalizeProvider(credentials);
+    return (0, util_middleware_1.normalizeProvider)(credentials);
 };
 
 
@@ -23779,9 +23116,11 @@ const protocol_http_1 = __nccwpck_require__(223);
 const getSkewCorrectedDate_1 = __nccwpck_require__(8253);
 const getUpdatedSystemClockOffset_1 = __nccwpck_require__(5863);
 const awsAuthMiddleware = (options) => (next, context) => async function (args) {
+    var _a, _b, _c;
     if (!protocol_http_1.HttpRequest.isInstance(args.request))
         return next(args);
-    const signer = await options.signer();
+    const authScheme = (_c = (_b = (_a = (context.endpointV2)) === null || _a === void 0 ? void 0 : _a.properties) === null || _b === void 0 ? void 0 : _b.authSchemes) === null || _c === void 0 ? void 0 : _c[0];
+    const signer = await options.signer(authScheme);
     const output = await next({
         ...args,
         request: await signer.sign(args.request, {
@@ -24266,7 +23605,7 @@ const constructStack = () => {
         });
         return expandedMiddlewareList;
     };
-    const getMiddlewareList = () => {
+    const getMiddlewareList = (debug = false) => {
         const normalizedAbsoluteEntries = [];
         const normalizedRelativeEntries = [];
         const normalizedEntriesNameMap = {};
@@ -24294,6 +23633,9 @@ const constructStack = () => {
             if (entry.toMiddleware) {
                 const toMiddleware = normalizedEntriesNameMap[entry.toMiddleware];
                 if (toMiddleware === undefined) {
+                    if (debug) {
+                        return;
+                    }
                     throw new Error(`${entry.toMiddleware} is not found when adding ${entry.name || "anonymous"} middleware ${entry.relation} ${entry.toMiddleware}`);
                 }
                 if (entry.relation === "after") {
@@ -24310,7 +23652,7 @@ const constructStack = () => {
             wholeList.push(...expendedMiddlewareList);
             return wholeList;
         }, []);
-        return mainChain.map((entry) => entry.middleware);
+        return mainChain;
     };
     const stack = {
         add: (middleware, options = {}) => {
@@ -24391,8 +23733,15 @@ const constructStack = () => {
             return cloned;
         },
         applyToStack: cloneTo,
+        identify: () => {
+            return getMiddlewareList(true).map((mw) => {
+                return mw.name + ": " + (mw.tags || []).join(",");
+            });
+        },
         resolve: (handler, context) => {
-            for (const middleware of getMiddlewareList().reverse()) {
+            for (const middleware of getMiddlewareList()
+                .map((entry) => entry.middleware)
+                .reverse()) {
                 handler = middleware(handler, context);
             }
             return handler;
@@ -26428,6 +25777,27 @@ exports.ProviderError = ProviderError;
 
 /***/ }),
 
+/***/ 2173:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TokenProviderError = void 0;
+const ProviderError_1 = __nccwpck_require__(1786);
+class TokenProviderError extends ProviderError_1.ProviderError {
+    constructor(message, tryNextLink = true) {
+        super(message, tryNextLink);
+        this.tryNextLink = tryNextLink;
+        this.name = "TokenProviderError";
+        Object.setPrototypeOf(this, TokenProviderError.prototype);
+    }
+}
+exports.TokenProviderError = TokenProviderError;
+
+
+/***/ }),
+
 /***/ 1444:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -26477,6 +25847,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(2324);
 tslib_1.__exportStar(__nccwpck_require__(6875), exports);
 tslib_1.__exportStar(__nccwpck_require__(1786), exports);
+tslib_1.__exportStar(__nccwpck_require__(2173), exports);
 tslib_1.__exportStar(__nccwpck_require__(1444), exports);
 tslib_1.__exportStar(__nccwpck_require__(529), exports);
 tslib_1.__exportStar(__nccwpck_require__(714), exports);
@@ -27575,6 +26946,22 @@ exports.getSSOTokenFromFile = getSSOTokenFromFile;
 
 /***/ }),
 
+/***/ 5175:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getSsoSessionData = void 0;
+const ssoSessionKeyRegex = /^sso-session\s(["'])?([^\1]+)\1$/;
+const getSsoSessionData = (data) => Object.entries(data)
+    .filter(([key]) => ssoSessionKeyRegex.test(key))
+    .reduce((acc, [key, value]) => ({ ...acc, [ssoSessionKeyRegex.exec(key)[2]]: value }), {});
+exports.getSsoSessionData = getSsoSessionData;
+
+
+/***/ }),
+
 /***/ 7387:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -27587,6 +26974,7 @@ tslib_1.__exportStar(__nccwpck_require__(6776), exports);
 tslib_1.__exportStar(__nccwpck_require__(2992), exports);
 tslib_1.__exportStar(__nccwpck_require__(8553), exports);
 tslib_1.__exportStar(__nccwpck_require__(7871), exports);
+tslib_1.__exportStar(__nccwpck_require__(6179), exports);
 tslib_1.__exportStar(__nccwpck_require__(6533), exports);
 tslib_1.__exportStar(__nccwpck_require__(4105), exports);
 
@@ -27618,6 +27006,30 @@ const loadSharedConfigFiles = async (init = {}) => {
     };
 };
 exports.loadSharedConfigFiles = loadSharedConfigFiles;
+
+
+/***/ }),
+
+/***/ 6179:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.loadSsoSessionData = void 0;
+const getConfigFilepath_1 = __nccwpck_require__(5216);
+const getSsoSessionData_1 = __nccwpck_require__(5175);
+const parseIni_1 = __nccwpck_require__(2806);
+const slurpFile_1 = __nccwpck_require__(9242);
+const swallowError = () => ({});
+const loadSsoSessionData = async (init = {}) => {
+    var _a;
+    return (0, slurpFile_1.slurpFile)((_a = init.configFilepath) !== null && _a !== void 0 ? _a : (0, getConfigFilepath_1.getConfigFilepath)())
+        .then(parseIni_1.parseIni)
+        .then(getSsoSessionData_1.getSsoSessionData)
+        .catch(swallowError);
+};
+exports.loadSsoSessionData = loadSsoSessionData;
 
 
 /***/ }),
@@ -28462,6 +27874,7 @@ class SignatureV4 {
     async presign(originalRequest, options = {}) {
         const { signingDate = new Date(), expiresIn = 3600, unsignableHeaders, unhoistableHeaders, signableHeaders, signingRegion, signingService, } = options;
         const credentials = await this.credentialProvider();
+        this.validateResolvedCredentials(credentials);
         const region = signingRegion !== null && signingRegion !== void 0 ? signingRegion : (await this.regionProvider());
         const { longDate, shortDate } = formatDate(signingDate);
         if (expiresIn > constants_1.MAX_PRESIGNED_TTL) {
@@ -28512,6 +27925,7 @@ class SignatureV4 {
     }
     async signString(stringToSign, { signingDate = new Date(), signingRegion, signingService } = {}) {
         const credentials = await this.credentialProvider();
+        this.validateResolvedCredentials(credentials);
         const region = signingRegion !== null && signingRegion !== void 0 ? signingRegion : (await this.regionProvider());
         const { shortDate } = formatDate(signingDate);
         const hash = new this.sha256(await this.getSigningKey(credentials, region, shortDate, signingService));
@@ -28520,6 +27934,7 @@ class SignatureV4 {
     }
     async signRequest(requestToSign, { signingDate = new Date(), signableHeaders, unsignableHeaders, signingRegion, signingService, } = {}) {
         const credentials = await this.credentialProvider();
+        this.validateResolvedCredentials(credentials);
         const region = signingRegion !== null && signingRegion !== void 0 ? signingRegion : (await this.regionProvider());
         const request = (0, prepareRequest_1.prepareRequest)(requestToSign);
         const { longDate, shortDate } = formatDate(signingDate);
@@ -28589,6 +28004,13 @@ ${(0, util_hex_encoding_1.toHex)(hashedRequest)}`;
     }
     getSigningKey(credentials, region, shortDate, service) {
         return (0, credentialDerivation_1.getSigningKey)(this.sha256, credentials, shortDate, region, service || this.service);
+    }
+    validateResolvedCredentials(credentials) {
+        if (typeof credentials !== "object" ||
+            typeof credentials.accessKeyId !== "string" ||
+            typeof credentials.secretAccessKey !== "string") {
+            throw new Error("Resolved credential object is not valid");
+        }
     }
 }
 exports.SignatureV4 = SignatureV4;
@@ -28740,6 +28162,9 @@ const constants_1 = __nccwpck_require__(342);
 const getCanonicalHeaders = ({ headers }, unsignableHeaders, signableHeaders) => {
     const canonical = {};
     for (const headerName of Object.keys(headers).sort()) {
+        if (headers[headerName] == undefined) {
+            continue;
+        }
         const canonicalHeaderName = headerName.toLowerCase();
         if (canonicalHeaderName in constants_1.ALWAYS_UNSIGNABLE_HEADERS ||
             (unsignableHeaders === null || unsignableHeaders === void 0 ? void 0 : unsignableHeaders.has(canonicalHeaderName)) ||
@@ -29406,9 +28831,9 @@ const parseRfc3339DateTime = (value) => {
     return buildDate(year, month, day, { hours, minutes, seconds, fractionalMilliseconds });
 };
 exports.parseRfc3339DateTime = parseRfc3339DateTime;
-const IMF_FIXDATE = new RegExp(/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), (\d{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d{4}) (\d{2}):(\d{2}):(\d{2})(?:\.(\d+))? GMT$/);
-const RFC_850_DATE = new RegExp(/^(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (\d{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-(\d{2}) (\d{2}):(\d{2}):(\d{2})(?:\.(\d+))? GMT$/);
-const ASC_TIME = new RegExp(/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ( [1-9]|\d{2}) (\d{2}):(\d{2}):(\d{2})(?:\.(\d+))? (\d{4})$/);
+const IMF_FIXDATE = new RegExp(/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), (\d{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d{4}) (\d{1,2}):(\d{2}):(\d{2})(?:\.(\d+))? GMT$/);
+const RFC_850_DATE = new RegExp(/^(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (\d{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-(\d{2}) (\d{1,2}):(\d{2}):(\d{2})(?:\.(\d+))? GMT$/);
+const ASC_TIME = new RegExp(/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ( [1-9]|\d{2}) (\d{1,2}):(\d{2}):(\d{2})(?:\.(\d+))? (\d{4})$/);
 const parseRfc7231DateTime = (value) => {
     if (value === null || value === undefined) {
         return undefined;
@@ -29521,6 +28946,38 @@ const stripLeadingZeroes = (value) => {
         return value;
     }
     return value.slice(idx);
+};
+
+
+/***/ }),
+
+/***/ 7222:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.throwDefaultError = void 0;
+const exceptions_1 = __nccwpck_require__(7778);
+const throwDefaultError = ({ output, parsedBody, exceptionCtor, errorCode }) => {
+    const $metadata = deserializeMetadata(output);
+    const statusCode = $metadata.httpStatusCode ? $metadata.httpStatusCode + "" : undefined;
+    const response = new exceptionCtor({
+        name: parsedBody.code || parsedBody.Code || errorCode || statusCode || "UnknowError",
+        $fault: "client",
+        $metadata,
+    });
+    throw (0, exceptions_1.decorateServiceException)(response, parsedBody);
+};
+exports.throwDefaultError = throwDefaultError;
+const deserializeMetadata = (output) => {
+    var _a;
+    return ({
+        httpStatusCode: output.statusCode,
+        requestId: (_a = output.headers["x-amzn-requestid"]) !== null && _a !== void 0 ? _a : output.headers["x-amzn-request-id"],
+        extendedRequestId: output.headers["x-amz-id-2"],
+        cfId: output.headers["x-amz-cf-id"],
+    });
 };
 
 
@@ -29687,6 +29144,7 @@ tslib_1.__exportStar(__nccwpck_require__(6034), exports);
 tslib_1.__exportStar(__nccwpck_require__(4014), exports);
 tslib_1.__exportStar(__nccwpck_require__(8392), exports);
 tslib_1.__exportStar(__nccwpck_require__(4695), exports);
+tslib_1.__exportStar(__nccwpck_require__(7222), exports);
 tslib_1.__exportStar(__nccwpck_require__(3088), exports);
 tslib_1.__exportStar(__nccwpck_require__(2363), exports);
 tslib_1.__exportStar(__nccwpck_require__(7778), exports);
@@ -29694,7 +29152,9 @@ tslib_1.__exportStar(__nccwpck_require__(1927), exports);
 tslib_1.__exportStar(__nccwpck_require__(6457), exports);
 tslib_1.__exportStar(__nccwpck_require__(5830), exports);
 tslib_1.__exportStar(__nccwpck_require__(3613), exports);
+tslib_1.__exportStar(__nccwpck_require__(1599), exports);
 tslib_1.__exportStar(__nccwpck_require__(4809), exports);
+tslib_1.__exportStar(__nccwpck_require__(308), exports);
 tslib_1.__exportStar(__nccwpck_require__(8000), exports);
 tslib_1.__exportStar(__nccwpck_require__(8730), exports);
 
@@ -29747,13 +29207,95 @@ exports.LazyJsonString = LazyJsonString;
 
 /***/ }),
 
+/***/ 1599:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convertMap = exports.map = void 0;
+function map(arg0, arg1, arg2) {
+    let target;
+    let filter;
+    let instructions;
+    if (typeof arg1 === "undefined" && typeof arg2 === "undefined") {
+        target = {};
+        instructions = arg0;
+    }
+    else {
+        target = arg0;
+        if (typeof arg1 === "function") {
+            filter = arg1;
+            instructions = arg2;
+            return mapWithFilter(target, filter, instructions);
+        }
+        else {
+            instructions = arg1;
+        }
+    }
+    for (const key of Object.keys(instructions)) {
+        if (!Array.isArray(instructions[key])) {
+            target[key] = instructions[key];
+            continue;
+        }
+        let [filter, value] = instructions[key];
+        if (typeof value === "function") {
+            let _value;
+            const defaultFilterPassed = filter === undefined && (_value = value()) != null;
+            const customFilterPassed = (typeof filter === "function" && !!filter(void 0)) || (typeof filter !== "function" && !!filter);
+            if (defaultFilterPassed) {
+                target[key] = _value;
+            }
+            else if (customFilterPassed) {
+                target[key] = value();
+            }
+        }
+        else {
+            const defaultFilterPassed = filter === undefined && value != null;
+            const customFilterPassed = (typeof filter === "function" && !!filter(value)) || (typeof filter !== "function" && !!filter);
+            if (defaultFilterPassed || customFilterPassed) {
+                target[key] = value;
+            }
+        }
+    }
+    return target;
+}
+exports.map = map;
+const convertMap = (target) => {
+    const output = {};
+    for (const [k, v] of Object.entries(target || {})) {
+        output[k] = [, v];
+    }
+    return output;
+};
+exports.convertMap = convertMap;
+const mapWithFilter = (target, filter, instructions) => {
+    return map(target, Object.entries(instructions).reduce((_instructions, [key, value]) => {
+        if (Array.isArray(value)) {
+            _instructions[key] = value;
+        }
+        else {
+            if (typeof value === "function") {
+                _instructions[key] = [filter, value()];
+            }
+            else {
+                _instructions[key] = [filter, value];
+            }
+        }
+        return _instructions;
+    }, {}));
+};
+
+
+/***/ }),
+
 /***/ 4809:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.strictParseByte = exports.strictParseShort = exports.strictParseInt32 = exports.strictParseInt = exports.strictParseLong = exports.limitedParseFloat32 = exports.limitedParseFloat = exports.handleFloat = exports.limitedParseDouble = exports.strictParseFloat32 = exports.strictParseFloat = exports.strictParseDouble = exports.expectUnion = exports.expectString = exports.expectObject = exports.expectNonNull = exports.expectByte = exports.expectShort = exports.expectInt32 = exports.expectInt = exports.expectLong = exports.expectFloat32 = exports.expectNumber = exports.expectBoolean = exports.parseBoolean = void 0;
+exports.logger = exports.strictParseByte = exports.strictParseShort = exports.strictParseInt32 = exports.strictParseInt = exports.strictParseLong = exports.limitedParseFloat32 = exports.limitedParseFloat = exports.handleFloat = exports.limitedParseDouble = exports.strictParseFloat32 = exports.strictParseFloat = exports.strictParseDouble = exports.expectUnion = exports.expectString = exports.expectObject = exports.expectNonNull = exports.expectByte = exports.expectShort = exports.expectInt32 = exports.expectInt = exports.expectLong = exports.expectFloat32 = exports.expectNumber = exports.expectBoolean = exports.parseBoolean = void 0;
 const parseBoolean = (value) => {
     switch (value) {
         case "true":
@@ -29769,20 +29311,52 @@ const expectBoolean = (value) => {
     if (value === null || value === undefined) {
         return undefined;
     }
+    if (typeof value === "number") {
+        if (value === 0 || value === 1) {
+            exports.logger.warn(stackTraceWarning(`Expected boolean, got ${typeof value}: ${value}`));
+        }
+        if (value === 0) {
+            return false;
+        }
+        if (value === 1) {
+            return true;
+        }
+    }
+    if (typeof value === "string") {
+        const lower = value.toLowerCase();
+        if (lower === "false" || lower === "true") {
+            exports.logger.warn(stackTraceWarning(`Expected boolean, got ${typeof value}: ${value}`));
+        }
+        if (lower === "false") {
+            return false;
+        }
+        if (lower === "true") {
+            return true;
+        }
+    }
     if (typeof value === "boolean") {
         return value;
     }
-    throw new TypeError(`Expected boolean, got ${typeof value}`);
+    throw new TypeError(`Expected boolean, got ${typeof value}: ${value}`);
 };
 exports.expectBoolean = expectBoolean;
 const expectNumber = (value) => {
     if (value === null || value === undefined) {
         return undefined;
     }
+    if (typeof value === "string") {
+        const parsed = parseFloat(value);
+        if (!Number.isNaN(parsed)) {
+            if (String(parsed) !== String(value)) {
+                exports.logger.warn(stackTraceWarning(`Expected number but observed string: ${value}`));
+            }
+            return parsed;
+        }
+    }
     if (typeof value === "number") {
         return value;
     }
-    throw new TypeError(`Expected number, got ${typeof value}`);
+    throw new TypeError(`Expected number, got ${typeof value}: ${value}`);
 };
 exports.expectNumber = expectNumber;
 const MAX_FLOAT = Math.ceil(2 ** 127 * (2 - 2 ** -23));
@@ -29803,7 +29377,7 @@ const expectLong = (value) => {
     if (Number.isInteger(value) && !Number.isNaN(value)) {
         return value;
     }
-    throw new TypeError(`Expected integer, got ${typeof value}`);
+    throw new TypeError(`Expected integer, got ${typeof value}: ${value}`);
 };
 exports.expectLong = expectLong;
 exports.expectInt = exports.expectLong;
@@ -29847,7 +29421,8 @@ const expectObject = (value) => {
     if (typeof value === "object" && !Array.isArray(value)) {
         return value;
     }
-    throw new TypeError(`Expected object, got ${typeof value}`);
+    const receivedType = Array.isArray(value) ? "array" : typeof value;
+    throw new TypeError(`Expected object, got ${receivedType}: ${value}`);
 };
 exports.expectObject = expectObject;
 const expectString = (value) => {
@@ -29857,7 +29432,11 @@ const expectString = (value) => {
     if (typeof value === "string") {
         return value;
     }
-    throw new TypeError(`Expected string, got ${typeof value}`);
+    if (["boolean", "number", "bigint"].includes(typeof value)) {
+        exports.logger.warn(stackTraceWarning(`Expected string, got ${typeof value}: ${value}`));
+        return String(value);
+    }
+    throw new TypeError(`Expected string, got ${typeof value}: ${value}`);
 };
 exports.expectString = expectString;
 const expectUnion = (value) => {
@@ -29866,10 +29445,10 @@ const expectUnion = (value) => {
     }
     const asObject = (0, exports.expectObject)(value);
     const setKeys = Object.entries(asObject)
-        .filter(([_, v]) => v !== null && v !== undefined)
-        .map(([k, _]) => k);
+        .filter(([, v]) => v != null)
+        .map(([k]) => k);
     if (setKeys.length === 0) {
-        throw new TypeError(`Unions must have exactly one non-null member`);
+        throw new TypeError(`Unions must have exactly one non-null member. None were found.`);
     }
     if (setKeys.length > 1) {
         throw new TypeError(`Unions must have exactly one non-null member. Keys ${setKeys} were not null.`);
@@ -29957,6 +29536,47 @@ const strictParseByte = (value) => {
     return (0, exports.expectByte)(value);
 };
 exports.strictParseByte = strictParseByte;
+const stackTraceWarning = (message) => {
+    return String(new TypeError(message).stack || message)
+        .split("\n")
+        .slice(0, 5)
+        .filter((s) => !s.includes("stackTraceWarning"))
+        .join("\n");
+};
+exports.logger = {
+    warn: console.warn,
+};
+
+
+/***/ }),
+
+/***/ 308:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.resolvedPath = void 0;
+const extended_encode_uri_component_1 = __nccwpck_require__(1927);
+const resolvedPath = (resolvedPath, input, memberName, labelValueProvider, uriLabel, isGreedyLabel) => {
+    if (input != null && input[memberName] !== undefined) {
+        const labelValue = labelValueProvider();
+        if (labelValue.length <= 0) {
+            throw new Error("Empty value provided for input HTTP label: " + memberName + ".");
+        }
+        resolvedPath = resolvedPath.replace(uriLabel, isGreedyLabel
+            ? labelValue
+                .split("/")
+                .map((segment) => (0, extended_encode_uri_component_1.extendedEncodeURIComponent)(segment))
+                .join("/")
+            : (0, extended_encode_uri_component_1.extendedEncodeURIComponent)(labelValue));
+    }
+    else {
+        throw new Error("No value provided for input HTTP label: " + memberName + ".");
+    }
+    return resolvedPath;
+};
+exports.resolvedPath = resolvedPath;
 
 
 /***/ }),
@@ -30358,7 +29978,10 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseUrl = void 0;
 const querystring_parser_1 = __nccwpck_require__(7424);
 const parseUrl = (url) => {
-    const { hostname, pathname, port, protocol, search } = new URL(url);
+    if (typeof url === 'string') {
+        return (0, exports.parseUrl)(new URL(url));
+    }
+    const { hostname, pathname, port, protocol, search } = url;
     let query;
     if (search) {
         query = (0, querystring_parser_1.parseQueryString)(search);
@@ -35372,7 +34995,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-eventbridge","description":"AWS SDK for JavaScript Eventbridge Client for Node.js, Browser and React Native","version":"3.110.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.110.0","@aws-sdk/config-resolver":"3.110.0","@aws-sdk/credential-provider-node":"3.110.0","@aws-sdk/fetch-http-handler":"3.110.0","@aws-sdk/hash-node":"3.110.0","@aws-sdk/invalid-dependency":"3.110.0","@aws-sdk/middleware-content-length":"3.110.0","@aws-sdk/middleware-host-header":"3.110.0","@aws-sdk/middleware-logger":"3.110.0","@aws-sdk/middleware-recursion-detection":"3.110.0","@aws-sdk/middleware-retry":"3.110.0","@aws-sdk/middleware-sdk-eventbridge":"3.110.0","@aws-sdk/middleware-serde":"3.110.0","@aws-sdk/middleware-signing":"3.110.0","@aws-sdk/middleware-stack":"3.110.0","@aws-sdk/middleware-user-agent":"3.110.0","@aws-sdk/node-config-provider":"3.110.0","@aws-sdk/node-http-handler":"3.110.0","@aws-sdk/protocol-http":"3.110.0","@aws-sdk/signature-v4-multi-region":"3.110.0","@aws-sdk/smithy-client":"3.110.0","@aws-sdk/types":"3.110.0","@aws-sdk/url-parser":"3.110.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.110.0","@aws-sdk/util-defaults-mode-node":"3.110.0","@aws-sdk/util-user-agent-browser":"3.110.0","@aws-sdk/util-user-agent-node":"3.110.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-eventbridge","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-eventbridge"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-eventbridge","description":"AWS SDK for JavaScript Eventbridge Client for Node.js, Browser and React Native","version":"3.180.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.180.0","@aws-sdk/config-resolver":"3.178.0","@aws-sdk/credential-provider-node":"3.180.0","@aws-sdk/fetch-http-handler":"3.178.0","@aws-sdk/hash-node":"3.178.0","@aws-sdk/invalid-dependency":"3.178.0","@aws-sdk/middleware-content-length":"3.178.0","@aws-sdk/middleware-host-header":"3.178.0","@aws-sdk/middleware-logger":"3.178.0","@aws-sdk/middleware-recursion-detection":"3.178.0","@aws-sdk/middleware-retry":"3.178.0","@aws-sdk/middleware-sdk-eventbridge":"3.178.0","@aws-sdk/middleware-serde":"3.178.0","@aws-sdk/middleware-signing":"3.179.0","@aws-sdk/middleware-stack":"3.178.0","@aws-sdk/middleware-user-agent":"3.178.0","@aws-sdk/node-config-provider":"3.178.0","@aws-sdk/node-http-handler":"3.178.0","@aws-sdk/protocol-http":"3.178.0","@aws-sdk/signature-v4-multi-region":"3.180.0","@aws-sdk/smithy-client":"3.180.0","@aws-sdk/types":"3.178.0","@aws-sdk/url-parser":"3.178.0","@aws-sdk/util-base64-browser":"3.170.0","@aws-sdk/util-base64-node":"3.170.0","@aws-sdk/util-body-length-browser":"3.170.0","@aws-sdk/util-body-length-node":"3.170.0","@aws-sdk/util-defaults-mode-browser":"3.180.0","@aws-sdk/util-defaults-mode-node":"3.180.0","@aws-sdk/util-user-agent-browser":"3.178.0","@aws-sdk/util-user-agent-node":"3.178.0","@aws-sdk/util-utf8-browser":"3.170.0","@aws-sdk/util-utf8-node":"3.170.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.170.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-eventbridge","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-eventbridge"}}');
 
 /***/ }),
 
@@ -35380,7 +35003,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-eventbridge","description"
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.110.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.110.0","@aws-sdk/fetch-http-handler":"3.110.0","@aws-sdk/hash-node":"3.110.0","@aws-sdk/invalid-dependency":"3.110.0","@aws-sdk/middleware-content-length":"3.110.0","@aws-sdk/middleware-host-header":"3.110.0","@aws-sdk/middleware-logger":"3.110.0","@aws-sdk/middleware-recursion-detection":"3.110.0","@aws-sdk/middleware-retry":"3.110.0","@aws-sdk/middleware-serde":"3.110.0","@aws-sdk/middleware-stack":"3.110.0","@aws-sdk/middleware-user-agent":"3.110.0","@aws-sdk/node-config-provider":"3.110.0","@aws-sdk/node-http-handler":"3.110.0","@aws-sdk/protocol-http":"3.110.0","@aws-sdk/smithy-client":"3.110.0","@aws-sdk/types":"3.110.0","@aws-sdk/url-parser":"3.110.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.110.0","@aws-sdk/util-defaults-mode-node":"3.110.0","@aws-sdk/util-user-agent-browser":"3.110.0","@aws-sdk/util-user-agent-node":"3.110.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.180.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.178.0","@aws-sdk/fetch-http-handler":"3.178.0","@aws-sdk/hash-node":"3.178.0","@aws-sdk/invalid-dependency":"3.178.0","@aws-sdk/middleware-content-length":"3.178.0","@aws-sdk/middleware-host-header":"3.178.0","@aws-sdk/middleware-logger":"3.178.0","@aws-sdk/middleware-recursion-detection":"3.178.0","@aws-sdk/middleware-retry":"3.178.0","@aws-sdk/middleware-serde":"3.178.0","@aws-sdk/middleware-stack":"3.178.0","@aws-sdk/middleware-user-agent":"3.178.0","@aws-sdk/node-config-provider":"3.178.0","@aws-sdk/node-http-handler":"3.178.0","@aws-sdk/protocol-http":"3.178.0","@aws-sdk/smithy-client":"3.180.0","@aws-sdk/types":"3.178.0","@aws-sdk/url-parser":"3.178.0","@aws-sdk/util-base64-browser":"3.170.0","@aws-sdk/util-base64-node":"3.170.0","@aws-sdk/util-body-length-browser":"3.170.0","@aws-sdk/util-body-length-node":"3.170.0","@aws-sdk/util-defaults-mode-browser":"3.180.0","@aws-sdk/util-defaults-mode-node":"3.180.0","@aws-sdk/util-user-agent-browser":"3.178.0","@aws-sdk/util-user-agent-node":"3.178.0","@aws-sdk/util-utf8-browser":"3.170.0","@aws-sdk/util-utf8-node":"3.170.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.170.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -35388,7 +35011,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.110.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.110.0","@aws-sdk/credential-provider-node":"3.110.0","@aws-sdk/fetch-http-handler":"3.110.0","@aws-sdk/hash-node":"3.110.0","@aws-sdk/invalid-dependency":"3.110.0","@aws-sdk/middleware-content-length":"3.110.0","@aws-sdk/middleware-host-header":"3.110.0","@aws-sdk/middleware-logger":"3.110.0","@aws-sdk/middleware-recursion-detection":"3.110.0","@aws-sdk/middleware-retry":"3.110.0","@aws-sdk/middleware-sdk-sts":"3.110.0","@aws-sdk/middleware-serde":"3.110.0","@aws-sdk/middleware-signing":"3.110.0","@aws-sdk/middleware-stack":"3.110.0","@aws-sdk/middleware-user-agent":"3.110.0","@aws-sdk/node-config-provider":"3.110.0","@aws-sdk/node-http-handler":"3.110.0","@aws-sdk/protocol-http":"3.110.0","@aws-sdk/smithy-client":"3.110.0","@aws-sdk/types":"3.110.0","@aws-sdk/url-parser":"3.110.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.110.0","@aws-sdk/util-defaults-mode-node":"3.110.0","@aws-sdk/util-user-agent-browser":"3.110.0","@aws-sdk/util-user-agent-node":"3.110.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.180.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.178.0","@aws-sdk/credential-provider-node":"3.180.0","@aws-sdk/fetch-http-handler":"3.178.0","@aws-sdk/hash-node":"3.178.0","@aws-sdk/invalid-dependency":"3.178.0","@aws-sdk/middleware-content-length":"3.178.0","@aws-sdk/middleware-host-header":"3.178.0","@aws-sdk/middleware-logger":"3.178.0","@aws-sdk/middleware-recursion-detection":"3.178.0","@aws-sdk/middleware-retry":"3.178.0","@aws-sdk/middleware-sdk-sts":"3.179.0","@aws-sdk/middleware-serde":"3.178.0","@aws-sdk/middleware-signing":"3.179.0","@aws-sdk/middleware-stack":"3.178.0","@aws-sdk/middleware-user-agent":"3.178.0","@aws-sdk/node-config-provider":"3.178.0","@aws-sdk/node-http-handler":"3.178.0","@aws-sdk/protocol-http":"3.178.0","@aws-sdk/smithy-client":"3.180.0","@aws-sdk/types":"3.178.0","@aws-sdk/url-parser":"3.178.0","@aws-sdk/util-base64-browser":"3.170.0","@aws-sdk/util-base64-node":"3.170.0","@aws-sdk/util-body-length-browser":"3.170.0","@aws-sdk/util-body-length-node":"3.170.0","@aws-sdk/util-defaults-mode-browser":"3.180.0","@aws-sdk/util-defaults-mode-node":"3.180.0","@aws-sdk/util-user-agent-browser":"3.178.0","@aws-sdk/util-user-agent-node":"3.178.0","@aws-sdk/util-utf8-browser":"3.170.0","@aws-sdk/util-utf8-node":"3.170.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.170.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
