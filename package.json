@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.9.1",
-    "@aws-sdk/client-eventbridge": "^3.180.0"
+    "@aws-sdk/client-eventbridge": "^3.186.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.65",
