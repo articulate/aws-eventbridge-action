@@ -26,7 +26,7 @@
     "@aws-sdk/client-eventbridge": "^3.186.0"
   },
   "devDependencies": {
-    "@types/node": "^16.11.65",
+    "@types/node": "^16.11.68",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "@vercel/ncc": "^0.34.0",
