@@ -5914,11 +5914,10 @@ tslib_1.__exportStar(__nccwpck_require__(6050), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveClientEndpointParameters = void 0;
 const resolveClientEndpointParameters = (options) => {
-    var _a, _b;
     return {
         ...options,
-        useDualstackEndpoint: (_a = options.useDualstackEndpoint) !== null && _a !== void 0 ? _a : false,
-        useFipsEndpoint: (_b = options.useFipsEndpoint) !== null && _b !== void 0 ? _b : false,
+        useDualstackEndpoint: options.useDualstackEndpoint ?? false,
+        useFipsEndpoint: options.useFipsEndpoint ?? false,
         defaultSigningName: "events",
     };
 };
@@ -12715,15 +12714,12 @@ const deserializeAws_json1_1UpdateEndpointResponse = (output, context) => {
         State: (0, smithy_client_1.expectString)(output.State),
     };
 };
-const deserializeMetadata = (output) => {
-    var _a, _b;
-    return ({
-        httpStatusCode: output.statusCode,
-        requestId: (_b = (_a = output.headers["x-amzn-requestid"]) !== null && _a !== void 0 ? _a : output.headers["x-amzn-request-id"]) !== null && _b !== void 0 ? _b : output.headers["x-amz-request-id"],
-        extendedRequestId: output.headers["x-amz-id-2"],
-        cfId: output.headers["x-amz-cf-id"],
-    });
-};
+const deserializeMetadata = (output) => ({
+    httpStatusCode: output.statusCode,
+    requestId: output.headers["x-amzn-requestid"] ?? output.headers["x-amzn-request-id"] ?? output.headers["x-amz-request-id"],
+    extendedRequestId: output.headers["x-amz-id-2"],
+    cfId: output.headers["x-amz-cf-id"],
+});
 const collectBody = (streamBody = new Uint8Array(), context) => {
     if (streamBody instanceof Uint8Array) {
         return Promise.resolve(streamBody);
@@ -12756,9 +12752,8 @@ const parseBody = (streamBody, context) => collectBodyString(streamBody, context
     return {};
 });
 const parseErrorBody = async (errorBody, context) => {
-    var _a;
     const value = await parseBody(errorBody, context);
-    value.message = (_a = value.message) !== null && _a !== void 0 ? _a : value.Message;
+    value.message = value.message ?? value.Message;
     return value;
 };
 const loadRestJsonErrorCode = (output, data) => {
@@ -12819,7 +12814,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const util_defaults_mode_node_1 = __nccwpck_require__(4243);
 const smithy_client_2 = __nccwpck_require__(4963);
 const getRuntimeConfig = (config) => {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q;
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
     const defaultConfigProvider = () => defaultsMode().then(smithy_client_1.loadConfigsForDefaultMode);
@@ -12829,24 +12823,26 @@ const getRuntimeConfig = (config) => {
         ...config,
         runtime: "node",
         defaultsMode,
-        base64Decoder: (_a = config === null || config === void 0 ? void 0 : config.base64Decoder) !== null && _a !== void 0 ? _a : util_base64_node_1.fromBase64,
-        base64Encoder: (_b = config === null || config === void 0 ? void 0 : config.base64Encoder) !== null && _b !== void 0 ? _b : util_base64_node_1.toBase64,
-        bodyLengthChecker: (_c = config === null || config === void 0 ? void 0 : config.bodyLengthChecker) !== null && _c !== void 0 ? _c : util_body_length_node_1.calculateBodyLength,
-        credentialDefaultProvider: (_d = config === null || config === void 0 ? void 0 : config.credentialDefaultProvider) !== null && _d !== void 0 ? _d : (0, client_sts_1.decorateDefaultCredentialProvider)(credential_provider_node_1.defaultProvider),
-        defaultUserAgentProvider: (_e = config === null || config === void 0 ? void 0 : config.defaultUserAgentProvider) !== null && _e !== void 0 ? _e : (0, util_user_agent_node_1.defaultUserAgent)({ serviceId: clientSharedValues.serviceId, clientVersion: package_json_1.default.version }),
-        maxAttempts: (_f = config === null || config === void 0 ? void 0 : config.maxAttempts) !== null && _f !== void 0 ? _f : (0, node_config_provider_1.loadConfig)(middleware_retry_1.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),
-        region: (_g = config === null || config === void 0 ? void 0 : config.region) !== null && _g !== void 0 ? _g : (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_REGION_CONFIG_OPTIONS, config_resolver_1.NODE_REGION_CONFIG_FILE_OPTIONS),
-        requestHandler: (_h = config === null || config === void 0 ? void 0 : config.requestHandler) !== null && _h !== void 0 ? _h : new node_http_handler_1.NodeHttpHandler(defaultConfigProvider),
-        retryMode: (_j = config === null || config === void 0 ? void 0 : config.retryMode) !== null && _j !== void 0 ? _j : (0, node_config_provider_1.loadConfig)({
-            ...middleware_retry_1.NODE_RETRY_MODE_CONFIG_OPTIONS,
-            default: async () => (await defaultConfigProvider()).retryMode || middleware_retry_1.DEFAULT_RETRY_MODE,
-        }),
-        sha256: (_k = config === null || config === void 0 ? void 0 : config.sha256) !== null && _k !== void 0 ? _k : hash_node_1.Hash.bind(null, "sha256"),
-        streamCollector: (_l = config === null || config === void 0 ? void 0 : config.streamCollector) !== null && _l !== void 0 ? _l : node_http_handler_1.streamCollector,
-        useDualstackEndpoint: (_m = config === null || config === void 0 ? void 0 : config.useDualstackEndpoint) !== null && _m !== void 0 ? _m : (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_DUALSTACK_ENDPOINT_CONFIG_OPTIONS),
-        useFipsEndpoint: (_o = config === null || config === void 0 ? void 0 : config.useFipsEndpoint) !== null && _o !== void 0 ? _o : (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_FIPS_ENDPOINT_CONFIG_OPTIONS),
-        utf8Decoder: (_p = config === null || config === void 0 ? void 0 : config.utf8Decoder) !== null && _p !== void 0 ? _p : util_utf8_node_1.fromUtf8,
-        utf8Encoder: (_q = config === null || config === void 0 ? void 0 : config.utf8Encoder) !== null && _q !== void 0 ? _q : util_utf8_node_1.toUtf8,
+        base64Decoder: config?.base64Decoder ?? util_base64_node_1.fromBase64,
+        base64Encoder: config?.base64Encoder ?? util_base64_node_1.toBase64,
+        bodyLengthChecker: config?.bodyLengthChecker ?? util_body_length_node_1.calculateBodyLength,
+        credentialDefaultProvider: config?.credentialDefaultProvider ?? (0, client_sts_1.decorateDefaultCredentialProvider)(credential_provider_node_1.defaultProvider),
+        defaultUserAgentProvider: config?.defaultUserAgentProvider ??
+            (0, util_user_agent_node_1.defaultUserAgent)({ serviceId: clientSharedValues.serviceId, clientVersion: package_json_1.default.version }),
+        maxAttempts: config?.maxAttempts ?? (0, node_config_provider_1.loadConfig)(middleware_retry_1.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),
+        region: config?.region ?? (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_REGION_CONFIG_OPTIONS, config_resolver_1.NODE_REGION_CONFIG_FILE_OPTIONS),
+        requestHandler: config?.requestHandler ?? new node_http_handler_1.NodeHttpHandler(defaultConfigProvider),
+        retryMode: config?.retryMode ??
+            (0, node_config_provider_1.loadConfig)({
+                ...middleware_retry_1.NODE_RETRY_MODE_CONFIG_OPTIONS,
+                default: async () => (await defaultConfigProvider()).retryMode || middleware_retry_1.DEFAULT_RETRY_MODE,
+            }),
+        sha256: config?.sha256 ?? hash_node_1.Hash.bind(null, "sha256"),
+        streamCollector: config?.streamCollector ?? node_http_handler_1.streamCollector,
+        useDualstackEndpoint: config?.useDualstackEndpoint ?? (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_DUALSTACK_ENDPOINT_CONFIG_OPTIONS),
+        useFipsEndpoint: config?.useFipsEndpoint ?? (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_FIPS_ENDPOINT_CONFIG_OPTIONS),
+        utf8Decoder: config?.utf8Decoder ?? util_utf8_node_1.fromUtf8,
+        utf8Encoder: config?.utf8Encoder ?? util_utf8_node_1.toUtf8,
     };
 };
 exports.getRuntimeConfig = getRuntimeConfig;
@@ -12864,18 +12860,15 @@ exports.getRuntimeConfig = void 0;
 const signature_v4_multi_region_1 = __nccwpck_require__(1856);
 const url_parser_1 = __nccwpck_require__(2992);
 const endpointResolver_1 = __nccwpck_require__(4877);
-const getRuntimeConfig = (config) => {
-    var _a, _b, _c, _d, _e, _f;
-    return ({
-        apiVersion: "2015-10-07",
-        disableHostPrefix: (_a = config === null || config === void 0 ? void 0 : config.disableHostPrefix) !== null && _a !== void 0 ? _a : false,
-        endpointProvider: (_b = config === null || config === void 0 ? void 0 : config.endpointProvider) !== null && _b !== void 0 ? _b : endpointResolver_1.defaultEndpointResolver,
-        logger: (_c = config === null || config === void 0 ? void 0 : config.logger) !== null && _c !== void 0 ? _c : {},
-        serviceId: (_d = config === null || config === void 0 ? void 0 : config.serviceId) !== null && _d !== void 0 ? _d : "EventBridge",
-        signerConstructor: (_e = config === null || config === void 0 ? void 0 : config.signerConstructor) !== null && _e !== void 0 ? _e : signature_v4_multi_region_1.SignatureV4MultiRegion,
-        urlParser: (_f = config === null || config === void 0 ? void 0 : config.urlParser) !== null && _f !== void 0 ? _f : url_parser_1.parseUrl,
-    });
-};
+const getRuntimeConfig = (config) => ({
+    apiVersion: "2015-10-07",
+    disableHostPrefix: config?.disableHostPrefix ?? false,
+    endpointProvider: config?.endpointProvider ?? endpointResolver_1.defaultEndpointResolver,
+    logger: config?.logger ?? {},
+    serviceId: config?.serviceId ?? "EventBridge",
+    signerConstructor: config?.signerConstructor ?? signature_v4_multi_region_1.SignatureV4MultiRegion,
+    urlParser: config?.urlParser ?? url_parser_1.parseUrl,
+});
 exports.getRuntimeConfig = getRuntimeConfig;
 
 
@@ -13553,11 +13546,10 @@ tslib_1.__exportStar(__nccwpck_require__(2586), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveClientEndpointParameters = void 0;
 const resolveClientEndpointParameters = (options) => {
-    var _a, _b;
     return {
         ...options,
-        useDualstackEndpoint: (_a = options.useDualstackEndpoint) !== null && _a !== void 0 ? _a : false,
-        useFipsEndpoint: (_b = options.useFipsEndpoint) !== null && _b !== void 0 ? _b : false,
+        useDualstackEndpoint: options.useDualstackEndpoint ?? false,
+        useFipsEndpoint: options.useFipsEndpoint ?? false,
         defaultSigningName: "awsssoportal",
     };
 };
@@ -14202,7 +14194,7 @@ const serializeAws_restJson1GetRoleCredentialsCommand = async (input, context) =
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-sso_bearer_token": input.accessToken,
     });
-    const resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/federation/credentials";
+    const resolvedPath = `${basePath?.endsWith("/") ? basePath.slice(0, -1) : basePath || ""}` + "/federation/credentials";
     const query = map({
         role_name: [, input.roleName],
         account_id: [, input.accountId],
@@ -14225,7 +14217,7 @@ const serializeAws_restJson1ListAccountRolesCommand = async (input, context) => 
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-sso_bearer_token": input.accessToken,
     });
-    const resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/assignment/roles";
+    const resolvedPath = `${basePath?.endsWith("/") ? basePath.slice(0, -1) : basePath || ""}` + "/assignment/roles";
     const query = map({
         next_token: [, input.nextToken],
         max_result: [() => input.maxResults !== void 0, () => input.maxResults.toString()],
@@ -14249,7 +14241,7 @@ const serializeAws_restJson1ListAccountsCommand = async (input, context) => {
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-sso_bearer_token": input.accessToken,
     });
-    const resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/assignment/accounts";
+    const resolvedPath = `${basePath?.endsWith("/") ? basePath.slice(0, -1) : basePath || ""}` + "/assignment/accounts";
     const query = map({
         next_token: [, input.nextToken],
         max_result: [() => input.maxResults !== void 0, () => input.maxResults.toString()],
@@ -14272,7 +14264,7 @@ const serializeAws_restJson1LogoutCommand = async (input, context) => {
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-sso_bearer_token": input.accessToken,
     });
-    const resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/logout";
+    const resolvedPath = `${basePath?.endsWith("/") ? basePath.slice(0, -1) : basePath || ""}` + "/logout";
     let body;
     return new protocol_http_1.HttpRequest({
         protocol,
@@ -14549,15 +14541,12 @@ const deserializeAws_restJson1RoleListType = (output, context) => {
     });
     return retVal;
 };
-const deserializeMetadata = (output) => {
-    var _a, _b;
-    return ({
-        httpStatusCode: output.statusCode,
-        requestId: (_b = (_a = output.headers["x-amzn-requestid"]) !== null && _a !== void 0 ? _a : output.headers["x-amzn-request-id"]) !== null && _b !== void 0 ? _b : output.headers["x-amz-request-id"],
-        extendedRequestId: output.headers["x-amz-id-2"],
-        cfId: output.headers["x-amz-cf-id"],
-    });
-};
+const deserializeMetadata = (output) => ({
+    httpStatusCode: output.statusCode,
+    requestId: output.headers["x-amzn-requestid"] ?? output.headers["x-amzn-request-id"] ?? output.headers["x-amz-request-id"],
+    extendedRequestId: output.headers["x-amz-id-2"],
+    cfId: output.headers["x-amz-cf-id"],
+});
 const collectBody = (streamBody = new Uint8Array(), context) => {
     if (streamBody instanceof Uint8Array) {
         return Promise.resolve(streamBody);
@@ -14577,9 +14566,8 @@ const parseBody = (streamBody, context) => collectBodyString(streamBody, context
     return {};
 });
 const parseErrorBody = async (errorBody, context) => {
-    var _a;
     const value = await parseBody(errorBody, context);
-    value.message = (_a = value.message) !== null && _a !== void 0 ? _a : value.Message;
+    value.message = value.message ?? value.Message;
     return value;
 };
 const loadRestJsonErrorCode = (output, data) => {
@@ -14638,7 +14626,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const util_defaults_mode_node_1 = __nccwpck_require__(4243);
 const smithy_client_2 = __nccwpck_require__(4963);
 const getRuntimeConfig = (config) => {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p;
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
     const defaultConfigProvider = () => defaultsMode().then(smithy_client_1.loadConfigsForDefaultMode);
@@ -14648,23 +14635,25 @@ const getRuntimeConfig = (config) => {
         ...config,
         runtime: "node",
         defaultsMode,
-        base64Decoder: (_a = config === null || config === void 0 ? void 0 : config.base64Decoder) !== null && _a !== void 0 ? _a : util_base64_node_1.fromBase64,
-        base64Encoder: (_b = config === null || config === void 0 ? void 0 : config.base64Encoder) !== null && _b !== void 0 ? _b : util_base64_node_1.toBase64,
-        bodyLengthChecker: (_c = config === null || config === void 0 ? void 0 : config.bodyLengthChecker) !== null && _c !== void 0 ? _c : util_body_length_node_1.calculateBodyLength,
-        defaultUserAgentProvider: (_d = config === null || config === void 0 ? void 0 : config.defaultUserAgentProvider) !== null && _d !== void 0 ? _d : (0, util_user_agent_node_1.defaultUserAgent)({ serviceId: clientSharedValues.serviceId, clientVersion: package_json_1.default.version }),
-        maxAttempts: (_e = config === null || config === void 0 ? void 0 : config.maxAttempts) !== null && _e !== void 0 ? _e : (0, node_config_provider_1.loadConfig)(middleware_retry_1.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),
-        region: (_f = config === null || config === void 0 ? void 0 : config.region) !== null && _f !== void 0 ? _f : (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_REGION_CONFIG_OPTIONS, config_resolver_1.NODE_REGION_CONFIG_FILE_OPTIONS),
-        requestHandler: (_g = config === null || config === void 0 ? void 0 : config.requestHandler) !== null && _g !== void 0 ? _g : new node_http_handler_1.NodeHttpHandler(defaultConfigProvider),
-        retryMode: (_h = config === null || config === void 0 ? void 0 : config.retryMode) !== null && _h !== void 0 ? _h : (0, node_config_provider_1.loadConfig)({
-            ...middleware_retry_1.NODE_RETRY_MODE_CONFIG_OPTIONS,
-            default: async () => (await defaultConfigProvider()).retryMode || middleware_retry_1.DEFAULT_RETRY_MODE,
-        }),
-        sha256: (_j = config === null || config === void 0 ? void 0 : config.sha256) !== null && _j !== void 0 ? _j : hash_node_1.Hash.bind(null, "sha256"),
-        streamCollector: (_k = config === null || config === void 0 ? void 0 : config.streamCollector) !== null && _k !== void 0 ? _k : node_http_handler_1.streamCollector,
-        useDualstackEndpoint: (_l = config === null || config === void 0 ? void 0 : config.useDualstackEndpoint) !== null && _l !== void 0 ? _l : (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_DUALSTACK_ENDPOINT_CONFIG_OPTIONS),
-        useFipsEndpoint: (_m = config === null || config === void 0 ? void 0 : config.useFipsEndpoint) !== null && _m !== void 0 ? _m : (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_FIPS_ENDPOINT_CONFIG_OPTIONS),
-        utf8Decoder: (_o = config === null || config === void 0 ? void 0 : config.utf8Decoder) !== null && _o !== void 0 ? _o : util_utf8_node_1.fromUtf8,
-        utf8Encoder: (_p = config === null || config === void 0 ? void 0 : config.utf8Encoder) !== null && _p !== void 0 ? _p : util_utf8_node_1.toUtf8,
+        base64Decoder: config?.base64Decoder ?? util_base64_node_1.fromBase64,
+        base64Encoder: config?.base64Encoder ?? util_base64_node_1.toBase64,
+        bodyLengthChecker: config?.bodyLengthChecker ?? util_body_length_node_1.calculateBodyLength,
+        defaultUserAgentProvider: config?.defaultUserAgentProvider ??
+            (0, util_user_agent_node_1.defaultUserAgent)({ serviceId: clientSharedValues.serviceId, clientVersion: package_json_1.default.version }),
+        maxAttempts: config?.maxAttempts ?? (0, node_config_provider_1.loadConfig)(middleware_retry_1.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),
+        region: config?.region ?? (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_REGION_CONFIG_OPTIONS, config_resolver_1.NODE_REGION_CONFIG_FILE_OPTIONS),
+        requestHandler: config?.requestHandler ?? new node_http_handler_1.NodeHttpHandler(defaultConfigProvider),
+        retryMode: config?.retryMode ??
+            (0, node_config_provider_1.loadConfig)({
+                ...middleware_retry_1.NODE_RETRY_MODE_CONFIG_OPTIONS,
+                default: async () => (await defaultConfigProvider()).retryMode || middleware_retry_1.DEFAULT_RETRY_MODE,
+            }),
+        sha256: config?.sha256 ?? hash_node_1.Hash.bind(null, "sha256"),
+        streamCollector: config?.streamCollector ?? node_http_handler_1.streamCollector,
+        useDualstackEndpoint: config?.useDualstackEndpoint ?? (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_DUALSTACK_ENDPOINT_CONFIG_OPTIONS),
+        useFipsEndpoint: config?.useFipsEndpoint ?? (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_FIPS_ENDPOINT_CONFIG_OPTIONS),
+        utf8Decoder: config?.utf8Decoder ?? util_utf8_node_1.fromUtf8,
+        utf8Encoder: config?.utf8Encoder ?? util_utf8_node_1.toUtf8,
     };
 };
 exports.getRuntimeConfig = getRuntimeConfig;
@@ -14681,17 +14670,14 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const url_parser_1 = __nccwpck_require__(2992);
 const endpointResolver_1 = __nccwpck_require__(898);
-const getRuntimeConfig = (config) => {
-    var _a, _b, _c, _d, _e;
-    return ({
-        apiVersion: "2019-06-10",
-        disableHostPrefix: (_a = config === null || config === void 0 ? void 0 : config.disableHostPrefix) !== null && _a !== void 0 ? _a : false,
-        endpointProvider: (_b = config === null || config === void 0 ? void 0 : config.endpointProvider) !== null && _b !== void 0 ? _b : endpointResolver_1.defaultEndpointResolver,
-        logger: (_c = config === null || config === void 0 ? void 0 : config.logger) !== null && _c !== void 0 ? _c : {},
-        serviceId: (_d = config === null || config === void 0 ? void 0 : config.serviceId) !== null && _d !== void 0 ? _d : "SSO",
-        urlParser: (_e = config === null || config === void 0 ? void 0 : config.urlParser) !== null && _e !== void 0 ? _e : url_parser_1.parseUrl,
-    });
-};
+const getRuntimeConfig = (config) => ({
+    apiVersion: "2019-06-10",
+    disableHostPrefix: config?.disableHostPrefix ?? false,
+    endpointProvider: config?.endpointProvider ?? endpointResolver_1.defaultEndpointResolver,
+    logger: config?.logger ?? {},
+    serviceId: config?.serviceId ?? "SSO",
+    urlParser: config?.urlParser ?? url_parser_1.parseUrl,
+});
 exports.getRuntimeConfig = getRuntimeConfig;
 
 
@@ -14827,7 +14813,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -15802,12 +15788,11 @@ exports.decorateDefaultCredentialProvider = decorateDefaultCredentialProvider;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveClientEndpointParameters = void 0;
 const resolveClientEndpointParameters = (options) => {
-    var _a, _b, _c;
     return {
         ...options,
-        useDualstackEndpoint: (_a = options.useDualstackEndpoint) !== null && _a !== void 0 ? _a : false,
-        useFipsEndpoint: (_b = options.useFipsEndpoint) !== null && _b !== void 0 ? _b : false,
-        useGlobalEndpoint: (_c = options.useGlobalEndpoint) !== null && _c !== void 0 ? _c : false,
+        useDualstackEndpoint: options.useDualstackEndpoint ?? false,
+        useFipsEndpoint: options.useFipsEndpoint ?? false,
+        useGlobalEndpoint: options.useGlobalEndpoint ?? false,
         defaultSigningName: "sts",
     };
 };
@@ -17965,15 +17950,12 @@ const deserializeAws_queryRegionDisabledException = (output, context) => {
     }
     return contents;
 };
-const deserializeMetadata = (output) => {
-    var _a, _b;
-    return ({
-        httpStatusCode: output.statusCode,
-        requestId: (_b = (_a = output.headers["x-amzn-requestid"]) !== null && _a !== void 0 ? _a : output.headers["x-amzn-request-id"]) !== null && _b !== void 0 ? _b : output.headers["x-amz-request-id"],
-        extendedRequestId: output.headers["x-amz-id-2"],
-        cfId: output.headers["x-amz-cf-id"],
-    });
-};
+const deserializeMetadata = (output) => ({
+    httpStatusCode: output.statusCode,
+    requestId: output.headers["x-amzn-requestid"] ?? output.headers["x-amzn-request-id"] ?? output.headers["x-amz-request-id"],
+    extendedRequestId: output.headers["x-amz-id-2"],
+    cfId: output.headers["x-amz-cf-id"],
+});
 const collectBody = (streamBody = new Uint8Array(), context) => {
     if (streamBody instanceof Uint8Array) {
         return Promise.resolve(streamBody);
@@ -18025,10 +18007,9 @@ const parseBody = (streamBody, context) => collectBodyString(streamBody, context
     return {};
 });
 const parseErrorBody = async (errorBody, context) => {
-    var _a;
     const value = await parseBody(errorBody, context);
     if (value.Error) {
-        value.Error.message = (_a = value.Error.message) !== null && _a !== void 0 ? _a : value.Error.Message;
+        value.Error.message = value.Error.message ?? value.Error.Message;
     }
     return value;
 };
@@ -18072,7 +18053,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const util_defaults_mode_node_1 = __nccwpck_require__(4243);
 const smithy_client_2 = __nccwpck_require__(4963);
 const getRuntimeConfig = (config) => {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q;
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
     const defaultConfigProvider = () => defaultsMode().then(smithy_client_1.loadConfigsForDefaultMode);
@@ -18082,24 +18062,26 @@ const getRuntimeConfig = (config) => {
         ...config,
         runtime: "node",
         defaultsMode,
-        base64Decoder: (_a = config === null || config === void 0 ? void 0 : config.base64Decoder) !== null && _a !== void 0 ? _a : util_base64_node_1.fromBase64,
-        base64Encoder: (_b = config === null || config === void 0 ? void 0 : config.base64Encoder) !== null && _b !== void 0 ? _b : util_base64_node_1.toBase64,
-        bodyLengthChecker: (_c = config === null || config === void 0 ? void 0 : config.bodyLengthChecker) !== null && _c !== void 0 ? _c : util_body_length_node_1.calculateBodyLength,
-        credentialDefaultProvider: (_d = config === null || config === void 0 ? void 0 : config.credentialDefaultProvider) !== null && _d !== void 0 ? _d : (0, defaultStsRoleAssumers_1.decorateDefaultCredentialProvider)(credential_provider_node_1.defaultProvider),
-        defaultUserAgentProvider: (_e = config === null || config === void 0 ? void 0 : config.defaultUserAgentProvider) !== null && _e !== void 0 ? _e : (0, util_user_agent_node_1.defaultUserAgent)({ serviceId: clientSharedValues.serviceId, clientVersion: package_json_1.default.version }),
-        maxAttempts: (_f = config === null || config === void 0 ? void 0 : config.maxAttempts) !== null && _f !== void 0 ? _f : (0, node_config_provider_1.loadConfig)(middleware_retry_1.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),
-        region: (_g = config === null || config === void 0 ? void 0 : config.region) !== null && _g !== void 0 ? _g : (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_REGION_CONFIG_OPTIONS, config_resolver_1.NODE_REGION_CONFIG_FILE_OPTIONS),
-        requestHandler: (_h = config === null || config === void 0 ? void 0 : config.requestHandler) !== null && _h !== void 0 ? _h : new node_http_handler_1.NodeHttpHandler(defaultConfigProvider),
-        retryMode: (_j = config === null || config === void 0 ? void 0 : config.retryMode) !== null && _j !== void 0 ? _j : (0, node_config_provider_1.loadConfig)({
-            ...middleware_retry_1.NODE_RETRY_MODE_CONFIG_OPTIONS,
-            default: async () => (await defaultConfigProvider()).retryMode || middleware_retry_1.DEFAULT_RETRY_MODE,
-        }),
-        sha256: (_k = config === null || config === void 0 ? void 0 : config.sha256) !== null && _k !== void 0 ? _k : hash_node_1.Hash.bind(null, "sha256"),
-        streamCollector: (_l = config === null || config === void 0 ? void 0 : config.streamCollector) !== null && _l !== void 0 ? _l : node_http_handler_1.streamCollector,
-        useDualstackEndpoint: (_m = config === null || config === void 0 ? void 0 : config.useDualstackEndpoint) !== null && _m !== void 0 ? _m : (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_DUALSTACK_ENDPOINT_CONFIG_OPTIONS),
-        useFipsEndpoint: (_o = config === null || config === void 0 ? void 0 : config.useFipsEndpoint) !== null && _o !== void 0 ? _o : (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_FIPS_ENDPOINT_CONFIG_OPTIONS),
-        utf8Decoder: (_p = config === null || config === void 0 ? void 0 : config.utf8Decoder) !== null && _p !== void 0 ? _p : util_utf8_node_1.fromUtf8,
-        utf8Encoder: (_q = config === null || config === void 0 ? void 0 : config.utf8Encoder) !== null && _q !== void 0 ? _q : util_utf8_node_1.toUtf8,
+        base64Decoder: config?.base64Decoder ?? util_base64_node_1.fromBase64,
+        base64Encoder: config?.base64Encoder ?? util_base64_node_1.toBase64,
+        bodyLengthChecker: config?.bodyLengthChecker ?? util_body_length_node_1.calculateBodyLength,
+        credentialDefaultProvider: config?.credentialDefaultProvider ?? (0, defaultStsRoleAssumers_1.decorateDefaultCredentialProvider)(credential_provider_node_1.defaultProvider),
+        defaultUserAgentProvider: config?.defaultUserAgentProvider ??
+            (0, util_user_agent_node_1.defaultUserAgent)({ serviceId: clientSharedValues.serviceId, clientVersion: package_json_1.default.version }),
+        maxAttempts: config?.maxAttempts ?? (0, node_config_provider_1.loadConfig)(middleware_retry_1.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),
+        region: config?.region ?? (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_REGION_CONFIG_OPTIONS, config_resolver_1.NODE_REGION_CONFIG_FILE_OPTIONS),
+        requestHandler: config?.requestHandler ?? new node_http_handler_1.NodeHttpHandler(defaultConfigProvider),
+        retryMode: config?.retryMode ??
+            (0, node_config_provider_1.loadConfig)({
+                ...middleware_retry_1.NODE_RETRY_MODE_CONFIG_OPTIONS,
+                default: async () => (await defaultConfigProvider()).retryMode || middleware_retry_1.DEFAULT_RETRY_MODE,
+            }),
+        sha256: config?.sha256 ?? hash_node_1.Hash.bind(null, "sha256"),
+        streamCollector: config?.streamCollector ?? node_http_handler_1.streamCollector,
+        useDualstackEndpoint: config?.useDualstackEndpoint ?? (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_DUALSTACK_ENDPOINT_CONFIG_OPTIONS),
+        useFipsEndpoint: config?.useFipsEndpoint ?? (0, node_config_provider_1.loadConfig)(config_resolver_1.NODE_USE_FIPS_ENDPOINT_CONFIG_OPTIONS),
+        utf8Decoder: config?.utf8Decoder ?? util_utf8_node_1.fromUtf8,
+        utf8Encoder: config?.utf8Encoder ?? util_utf8_node_1.toUtf8,
     };
 };
 exports.getRuntimeConfig = getRuntimeConfig;
@@ -18116,17 +18098,14 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const url_parser_1 = __nccwpck_require__(2992);
 const endpointResolver_1 = __nccwpck_require__(1203);
-const getRuntimeConfig = (config) => {
-    var _a, _b, _c, _d, _e;
-    return ({
-        apiVersion: "2011-06-15",
-        disableHostPrefix: (_a = config === null || config === void 0 ? void 0 : config.disableHostPrefix) !== null && _a !== void 0 ? _a : false,
-        endpointProvider: (_b = config === null || config === void 0 ? void 0 : config.endpointProvider) !== null && _b !== void 0 ? _b : endpointResolver_1.defaultEndpointResolver,
-        logger: (_c = config === null || config === void 0 ? void 0 : config.logger) !== null && _c !== void 0 ? _c : {},
-        serviceId: (_d = config === null || config === void 0 ? void 0 : config.serviceId) !== null && _d !== void 0 ? _d : "STS",
-        urlParser: (_e = config === null || config === void 0 ? void 0 : config.urlParser) !== null && _e !== void 0 ? _e : url_parser_1.parseUrl,
-    });
-};
+const getRuntimeConfig = (config) => ({
+    apiVersion: "2011-06-15",
+    disableHostPrefix: config?.disableHostPrefix ?? false,
+    endpointProvider: config?.endpointProvider ?? endpointResolver_1.defaultEndpointResolver,
+    logger: config?.logger ?? {},
+    serviceId: config?.serviceId ?? "STS",
+    urlParser: config?.urlParser ?? url_parser_1.parseUrl,
+});
 exports.getRuntimeConfig = getRuntimeConfig;
 
 
@@ -18262,7 +18241,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -18985,7 +18964,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -19353,7 +19332,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -20163,7 +20142,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -20713,7 +20692,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -21098,7 +21077,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -21530,7 +21509,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -22008,7 +21987,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -22410,7 +22389,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -22708,6 +22687,44 @@ exports.getContentLengthPlugin = getContentLengthPlugin;
 
 /***/ }),
 
+/***/ 3504:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createConfigValueProvider = void 0;
+const createConfigValueProvider = (configKey, canonicalEndpointParamKey, config) => {
+    const configProvider = async () => {
+        var _a;
+        const configValue = (_a = config[configKey]) !== null && _a !== void 0 ? _a : config[canonicalEndpointParamKey];
+        if (typeof configValue === "function") {
+            return configValue();
+        }
+        return configValue;
+    };
+    if (configKey === "endpoint" || canonicalEndpointParamKey === "endpoint") {
+        return async () => {
+            const endpoint = await configProvider();
+            if (endpoint && typeof endpoint === "object") {
+                if ("url" in endpoint) {
+                    return endpoint.url.href;
+                }
+                if ("hostname" in endpoint) {
+                    const { protocol, hostname, port, path } = endpoint;
+                    return `${protocol}//${hostname}${port ? ":" + port : ""}${path}`;
+                }
+            }
+            return endpoint;
+        };
+    }
+    return configProvider;
+};
+exports.createConfigValueProvider = createConfigValueProvider;
+
+
+/***/ }),
+
 /***/ 2419:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -22716,6 +22733,7 @@ exports.getContentLengthPlugin = getContentLengthPlugin;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveParams = exports.getEndpointFromInstructions = void 0;
 const service_customizations_1 = __nccwpck_require__(3589);
+const createConfigValueProvider_1 = __nccwpck_require__(3504);
 const getEndpointFromInstructions = async (commandInput, instructionsSupplier, clientConfig, context) => {
     const endpointParams = await (0, exports.resolveParams)(commandInput, instructionsSupplier, clientConfig);
     if (typeof clientConfig.endpointProvider !== "function") {
@@ -22739,7 +22757,7 @@ const resolveParams = async (commandInput, instructionsSupplier, clientConfig) =
                 break;
             case "clientContextParams":
             case "builtInParams":
-                endpointParams[name] = await createConfigProvider(instruction.name, name, clientConfig)();
+                endpointParams[name] = await (0, createConfigValueProvider_1.createConfigValueProvider)(instruction.name, name, clientConfig)();
                 break;
             default:
                 throw new Error("Unrecognized endpoint parameter instruction: " + JSON.stringify(instruction));
@@ -22754,16 +22772,6 @@ const resolveParams = async (commandInput, instructionsSupplier, clientConfig) =
     return endpointParams;
 };
 exports.resolveParams = resolveParams;
-const createConfigProvider = (configKey, canonicalEndpointParamKey, config) => {
-    const configProvider = async () => {
-        const configValue = config[configKey] || config[canonicalEndpointParamKey];
-        if (typeof configValue === "function") {
-            return configValue();
-        }
-        return configValue;
-    };
-    return configProvider;
-};
 
 
 /***/ }),
@@ -23114,7 +23122,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -23536,7 +23544,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -24438,7 +24446,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -24881,7 +24889,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -25439,7 +25447,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -26008,7 +26016,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -26447,7 +26455,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -26874,7 +26882,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -27639,7 +27647,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -28142,7 +28150,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -28589,7 +28597,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -29359,7 +29367,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -29752,7 +29760,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -30629,7 +30637,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -31065,7 +31073,7 @@ const throwDefaultError = ({ output, parsedBody, exceptionCtor, errorCode }) => 
     const $metadata = deserializeMetadata(output);
     const statusCode = $metadata.httpStatusCode ? $metadata.httpStatusCode + "" : undefined;
     const response = new exceptionCtor({
-        name: parsedBody.code || parsedBody.Code || errorCode || statusCode || "UnknowError",
+        name: parsedBody.code || parsedBody.Code || errorCode || statusCode || "UnknownError",
         $fault: "client",
         $metadata,
     });
@@ -31134,11 +31142,6 @@ let warningEmitted = false;
 const emitWarningIfUnsupportedVersion = (version) => {
     if (version && !warningEmitted && parseInt(version.substring(1, version.indexOf("."))) < 14) {
         warningEmitted = true;
-        process.emitWarning(`The AWS SDK for JavaScript (v3) will\n` +
-            `no longer support Node.js ${version} on November 1, 2022.\n\n` +
-            `To continue receiving updates to AWS services, bug fixes, and security\n` +
-            `updates please upgrade to Node.js 14.x or later.\n\n` +
-            `For details, please refer our blog post: https://a.co/48dbdYz`, `NodeDeprecationWarning`);
     }
 };
 exports.emitWarningIfUnsupportedVersion = emitWarningIfUnsupportedVersion;
@@ -31877,7 +31880,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -32339,7 +32342,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseUrl = void 0;
 const querystring_parser_1 = __nccwpck_require__(7424);
 const parseUrl = (url) => {
-    if (typeof url === 'string') {
+    if (typeof url === "string") {
         return (0, exports.parseUrl)(new URL(url));
     }
     const { hostname, pathname, port, protocol, search } = url;
@@ -32564,7 +32567,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -32953,7 +32956,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -33393,7 +33396,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -33583,6 +33586,55 @@ var __createBinding;
     exporter("__classPrivateFieldSet", __classPrivateFieldSet);
     exporter("__classPrivateFieldIn", __classPrivateFieldIn);
 });
+
+
+/***/ }),
+
+/***/ 1809:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.debugId = void 0;
+exports.debugId = "endpoints";
+
+
+/***/ }),
+
+/***/ 7617:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const tslib_1 = __nccwpck_require__(5666);
+tslib_1.__exportStar(__nccwpck_require__(1809), exports);
+tslib_1.__exportStar(__nccwpck_require__(6833), exports);
+
+
+/***/ }),
+
+/***/ 6833:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.toDebugString = void 0;
+function toDebugString(input) {
+    if (typeof input !== "object" || input == null) {
+        return input;
+    }
+    if ("ref" in input) {
+        return `$${toDebugString(input.ref)}`;
+    }
+    if ("fn" in input) {
+        return `${input.fn}(${(input.argv || []).map(toDebugString).join(", ")})`;
+    }
+    return JSON.stringify(input, null, 2);
+}
+exports.toDebugString = toDebugString;
 
 
 /***/ }),
@@ -34000,18 +34052,20 @@ exports.uriEncode = uriEncode;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveEndpoint = void 0;
+const debug_1 = __nccwpck_require__(7617);
 const types_1 = __nccwpck_require__(7433);
 const utils_1 = __nccwpck_require__(1114);
 const resolveEndpoint = (ruleSetObject, options) => {
-    var _a, _b;
+    var _a, _b, _c, _d, _e, _f;
     const { endpointParams, logger } = options;
     const { parameters, rules } = ruleSetObject;
+    (_b = (_a = options.logger) === null || _a === void 0 ? void 0 : _a.debug) === null || _b === void 0 ? void 0 : _b.call(_a, debug_1.debugId, `Initial EndpointParams: ${(0, debug_1.toDebugString)(endpointParams)}`);
     const paramsWithDefault = Object.entries(parameters)
         .filter(([, v]) => v.default != null)
         .map(([k, v]) => [k, v.default]);
     if (paramsWithDefault.length > 0) {
         for (const [paramKey, paramDefaultValue] of paramsWithDefault) {
-            endpointParams[paramKey] = (_a = endpointParams[paramKey]) !== null && _a !== void 0 ? _a : paramDefaultValue;
+            endpointParams[paramKey] = (_c = endpointParams[paramKey]) !== null && _c !== void 0 ? _c : paramDefaultValue;
         }
     }
     const requiredParams = Object.entries(parameters)
@@ -34023,7 +34077,7 @@ const resolveEndpoint = (ruleSetObject, options) => {
         }
     }
     const endpoint = (0, utils_1.evaluateRules)(rules, { endpointParams, logger, referenceRecord: {} });
-    if ((_b = options.endpointParams) === null || _b === void 0 ? void 0 : _b.Endpoint) {
+    if ((_d = options.endpointParams) === null || _d === void 0 ? void 0 : _d.Endpoint) {
         try {
             const givenEndpoint = new URL(options.endpointParams.Endpoint);
             const { protocol, port } = givenEndpoint;
@@ -34033,6 +34087,7 @@ const resolveEndpoint = (ruleSetObject, options) => {
         catch (e) {
         }
     }
+    (_f = (_e = options.logger) === null || _e === void 0 ? void 0 : _e.debug) === null || _f === void 0 ? void 0 : _f.call(_e, debug_1.debugId, `Resolved endpoint: ${(0, debug_1.toDebugString)(endpoint)}`);
     return endpoint;
 };
 exports.resolveEndpoint = resolveEndpoint;
@@ -34151,13 +34206,16 @@ exports.callFunction = callFunction;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.evaluateCondition = void 0;
+const debug_1 = __nccwpck_require__(7617);
 const types_1 = __nccwpck_require__(7433);
 const callFunction_1 = __nccwpck_require__(5075);
 const evaluateCondition = ({ assign, ...fnArgs }, options) => {
+    var _a, _b;
     if (assign && assign in options.referenceRecord) {
         throw new types_1.EndpointError(`'${assign}' is already defined in Reference Record.`);
     }
     const value = (0, callFunction_1.callFunction)(fnArgs, options);
+    (_b = (_a = options.logger) === null || _a === void 0 ? void 0 : _a.debug) === null || _b === void 0 ? void 0 : _b.call(_a, debug_1.debugId, `evaluateCondition: ${(0, debug_1.toDebugString)(fnArgs)} = ${(0, debug_1.toDebugString)(value)}`);
     return {
         result: value === "" ? true : !!value,
         ...(assign != null && { toAssign: { name: assign, value } }),
@@ -34175,8 +34233,10 @@ exports.evaluateCondition = evaluateCondition;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.evaluateConditions = void 0;
+const debug_1 = __nccwpck_require__(7617);
 const evaluateCondition_1 = __nccwpck_require__(7851);
 const evaluateConditions = (conditions = [], options) => {
+    var _a, _b;
     const conditionsReferenceRecord = {};
     for (const condition of conditions) {
         const { result, toAssign } = (0, evaluateCondition_1.evaluateCondition)(condition, {
@@ -34191,6 +34251,7 @@ const evaluateConditions = (conditions = [], options) => {
         }
         if (toAssign) {
             conditionsReferenceRecord[toAssign.name] = toAssign.value;
+            (_b = (_a = options.logger) === null || _a === void 0 ? void 0 : _a.debug) === null || _b === void 0 ? void 0 : _b.call(_a, debug_1.debugId, `assign: ${toAssign.name} := ${(0, debug_1.toDebugString)(toAssign.value)}`);
         }
     }
     return { result: true, referenceRecord: conditionsReferenceRecord };
@@ -34207,11 +34268,13 @@ exports.evaluateConditions = evaluateConditions;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.evaluateEndpointRule = void 0;
+const debug_1 = __nccwpck_require__(7617);
 const evaluateConditions_1 = __nccwpck_require__(9169);
 const getEndpointHeaders_1 = __nccwpck_require__(8268);
 const getEndpointProperties_1 = __nccwpck_require__(4973);
 const getEndpointUrl_1 = __nccwpck_require__(3602);
 const evaluateEndpointRule = (endpointRule, options) => {
+    var _a, _b;
     const { conditions, endpoint } = endpointRule;
     const { result, referenceRecord } = (0, evaluateConditions_1.evaluateConditions)(conditions, options);
     if (!result) {
@@ -34222,6 +34285,7 @@ const evaluateEndpointRule = (endpointRule, options) => {
         referenceRecord: { ...options.referenceRecord, ...referenceRecord },
     };
     const { url, properties, headers } = endpoint;
+    (_b = (_a = options.logger) === null || _a === void 0 ? void 0 : _a.debug) === null || _b === void 0 ? void 0 : _b.call(_a, debug_1.debugId, `Resolving endpoint from template: ${(0, debug_1.toDebugString)(endpoint)}`);
     return {
         ...(headers != undefined && {
             headers: (0, getEndpointHeaders_1.getEndpointHeaders)(headers, endpointRuleOptions),
@@ -34653,7 +34717,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -35053,7 +35117,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -35418,7 +35482,7 @@ var __createBinding;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
+            while (g && (g = 0, op[0] && (_ = 0)), _) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
                 if (y = 0, t) op = [op[0] & 2, t.value];
                 switch (op[0]) {
@@ -39060,7 +39124,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-eventbridge","description":"AWS SDK for JavaScript Eventbridge Client for Node.js, Browser and React Native","version":"3.196.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.196.0","@aws-sdk/config-resolver":"3.193.0","@aws-sdk/credential-provider-node":"3.196.0","@aws-sdk/fetch-http-handler":"3.193.0","@aws-sdk/hash-node":"3.193.0","@aws-sdk/invalid-dependency":"3.193.0","@aws-sdk/middleware-content-length":"3.193.0","@aws-sdk/middleware-endpoint":"3.193.0","@aws-sdk/middleware-host-header":"3.193.0","@aws-sdk/middleware-logger":"3.193.0","@aws-sdk/middleware-recursion-detection":"3.193.0","@aws-sdk/middleware-retry":"3.193.0","@aws-sdk/middleware-serde":"3.193.0","@aws-sdk/middleware-signing":"3.193.0","@aws-sdk/middleware-stack":"3.193.0","@aws-sdk/middleware-user-agent":"3.193.0","@aws-sdk/node-config-provider":"3.193.0","@aws-sdk/node-http-handler":"3.193.0","@aws-sdk/protocol-http":"3.193.0","@aws-sdk/signature-v4-multi-region":"3.193.0","@aws-sdk/smithy-client":"3.193.0","@aws-sdk/types":"3.193.0","@aws-sdk/url-parser":"3.193.0","@aws-sdk/util-base64-browser":"3.188.0","@aws-sdk/util-base64-node":"3.188.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.188.0","@aws-sdk/util-defaults-mode-browser":"3.193.0","@aws-sdk/util-defaults-mode-node":"3.193.0","@aws-sdk/util-endpoints":"3.196.0","@aws-sdk/util-user-agent-browser":"3.193.0","@aws-sdk/util-user-agent-node":"3.193.0","@aws-sdk/util-utf8-browser":"3.188.0","@aws-sdk/util-utf8-node":"3.188.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.188.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-eventbridge","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-eventbridge"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-eventbridge","description":"AWS SDK for JavaScript Eventbridge Client for Node.js, Browser and React Native","version":"3.201.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.201.0","@aws-sdk/config-resolver":"3.201.0","@aws-sdk/credential-provider-node":"3.201.0","@aws-sdk/fetch-http-handler":"3.201.0","@aws-sdk/hash-node":"3.201.0","@aws-sdk/invalid-dependency":"3.201.0","@aws-sdk/middleware-content-length":"3.201.0","@aws-sdk/middleware-endpoint":"3.201.0","@aws-sdk/middleware-host-header":"3.201.0","@aws-sdk/middleware-logger":"3.201.0","@aws-sdk/middleware-recursion-detection":"3.201.0","@aws-sdk/middleware-retry":"3.201.0","@aws-sdk/middleware-serde":"3.201.0","@aws-sdk/middleware-signing":"3.201.0","@aws-sdk/middleware-stack":"3.201.0","@aws-sdk/middleware-user-agent":"3.201.0","@aws-sdk/node-config-provider":"3.201.0","@aws-sdk/node-http-handler":"3.201.0","@aws-sdk/protocol-http":"3.201.0","@aws-sdk/signature-v4-multi-region":"3.201.0","@aws-sdk/smithy-client":"3.201.0","@aws-sdk/types":"3.201.0","@aws-sdk/url-parser":"3.201.0","@aws-sdk/util-base64-browser":"3.188.0","@aws-sdk/util-base64-node":"3.201.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.201.0","@aws-sdk/util-defaults-mode-browser":"3.201.0","@aws-sdk/util-defaults-mode-node":"3.201.0","@aws-sdk/util-endpoints":"3.201.0","@aws-sdk/util-user-agent-browser":"3.201.0","@aws-sdk/util-user-agent-node":"3.201.0","@aws-sdk/util-utf8-browser":"3.188.0","@aws-sdk/util-utf8-node":"3.201.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.188.0","@tsconfig/node14":"1.0.3","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-eventbridge","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-eventbridge"}}');
 
 /***/ }),
 
@@ -39068,7 +39132,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-eventbridge","description"
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.196.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.193.0","@aws-sdk/fetch-http-handler":"3.193.0","@aws-sdk/hash-node":"3.193.0","@aws-sdk/invalid-dependency":"3.193.0","@aws-sdk/middleware-content-length":"3.193.0","@aws-sdk/middleware-endpoint":"3.193.0","@aws-sdk/middleware-host-header":"3.193.0","@aws-sdk/middleware-logger":"3.193.0","@aws-sdk/middleware-recursion-detection":"3.193.0","@aws-sdk/middleware-retry":"3.193.0","@aws-sdk/middleware-serde":"3.193.0","@aws-sdk/middleware-stack":"3.193.0","@aws-sdk/middleware-user-agent":"3.193.0","@aws-sdk/node-config-provider":"3.193.0","@aws-sdk/node-http-handler":"3.193.0","@aws-sdk/protocol-http":"3.193.0","@aws-sdk/smithy-client":"3.193.0","@aws-sdk/types":"3.193.0","@aws-sdk/url-parser":"3.193.0","@aws-sdk/util-base64-browser":"3.188.0","@aws-sdk/util-base64-node":"3.188.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.188.0","@aws-sdk/util-defaults-mode-browser":"3.193.0","@aws-sdk/util-defaults-mode-node":"3.193.0","@aws-sdk/util-endpoints":"3.196.0","@aws-sdk/util-user-agent-browser":"3.193.0","@aws-sdk/util-user-agent-node":"3.193.0","@aws-sdk/util-utf8-browser":"3.188.0","@aws-sdk/util-utf8-node":"3.188.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.188.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.201.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.201.0","@aws-sdk/fetch-http-handler":"3.201.0","@aws-sdk/hash-node":"3.201.0","@aws-sdk/invalid-dependency":"3.201.0","@aws-sdk/middleware-content-length":"3.201.0","@aws-sdk/middleware-endpoint":"3.201.0","@aws-sdk/middleware-host-header":"3.201.0","@aws-sdk/middleware-logger":"3.201.0","@aws-sdk/middleware-recursion-detection":"3.201.0","@aws-sdk/middleware-retry":"3.201.0","@aws-sdk/middleware-serde":"3.201.0","@aws-sdk/middleware-stack":"3.201.0","@aws-sdk/middleware-user-agent":"3.201.0","@aws-sdk/node-config-provider":"3.201.0","@aws-sdk/node-http-handler":"3.201.0","@aws-sdk/protocol-http":"3.201.0","@aws-sdk/smithy-client":"3.201.0","@aws-sdk/types":"3.201.0","@aws-sdk/url-parser":"3.201.0","@aws-sdk/util-base64-browser":"3.188.0","@aws-sdk/util-base64-node":"3.201.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.201.0","@aws-sdk/util-defaults-mode-browser":"3.201.0","@aws-sdk/util-defaults-mode-node":"3.201.0","@aws-sdk/util-endpoints":"3.201.0","@aws-sdk/util-user-agent-browser":"3.201.0","@aws-sdk/util-user-agent-node":"3.201.0","@aws-sdk/util-utf8-browser":"3.188.0","@aws-sdk/util-utf8-node":"3.201.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.188.0","@tsconfig/node14":"1.0.3","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -39076,7 +39140,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.196.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.193.0","@aws-sdk/credential-provider-node":"3.196.0","@aws-sdk/fetch-http-handler":"3.193.0","@aws-sdk/hash-node":"3.193.0","@aws-sdk/invalid-dependency":"3.193.0","@aws-sdk/middleware-content-length":"3.193.0","@aws-sdk/middleware-endpoint":"3.193.0","@aws-sdk/middleware-host-header":"3.193.0","@aws-sdk/middleware-logger":"3.193.0","@aws-sdk/middleware-recursion-detection":"3.193.0","@aws-sdk/middleware-retry":"3.193.0","@aws-sdk/middleware-sdk-sts":"3.193.0","@aws-sdk/middleware-serde":"3.193.0","@aws-sdk/middleware-signing":"3.193.0","@aws-sdk/middleware-stack":"3.193.0","@aws-sdk/middleware-user-agent":"3.193.0","@aws-sdk/node-config-provider":"3.193.0","@aws-sdk/node-http-handler":"3.193.0","@aws-sdk/protocol-http":"3.193.0","@aws-sdk/smithy-client":"3.193.0","@aws-sdk/types":"3.193.0","@aws-sdk/url-parser":"3.193.0","@aws-sdk/util-base64-browser":"3.188.0","@aws-sdk/util-base64-node":"3.188.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.188.0","@aws-sdk/util-defaults-mode-browser":"3.193.0","@aws-sdk/util-defaults-mode-node":"3.193.0","@aws-sdk/util-endpoints":"3.196.0","@aws-sdk/util-user-agent-browser":"3.193.0","@aws-sdk/util-user-agent-node":"3.193.0","@aws-sdk/util-utf8-browser":"3.188.0","@aws-sdk/util-utf8-node":"3.188.0","fast-xml-parser":"4.0.11","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.188.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.201.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.201.0","@aws-sdk/credential-provider-node":"3.201.0","@aws-sdk/fetch-http-handler":"3.201.0","@aws-sdk/hash-node":"3.201.0","@aws-sdk/invalid-dependency":"3.201.0","@aws-sdk/middleware-content-length":"3.201.0","@aws-sdk/middleware-endpoint":"3.201.0","@aws-sdk/middleware-host-header":"3.201.0","@aws-sdk/middleware-logger":"3.201.0","@aws-sdk/middleware-recursion-detection":"3.201.0","@aws-sdk/middleware-retry":"3.201.0","@aws-sdk/middleware-sdk-sts":"3.201.0","@aws-sdk/middleware-serde":"3.201.0","@aws-sdk/middleware-signing":"3.201.0","@aws-sdk/middleware-stack":"3.201.0","@aws-sdk/middleware-user-agent":"3.201.0","@aws-sdk/node-config-provider":"3.201.0","@aws-sdk/node-http-handler":"3.201.0","@aws-sdk/protocol-http":"3.201.0","@aws-sdk/smithy-client":"3.201.0","@aws-sdk/types":"3.201.0","@aws-sdk/url-parser":"3.201.0","@aws-sdk/util-base64-browser":"3.188.0","@aws-sdk/util-base64-node":"3.201.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.201.0","@aws-sdk/util-defaults-mode-browser":"3.201.0","@aws-sdk/util-defaults-mode-node":"3.201.0","@aws-sdk/util-endpoints":"3.201.0","@aws-sdk/util-user-agent-browser":"3.201.0","@aws-sdk/util-user-agent-node":"3.201.0","@aws-sdk/util-utf8-browser":"3.188.0","@aws-sdk/util-utf8-node":"3.201.0","fast-xml-parser":"4.0.11","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.188.0","@tsconfig/node14":"1.0.3","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
