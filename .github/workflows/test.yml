@@ -35,11 +35,8 @@ jobs:
           detail: ${{ toJSON(github.event) }}
       - name: Check missing inputs
         run: 'test "${{ steps.inputs.outputs.error }}" == "Input required and not supplied: event-bus-name"'
-      - name: Check if we can push to AWS
-        id: check
-        run: echo "::set-output name=push::${{ secrets.AWS_ACCESS_KEY_ID != '' }}"
       - name: Test push to EventBridge
-        if: ${{ steps.check.outputs.push == 'true' }}
+        if: env.AWS_ACCESS_KEY_ID != ''
         uses: ./
         with:
           event-bus-name: github-actions-test
