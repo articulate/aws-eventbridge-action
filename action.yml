@@ -4,13 +4,13 @@ author: Articulate Global, LLC
 inputs:
   event-bus-name:
     required: true
-    description: The name or ARN of the event bus to recieve the event.
+    description: The name or ARN of the event bus to receive the event.
   source:
     required: true
     description: The source of the event.
   resources:
     required: false
-    description: A comma seperated list of of ARNs which the event concerns.
+    description: A comma separated list of of ARNs which the event concerns.
   detail-type:
     required: true
     description: Used to decide what fields to expect in the event detail.

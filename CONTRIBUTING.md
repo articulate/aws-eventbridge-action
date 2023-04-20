@@ -31,7 +31,52 @@ AWS_SESSION_TOKEN=xxx
 Before creating a pull request, make sure code is properly tested. Either with
 Jest or in the workflow.
 
-Make sure tests pass with `npm test` and meet our styleguide with `npm run lint`
-(use `npm run format` to try to autofix).
+If you make a change to `src`, you'll need to recompile with `npm run all` to work
+with Actions. This will also run all linters and tests.
 
 When writing commits, we try to follow [Angular Commit Message Conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format).
+
+## Publishing
+
+Once you are ready to release the current state of the default branch, you
+will need to create a release for the version.
+
+### Versioning
+
+We use [semantic versioning](https://semver.org/) for our releases.
+
+You can also manually determine the next release by viewing the most recent [release](https://github.com/articulate/aws-eventbridge-action/releases). Your version will be similar in format to `v1.0.2` (PATCH) or `v1.1.0` (MINOR)
+
+### Releasing
+
+* From the [release](https://github.com/articulate/aws-eventbridge-action/releases) page, Click `Draft a new release`
+* Click `Choose a tag` and enter your version name and click the tag or `+create new tag on publish` if you are versioning manually
+* Enter the version name as the `Release Title`
+* Click the Generate release notes to populate the description
+* Assuming applicable, leave `Set as the latest release` clicked
+* Click `Publish release`
+
+Alternatively, you can use the gh client.
+
+* Example: `gh release create v1.0.2 --generate-notes`
+
+### Releasing / Scripted Method (Optional)
+
+For a more automated experience, we recommend mloberg's git-release extension to tag your release. Requires GitHub cli `gh` and `git` to be installed locally.
+
+* [git-release](https://github.com/mloberg/dotfiles/blob/main/bin/git-release)
+* Drop the script in a local path and make sure it's executable
+* Run `git release patch` or `get release minor` etc to generate the next tag for your release, push it up, and create a release complete with notes. (check script for more syntax options)
+
+### Update the major version tag
+
+Some actions will reference this using the _v1_ tag. We will need to update that tag locally and force push it.
+
+Then, update the v1 tag to point to the current commit.
+
+```shell
+git checkout main
+git pull
+git tag -fa v1 -m "Update v1 tag"
+git push origin v1 --force
+```
