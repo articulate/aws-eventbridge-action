@@ -8,7 +8,7 @@ GitHub Action workflow.
 See [action.yml](action.yml) for a detailed list of inputs and outputs.
 
 ```yaml
-- uses: articulate/aws-eventbridge-action@v1
+- uses: articulate/aws-eventbridge-action@v2
   with:
     event-bus-name: my-bus-name-or-arn
     source: github.actions
