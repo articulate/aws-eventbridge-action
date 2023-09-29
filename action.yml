@@ -25,7 +25,7 @@ outputs:
   event-id:
     description: The event ID from AWS EventBridge.
 runs:
-  using: node16
+  using: node20
   main: dist/index.js
 branding:
   color: blue

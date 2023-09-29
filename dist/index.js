@@ -11,9 +11,9 @@ exports.getEntry = void 0;
 function getEntry(output) {
     const entry = output.Entries ? output.Entries[0] : undefined;
     return {
-        EventId: (entry === null || entry === void 0 ? void 0 : entry.EventId) || '',
-        ErrorCode: (entry === null || entry === void 0 ? void 0 : entry.ErrorCode) || 'Unknown Error',
-        ErrorMessage: (entry === null || entry === void 0 ? void 0 : entry.ErrorMessage) || 'An unknown error occured.',
+        EventId: entry?.EventId || '',
+        ErrorCode: entry?.ErrorCode || 'Unknown Error',
+        ErrorMessage: entry?.ErrorMessage || 'An unknown error occured.',
     };
 }
 exports.getEntry = getEntry;
@@ -102,47 +102,36 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(42186));
 const client_eventbridge_1 = __nccwpck_require__(24947);
 const event_1 = __nccwpck_require__(94979);
 const inputs_1 = __nccwpck_require__(36180);
-function run() {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const client = new client_eventbridge_1.EventBridgeClient({
-                region: core.getInput('aws-region'),
-            });
-            // validate detail is valid JSON
-            const command = new client_eventbridge_1.PutEventsCommand({
-                Entries: [(0, inputs_1.getEvent)()],
-            });
-            core.debug('Sending request to AWS');
-            const response = yield client.send(command);
-            core.debug(`Recieved response from AWS: ${response.$metadata.httpStatusCode} ${response.$metadata.requestId}`);
-            const failed = response.FailedEntryCount || 0;
-            const entry = (0, event_1.getEntry)(response);
-            if (failed > 0) {
-                throw new Error(`Could not send event. ${entry.ErrorCode}: ${entry.ErrorMessage}`);
-            }
-            core.setOutput('event-id', entry.EventId);
+async function run() {
+    try {
+        const client = new client_eventbridge_1.EventBridgeClient({
+            region: core.getInput('aws-region'),
+        });
+        // validate detail is valid JSON
+        const command = new client_eventbridge_1.PutEventsCommand({
+            Entries: [(0, inputs_1.getEvent)()],
+        });
+        core.debug('Sending request to AWS');
+        const response = await client.send(command);
+        core.debug(`Recieved response from AWS: ${response.$metadata.httpStatusCode} ${response.$metadata.requestId}`);
+        const failed = response.FailedEntryCount || 0;
+        const entry = (0, event_1.getEntry)(response);
+        if (failed > 0) {
+            throw new Error(`Could not send event. ${entry.ErrorCode}: ${entry.ErrorMessage}`);
         }
-        catch (error) {
-            if (error instanceof Error) {
-                core.setOutput('error', error.message);
-                core.setFailed(error.message);
-            }
+        core.setOutput('event-id', entry.EventId);
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            core.setOutput('error', error.message);
+            core.setFailed(error.message);
         }
-    });
+    }
 }
 // eslint-disable-next-line unicorn/prefer-top-level-await
 run();
