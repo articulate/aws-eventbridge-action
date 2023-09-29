@@ -4,8 +4,14 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    groups:
+      actions:
+        patterns:
+          - "*"
   - package-ecosystem: npm
     directory: /
-    open-pull-requests-limit: 25
     schedule:
       interval: monthly
+    groups:
+      dev:
+        dependency-type: development

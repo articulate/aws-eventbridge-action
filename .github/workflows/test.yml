@@ -27,7 +27,8 @@ jobs:
         with:
           detail: invalid
       - name: Check invalid JSON
-        run: 'test "${{ steps.json.outputs.error }}" == "detail is not valid JSON. SyntaxError: Unexpected token i in JSON at position 0"'
+        run: |
+          test "${{ contains(steps.json.outputs.error, 'detail is not valid json') }}" == "true"
       - name: Test missing inputs
         id: inputs
         continue-on-error: true
