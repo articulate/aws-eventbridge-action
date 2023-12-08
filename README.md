@@ -1,5 +1,8 @@
 # aws-eventbridge-action
 
+> [!WARNING]
+> This project is no longer active.
+
 Send events to [AWS EventBridge](https://aws.amazon.com/eventbridge/) from your
 GitHub Action workflow.
 
